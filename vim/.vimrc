@@ -40,6 +40,7 @@ Bundle 'plasticboy/vim-markdown'
 Bundle 'terryma/vim-multiple-cursors'
 " Bundle 'fholgado/minibufexpl.vim'
 Bundle 'tpope/vim-surround'
+Bundle 'Lokaltog/vim-easymotion'
 " vim-snipmate requires vim-addon-mw-utils and tlib_vim
 Bundle "MarcWeber/vim-addon-mw-utils"
 Bundle "tomtom/tlib_vim"

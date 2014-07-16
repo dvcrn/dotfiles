@@ -1,0 +1,54 @@
+# Update and upgrade fomulae
+update
+upgrade
+
+# Dev tools
+install android-platform-tools
+install heroku-toolbelt
+install mozilla-addon-sdk
+install awscli
+
+# Git
+install hub
+install hubflow
+install git
+install git-flow
+
+# Languages
+install php56
+install php56-mcrypt
+install pypy
+install python
+install python3
+install go
+install leiningen # Clojure
+
+# Servers and tools
+install nginx
+install rabbitmq
+install postgis
+install postgresql
+install redis
+install sqlite
+
+# Dev tools
+install tmux
+install vim
+install wget
+install reattach-to-user-namespace
+install watch
+install readline
+install zsh
+install zsh-lovers
+
+# Misc tools
+install osxfuse
+install wine
+
+# Libraries
+install libxml2
+install libyaml
+install openssl
+
+# Doctor
+doctor

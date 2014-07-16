@@ -1,0 +1,15 @@
+{
+  // When set to true GitGutter runs asynchronously in a seperate thread
+  // This may cause a small delay between a modification and the icon change
+  // but can increase performance greatly if needed.
+  "non_blocking": true,
+
+  // Determines whether GitGutter ignores whitespace in modified files.
+  // Set "none" to ensure whitespace is considered in the diff
+  // Set "all" to ignore all white space
+  // Set "eol" to only ignore whitespace at the end of lines
+  "ignore_whitespace": "all",
+
+  // Add a special marker on untracked files
+  "show_markers_on_untracked_file": true,
+}

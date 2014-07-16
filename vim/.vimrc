@@ -38,6 +38,7 @@ Bundle 'benmills/vimux'
 Bundle 'git://git.wincent.com/command-t.git'
 Bundle 'plasticboy/vim-markdown'
 Bundle 'terryma/vim-multiple-cursors'
+Bundle 'airblade/vim-gitgutter'
 " Bundle 'fholgado/minibufexpl.vim'
 Bundle 'tpope/vim-surround'
 Bundle 'Lokaltog/vim-easymotion'
@@ -48,7 +49,13 @@ Bundle "garbas/vim-snipmate"
 " Some snippets to get started
 Bundle "honza/vim-snippets"
 " Syntax
+Bundle "amdt/vim-niji"
 Bundle "saltstack/salt-vim"
+Bundle "rodjek/vim-puppet"
+" Clojure
+Bundle "tpope/vim-fireplace"
+Bundle "guns/vim-clojure-static"
+Bundle "guns/vim-clojure-highlight"
 
 if has('autocmd')
   filetype plugin indent on    " enable plugins, detection and indenting

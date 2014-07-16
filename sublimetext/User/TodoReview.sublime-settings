@@ -1,0 +1,14 @@
+{
+  "exclude_folders": [
+    "*.git*",
+    "*node_modules*",
+    "*vendor*",
+  ],
+  "render_include_folder": true,
+  "patterns": {
+    "TODO": "TODO[\\s]*?:+(?P<todo>.*)$",
+    "NOTE": "NOTE[\\s]*?:+(?P<note>.*)$",
+    "FIXME": "FIX ?ME[\\s]*?:+(?P<fixme>.*)$",
+    "CHANGED": "CHANGED[\\s]*?:+(?P<changed>.*)$"
+  },
+}

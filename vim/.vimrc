@@ -42,6 +42,7 @@ Bundle 'airblade/vim-gitgutter'
 " Bundle 'fholgado/minibufexpl.vim'
 Bundle 'tpope/vim-surround'
 Bundle 'Lokaltog/vim-easymotion'
+Bundle 'mattn/emmet-vim'
 " vim-snipmate requires vim-addon-mw-utils and tlib_vim
 Bundle "MarcWeber/vim-addon-mw-utils"
 Bundle "tomtom/tlib_vim"
@@ -49,9 +50,12 @@ Bundle "garbas/vim-snipmate"
 " Some snippets to get started
 Bundle "honza/vim-snippets"
 " Syntax
+Bundle "scrooloose/syntastic"
 Bundle "amdt/vim-niji"
 Bundle "saltstack/salt-vim"
 Bundle "rodjek/vim-puppet"
+Bundle "groenewege/vim-less"
+Bundle "davidhalter/jedi-vim"
 " Clojure
 Bundle "tpope/vim-fireplace"
 Bundle "guns/vim-clojure-static"
@@ -85,7 +89,7 @@ set timeout timeoutlen=1000 ttimeoutlen=500
 " Trying to break a very old habit...
 " ex mode commands made easy
 " -------------------------------------------------------------------
-nnoremap ; :
+" nnoremap ; :
 nnoremap Q <nop>
 
 " -------------------------------------------------------------------
@@ -150,6 +154,11 @@ nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
+
+" Tab navigation
+nnoremap <C-\> :bnext<CR>
+nnoremap <C-]> :bprevious<CR>
+nnoremap <C-x> :bdelete<CR>
 
 " -------------------------------------------------------------------
 " Move line(s) up or down via C-j and C-k respectively
@@ -222,12 +231,15 @@ set sidescroll=1        " number of cols to scroll at a time
 " toggle listchars on or off
 noremap <Leader>i :set list!<CR>
 
+" Toggle relative line numbers
+noremap <Leader>l :set relativenumber!<CR>
+
 " fix Vim's regex handling
 nnoremap / /\v
 vnoremap / /\v
 
 " Paste mode to prevent autoindentation of pasted lines
-set pastetoggle=<F2>
+set pastetoggle=<F5>
 
 " Better pasting from clipboard
 " http://tilvim.com/2014/03/18/a-better-paste.html
@@ -333,6 +345,8 @@ if has("autocmd")
   " syntax of these languages is fussy over tabs Vs spaces
   autocmd FileType make setlocal ts=8 sts=8 sw=8 noexpandtab
   autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
+  autocmd FileType javascript setlocal shiftwidth=4 tabstop=4
+  autocmd FileType python setlocal shiftwidth=4 tabstop=4
 
   " treat .rss files as XML
   autocmd BufNewFile,BufRead *.rss,*.atom setfiletype xml
@@ -352,6 +366,7 @@ if has("autocmd")
   autocmd BufNewFile,BufRead Gemfile,Gemfile.lock,Guardfile setfiletype ruby
   autocmd BufNewFile,BufRead Thorfile,config.ru,Vagrantfile setfiletype ruby
   autocmd BufNewFile,BufRead Berksfile,Berksfile.lock setfiletype ruby
+  autocmd BufNewFile,BufRead Puppetfile setfiletype ruby
   autocmd BufNewFile,BufRead Rakefile setfiletype rake
   autocmd BufNewFile,BufRead Rakefile set syntax=ruby
   autocmd BufNewFile,BufRead *.rake setfiletype rake
@@ -389,6 +404,9 @@ let g:airline#extensions#tabline#fnamemod = ':t'
 
 let g:airline_theme='dark'
 
+" Use buffers instead of tabs with jedi
+let g:jedi#use_tabs_not_buffers = 0
+
 " Vimux settings
 let g:VimuxHeight = "30"
 let g:VimuxOrientation = "v"
@@ -424,6 +442,17 @@ nmap <leader>vd :call VimuxRunCommand("deploy")<CR>
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 let g:ctrlp_working_path_mode = 'ra'
+
+" Ignore some files we don't need
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.git/,*.pyc
+
+" Syntastic
+let g:syntastic_check_on_open=1
+let g:syntastic_enable_signs=1
+let g:syntastic_javascript_checkers = ['jslint']
+let g:syntastic_javascript_jslint_args = " "
+
+
 " -------------------------------------------------------------------
 "  finis
 " -------------------------------------------------------------------

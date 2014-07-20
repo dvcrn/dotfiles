@@ -56,6 +56,7 @@ Bundle "saltstack/salt-vim"
 Bundle "rodjek/vim-puppet"
 Bundle "groenewege/vim-less"
 Bundle "davidhalter/jedi-vim"
+Bundle "kchmck/vim-coffee-script"
 " Clojure
 Bundle "tpope/vim-fireplace"
 Bundle "guns/vim-clojure-static"

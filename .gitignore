@@ -1,1 +1,3 @@
 Package Control.cache*
+*.cache*
+sublimetext/User/Package Control.cache/*

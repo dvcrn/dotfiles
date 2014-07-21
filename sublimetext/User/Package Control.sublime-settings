@@ -32,6 +32,7 @@
 		"SublimeLinter-flake8",
 		"SublimeLinter-json",
 		"SublimeLinter-php",
+		"SublimeLinter-pyyaml",
 		"SublimeREPL",
 		"Surround",
 		"Theme - Nil",

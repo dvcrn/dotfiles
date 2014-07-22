@@ -157,9 +157,9 @@ nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
 " Tab navigation
-nnoremap ‘ :bnext<CR>
-nnoremap “ :bprevious<CR>
-nnoremap <M-x> :bdelete<CR>
+nnoremap ‘ :bnext<CR> # alt-right-square-bracket
+nnoremap “ :bprevious<CR> # alt-left-square-bracket
+nnoremap ≈ :bdelete<CR> # alt-x
 " nnoremap <C-\> :bnext<CR>
 " nnoremap <C-]> :bprevious<CR>
 " nnoremap <C-x> :bdelete<CR>

@@ -157,12 +157,12 @@ nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
 " Tab navigation
-nnoremap ‘ :bnext<CR> # alt-right-square-bracket
-nnoremap “ :bprevious<CR> # alt-left-square-bracket
-nnoremap ≈ :bdelete<CR> # alt-x
-" nnoremap <C-\> :bnext<CR>
-" nnoremap <C-]> :bprevious<CR>
-" nnoremap <C-x> :bdelete<CR>
+" alt-right-square-bracket
+nnoremap ‘ :bnext<CR> 
+" alt-left-square-bracket
+nnoremap “ :bprevious<CR> 
+" alt-x
+nnoremap ≈ :bdelete<CR> 
 
 " -------------------------------------------------------------------
 " Move line(s) up or down via C-j and C-k respectively

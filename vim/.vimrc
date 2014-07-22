@@ -453,6 +453,11 @@ let g:syntastic_enable_signs=1
 let g:syntastic_javascript_checkers = ['jslint']
 let g:syntastic_javascript_jslint_args = " "
 
+" Fugitive
+nnoremap <leader>gs :Gstatus<CR>
+nnoremap <leader>gc :Gcommit<CR>
+nnoremap <leader>gp :Gpush<CR>
+
 
 " -------------------------------------------------------------------
 "  finis

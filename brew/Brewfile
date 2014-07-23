@@ -42,6 +42,8 @@ install zsh
 install zsh-lovers
 install tree
 install z
+install ag
+install ack
 
 # Misc tools
 install osxfuse

@@ -160,11 +160,11 @@ nnoremap <C-l> <C-w>l
 
 " Tab navigation
 " alt-right-square-bracket
-nnoremap ‘ :bnext<CR> 
+nnoremap ‘ :bnext<CR>
 " alt-left-square-bracket
-nnoremap “ :bprevious<CR> 
+nnoremap “ :bprevious<CR>
 " alt-x
-nnoremap ≈ :bdelete<CR> 
+nnoremap ≈ :bp\|bd #<CR>
 
 " -------------------------------------------------------------------
 " Move line(s) up or down via C-j and C-k respectively
@@ -385,6 +385,15 @@ if has("autocmd")
   let NERDTreeIgnore = ['\.pyc$', '\~$', '\.rbc$']
   autocmd BufNewFile,BufRead *.py set ts=2 sts=2 sw=2 expandtab
 
+  " Remove whitespaces on save
+  fun! <SID>StripTrailingWhitespaces()
+      let l = line(".")
+      let c = col(".")
+      %s/\s\+$//e
+      call cursor(l, c)
+  endfun
+  autocmd BufWritePre * :call <SID>StripTrailingWhitespaces()
+
 endif
 
 " -------------------------------------------------------------------
@@ -462,7 +471,6 @@ let g:syntastic_javascript_jslint_args = " "
 nnoremap <leader>gs :Gstatus<CR>
 nnoremap <leader>gc :Gcommit<CR>
 nnoremap <leader>gp :Gpush<CR>
-
 
 " -------------------------------------------------------------------
 "  finis

@@ -15,8 +15,6 @@ install git
 install git-flow
 
 # Languages
-install php56
-install php56-mcrypt
 install pypy
 install python
 install python3
@@ -26,8 +24,8 @@ install leiningen # Clojure
 # Servers and tools
 install nginx
 install rabbitmq
-install postgis
-install postgresql
+# install postgis
+# install postgresql
 install redis
 install sqlite
 

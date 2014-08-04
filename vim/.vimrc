@@ -1,7 +1,5 @@
 " .vimrc
-" Maintained by: Mark Nichols
-" mark@zanshin.net
-" http;//zanshin.net
+" Maintained by: David Mohl
 "
 " -------------------------------------------------------------------
 " Forget compatibility with vi. Who cares.
@@ -41,6 +39,7 @@ Bundle 'terryma/vim-multiple-cursors'
 Bundle 'airblade/vim-gitgutter'
 " Bundle 'fholgado/minibufexpl.vim'
 Bundle 'tpope/vim-surround'
+Bundle 'edkolev/tmuxline.vim'
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 'mattn/emmet-vim'
 " vim-snipmate requires vim-addon-mw-utils and tlib_vim
@@ -210,11 +209,21 @@ set noswapfile
 " Set the color scheme
 " -------------------------------------------------------------------
 set background=dark
+
+highlight clear SignColumn
+highlight GitGutterAdd ctermfg=green guifg=darkgreen
+highlight GitGutterChange ctermfg=yellow guifg=darkyellow
+highlight GitGutterDelete ctermfg=red guifg=darkred
+highlight GitGutterChangeDelete ctermfg=yellow guifg=darkyellow
+
 " silent! colorscheme Tomorrow-Night
 " silent! colorscheme badwolf
 " Make the gutters darker than the background.
 " let g:badwolf_darkgutter = 1
-silent! colorscheme landscape
+let g:solarized_contrast="high"
+let g:solarized_visibility="low"
+let g:solarized_termcolors=256
+silent! colorscheme solarized
 
 " -------------------------------------------------------------------
 " Set tab stuff
@@ -405,8 +414,8 @@ nmap <leader>t :CommandT <CR>
 nmap <leader>T :CommandTFlush<CR>:CommandT<CR>
 
 " vim-airline settings
-let g:airline_left_sep=''
-let g:airline_right_sep=''
+" let g:airline_left_sep=''
+" let g:airline_right_sep=''
 let g:airline#extensions#whitespace#trailing_format = 'trailing[%s]'
 let g:airline#extensions#whitespace#mixed_indent_format = 'mixed-indent[%s]'
 let g:airline#extensions#branch#enabled = 1
@@ -416,8 +425,8 @@ let g:airline#extensions#tabline#enabled = 1
 
 " Show just the filename
 let g:airline#extensions#tabline#fnamemod = ':t'
-
-let g:airline_theme='dark'
+let g:airline_powerline_fonts=1
+let g:airline_theme='bubblegum'
 
 " Use buffers instead of tabs with jedi
 let g:jedi#use_tabs_not_buffers = 0

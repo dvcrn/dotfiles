@@ -48,6 +48,7 @@ Bundle "tomtom/tlib_vim"
 Bundle "garbas/vim-snipmate"
 Bundle 'mileszs/ack.vim'
 Bundle 'rking/ag.vim'
+Bundle 'tobyS/vmustache'
 " Some snippets to get started
 Bundle "honza/vim-snippets"
 " Syntax
@@ -58,6 +59,8 @@ Bundle "rodjek/vim-puppet"
 Bundle "groenewege/vim-less"
 Bundle "davidhalter/jedi-vim"
 Bundle "kchmck/vim-coffee-script"
+Bundle 'tobyS/pdv'
+Bundle 'elzr/vim-json'
 " Clojure
 Bundle "tpope/vim-fireplace"
 Bundle "guns/vim-clojure-static"
@@ -362,6 +365,7 @@ if has("autocmd")
   autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
   autocmd FileType javascript setlocal shiftwidth=4 tabstop=4
   autocmd FileType python setlocal shiftwidth=4 tabstop=4
+  autocmd FileType php setlocal shiftwidth=4 tabstop=4
 
   " treat .rss files as XML
   autocmd BufNewFile,BufRead *.rss,*.atom setfiletype xml

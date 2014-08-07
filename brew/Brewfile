@@ -2,6 +2,11 @@
 update
 upgrade
 
+# Taps
+tap homebrew/dupes
+tap homebrew/versions
+tap homebrew/homebrew-php
+
 # Dev tools
 install android-platform-tools
 install heroku-toolbelt
@@ -20,6 +25,8 @@ install python
 install python3
 install go
 install leiningen # Clojure
+install node
+install php56
 
 # Servers and tools
 install nginx

@@ -37,6 +37,8 @@ Bundle 'git://git.wincent.com/command-t.git'
 Bundle 'plasticboy/vim-markdown'
 Bundle 'terryma/vim-multiple-cursors'
 Bundle 'airblade/vim-gitgutter'
+Bundle 'Valloric/YouCompleteMe'
+Bundle 'vim-scripts/paredit.vim'
 " Bundle 'fholgado/minibufexpl.vim'
 Bundle 'tpope/vim-surround'
 Bundle 'edkolev/tmuxline.vim'
@@ -434,6 +436,7 @@ let g:airline_theme='bubblegum'
 
 " Use buffers instead of tabs with jedi
 let g:jedi#use_tabs_not_buffers = 0
+let g:jedi#popup_on_dot = 0
 
 " Vimux settings
 let g:VimuxHeight = "30"

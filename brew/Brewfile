@@ -7,6 +7,9 @@ tap homebrew/dupes
 tap homebrew/versions
 tap homebrew/homebrew-php
 
+# Build tools
+cmake
+
 # Dev tools
 install android-platform-tools
 install heroku-toolbelt

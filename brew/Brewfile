@@ -55,6 +55,7 @@ install ack
 
 # Misc tools
 install osxfuse
+install ntfs-3g
 install wine
 
 # Libraries

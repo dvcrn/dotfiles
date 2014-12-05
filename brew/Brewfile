@@ -15,6 +15,7 @@ install android-platform-tools
 install heroku-toolbelt
 install mozilla-addon-sdk
 install awscli
+install gdb
 
 # Git
 install hub

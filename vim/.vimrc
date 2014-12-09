@@ -336,7 +336,9 @@ nnoremap <leader>h <C-w>s<C-w>j   " open a horizontal split and switch to it (,h
 " -------------------------------------------------------------------
 " NERDTree
 " -------------------------------------------------------------------
-nnoremap <C-k>b :NERDTreeToggle<CR>   " open a horizontal split and switch to it (,h)
+nnoremap <leader>b :NERDTreeToggle<CR>   " open a horizontal split and switch to it (,h)
+nnoremap <leader>f :NERDTreeFind<CR>   " open a horizontal split and switch to it (,h)
+let g:NERDTreeHijackNetrw=0
 
 " -------------------------------------------------------------------
 " vimrc shortcuts

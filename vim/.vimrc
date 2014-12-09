@@ -28,7 +28,7 @@ Bundle 'gmarik/vundle'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'itchyny/landscape.vim'
 Bundle 'git://github.com/sjl/badwolf.git'
-" Bundle 'scrooloose/nerdtree'
+Bundle 'scrooloose/nerdtree'
 Bundle 'kien/ctrlp.vim'
 Bundle 'tpope/vim-fugitive'
 Bundle 'bling/vim-airline'
@@ -331,6 +331,12 @@ nmap _= :call Preserve("normal gg=G")<CR>
 " -------------------------------------------------------------------
 nnoremap <leader>v <C-w>v<C-w>l   " open a vertical split and switch to it (,v)
 nnoremap <leader>h <C-w>s<C-w>j   " open a horizontal split and switch to it (,h)
+
+
+" -------------------------------------------------------------------
+" NERDTree
+" -------------------------------------------------------------------
+nnoremap <C-k>b :NERDTreeToggle<CR>   " open a horizontal split and switch to it (,h)
 
 " -------------------------------------------------------------------
 " vimrc shortcuts

@@ -33,7 +33,7 @@ Bundle 'kien/ctrlp.vim'
 Bundle 'tpope/vim-fugitive'
 Bundle 'bling/vim-airline'
 Bundle 'benmills/vimux'
-Bundle 'git://git.wincent.com/command-t.git'
+"Bundle 'git://git.wincent.com/command-t.git'
 Bundle 'plasticboy/vim-markdown'
 Bundle 'terryma/vim-multiple-cursors'
 Bundle 'airblade/vim-gitgutter'
@@ -425,8 +425,8 @@ endif
 " -------------------------------------------------------------------
 
 " Command-t
-nmap <leader>t :CommandT <CR>
-nmap <leader>T :CommandTFlush<CR>:CommandT<CR>
+"nmap <leader>t :CommandT <CR>
+"nmap <leader>T :CommandTFlush<CR>:CommandT<CR>
 
 " vim-airline settings
 " let g:airline_left_sep=''
@@ -479,12 +479,14 @@ nmap <leader>vd :call VimuxRunCommand("deploy")<CR>
 " hi MBEVisibleActiveChanged ctermfg=203 ctermbg=235
 
 " Control-P
+" Ignore some files we don't need
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.git/,*.pyc
+
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 let g:ctrlp_working_path_mode = 'ra'
+let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
 
-" Ignore some files we don't need
-set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.git/,*.pyc
 
 " Syntastic
 let g:syntastic_check_on_open=1

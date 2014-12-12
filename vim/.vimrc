@@ -68,6 +68,7 @@ Bundle 'elzr/vim-json'
 Bundle "tpope/vim-fireplace"
 Bundle "guns/vim-clojure-static"
 Bundle "guns/vim-clojure-highlight"
+Bundle "fwolanski/vim-clojure-conceal"
 
 if has('autocmd')
   filetype plugin indent on    " enable plugins, detection and indenting
@@ -451,6 +452,9 @@ let g:jedi#popup_on_dot = 0
 let g:VimuxHeight = "30"
 let g:VimuxOrientation = "v"
 let g:VimuxUseNearestPane = 0
+
+" Lambda concealing for vim
+let g:clojure_conceal_extras = 1
 
 " Vimux Mappings
 nmap <leader>vp :VimuxPromptCommand<cr>

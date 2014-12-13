@@ -25,6 +25,7 @@ call vundle#rc()
 
 " let Vundle manage Vundle
 Bundle 'gmarik/vundle'
+Bundle 'powerline/powerline'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'itchyny/landscape.vim'
 Bundle 'git://github.com/sjl/badwolf.git'
@@ -38,13 +39,14 @@ Bundle 'plasticboy/vim-markdown'
 Bundle 'terryma/vim-multiple-cursors'
 Bundle 'airblade/vim-gitgutter'
 Bundle 'Valloric/YouCompleteMe'
-Bundle 'vim-scripts/paredit.vim'
+" Bundle 'vim-scripts/paredit.vim'
 " Bundle 'fholgado/minibufexpl.vim'
 Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-classpath'
 Bundle 'edkolev/tmuxline.vim'
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 'mattn/emmet-vim'
+Bundle 'tpope/vim-repeat'
 " vim-snipmate requires vim-addon-mw-utils and tlib_vim
 Bundle "MarcWeber/vim-addon-mw-utils"
 Bundle "tomtom/tlib_vim"
@@ -69,6 +71,8 @@ Bundle "tpope/vim-fireplace"
 Bundle "guns/vim-clojure-static"
 Bundle "guns/vim-clojure-highlight"
 Bundle "fwolanski/vim-clojure-conceal"
+Bundle 'tpope/vim-sexp-mappings-for-regular-people'
+Bundle 'guns/vim-sexp'
 
 if has('autocmd')
   filetype plugin indent on    " enable plugins, detection and indenting

@@ -18,10 +18,10 @@ endfunction
 " -------------------------------------------------------------------
 " turn filetype on so that we can turn if off without generating an exit code
 " of 1 when quiting vim.
-filetype on                     " best to have it on before turning it off
-filetype off                    " needs to be off to setup Vundle
-set rtp+=~/.vim/bundle/vundle/  " add vundle to run time path
-call vundle#rc()
+filetype on                        " best to have it on before turning it off
+filetype off                       " needs to be off to setup Vundle
+set rtp+=~/.vim/bundle/Vundle.vim  " add vundle to run time path
+call vundle#begin()
 
 " let Vundle manage Vundle
 Bundle 'gmarik/vundle'

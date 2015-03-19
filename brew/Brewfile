@@ -1,68 +1,66 @@
-# Update and upgrade fomulae
-update
-upgrade
+# brew tap Homebrew/brewdler ; has to come first.
 
 # Taps
-tap homebrew/dupes
-tap homebrew/versions
-tap homebrew/homebrew-php
+tap "homebrew/dupes"
+tap "homebrew/versions"
+tap "homebrew/homebrew-php"
+tap "caskroom/cask"
+
+# Cask
+brew "brew-cask"
 
 # Build tools
-cmake
+brew "cmake"
 
 # Dev tools
-install android-platform-tools
-install heroku-toolbelt
-install mozilla-addon-sdk
-install awscli
-install gdb
+brew "android-platform-tools"
+brew "heroku-toolbelt"
+brew "mozilla-addon-sdk"
+brew "awscli"
+brew "gdb"
 
 # Git
-install hub
-install hubflow
-install git
-install git-flow
+brew "hub"
+brew "hubflow"
+brew "git"
+brew "git-flow"
 
 # Languages
-install pypy
-install python
-install python3
-install go
-install leiningen # Clojure
-install node
-install php56
+brew "pypy"
+brew "python"
+brew "python3"
+brew "go"
+brew "leiningen"
+brew "node"
+# brew "php56"
 
 # Servers and tools
-install nginx
-install rabbitmq
+# brew "nginx"
+# brew "rabbitmq"
 # install postgis
 # install postgresql
-install redis
-install sqlite
+# install redis
+# install sqlite
 
 # Dev tools
-install tmux
-install vim
-install wget
-install reattach-to-user-namespace
-install watch
-install readline
-install zsh
-install zsh-lovers
-install tree
-install z
-install ag
-install ack
+brew "tmux"
+brew "vim"
+brew "wget"
+brew "reattach-to-user-namespace"
+brew "watch"
+brew "readline"
+brew "zsh"
+brew "zsh-lovers"
+brew "tree"
+brew "z"
+brew "ag"
+brew "ack"
 
 # Misc tools
-install osxfuse
-install ntfs-3g
-install wine
+cask "osxfuse"
+brew "ntfs-3g"
 
 # Libraries
-install libxml2
-install libyaml
-install openssl
-
-# Doctor
-doctor
+brew "libxml2"
+brew "libyaml"
+brew "openssl"

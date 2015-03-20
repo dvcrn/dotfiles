@@ -24,55 +24,61 @@ set rtp+=~/.vim/bundle/Vundle.vim  " add vundle to run time path
 call vundle#begin()
 
 " let Vundle manage Vundle
-Bundle 'gmarik/vundle'
-Bundle 'powerline/powerline'
-Bundle 'altercation/vim-colors-solarized'
-Bundle 'itchyny/landscape.vim'
-Bundle 'git://github.com/sjl/badwolf.git'
-Bundle 'scrooloose/nerdtree'
-Bundle 'kien/ctrlp.vim'
-Bundle 'tpope/vim-fugitive'
-Bundle 'bling/vim-airline'
-Bundle 'benmills/vimux'
-"Bundle 'git://git.wincent.com/command-t.git'
-Bundle 'plasticboy/vim-markdown'
-Bundle 'terryma/vim-multiple-cursors'
-Bundle 'airblade/vim-gitgutter'
-Bundle 'Valloric/YouCompleteMe'
-" Bundle 'vim-scripts/paredit.vim'
-" Bundle 'fholgado/minibufexpl.vim'
-Bundle 'tpope/vim-surround'
-Bundle 'tpope/vim-classpath'
-Bundle 'edkolev/tmuxline.vim'
-Bundle 'Lokaltog/vim-easymotion'
-Bundle 'mattn/emmet-vim'
-Bundle 'tpope/vim-repeat'
+Plugin 'gmarik/Vundle.vim'
+Plugin 'powerline/powerline'
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'itchyny/landscape.vim'
+Plugin 'git://github.com/sjl/badwolf.git'
+Plugin 'scrooloose/nerdtree'
+Plugin 'kien/ctrlp.vim'
+Plugin 'tpope/vim-fugitive'
+Plugin 'bling/vim-airline'
+Plugin 'benmills/vimux'
+"Plugin 'git://git.wincent.com/command-t.git'
+Plugin 'plasticboy/vim-markdown'
+Plugin 'terryma/vim-multiple-cursors'
+Plugin 'airblade/vim-gitgutter'
+Plugin 'Valloric/YouCompleteMe'
+" Plugin 'vim-scripts/paredit.vim'
+" Plugin 'fholgado/minibufexpl.vim'
+Plugin 'tpope/vim-surround'
+Plugin 'tpope/vim-classpath'
+Plugin 'edkolev/tmuxline.vim'
+Plugin 'Lokaltog/vim-easymotion'
+Plugin 'mattn/emmet-vim'
+Plugin 'tpope/vim-repeat'
 " vim-snipmate requires vim-addon-mw-utils and tlib_vim
-Bundle "MarcWeber/vim-addon-mw-utils"
-Bundle "tomtom/tlib_vim"
-Bundle "garbas/vim-snipmate"
-Bundle 'mileszs/ack.vim'
-Bundle 'rking/ag.vim'
-Bundle 'tobyS/vmustache'
+Plugin 'MarcWeber/vim-addon-mw-utils'
+Plugin 'tomtom/tlib_vim'
+Plugin 'garbas/vim-snipmate'
+Plugin 'mileszs/ack.vim'
+Plugin 'rking/ag.vim'
+Plugin 'tobyS/vmustache'
 " Some snippets to get started
-Bundle "honza/vim-snippets"
+Plugin 'honza/vim-snippets'
 " Syntax
-Bundle "scrooloose/syntastic"
-Bundle "amdt/vim-niji"
-Bundle "saltstack/salt-vim"
-Bundle "rodjek/vim-puppet"
-Bundle "groenewege/vim-less"
-Bundle "davidhalter/jedi-vim"
-Bundle "kchmck/vim-coffee-script"
-Bundle 'tobyS/pdv'
-Bundle 'elzr/vim-json'
+Plugin 'scrooloose/syntastic'
+Plugin 'amdt/vim-niji'
+Plugin 'saltstack/salt-vim'
+Plugin 'rodjek/vim-puppet'
+Plugin 'groenewege/vim-less'
+Plugin 'davidhalter/jedi-vim'
+Plugin 'kchmck/vim-coffee-script'
+Plugin 'tobyS/pdv'
+Plugin 'elzr/vim-json'
 " Clojure
-Bundle "tpope/vim-fireplace"
-Bundle "guns/vim-clojure-static"
-Bundle "guns/vim-clojure-highlight"
-Bundle "fwolanski/vim-clojure-conceal"
-Bundle 'tpope/vim-sexp-mappings-for-regular-people'
-Bundle 'guns/vim-sexp'
+Plugin 'tpope/vim-fireplace'
+Plugin 'guns/vim-clojure-static'
+Plugin 'guns/vim-clojure-highlight'
+Plugin 'fwolanski/vim-clojure-conceal'
+Plugin 'tpope/vim-sexp-mappings-for-regular-people'
+Plugin 'guns/vim-sexp'
+" ObjC
+Plugin 'eraserhd/vim-ios'
+Plugin 'msanders/cocoa.vim'
+Plugin 'Rip-Rip/clang_complete'
+
+call vundle#end()
 
 if has('autocmd')
   filetype plugin indent on    " enable plugins, detection and indenting
@@ -235,6 +241,9 @@ let g:solarized_contrast="high"
 let g:solarized_visibility="low"
 let g:solarized_termcolors=256
 silent! colorscheme solarized
+
+" Fix GitGutter?
+highlight clear SignColumn
 
 " -------------------------------------------------------------------
 " Set tab stuff

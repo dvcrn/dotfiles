@@ -1,9 +1,13 @@
 {
+	"in_process_packages":
+	[
+	],
 	"installed_packages":
 	[
 		"AdvancedNewFile",
 		"All Autocomplete",
 		"AutoPEP8",
+		"Babel",
 		"Base16 Color Schemes",
 		"Better CoffeeScript",
 		"BracketHighlighter",
@@ -32,11 +36,13 @@
 		"SublimeLinter-contrib-puppet",
 		"SublimeLinter-contrib-scss-lint",
 		"SublimeLinter-flake8",
+		"SublimeLinter-flow",
 		"SublimeLinter-json",
 		"SublimeLinter-php",
 		"SublimeLinter-pyyaml",
 		"SublimeREPL",
 		"Surround",
+		"Theme - Brogrammer",
 		"Theme - Nil",
 		"Theme - Soda",
 		"Theme - Spacegray",

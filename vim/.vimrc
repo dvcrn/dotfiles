@@ -27,8 +27,6 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 Plugin 'powerline/powerline'
 Plugin 'altercation/vim-colors-solarized'
-Plugin 'itchyny/landscape.vim'
-Plugin 'git://github.com/sjl/badwolf.git'
 Plugin 'scrooloose/nerdtree'
 Plugin 'kien/ctrlp.vim'
 Plugin 'tpope/vim-fugitive'
@@ -39,6 +37,7 @@ Plugin 'plasticboy/vim-markdown'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'Valloric/YouCompleteMe'
+Plugin 'nathanaelkane/vim-indent-guides'
 " Plugin 'vim-scripts/paredit.vim'
 " Plugin 'fholgado/minibufexpl.vim'
 Plugin 'tpope/vim-surround'
@@ -47,6 +46,7 @@ Plugin 'edkolev/tmuxline.vim'
 Plugin 'Lokaltog/vim-easymotion'
 Plugin 'mattn/emmet-vim'
 Plugin 'tpope/vim-repeat'
+Plugin 'Townk/vim-autoclose'
 " vim-snipmate requires vim-addon-mw-utils and tlib_vim
 Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'tomtom/tlib_vim'
@@ -54,6 +54,7 @@ Plugin 'garbas/vim-snipmate'
 Plugin 'mileszs/ack.vim'
 Plugin 'rking/ag.vim'
 Plugin 'tobyS/vmustache'
+Plugin 'vim-scripts/plist.vim'
 " Some snippets to get started
 Plugin 'honza/vim-snippets'
 " Syntax
@@ -66,6 +67,9 @@ Plugin 'davidhalter/jedi-vim'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'tobyS/pdv'
 Plugin 'elzr/vim-json'
+" Themes
+" Plugin 'itchyny/landscape.vim'
+" Plugin 'git://github.com/sjl/badwolf.git'
 " Clojure
 Plugin 'tpope/vim-fireplace'
 Plugin 'guns/vim-clojure-static'
@@ -77,6 +81,10 @@ Plugin 'guns/vim-sexp'
 Plugin 'eraserhd/vim-ios'
 Plugin 'msanders/cocoa.vim'
 Plugin 'Rip-Rip/clang_complete'
+" JSX / ES6 / Javascript
+" Plugin 'facebook/vim-flow'
+Plugin 'mxw/vim-jsx'
+Plugin 'moll/vim-node'
 
 call vundle#end()
 
@@ -469,6 +477,9 @@ let g:VimuxUseNearestPane = 0
 " Lambda concealing for vim
 let g:clojure_conceal_extras = 1
 
+" Use jsx in every js file
+let g:jsx_ext_required = 0
+
 " Vimux Mappings
 nmap <leader>vp :VimuxPromptCommand<cr>
 nmap <leader>vl :VimuxRunLastCommand<cr>
@@ -510,6 +521,17 @@ let g:syntastic_check_on_open=1
 let g:syntastic_enable_signs=1
 let g:syntastic_javascript_checkers = ['jslint']
 let g:syntastic_javascript_jslint_args = " "
+
+" YCM
+let g:ycm_autoclose_preview_window_after_insertion = 1
+
+" Fix autoclose?
+let g:AutoClosePumvisible = {"ENTER": "<C-Y>", "ESC": "<ESC>"}
+
+" Indent guides
+let g:indent_guides_start_level = 2
+let g:indent_guides_guide_size = 1
+
 
 " Fugitive
 nnoremap <leader>gs :Gstatus<CR>

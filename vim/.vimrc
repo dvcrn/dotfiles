@@ -27,6 +27,8 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 Plugin 'powerline/powerline'
 Plugin 'altercation/vim-colors-solarized'
+Plugin 'morhetz/gruvbox'
+Plugin 'w0ng/vim-hybrid'
 Plugin 'scrooloose/nerdtree'
 Plugin 'kien/ctrlp.vim'
 Plugin 'tpope/vim-fugitive'
@@ -83,8 +85,10 @@ Plugin 'msanders/cocoa.vim'
 Plugin 'Rip-Rip/clang_complete'
 " JSX / ES6 / Javascript
 " Plugin 'facebook/vim-flow'
+Plugin 'pangloss/vim-javascript'
 Plugin 'mxw/vim-jsx'
-Plugin 'moll/vim-node'
+Plugin 'jelera/vim-javascript-syntax'
+"Plugin 'moll/vim-node'
 
 call vundle#end()
 
@@ -127,6 +131,7 @@ set cmdheight=2                   " and use a two-line tall status line
 set showcmd                       " show the command
 set noshowmode                    " don't show the mode, vim-airline will do that for us
 set autoindent                    " turns it on
+set cursorline
 set smartindent                   " does the right thing (mostly) in programs
 set linespace=3                   " prefer a slight higher line height
 set linebreak                     " wrap intelligently, won't insert hard line breaks
@@ -245,10 +250,15 @@ highlight GitGutterChangeDelete ctermfg=yellow guifg=darkyellow
 " silent! colorscheme badwolf
 " Make the gutters darker than the background.
 " let g:badwolf_darkgutter = 1
+
+" Solarized
 let g:solarized_contrast="high"
 let g:solarized_visibility="low"
 let g:solarized_termcolors=256
 silent! colorscheme solarized
+" Hybrid
+" let g:hybrid_use_Xresources = 1
+" colorscheme hybrid
 
 " Fix GitGutter?
 highlight clear SignColumn
@@ -289,12 +299,6 @@ set pastetoggle=<F5>
 map <Leader>p :set paste<CR>o<esc>"*]p:set nopaste<cr>
 
 set clipboard=unnamed   " yank and paste with the system clipboard
-
-" show cursorline only in active window
-if has("autocmd")
-  autocmd WinLeave * set nocursorline
-  autocmd WinEnter * set cursorline
-endif
 
 " Map escape to jj -- much faster to reach and type
 imap jj <esc>
@@ -396,7 +400,7 @@ if has("autocmd")
   " syntax of these languages is fussy over tabs Vs spaces
   autocmd FileType make setlocal ts=8 sts=8 sw=8 noexpandtab
   autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
-  autocmd FileType javascript setlocal shiftwidth=4 tabstop=4
+  autocmd FileType javascript setlocal shiftwidth=2 tabstop=2
   autocmd FileType python setlocal shiftwidth=4 tabstop=4
   autocmd FileType php setlocal shiftwidth=4 tabstop=4
 

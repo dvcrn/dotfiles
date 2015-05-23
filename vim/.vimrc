@@ -28,6 +28,10 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'powerline/powerline'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'morhetz/gruvbox'
+Plugin 'croaker/mustang-vim'
+Plugin '29decibel/codeschool-vim-theme'
+Plugin 'chriskempson/vim-tomorrow-theme'
+Plugin 'ciaranm/inkpot'
 Plugin 'w0ng/vim-hybrid'
 Plugin 'scrooloose/nerdtree'
 Plugin 'kien/ctrlp.vim'
@@ -48,7 +52,7 @@ Plugin 'edkolev/tmuxline.vim'
 Plugin 'Lokaltog/vim-easymotion'
 Plugin 'mattn/emmet-vim'
 Plugin 'tpope/vim-repeat'
-Plugin 'Townk/vim-autoclose'
+Plugin 'jiangmiao/auto-pairs'
 " vim-snipmate requires vim-addon-mw-utils and tlib_vim
 Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'tomtom/tlib_vim'
@@ -88,6 +92,7 @@ Plugin 'Rip-Rip/clang_complete'
 Plugin 'pangloss/vim-javascript'
 Plugin 'mxw/vim-jsx'
 Plugin 'jelera/vim-javascript-syntax'
+Plugin 'marijnh/tern_for_vim'
 "Plugin 'moll/vim-node'
 
 call vundle#end()
@@ -472,6 +477,7 @@ let g:airline_theme='bubblegum'
 " Use buffers instead of tabs with jedi
 let g:jedi#use_tabs_not_buffers = 0
 let g:jedi#popup_on_dot = 0
+let g:jedi#completions_enabled = 0
 
 " Vimux settings
 let g:VimuxHeight = "30"

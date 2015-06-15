@@ -1,3 +1,10 @@
 Package Control.cache*
 *.cache*
 sublimetext/User/Package Control.cache/*
+.cache
+elpa
+auto-save-list
+eshell
+el-get
+custom.el
+*.elc

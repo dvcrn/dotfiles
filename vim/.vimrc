@@ -65,7 +65,7 @@ Plugin 'vim-scripts/plist.vim'
 Plugin 'honza/vim-snippets'
 " Syntax
 Plugin 'scrooloose/syntastic'
-Plugin 'amdt/vim-niji'
+Plugin 'dvcrn/vim-niji'
 Plugin 'saltstack/salt-vim'
 Plugin 'rodjek/vim-puppet'
 Plugin 'groenewege/vim-less'

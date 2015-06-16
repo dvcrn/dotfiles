@@ -5,6 +5,8 @@ tap "homebrew/dupes"
 tap "homebrew/versions"
 tap "homebrew/homebrew-php"
 tap "caskroom/cask"
+tap "rogual/neovim-dot-app"
+tap "neovim/neovim"
 
 # Cask
 brew "brew-cask"
@@ -45,6 +47,8 @@ brew "node"
 # Dev tools
 brew "tmux"
 brew "vim"
+brew "emacs", args: ['with-cocoa', 'with-gnutls', 'srgb']
+brew "neovim", args: ['HEAD']
 brew "wget"
 brew "reattach-to-user-namespace"
 brew "watch"
@@ -55,6 +59,7 @@ brew "tree"
 brew "z"
 brew "ag"
 brew "ack"
+brew "neovim-dot-app", args: ['HEAD']
 
 # Misc tools
 cask "osxfuse"

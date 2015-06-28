@@ -7,6 +7,7 @@ tap "homebrew/homebrew-php"
 tap "caskroom/cask"
 tap "rogual/neovim-dot-app"
 tap "neovim/neovim"
+tap "railwaycat/emacsmacport"
 
 # Cask
 brew "brew-cask"
@@ -30,6 +31,8 @@ brew "git-flow"
 # Languages
 brew "pypy"
 brew "python"
+brew "pyenv"
+brew "pyenv-virtualenv"
 brew "python3"
 brew "go"
 brew "leiningen"
@@ -47,6 +50,8 @@ brew "node"
 # Dev tools
 brew "tmux"
 brew "vim"
+brew "macvim"
+brew "emacs-mac"
 brew "emacs", args: ['with-cocoa', 'with-gnutls', 'srgb']
 brew "neovim", args: ['HEAD']
 brew "wget"

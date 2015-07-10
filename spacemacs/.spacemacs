@@ -32,12 +32,13 @@
      python
      html
      osx
+     typescript
      )
    ;; List of additional packages that will be installed wihout being
    ;; wrapped in a layer. If you need some configuration for these
    ;; packages then consider to create a layer, you can also put the
    ;; configuration in `dotspacemacs/config'.
-   dotspacemacs-additional-packages '(unicode-fonts)
+   dotspacemacs-additional-packages '(unicode-fonts ws-butler)
    ;; A list of packages and/or extensions that will not be install and loaded.
    dotspacemacs-excluded-packages '()
    ;; If non-nil spacemacs will delete any orphan packages, i.e. packages that
@@ -167,6 +168,11 @@ before layers configuration."
   ; (set-fontset-font "fontset-default"
   ;                   'japanese-jisx0208
   ;                   '("Hiragino Kaku Gothic Pro" . "iso10646-1"))
+
+  ; Javascript
+  (setq js-indent-level 2)
+  (setq javascript-indent-level 2)
+  (setq js2-basic-offset 2)
 )
 
 ;; Do not write anything past this comment. This is where Emacs will

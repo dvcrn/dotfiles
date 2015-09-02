@@ -22,17 +22,18 @@
      better-defaults
      emacs-lisp
      (c-c++ :variables c-c++-enable-clang-support t)
-     (git :variables
-           git-gutter-use-fringe t)
+     git
      markdown
+     version-control
      org
+     org-jira
      shell
      syntax-checking
      javascript
      python
      html
-     osx
      typescript
+     osx
      )
    ;; List of additional packages that will be installed wihout being
    ;; wrapped in a layer. If you need some configuration for these
@@ -89,6 +90,7 @@ before layers configuration."
                                :weight normal
                                :width normal
                                :powerline-scale 1)
+   powerline-default-seperator 'contour
    ;; The leader key
    dotspacemacs-leader-key "SPC"
    ;; The leader key accessible in `emacs state' and `insert state'

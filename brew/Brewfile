@@ -3,7 +3,7 @@
 # Taps
 tap "homebrew/dupes"
 tap "homebrew/versions"
-tap "homebrew/homebrew-php"
+tap "homebrew/fuse"
 tap "caskroom/cask"
 tap "rogual/neovim-dot-app"
 tap "neovim/neovim"
@@ -28,6 +28,12 @@ brew "hubflow"
 brew "git"
 brew "git-flow"
 
+# Libraries
+brew "msgpack"
+brew "libxml2"
+brew "libyaml"
+brew "openssl"
+
 # Languages
 brew "pypy"
 brew "python"
@@ -37,15 +43,6 @@ brew "python3"
 brew "go"
 brew "leiningen"
 brew "node"
-# brew "php56"
-
-# Servers and tools
-# brew "nginx"
-# brew "rabbitmq"
-# install postgis
-# install postgresql
-# install redis
-# install sqlite
 
 # Dev tools
 brew "tmux"
@@ -70,7 +67,31 @@ brew "neovim-dot-app", args: ['HEAD']
 cask "osxfuse"
 brew "ntfs-3g"
 
-# Libraries
-brew "libxml2"
-brew "libyaml"
-brew "openssl"
+# General Apps
+cask "skype"
+cask "slack"
+
+cask "google-chrome"
+cask "1password"
+cask "dropbox"
+
+cask "sourcetree"
+cask "little-snitch"
+
+cask "iterm2"
+cask "sublime-text3"
+cask "intellij-idea"
+
+cask "alfred"
+cask "launchbar"
+
+cask "shortcat"
+cask "apptivate"
+cask "hyperdock"
+cask "hyperswitch"
+cask "totalspaces"
+
+cask "google-japanese-ime"
+
+cask "asepsis"
+cask "java6"

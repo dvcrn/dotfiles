@@ -177,6 +177,11 @@ nnoremap <Right> :echoe "Use l"<CR>
 nnoremap <Up> :echoe "Use k"<CR>
 nnoremap <Down> :echoe "Use j"<CR>
 
+" nnoremap jj :echoe "Use xj"<CR>
+" nnoremap ll :echoe "Use xl"<CR>
+" nnoremap kk :echoe "Use xk"<CR>
+" nnoremap hh :echoe "Use xh"<CR>
+
 " map <up> <nop>
 " map <down> <nop>
 " map <left> <nop>
@@ -307,6 +312,9 @@ set clipboard=unnamed   " yank and paste with the system clipboard
 
 " Map escape to jj -- much faster to reach and type
 imap jj <esc>
+imap jk <esc>
+imap kj <esc>
+vno v <esc>
 
 " Highlight words to avoid in tech writing
 " =======================================
@@ -328,8 +336,8 @@ autocmd BufWinLeave * call clearmatches()
 " Searching
 " -------------------------------------------------------------------
 set gdefault            " apply substitutions globally by default. add `g` for old behavior
-set incsearch           " use incremental search
-set hlsearch            " highlight search results
+ set incsearch           " use incremental search
+ set hlsearch            " highlight search results
 set ignorecase          " ignore case when searching
 set smartcase           " ignore case if search string is all lower case, case-sensitve otherwise
 " remove search highlighting with <F3>

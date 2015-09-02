@@ -6,3 +6,4 @@
 *.codekit
 sftp-config.json
 *.vagrant/*
+.idea

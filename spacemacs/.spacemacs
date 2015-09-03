@@ -20,24 +20,35 @@
      themes-megapack
      auto-completion
      better-defaults
-     emacs-lisp
-					clojure
-     (c-c++ :variables c-c++-enable-clang-support t)
+
+					; Version stuff
      git
-     markdown
+					github
      version-control
+
+     markdown
      org
      org-jira
      shell
      syntax-checking
+
+					; Languages
+     emacs-lisp
+					clojure
+     (c-c++ :variables c-c++-enable-clang-support t)
      javascript
-     python
      html
-     typescript
-     osx
      php
+     typescript
 					erlang
      elixir
+					salt
+     python
+
+     osx
+
+					dash
+					chrome
      )
    ;; List of additional packages that will be installed wihout being
    ;; wrapped in a layer. If you need some configuration for these

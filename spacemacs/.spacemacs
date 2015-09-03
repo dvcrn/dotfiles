@@ -21,6 +21,7 @@
      auto-completion
      better-defaults
      emacs-lisp
+					clojure
      (c-c++ :variables c-c++-enable-clang-support t)
      git
      markdown
@@ -34,6 +35,9 @@
      html
      typescript
      osx
+     php
+					erlang
+     elixir
      )
    ;; List of additional packages that will be installed wihout being
    ;; wrapped in a layer. If you need some configuration for these
@@ -68,29 +72,27 @@ before layers configuration."
    ;; directory. A string value must be a path to an image format supported
    ;; by your Emacs build.
    ;; If the value is nil then no banner is displayed.
-   dotspacemacs-startup-banner 'official
+   dotspacemacs-startup-banner 'nil
    ;; List of items to show in the startup buffer. If nil it is disabled.
    ;; Possible values are: `recents' `bookmarks' `projects'."
    dotspacemacs-startup-lists '(recents projects)
    ;; List of themes, the first of the list is loaded when spacemacs starts.
    ;; Press <SPC> T n to cycle to the next theme in the list (works great
    ;; with 2 themes variants, one dark and one light)
-   dotspacemacs-themes '(sanityinc-tomorrow-eighties
-                         solarized-light
+   dotspacemacs-themes '(zenburn
+																									sanityinc-tomorrow-eighties
                          solarized-dark
-                         leuven
-                         monokai
-                         zenburn)
+                         monokai)
    ;; If non nil the cursor color matches the state color.
    dotspacemacs-colorize-cursor-according-to-state t
    ;; Default font. `powerline-scale' allows to quickly tweak the mode-line
    ;; size to make separators look not too crappy.
-   dotspacemacs-default-font '("Monaco"
-                               :size 18
+   dotspacemacs-default-font '("Hack"
+                               :size 14
                                :weight normal
                                :width normal
                                :powerline-scale 1)
-   powerline-default-seperator 'contour
+   powerline-default-seperator 'wave
    ;; The leader key
    dotspacemacs-leader-key "SPC"
    ;; The leader key accessible in `emacs state' and `insert state'
@@ -131,7 +133,7 @@ before layers configuration."
    ;; A value from the range (0..100), in increasing opacity, which describes
    ;; the transparency level of a frame when it's active or selected.
    ;; Transparency can be toggled through `toggle-transparency'.
-   dotspacemacs-active-transparency 90
+   dotspacemacs-active-transparency 70
    ;; A value from the range (0..100), in increasing opacity, which describes
    ;; the transparency level of a frame when it's inactive or deselected.
    ;; Transparency can be toggled through `toggle-transparency'.
@@ -157,24 +159,50 @@ before layers configuration."
    ;; Not used for now.
    dotspacemacs-default-package-repository nil
    ;; Don't open new files in same frame
-   ns-pop-up-frames t
+   ns-pop-up-frames nil
    )
   ;; User initialization goes here
   )
 
-(defun dotspacemacs/config ()
-  (global-linum-mode t)
-  (linum-relative-toggle)
-  (indent-guide-global-mode)
-  (unicode-fonts-setup)
-  ; (set-fontset-font "fontset-default"
-  ;                   'japanese-jisx0208
-  ;                   '("Hiragino Kaku Gothic Pro" . "iso10646-1"))
+(defun setup-indent (n)
+  ;; web development
+  (setq coffee-tab-width n) ; coffeescript
+  (setq javascript-indent-level n) ; javascript-mode
+  (setq js-indent-level n) ; js-mode
+  (setq js2-basic-offset n) ; js2-mode
+  (setq web-mode-markup-indent-offset n) ; web-mode, html tag in html file
+  (setq web-mode-css-indent-offset n) ; web-mode, css in html file
+  (setq web-mode-code-indent-offset n) ; web-mode, js code in html file
+  (setq css-indent-offset n) ; css-mode
+  )
 
-  ; Javascript
-  (setq js-indent-level 2)
-  (setq javascript-indent-level 2)
-  (setq js2-basic-offset 2)
+(defun silicon-studio-style ()
+		(interactive)
+		(message "Silicon Studio Style")
+  (setq indent_with_tabs t)
+		(setq-default indent-tabs-mode t
+																default-tab-width 1)
+		(setq jiralib-url "https://pj.siliconstudio.co.jp/jira")
+		(setup-indent 1)
+		)
+
+(defun personal-style ()
+		(interactive)
+		(message "Personal coding style")
+  (setq indent_with_tabs nil)
+		(setq-default indent-tabs-mode nil
+																default-tab-width 1)
+		(setup-indent 2)
+		)
+
+(defun dotspacemacs/config ()
+  ; (indent-guide-global-mode)
+		(global-linum-mode t)
+  (linum-relative-toggle)
+		(silicon-studio-style)
+
+  ; Elixir
+		(add-hook 'alchemist-mode-hook 'company-mode)
 )
 
 ;; Do not write anything past this comment. This is where Emacs will

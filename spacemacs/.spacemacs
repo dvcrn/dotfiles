@@ -150,7 +150,7 @@ before layers configuration."
    ;; `current' or `nil'. Default is `all'
    dotspacemacs-highlight-delimiters 'all
    ;; If non nil advises quit functions to keep server open when quitting.
-   dotspacemacs-persistent-server nil
+   dotspacemacs-persistent-server t
    ;; List of search tool executable names. Spacemacs uses the first installed
    ;; tool of the list. Supported tools are `ag', `pt', `ack' and `grep'.
    dotspacemacs-search-tools '("ag" "pt" "ack" "grep")
@@ -203,6 +203,9 @@ before layers configuration."
 
   ; Elixir
 		(add-hook 'alchemist-mode-hook 'company-mode)
+
+		; Get rid off odd pasint behavior
+		(fset 'evil-visual-update-x-selection 'ignore)
 )
 
 ;; Do not write anything past this comment. This is where Emacs will

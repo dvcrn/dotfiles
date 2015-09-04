@@ -19,7 +19,6 @@
      ;; ----------------------------------------------------------------
 					colors
      themes-megapack
-     auto-completion
      better-defaults
 				 ; IRC
 					erc
@@ -54,6 +53,8 @@
 
 					dash
 					chrome
+
+     auto-completion
      )
    ;; List of additional packages that will be installed wihout being
    ;; wrapped in a layer. If you need some configuration for these
@@ -217,14 +218,12 @@ before layers configuration."
   (linum-relative-toggle)
 		(silicon-studio-style)
 
-  ; Elixir
-		(add-hook 'alchemist-mode-hook 'company-mode)
-
 		; Get rid off odd pasint behavior
 		(fset 'evil-visual-update-x-selection 'ignore)
 
   ; get rid of symbolic link question
 		(setq vc-follow-symlinks t)
+		(global-company-mode)
 )
 
 ;; Do not write anything past this comment. This is where Emacs will

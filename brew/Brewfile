@@ -49,7 +49,7 @@ brew "tmux"
 brew "vim"
 brew "macvim"
 brew "emacs-mac"
-brew "emacs", args: ['with-cocoa', 'with-gnutls', 'srgb']
+# brew "emacs", args: ['with-cocoa', 'with-gnutls', 'srgb']
 brew "neovim", args: ['HEAD']
 brew "wget"
 brew "reattach-to-user-namespace"

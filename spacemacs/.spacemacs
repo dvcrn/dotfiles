@@ -20,6 +20,8 @@
      themes-megapack
      auto-completion
      better-defaults
+				 ; IRC
+					erc
 
 					; Version stuff
      git
@@ -217,6 +219,9 @@ before layers configuration."
 
 		; Get rid off odd pasint behavior
 		(fset 'evil-visual-update-x-selection 'ignore)
+
+  ; get rid of symbolic link question
+		(setq vc-follow-symlinks t)
 )
 
 ;; Do not write anything past this comment. This is where Emacs will

@@ -45,7 +45,9 @@
 					erlang
      elixir
 					salt
+
      python
+					django
 
      osx
 

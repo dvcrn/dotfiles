@@ -314,6 +314,7 @@ set clipboard=unnamed   " yank and paste with the system clipboard
 imap jj <esc>
 imap jk <esc>
 imap kj <esc>
+imap fd <esc>
 vno v <esc>
 
 " Highlight words to avoid in tech writing

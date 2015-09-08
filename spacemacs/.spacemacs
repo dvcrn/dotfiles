@@ -126,9 +126,13 @@ before layers configuration."
    dotspacemacs-command-key ":"
    ;; If non nil then `ido' replaces `helm' for some commands. For now only
    ;; `find-files' (SPC f f) is replaced.
+   dotspacemacs-auto-save-file-location 'cache
    dotspacemacs-use-ido nil
    ;; If non nil the paste micro-state is enabled. When enabled pressing `p`
    ;; several times cycle between the kill ring content.
+   dotspacemacs-helm-resize nil
+   dotspacemacs-helm-no-header nil
+   dotspacemacs-helm-position 'bottom
    dotspacemacs-enable-paste-micro-state nil
    ;; Guide-key delay in seconds. The Guide-key is the popup buffer listing
    ;; the commands bound to the current keystrokes.
@@ -136,6 +140,7 @@ before layers configuration."
    ;; If non nil a progress bar is displayed when spacemacs is loading. This
    ;; may increase the boot time on some systems and emacs builds, set it to
    ;; nil ;; to boost the loading time.
+   dotspacemacs-which-key-position 'bottom
    dotspacemacs-loading-progress-bar t
    ;; If non nil the frame is fullscreen when Emacs starts up.
    ;; (Emacs 24.4+ only)
@@ -178,7 +183,6 @@ before layers configuration."
    ;; Don't open new files in same frame
    ns-pop-up-frames nil
    )
-  ;; User initialization goes here
   )
 
 (defun setup-indent (n)
@@ -223,8 +227,10 @@ before layers configuration."
            :nick "dvcrn"
            :password "*****"))
 
+(defun dotspacemacs/user-init ()
+)
 
-(defun dotspacemacs/config ()
+(defun dotspacemacs/user-config ()
   ; (indent-guide-global-mode)
 		;(global-linum-mode t)
   (linum-relative-toggle)

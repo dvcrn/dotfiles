@@ -17,15 +17,15 @@
      ;; Uncomment some layer names and press <SPC f e R> (Vim style) or
      ;; <M-m f e R> (Emacs style) to install them.
      ;; ----------------------------------------------------------------
-					colors
+     colors
      themes-megapack
      better-defaults
-				 ; IRC
-					erc
+     ; IRC
+     erc
 
-					; Version stuff
+     ; Version stuff
      git
-					github
+     github
      version-control
 
      markdown
@@ -34,25 +34,25 @@
      shell
      syntax-checking
 
-					; Languages
+     ; Languages
      emacs-lisp
-					clojure
+     clojure
      (c-c++ :variables c-c++-enable-clang-support t)
      javascript
      html
      php
      typescript
-					erlang
+     erlang
      elixir
-					salt
+     salt
 
      python
-					django
+     django
 
      osx
 
-					dash
-					chrome
+     dash
+     chrome
 
      auto-completion
      )
@@ -212,11 +212,24 @@ before layers configuration."
 		(setup-indent 2)
 		)
 
+(defun erc-gitter-connect ()
+  "Quick connect to irc.gitter.im"
+  (interactive)
+  ;; clean up old buffers if they exist
+  (dolist (buf '("irc.gitter.im:6667" "#syl20bnr/spacemacs"))
+    (when (get-buffer buf) (kill-buffer buf)))
+  (erc-ssl :server "irc.gitter.im"
+           :port 6667
+           :nick "dvcrn"
+           :password "*****"))
+
+
 (defun dotspacemacs/config ()
   ; (indent-guide-global-mode)
 		;(global-linum-mode t)
   (linum-relative-toggle)
-		(silicon-studio-style)
+		;(silicon-studio-style)
+		(personal-style)
 
 		; Get rid off odd pasint behavior
 		(fset 'evil-visual-update-x-selection 'ignore)

@@ -267,13 +267,14 @@ values."
   "Initialization function for user code.
 It is called immediately after `dotspacemacs/init'.  You are free to put any
 user code."
+		(setq evil-escape-delay 0.2)
   )
 
 (defun dotspacemacs/user-config ()
   "Configuration function for user code.
  This function is called at the very end of Spacemacs initialization after
 layers configuration. You are free to put any user code."
-; (indent-guide-global-mode)
+		; (indent-guide-global-mode)
   ;(global-linum-mode t)
   (linum-relative-toggle)
   ;(silicon-studio-style)
@@ -285,7 +286,9 @@ layers configuration. You are free to put any user code."
   ; get rid of symbolic link question
   (setq vc-follow-symlinks t)
   (global-company-mode)
-  (setq-default git-magit-status-fullscreen t)
+
+  (setq-default
+   git-magit-status-fullscreen t)
 )
 
 ;; Do not write anything past this comment. This is where Emacs will

@@ -1,5 +1,0 @@
-{
-  "default_extend_env": {
-    "PATH": "{PATH}:/opt/boxen/homebrew/bin"
-  },
-}

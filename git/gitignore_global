@@ -7,3 +7,4 @@
 sftp-config.json
 *.vagrant/*
 .idea
+.tern-port

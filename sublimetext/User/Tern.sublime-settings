@@ -1,6 +1,0 @@
-{
-    "tern_argument_hints": true,
-    "tern_argument_hints_type": "tooltip",
-    "tern_argument_completion": true,
-    "tern_command": ["node", "/usr/local/bin/tern"],
-}

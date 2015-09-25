@@ -25,7 +25,7 @@ Everything that is not part of a layer.
 These packages will be installed through package control
 """
 additional_packages = [
-    "VintageLines",
+    #"VintageLines",
     "WakaTime"
 ]
 

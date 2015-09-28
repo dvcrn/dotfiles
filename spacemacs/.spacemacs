@@ -26,6 +26,7 @@ values."
      auto-completion
      better-defaults
 
+     ;; Languages
      emacs-lisp
      clojure
      (c-c++ :variables c-c++-enable-clang-support t)
@@ -38,25 +39,26 @@ values."
      salt
      python
      django
-
      osx
 
-     ; Apps
+     ;; Apps
      dash
      chrome
 
-     ; Version control
+     ;; Version control
      git
      github
      version-control
 
-    ; etc
+     ;; etc
      shell
      erc
+     jabber
+     perspectives
+     wakatime
 
-     ; frameworks
+     ;; frameworks
      react
-
 
      ;; markdown
      org
@@ -110,12 +112,13 @@ values."
    ;; Press <SPC> T n to cycle to the next theme in the list (works great
    ;; with 2 themes variants, one dark and one light)
    dotspacemacs-themes '(monokai
-                         spacemacs-dark
-                         spacemacs-light
+                         ;spacemacs-dark
+                         ;spacemacs-light
                          solarized-light
-                         solarized-dark
-                         leuven
-                         zenburn)
+                         ;solarized-dark
+                         ;leuven
+                         ;zenburn
+                         )
    ;; If non nil the cursor color matches the state color.
    dotspacemacs-colorize-cursor-according-to-state t
    ;; Default font. `powerline-scale' allows to quickly tweak the mode-line
@@ -274,22 +277,48 @@ user code."
   "Configuration function for user code.
  This function is called at the very end of Spacemacs initialization after
 layers configuration. You are free to put any user code."
-		; (indent-guide-global-mode)
-  ;(global-linum-mode t)
+		;; (indent-guide-global-mode)
+  ;; (global-linum-mode t)
   (linum-relative-toggle)
   ;(silicon-studio-style)
   (personal-style)
 
-  ; Get rid off odd pasting behavior
+  ;; Get rid off odd pasting behavior
   (fset 'evil-visual-update-x-selection 'ignore)
 
-  ; get rid of symbolic link question
+  ;; get rid of symbolic link question
   (setq vc-follow-symlinks t)
   (global-company-mode)
 
+  ;; Always launch magit in fullscreen
   (setq-default
    git-magit-status-fullscreen t)
+
+  ;; Jabber stuff
+  (setq ssl-program-name "gnutls-cli"
+        ssl-program-arguments '("--insecure" "-p" service host)
+        ssl-certificate-verification-policy 1)
+
+  (setq jabber-account-list '(("dmohl@chat.facebook.com"
+                               (:port . 5223)
+                               (:password . "*****")
+                               (:connection-type . ssl))))
 )
 
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(wakatime-api-key
+   "                                                                 (0.104.0)"))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(default ((t (:family "Hack" :foundry "nil" :slant normal :weight normal :height 141 :width normal))))
+ '(company-tooltip-common ((t (:inherit company-tooltip :weight bold :underline nil))))
+ '(company-tooltip-common-selection ((t (:inherit company-tooltip-selection :weight bold :underline nil)))))

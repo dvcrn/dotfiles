@@ -294,31 +294,10 @@ layers configuration. You are free to put any user code."
   (setq-default
    git-magit-status-fullscreen t)
 
-  ;; Jabber stuff
-  (setq ssl-program-name "gnutls-cli"
-        ssl-program-arguments '("--insecure" "-p" service host)
-        ssl-certificate-verification-policy 1)
+  (add-to-list 'auto-mode-alist '("\\.js\\'" . react-mode))
 
-  (setq jabber-account-list '(("dmohl@chat.facebook.com"
-                               (:port . 5223)
-                               (:password . "*****")
-                               (:connection-type . ssl))))
+  (setq wakatime-api-key "*****")
 )
 
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(wakatime-api-key
-   "                                                                 (0.104.0)"))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(default ((t (:family "Hack" :foundry "nil" :slant normal :weight normal :height 141 :width normal))))
- '(company-tooltip-common ((t (:inherit company-tooltip :weight bold :underline nil))))
- '(company-tooltip-common-selection ((t (:inherit company-tooltip-selection :weight bold :underline nil)))))

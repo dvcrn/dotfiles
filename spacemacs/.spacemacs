@@ -20,12 +20,12 @@
      erlang
      elixir
      salt
+					puppet
      python
      django
      osx
 
      ;; Apps
-     dash
      chrome
 
      ;; Version control
@@ -39,6 +39,7 @@
      jabber
      perspectives
      wakatime
+					emoji
 
      ;; frameworks
      react

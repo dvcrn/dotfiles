@@ -40,7 +40,7 @@
      perspectives
      wakatime
 					emoji
-					(colors :variables colors-enable-nyan-cat-progress-bar t)
+					colors
 
      ;; frameworks
      react

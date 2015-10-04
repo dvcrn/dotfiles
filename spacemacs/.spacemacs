@@ -40,6 +40,7 @@
      perspectives
      wakatime
 					emoji
+					(colors :variables colors-enable-nyan-cat-progress-bar t)
 
      ;; frameworks
      react
@@ -176,6 +177,9 @@
   (add-to-list 'auto-mode-alist '("\\.js\\'" . react-mode))
 
   (setq wakatime-api-key "*****")
+
+		;; rainbow mode
+		(rainbow-mode)
 )
 
 ;; Do not write anything past this comment. This is where Emacs will

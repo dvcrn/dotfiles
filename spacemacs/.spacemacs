@@ -47,13 +47,10 @@
 
      ;; markdown
      org
-     (shell :variables
-            org-enable-github-support t
-            shell-default-height 30
-            shell-default-position 'bottom)
      spell-checking
      syntax-checking
      version-control
+     ;; vim-powerline
      )
    dotspacemacs-additional-packages '()
    dotspacemacs-excluded-packages '()
@@ -180,6 +177,8 @@
 
 		;; rainbow mode
 		(rainbow-mode)
+
+		(global-set-key (kbd "M-s-SPC") nil)
 )
 
 ;; Do not write anything past this comment. This is where Emacs will

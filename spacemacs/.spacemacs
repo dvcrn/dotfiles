@@ -117,7 +117,7 @@
   (setq css-indent-offset n) ; css-mode
   )
 
-(defun silicon-studio-style ()
+(defun work-style ()
   (interactive)
   (message "Silicon Studio Style")
   (setq indent_with_tabs t)
@@ -157,7 +157,7 @@
 		;; (indent-guide-global-mode)
   ;; (global-linum-mode t)
   (linum-relative-toggle)
-  ;(silicon-studio-style)
+  ;(work-style)
   (personal-style)
 
   ;; Get rid off odd pasting behavior
@@ -172,7 +172,6 @@
    git-magit-status-fullscreen t)
 
   (add-to-list 'auto-mode-alist '("\\.js\\'" . react-mode))
-
   (setq wakatime-api-key "*****")
 
 		;; rainbow mode

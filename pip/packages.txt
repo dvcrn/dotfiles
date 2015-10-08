@@ -1,9 +1,14 @@
 flake8
 pep8
 autoflake
+
 ipython
+anaconda-mode
+
 jedi
 json-rpc
-service-factory
+
 virtualenv
+
+service-factory
 yapf

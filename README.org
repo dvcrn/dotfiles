@@ -1,0 +1,24 @@
+* David's dotfiles
+** brew
+Apps and stuff that should be installed through brew (and cask) on all of my systems. To install, use [[https://github.com/Homebrew/homebrew-bundle][brew-bundle]].
+
+** git
+holds gitconfig and gitignore_global. Sets default editor, author name, credential helper and other stuff for git usage. Needs to get symlinked to =~/.gitconfig=  and =~/.gitignore_global=. 
+
+** pip
+Basic python packages that have to be OS global and not virtualenv specific. Install with ~pip install -r packages.txt~
+
+** tmux
+Adds tmux configuration to work with vim-friendly shorcuts and a better style. Comment the last line inside ~.tmux.conf~ in to use vim-tmuxline instead. Has to go under =~/.tmux.conf=
+
+** vim
+Awesome vim config you should try out. Put it (and .gvimrc) under =~/.vimrc= and =~/.gvimrc=. Install plugins with [[https://github.com/VundleVim/Vundle.vim][Vundle]].
+
+** spacemacs
+My spacemacs config. Heavily opinionated. [[https://github.com/syl20bnr/spacemacs][Install spacemacs here.]] and symlink to =~/.spacemacs=.
+
+** sublimious / sublime text
+Config is managed by [[https://github.com/dvcrn/sublimious][sublimious]]. Symlink to =~/.sublimious= and install sublimious through package control.
+
+** iTerm2
+iTerm2 config. Just point iTerm to the folder holding the file and you should be good

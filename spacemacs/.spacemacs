@@ -46,7 +46,8 @@
      react
 
      ;; markdown
-     org
+     (org :variables
+          org-enable-github-support t)
      spell-checking
      syntax-checking
      version-control
@@ -62,8 +63,8 @@
    dotspacemacs-verbose-loading nil
    dotspacemacs-startup-banner '999
    dotspacemacs-startup-lists '(recents projects)
-   dotspacemacs-themes '(monokai
-                         ;spacemacs-dark
+   dotspacemacs-themes '(spacemacs-dark
+                         monokai
                          ;spacemacs-light
                          solarized-light
                          ;solarized-dark
@@ -117,18 +118,18 @@
   (setq css-indent-offset n) ; css-mode
   )
 
-(defun work-style ()
+(defun tab-style ()
   (interactive)
-  (message "Silicon Studio Style")
+  (message "Tab indendation style")
   (setq indent_with_tabs t)
   (setq-default indent-tabs-mode t
                 default-tab-width 1)
   (setup-indent 1)
   )
 
-(defun personal-style ()
+(defun space-style ()
   (interactive)
-  (message "Personal coding style")
+  (message "Space indendation style")
   (setq indent_with_tabs nil)
   (setq-default indent-tabs-mode nil
                 default-tab-width 1)
@@ -144,6 +145,7 @@
   ;; clean up old buffers if they exist
   (dolist (buf '("irc.gitter.im:6667" "#syl20bnr/spacemacs"))
     (when (get-buffer buf) (kill-buffer buf)))
+
   (erc-ssl :server "irc.gitter.im"
            :port 6667
            :nick "dvcrn"
@@ -157,8 +159,7 @@
 		;; (indent-guide-global-mode)
   ;; (global-linum-mode t)
   (linum-relative-toggle)
-  ;(work-style)
-  (personal-style)
+  (space-style)
 
   ;; Get rid off odd pasting behavior
   (fset 'evil-visual-update-x-selection 'ignore)

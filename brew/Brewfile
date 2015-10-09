@@ -1,4 +1,4 @@
-# brew tap Homebrew/brewdler ; has to come first.
+# brew tap Homebrew/bundle ; has to come first.
 
 # Taps
 tap "homebrew/dupes"
@@ -62,6 +62,20 @@ brew "z"
 brew "ag"
 brew "ack"
 brew "neovim-dot-app", args: ['HEAD']
+
+# Quicklook plugins
+# https://github.com/sindresorhus/quick-look-plugins
+cask "qlcolorcode"
+cask "qlstephen"
+cask "qlmarkdown"
+cask "quicklook-json"
+cask "qlprettypatch"
+cask "quicklook-csv"
+cask "betterzipql"
+cask "qlimagesize"
+cask "webpquicklook"
+cask "suspicious-package"
+cask "provisionql"
 
 # Misc tools
 cask "osxfuse"

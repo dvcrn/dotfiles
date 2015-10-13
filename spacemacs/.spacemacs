@@ -6,6 +6,7 @@
    dotspacemacs-configuration-layer-path '()
    dotspacemacs-configuration-layers
    '(
+     osx
      auto-completion
      better-defaults
 
@@ -23,7 +24,6 @@
 					puppet
      python
      django
-     osx
 
      ;; Apps
      chrome
@@ -38,12 +38,16 @@
      erc
      jabber
      perspectives
-     wakatime
 					emoji
 					colors
+     (wakatime :variables
+               wakatime-api-key "*****"
+               wakatime-cli-path "/usr/local/bin/wakatime"
+               wakatime-python-bin "/usr/local/bin/python")
 
      ;; frameworks
      react
+     jekyll
 
      ;; markdown
      (org :variables
@@ -177,8 +181,6 @@
 
 		;; rainbow mode
 		(rainbow-mode)
-
-		(global-set-key (kbd "M-s-SPC") nil)
 )
 
 ;; Do not write anything past this comment. This is where Emacs will

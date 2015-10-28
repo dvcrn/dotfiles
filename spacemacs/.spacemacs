@@ -37,7 +37,6 @@
      shell
      erc
      jabber
-     perspectives
 					emoji
 					colors
      (wakatime :variables
@@ -155,6 +154,30 @@
            :nick "dvcrn"
            :password "*****"))
 
+(defun figwheel-repl ()
+  (interactive)
+  (save-some-buffers)
+  (with-current-buffer (cider-current-repl-buffer)
+    (goto-char (point-max))
+    (insert "(require 'figwheel-sidecar.repl-api)
+             (figwheel-sidecar.repl-api/cljs-repl)")
+    (cider-repl-return)))
+
+(defun ambly-repl ()
+		(interactive)
+		(with-current-buffer (cider-current-repl-buffer)
+				(goto-char (point-max))
+				(insert "
+(require
+	'[cljs.repl :as repl]
+	'[cemerick.piggieback]
+	'[ambly.core :as ambly])
+
+(cemerick.piggieback/cljs-repl
+	(ambly/repl-env :choose-first-discovered true))")
+(cider-repl-return)
+				))
+
 (defun dotspacemacs/user-init ()
 		(setq evil-escape-delay 0.2)
   )
@@ -176,11 +199,13 @@
   (setq-default
    git-magit-status-fullscreen t)
 
-  (add-to-list 'auto-mode-alist '("\\.js\\'" . react-mode))
-  (setq wakatime-api-key "*****")
-
 		;; rainbow mode
 		(rainbow-mode)
+
+		;; Make clojure prettier
+		(setq clojure-enable-fancify-symbols t)
+
+  ;(add-to-list 'auto-mode-alist '("\\.js\\'" . react-mode))
 )
 
 ;; Do not write anything past this comment. This is where Emacs will

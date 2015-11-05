@@ -33,6 +33,11 @@
      github
      version-control
 
+     ;; vim
+     ;; vim-powerline
+     evil-snipe
+     unimpaired
+
      ;; etc
      shell
      erc

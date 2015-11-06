@@ -60,6 +60,8 @@
      syntax-checking
      version-control
      ;; vim-powerline
+
+     themes-megapack
      )
    dotspacemacs-additional-packages '()
    dotspacemacs-excluded-packages '()
@@ -71,14 +73,10 @@
    dotspacemacs-verbose-loading nil
    dotspacemacs-startup-banner '999
    dotspacemacs-startup-lists '(recents projects)
-   dotspacemacs-themes '(spacemacs-dark
-                         monokai
-                         ;spacemacs-light
-                         solarized-light
-                         ;solarized-dark
-                         ;leuven
-                         ;zenburn
-                         )
+   dotspacemacs-themes '(zenburn
+                         misterioso
+                         spacemacs-dark
+                         monokai)
    dotspacemacs-colorize-cursor-according-to-state t
    dotspacemacs-default-font '("Hack"
                                :size 14
@@ -92,8 +90,8 @@
    dotspacemacs-command-key ":"
    dotspacemacs-auto-save-file-location 'cache
    dotspacemacs-use-ido nil
-   dotspacemacs-helm-resize nil
-   dotspacemacs-helm-no-header nil
+   dotspacemacs-helm-resize t
+   dotspacemacs-helm-no-header t
    dotspacemacs-helm-position 'bottom
    dotspacemacs-enable-paste-micro-state nil
    dotspacemacs-which-key-delay 0.4
@@ -108,7 +106,7 @@
    dotspacemacs-smooth-scrolling t
    dotspacemacs-smartparens-strict-mode nil
    dotspacemacs-highlight-delimiters 'all
-   dotspacemacs-persistent-server nil
+   dotspacemacs-persistent-server t
    dotspacemacs-search-tools '("ag" "pt" "ack" "grep")
    dotspacemacs-default-package-repository nil
    ))
@@ -189,7 +187,7 @@
 
 (defun dotspacemacs/user-config ()
 		;; (indent-guide-global-mode)
-  ;; (global-linum-mode t)
+  (global-linum-mode t)
   (linum-relative-toggle)
   (space-style)
 
@@ -211,6 +209,8 @@
 		(setq clojure-enable-fancify-symbols t)
 
   ;(add-to-list 'auto-mode-alist '("\\.js\\'" . react-mode))
+
+  (setq powerline-default-separator 'alternate)
 )
 
 ;; Do not write anything past this comment. This is where Emacs will

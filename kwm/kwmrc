@@ -12,13 +12,13 @@
 
 # Set default values for screen padding
 kwmc config padding top 40
-kwmc config padding bottom 40
-kwmc config padding left 20
-kwmc config padding right 20
+kwmc config padding bottom 20
+kwmc config padding left 10
+kwmc config padding right 10
 
 # Set default values for container gaps
-kwmc config gap vertical 20
-kwmc config gap horizontal 20
+kwmc config gap vertical 10
+kwmc config gap horizontal 10
 
 # Let Kwm listen for hotkeys
 kwmc config hotkeys enable

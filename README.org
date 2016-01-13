@@ -3,7 +3,7 @@
 Apps and stuff that should be installed through brew (and cask) on all of my systems. To install, use [[https://github.com/Homebrew/homebrew-bundle][brew-bundle]].
 
 ** git
-holds gitconfig and gitignore_global. Sets default editor, author name, credential helper and other stuff for git usage. Needs to get symlinked to =~/.gitconfig=  and =~/.gitignore_global=. 
+holds gitconfig and gitignore_global. Sets default editor, author name, credential helper and other stuff for git usage. Needs to get symlinked to =~/.gitconfig=  and =~/.gitignore_global=.
 
 ** pip
 Basic python packages that have to be OS global and not virtualenv specific. Install with ~pip install -r packages.txt~
@@ -22,3 +22,6 @@ Config is managed by [[https://github.com/dvcrn/sublimious][sublimious]]. Symlin
 
 ** iTerm2
 iTerm2 config. Just point iTerm to the folder holding the file and you should be good
+
+** kwm
+config for [kwm](https://github.com/koekeishiya/kwm). Symlink to ~/.kwm/kwmrc

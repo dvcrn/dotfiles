@@ -24,4 +24,7 @@ Config is managed by [[https://github.com/dvcrn/sublimious][sublimious]]. Symlin
 iTerm2 config. Just point iTerm to the folder holding the file and you should be good
 
 ** kwm
-config for [kwm](https://github.com/koekeishiya/kwm). Symlink to ~/.kwm/kwmrc
+config for [[kwm][https://github.com/koekeishiya/kwm]]. Symlink to =~/.kwm/kwmrc=
+
+** fisherman
+experimental fishshell config based on [[fisherman][https://github.com/fisherman/fisherman]]. Symlink entire folder to =~/.config/fisherman= and install fisherman.

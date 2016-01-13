@@ -28,3 +28,6 @@ config for [[kwm][https://github.com/koekeishiya/kwm]]. Symlink to =~/.kwm/kwmrc
 
 ** fisherman
 experimental fishshell config based on [[fisherman][https://github.com/fisherman/fisherman]]. Symlink entire folder to =~/.config/fisherman= and install fisherman.
+
+** peco
+config for peco search. Symlink the config into =~/.config/peco/config.json=

@@ -1,18 +1,23 @@
 # name: L
-function _git_branch_name
-  echo (command git symbolic-ref HEAD ^/dev/null | sed -e 's|^refs/heads/||')
-end
-
-function _is_git_dirty
-  echo (command git status -s --ignore-submodules=dirty ^/dev/null)
-end
+set -g __fish_git_prompt_show_informative_status 1
+set -g __fish_git_prompt_char_upstream_prefix ""
+set -g __fish_git_prompt_char_upstream_suffix ""
+set -g __fish_git_prompt_hide_untrackedfiles 1
+set -g __fish_git_prompt_char_upstream_ahead "⇡"
+set -g __fish_git_prompt_char_upstream_behind "⇣"
+set -g __fish_git_prompt_char_untrackedfiles "*"
+set -g __fish_git_prompt_char_dirtystate "+"
+set -g __fish_git_prompt_char_stagedstate "."
+set -g __fish_git_prompt_char_cleanstate ""
+set -g __fish_git_prompt_char_stateseparator ""
+set -g __fish_git_prompt_char_upstream_prefix ""
 
 function _arrow
   switch $fish_bind_mode
     case default
       set_color red; echo "λ"
     case insert
-      set_color blue; echo "λ"
+      set_color magenta; echo "λ"
     case visual
       set_color green; echo "λ"
   end
@@ -23,10 +28,15 @@ function _vim_state
     case default
       set_color red; echo "[n]"
     case insert
-      set_color blue; echo "[i]"
+      set_color magenta; echo "[i]"
     case visual
       set_color green; echo "[v]"
   end
+end
+
+function _git_state
+  #echo (command git symbolic-ref HEAD ^/dev/null | sed -e 's|^refs/heads/||')
+  echo (__fish_git_prompt " " | tr -d ")" | tr -d "(" | tr -d " ")
 end
 
 function fish_prompt
@@ -37,15 +47,6 @@ function fish_prompt
 
   set -l cwd $blue(prompt_pwd)
 
-  if [ (_git_branch_name) ]
-    set git_info $green(_git_branch_name)
-    set git_info ":$git_info"
-
-    if [ (_is_git_dirty) ]
-      set -l dirty "*"
-      set git_info "$git_info$dirty"
-    end
-  end
-
-  echo -n -s (_vim_state) ' ' $cwd $git_info $normal ' ' (_arrow) ' '
+  echo $cwd $normal(_git_state)
+  echo -n -s (_vim_state) ' ' (_arrow) ' ' $normal
 end

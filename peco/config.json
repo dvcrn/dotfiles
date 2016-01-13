@@ -1,0 +1,13 @@
+{
+    "Action": {
+        "selectAllAndFinish": [
+            "peco.SelectAll",
+            "peco.Finish"
+        ]
+    },
+    "Keymap": {
+        "Enter": "selectAllAndFinish",
+        "C-k": "peco.SelectUp",
+        "C-j": "peco.SelectDown"
+    }
+}

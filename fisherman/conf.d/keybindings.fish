@@ -7,6 +7,8 @@ function kbdngs
     fish_vi_key_bindings
     bind -M insert -m default fd force-repaint
     bind -M insert \cr 'peco_select_history (commandline -b)'
+    bind -M insert ! __history_previous_command
+    bind -M insert '$' __history_previous_command_arguments
 end
 
 set -g fish_key_bindings kbdngs

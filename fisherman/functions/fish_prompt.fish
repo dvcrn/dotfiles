@@ -35,7 +35,6 @@ function _vim_state
 end
 
 function _git_state
-  #echo (command git symbolic-ref HEAD ^/dev/null | sed -e 's|^refs/heads/||')
   echo (__fish_git_prompt " " | tr -d ")" | tr -d "(" | tr -d " ")
 end
 
@@ -47,6 +46,7 @@ function fish_prompt
 
   set -l cwd $blue(prompt_pwd)
 
+  echo ''
   echo $cwd $normal(_git_state)
   echo -n -s (_vim_state) ' ' (_arrow) ' ' $normal
 end

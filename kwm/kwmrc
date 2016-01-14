@@ -46,7 +46,7 @@ kwmc config focus mouse-follows enable
 kwmc config cycle-focus all
 
 # Window can be made floating through drag&drop
-# kwmc config dragndrop enable
+kwmc config dragndrop disable
 
 # Allow Kwm to tile windows
 kwmc config tiling enable

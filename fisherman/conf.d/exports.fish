@@ -13,6 +13,7 @@ set -x PYTHONPATH (brew --prefix)"/lib/python2.7/site-packages:$PYTHONPATH"
 
 set -x VISUAL atom
 set -x EDITOR nvim
+set -x TERM xterm-256
 
 function serve
   python -m SimpleHTTPServer 8000

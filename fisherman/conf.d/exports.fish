@@ -45,7 +45,7 @@ function emacs
   if test $number -gt 1
     reattach-to-user-namespace emacsclient -n $argv[1]
   else
-    reattach-to-user-namespace open -a /usr/local/Cellar/emacs-mac/emacs-24.5-z-mac-5.10/Emacs.app $argv[1]
+    reattach-to-user-namespace open -a /usr/local/Cellar/emacs-mac/emacs-24.5-z-mac-5.13/Emacs.app $argv[1]
   end
 end
 

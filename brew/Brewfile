@@ -98,6 +98,7 @@ cask "little-snitch"
 cask "iterm2"
 cask "sublime-text3"
 cask "intellij-idea"
+cask "atom"
 
 cask "alfred"
 cask "launchbar"

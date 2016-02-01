@@ -96,12 +96,14 @@ cask "sourcetree"
 cask "little-snitch"
 
 cask "iterm2"
+cask "cathode"
 cask "sublime-text3"
 cask "intellij-idea"
 cask "atom"
 
 cask "alfred"
 cask "launchbar"
+cask "bartender"
 
 cask "shortcat"
 cask "apptivate"
@@ -111,5 +113,5 @@ cask "totalspaces"
 
 cask "google-japanese-ime"
 
-cask "asepsis"
+# cask "asepsis"
 cask "java"

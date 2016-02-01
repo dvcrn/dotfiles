@@ -16,7 +16,7 @@ layers = [
     'osx',
     'git',
     'python',
-    'javascript',
+    # 'javascript',
     'markdown',
     'php',
     'coffee',

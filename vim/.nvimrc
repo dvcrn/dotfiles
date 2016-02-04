@@ -227,11 +227,6 @@ set termencoding=utf-8  " we like utf-8
 set encoding=utf-8
 
 " -------------------------------------------------------------------
-" Encryption settings
-" -------------------------------------------------------------------
-set cryptmethod=blowfish " Strong encryption is good
-
-" -------------------------------------------------------------------
 " What to do with files and focus
 " -------------------------------------------------------------------
 set autowrite           " write out old file when switching between files

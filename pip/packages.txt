@@ -12,3 +12,5 @@ virtualenv
 
 service-factory
 yapf
+
+neovim

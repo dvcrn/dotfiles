@@ -4,7 +4,7 @@
 [core]
   editor = nvim
   whitespace = fix,-indent-with-non-tab,trailing-space,cr-at-eol
-  excludesfile = ~/.gitignore_global
+	excludesfile = /Users/david/.gitignore_global
 [web]
   browser = google-chrome
 [rerere]
@@ -43,7 +43,7 @@
 	helper = osxkeychain
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path =
+	path = 
 [mergetool "sourcetree"]
-	cmd = /opt/homebrew-cask/Caskroom/sourcetree/2.0.5.2/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	cmd = /opt/homebrew-cask/Caskroom/sourcetree/2.1/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true

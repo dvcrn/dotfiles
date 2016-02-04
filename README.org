@@ -1,4 +1,7 @@
 * David's dotfiles
+
+To install all of these, just run ~./install.sh~. This assumes that your dotfiles are inside =~/.dotfiles/=
+
 ** brew
 Apps and stuff that should be installed through brew (and cask) on all of my systems. To install, use [[https://github.com/Homebrew/homebrew-bundle][brew-bundle]].
 
@@ -7,6 +10,9 @@ holds gitconfig and gitignore_global. Sets default editor, author name, credenti
 
 ** pip
 Basic python packages that have to be OS global and not virtualenv specific. Install with ~pip install -r packages.txt~
+
+** npm
+Same as pip but for node packages. Run ~python install.py~
 
 ** tmux
 Adds tmux configuration to work with vim-friendly shorcuts and a better style. Comment the last line inside ~.tmux.conf~ in to use vim-tmuxline instead. Has to go under =~/.tmux.conf=
@@ -19,6 +25,9 @@ My spacemacs config. Heavily opinionated. [[https://github.com/syl20bnr/spacemac
 
 ** sublimious / sublime text
 Config is managed by [[https://github.com/dvcrn/sublimious][sublimious]]. Symlink to =~/.sublimious= and install sublimious through package control.
+
+** proton / atom
+Config is managed by [[https://github.com/dvcrn/proton][proton]]. Symlink to =~/.proton= and install proton through apm.
 
 ** iTerm2
 iTerm2 config. Just point iTerm to the folder holding the file and you should be good

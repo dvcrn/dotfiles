@@ -21,9 +21,10 @@
      erlang
      elixir
      salt
-					puppet
+     puppet
      python
      django
+     ruby
 
      ;; Apps
      chrome
@@ -42,8 +43,8 @@
      shell
      erc
      jabber
-					emoji
-					colors
+     emoji
+     colors
      (wakatime :variables
                wakatime-api-key "*****"
                wakatime-cli-path "/usr/local/bin/wakatime"
@@ -61,8 +62,8 @@
      version-control
      ;; vim-powerline
 
-     themes-megapack
-     )
+     themes-megapack)
+
    dotspacemacs-additional-packages '()
    dotspacemacs-excluded-packages '()
    dotspacemacs-delete-orphan-packages t))
@@ -108,8 +109,8 @@
    dotspacemacs-highlight-delimiters 'all
    dotspacemacs-persistent-server t
    dotspacemacs-search-tools '("ag" "pt" "ack" "grep")
-   dotspacemacs-default-package-repository nil
-   ))
+   dotspacemacs-default-package-repository nil))
+
 
 (defun setup-indent (n)
   ;; web development
@@ -121,8 +122,8 @@
   (setq web-mode-css-indent-offset n) ; web-mode, css in html file
   (setq web-mode-code-indent-offset n) ; web-mode, js code in html file
   (setq web-mode-attr-indent-offset n) ; web-mode, js code in html file
-  (setq css-indent-offset n) ; css-mode
-  )
+  (setq css-indent-offset n)) ; css-mode
+
 
 (defun tab-style ()
   (interactive)
@@ -130,8 +131,8 @@
   (setq indent_with_tabs t)
   (setq-default indent-tabs-mode t
                 default-tab-width 1)
-  (setup-indent 1)
-  )
+  (setup-indent 1))
+
 
 (defun space-style ()
   (interactive)
@@ -143,8 +144,8 @@
   (with-eval-after-load 'web-mode
     (add-to-list 'web-mode-indentation-params '("lineup-args" . nil))
     (add-to-list 'web-mode-indentation-params '("lineup-concats" . nil))
-    (add-to-list 'web-mode-indentation-params '("lineup-calls" . nil)))
-  )
+    (add-to-list 'web-mode-indentation-params '("lineup-calls" . nil))))
+
 
 (defun erc-gitter-connect ()
   (interactive)
@@ -166,27 +167,26 @@
              (figwheel-sidecar.repl-api/cljs-repl)")
     (cider-repl-return)))
 
-(defun ambly-repl ()
-		(interactive)
-		(with-current-buffer (cider-current-repl-buffer)
-				(goto-char (point-max))
-				(insert "
-(require
-	'[cljs.repl :as repl]
-	'[cemerick.piggieback]
-	'[ambly.core :as ambly])
+; (defun ambly-repl ()
+; 		(interactive)
+; 		(with-current-buffer (cider-current-repl-buffer)
+; 				(goto-char (point-max))
+; 				(insert "
+; (require
+;   '[cljs.repl :as repl]
+;   '[cemerick.piggieback]
+;   '[ambly.core :as ambly])
+;
+; (cemerick.piggieback/cljs-repl
+; 	(ambly/repl-env :choose-first-discovered true))")
+; (cider-repl-return)
 
-(cemerick.piggieback/cljs-repl
-	(ambly/repl-env :choose-first-discovered true))")
-(cider-repl-return)
-				))
 
 (defun dotspacemacs/user-init ()
-		(setq evil-escape-delay 0.2)
-  )
+    (setq evil-escape-delay 0.2))
 
 (defun dotspacemacs/user-config ()
-		;; (indent-guide-global-mode)
+;; (indent-guide-global-mode)
   (global-linum-mode t)
   (linum-relative-toggle)
   (space-style)
@@ -199,19 +199,20 @@
   (global-company-mode)
 
   ;; Always launch magit in fullscreen
-  (setq-default
-   git-magit-status-fullscreen t)
+  (setq-default git-magit-status-fullscreen t)
 
-		;; rainbow mode
-		(rainbow-mode)
+  ;; rainbow mode
+  (rainbow-mode)
 
-		;; Make clojure prettier
-		(setq clojure-enable-fancify-symbols t)
+  ;; Make clojure prettier
+  (setq clojure-enable-fancify-symbols t)
 
-  ;(add-to-list 'auto-mode-alist '("\\.js\\'" . react-mode))
+  ;; always use react mode with js files
+  (add-to-list 'auto-mode-alist '("\\.js\\'" . react-mode))
 
-  (setq powerline-default-separator 'alternate)
-)
+  ;; different seperator for powerline
+  (setq powerline-default-separator 'alternate))
+
 
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.

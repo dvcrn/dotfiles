@@ -9,3 +9,4 @@ el-get
 custom.el
 *.elc
 fisherman/cache
+npm-debug.log

@@ -18,7 +18,7 @@ Same as pip but for node packages. Run ~python install.py~
 Adds tmux configuration to work with vim-friendly shorcuts and a better style. Comment the last line inside ~.tmux.conf~ in to use vim-tmuxline instead. Has to go under =~/.tmux.conf=
 
 ** vim
-Awesome vim config you should try out. Put it (and .gvimrc) under =~/.vimrc= and =~/.gvimrc=. Install plugins with [[https://github.com/VundleVim/Vundle.vim][Vundle]].
+Awesome vim config you should try out. Put it (and .gvimrc, .ideavimrc) under =~/.vimrc=,  =~/.gvimrc= and =~/.ideavimrc=. Install plugins with [[https://github.com/VundleVim/Vundle.vim][Vundle]].
 
 ** spacemacs
 My spacemacs config. Heavily opinionated. [[https://github.com/syl20bnr/spacemacs][Install spacemacs here.]] and symlink to =~/.spacemacs=.

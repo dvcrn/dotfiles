@@ -16,11 +16,10 @@ layers = [
     'osx',
     'git',
     'python',
-    # 'javascript',
+    'javascript',
     'markdown',
     'php',
-    'coffee',
-    'muddi'
+    'coffee'
 ]
 
 """
@@ -38,7 +37,7 @@ Put your own config in here or override defaults
 user_config = {
     # Sublimious general
     # How long should sublimious wait before showing you the overlay?
-    # "shortcut_overlay_timeout": 0,
+    "shortcut_overlay_timeout": 0,
     "show_shortcut_overlay": True,
 
     "vintage_lines.force_mode": True,
@@ -50,9 +49,9 @@ user_config = {
     # "theme": "Soda Dark.sublime-theme",
     # "color_scheme": "Packages/User/base16-ocean.dark (SL).tmTheme",
     # "font_face": "Hack",
-    "font_size": 14,
-    "theme": "Material-Theme.sublime-theme",
-    "color_scheme": "Packages/Material Theme/schemes/Material-Theme.tmTheme",
+    "font_size": 15,
+    # "theme": "Material-Theme.sublime-theme",
+    # "color_scheme": "Packages/Material Theme/schemes/Material-Theme.tmTheme",
 
     # These lines are responsible for editor appearance
     "line_numbers": False,

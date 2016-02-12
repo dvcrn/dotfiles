@@ -21,6 +21,7 @@
     :tools/git
     :tools/linter
     :tools/build
+    :tools/todo
     ;; :tools/bookmarks
     ;; :tools/minimap
 
@@ -34,6 +35,7 @@
     :lang/elixir
     :lang/markdown
     :lang/python
+    :lang/ruby
 
     ;; -----------------------------------
     ;; Frameworks
@@ -76,6 +78,16 @@
     ;; prefer classic vim mode over vim-mode-plus? Change this to :vim-mode
     ["proton.core.vim-provider" :vim-mode-plus]
     ["proton.lang.javascript.linter" :eslint]
+
+    ;; linters
+    ["linter-clojure.javaExecutablePath" "/usr/bin/java"]
+    ["linter-clojure.clojureExecutablePath" "/Users/david/.m2/repository/org/clojure/clojure/1.7.0/clojure-1.7.0.jar"]
+
+    ["autocomplete-elixir.erlangHome" "/usr/local/bin"]
+    ["autocomplete-elixir.elixirPath" "/usr/local/bin"]
+
+    ["linter-ruby.executablePath" "/Users/david/.rbenv/shims/rubocop"]
+    ["linter-ruby.rubyExecutablePath" "/Users/david/.rbenv/shims/ruby"]
   ]
 
   ;; Don't like a keybinding or want to add something yourself? Do it here

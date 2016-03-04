@@ -50,11 +50,11 @@ function emacs
 end
 
 function vim
-  reattach-to-user-namespace nvim
+  reattach-to-user-namespace nvim $argv[1]
 end
 
 function vi
-  vim
+  reattach-to-user-namespace nvim $argv[1]
 end
 
 function markright

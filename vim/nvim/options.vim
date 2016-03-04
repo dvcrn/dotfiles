@@ -48,3 +48,8 @@ set gdefault            " apply substitutions globally by default. add `g` for o
 set hlsearch            " highlight search results
 set ignorecase          " ignore case when searching
 set smartcase           " ignore case if search string is all lower case, case-sensitve otherwise
+
+" Make cursor a flat bar in insert mode
+:let $NVIM_TUI_ENABLE_CURSOR_SHAPE=1
+
+

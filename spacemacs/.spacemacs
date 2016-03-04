@@ -25,6 +25,7 @@
      python
      django
      ruby
+     swift
 
      ;; Apps
      chrome
@@ -80,7 +81,7 @@
                          monokai)
    dotspacemacs-colorize-cursor-according-to-state t
    dotspacemacs-default-font '("Hack"
-                               :size 14
+                               :size 15
                                :weight normal
                                :width normal
                                :powerline-scale 1.1)

@@ -9,7 +9,7 @@ set -x LC_ALL
 
 set -x PATH (brew --prefix)"/bin:$PATH"
 set -x DEVELOPER_DIR "/Applications/Xcode.app/Contents/Developer/"
-set -x PYTHONPATH (brew --prefix)"/lib/python2.7/site-packages:$PYTHONPATH"
+#set -x PYTHONPATH (brew --prefix)"/lib/python2.7/site-packages:$PYTHONPATH"
 
 set -x VISUAL atom
 set -x EDITOR nvim

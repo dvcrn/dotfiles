@@ -16,6 +16,7 @@ layers = [
     'osx',
     'git',
     'python',
+    'clojure',
     'javascript',
     'markdown',
     'php',
@@ -49,9 +50,6 @@ user_config = {
     # "theme": "Soda Dark.sublime-theme",
     # "color_scheme": "Packages/User/base16-ocean.dark (SL).tmTheme",
     # "font_face": "Hack",
-    "font_size": 15,
-    # "theme": "Material-Theme.sublime-theme",
-    # "color_scheme": "Packages/Material Theme/schemes/Material-Theme.tmTheme",
 
     # These lines are responsible for editor appearance
     "line_numbers": False,
@@ -77,4 +75,3 @@ user_config = {
         }
     }
 }
-

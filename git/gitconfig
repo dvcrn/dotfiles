@@ -4,7 +4,7 @@
 [core]
   editor = nvim
   whitespace = fix,-indent-with-non-tab,trailing-space,cr-at-eol
-	excludesfile = /Users/david/.gitignore_global
+	excludesfile = ~/.gitignore_global
 [web]
   browser = google-chrome
 [rerere]
@@ -26,9 +26,6 @@
   added = green bold
   changed = yellow bold
   untracked = red bold
-[github]
-  user = dvcrn
-  token = *****
 [push]
 	default = simple
 [filter "media"]
@@ -41,8 +38,3 @@
 	required = true
 [credential]
 	helper = osxkeychain
-[difftool "sourcetree"]
-	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path = 
-[url "https://"]
-	insteadOf = git://

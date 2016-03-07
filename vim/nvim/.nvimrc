@@ -39,6 +39,9 @@ Plug 'snoe/nvim-parinfer.js'
 " Swift
 Plug 'keith/swift.vim'
 
+" Ruby
+Plug 'vim-ruby/vim-ruby'
+
 call plug#end()
 
 " control whitespace preferences based on filetype

@@ -32,11 +32,14 @@ echo "---> tmux done"
 
 echo ""
 echo "---> vim"
-ln -s ~/.dotfiles/vim/.vimrc ~/.vimrc
-ln -s ~/.dotfiles/vim/.gvimrc ~/.gvimrc
-ln -s ~/.dotfiles/vim/.ideavimrc ~/.ideavimrc
+# ln -s ~/.dotfiles/vim/.vimrc ~/.vimrc
+# ln -s ~/.dotfiles/vim/.gvimrc ~/.gvimrc
+# ln -s ~/.dotfiles/vim/.ideavimrc ~/.ideavimrc
 mkdir -p ~/.config/nvim/
 ln -s ~/.dotfiles/vim/nvim/.nvimrc ~/.config/nvim/init.vim
+ln -s ~/.dotfiles/vim/nvim/.nvimrc ~/.vimrc
+ln -s ~/.dotfiles/vim/nvim/.nvimrc ~/.gvimrc
+ln -s ~/.dotfiles/vim/nvim/.nvimrc ~/.ideavimrc
 echo "---> vim done"
 
 echo ""

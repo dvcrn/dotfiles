@@ -16,6 +16,11 @@ Plug 'tpope/vim-sensible'
 Plug 'jiangmiao/auto-pairs'
 Plug 'rking/ag.vim'
 
+" Hard mode to get rid of habits
+Plug 'dvcrn/hardmode'
+Plug 'kbarrette/mediummode'
+Plug 'takac/vim-hardtime'
+
 " Themes
 Plug 'chriskempson/vim-tomorrow-theme'
 Plug 'nathanaelkane/vim-indent-guides'
@@ -43,6 +48,8 @@ Plug 'keith/swift.vim'
 Plug 'vim-ruby/vim-ruby'
 
 call plug#end()
+
+" autocmd VimEnter,BufNewFile,BufReadPost * silent! call HardMode()
 
 " control whitespace preferences based on filetype
 filetype on
@@ -90,3 +97,5 @@ source ~/.dotfiles/vim/nvim/plugins/nerdtree.vim
 source ~/.dotfiles/vim/nvim/plugins/fugitive.vim
 source ~/.dotfiles/vim/nvim/plugins/airline.vim
 source ~/.dotfiles/vim/nvim/plugins/gitgutter.vim
+source ~/.dotfiles/vim/nvim/plugins/mediummode.vim
+source ~/.dotfiles/vim/nvim/plugins/hardtime.vim

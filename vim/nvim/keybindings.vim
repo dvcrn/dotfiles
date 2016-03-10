@@ -35,8 +35,12 @@ nnoremap Q <nop>
 
 cmap w!! w !sudo tee > /dev/null %
 
-noremap <Leader>ti :set list!<CR> " Toggle special characters
-noremap <Leader>tl :set relativenumber!<CR> " Toggle relative line numbers
+" toggles
+noremap <Leader>ti :set list!<CR>:echo 'Toggled special characters'<CR>" Toggle special characters
+noremap <Leader>tl :set relativenumber!<CR>:echo 'Toggled relative line numbers'<CR>" Toggle relative line numbers
+noremap <Leader>tm :MediumModeToggle<CR>:echo 'Toggled medium mode'<CR>" Toggle medium mode
+noremap <Leader>tH :call ToggleHardMode()<CR>:echo 'Toggled hardmode'<CR>" Toggle hard mode
+noremap <Leader>th :HardTimeToggle<CR>:echo 'Toggled hardtime'<CR>" Toggle hard time
 
 " fix Vim's regex handling
 nnoremap / /\v

@@ -35,25 +35,18 @@ nnoremap Q <nop>
 
 cmap w!! w !sudo tee > /dev/null %
 
-" toggles
-noremap <Leader>ti :set list!<CR>:echo 'Toggled special characters'<CR>" Toggle special characters
-noremap <Leader>tl :set relativenumber!<CR>:echo 'Toggled relative line numbers'<CR>" Toggle relative line numbers
-noremap <Leader>tm :MediumModeToggle<CR>:echo 'Toggled medium mode'<CR>" Toggle medium mode
-noremap <Leader>tH :call ToggleHardMode()<CR>:echo 'Toggled hardmode'<CR>" Toggle hard mode
-noremap <Leader>th :HardTimeToggle<CR>:echo 'Toggled hardtime'<CR>" Toggle hard time
-
 " fix Vim's regex handling
 nnoremap / /\v
 vnoremap / /\v
 
 " Paste stuff
+" map <Leader>p :set paste<CR>o<esc>"*]p:set nopaste<cr>
 set pastetoggle=<F5>
-map <Leader>p :set paste<CR>o<esc>"*]p:set nopaste<cr>
 
-" Map escape to jj -- much faster to reach and type
-imap jj <esc>
-imap jk <esc>
-imap kj <esc>
+" remap esc to something that is faster
+" imap jj <esc>
+" imap jk <esc>
+" imap kj <esc>
 imap fd <esc>
 vno v <esc>
 
@@ -61,6 +54,33 @@ vno v <esc>
 " remove search highlighting with <F3>
 nnoremap <silent> <leader>/ :nohlsearch<CR>
 
-" Splits
+" -------- space based keybindings
+" meta
+nnoremap <leader>_i :PlugInstall<CR>
+nnoremap <leader>_c :PlugClean<CR>
+
+" project
+nnoremap <silent> <leader>pt :NERDTreeToggle<CR>   " open a horizontal split and switch to it (,h)
+nnoremap <silent> <leader>pF :NERDTreeFind<CR>   " open a horizontal split and switch to it (,h)
+nnoremap <leader>pf :CtrlP<CR>
+
+" window
 nnoremap <leader>wv <C-w>v<C-w>l   " split vertically
 nnoremap <leader>wh <C-w>s<C-w>j   " split horizontally
+
+" buffer
+nnoremap <Leader><Tab> :e#<CR> " switch to last buffer
+nnoremap <leader>bb :CtrlPBuffer<CR>
+nnoremap <leader>bd :bdelete<CR>
+
+" toggles
+noremap <Leader>ti :set list!<CR>:echo 'Toggled special characters'<CR>" Toggle special characters
+noremap <Leader>tl :set relativenumber!<CR>:echo 'Toggled relative line numbers'<CR>" Toggle relative line numbers
+noremap <Leader>tm :MediumModeToggle<CR>:echo 'Toggled medium mode'<CR>" Toggle medium mode
+noremap <Leader>tH :call ToggleHardMode()<CR>:echo 'Toggled hardmode'<CR>" Toggle hard mode
+noremap <Leader>th :HardTimeToggle<CR>:echo 'Toggled hardtime'<CR>" Toggle hard time
+
+" git
+nnoremap <leader>gs :Gstatus<CR>
+nnoremap <leader>gc :Gcommit<CR>
+nnoremap <leader>gp :Gpush<CR>

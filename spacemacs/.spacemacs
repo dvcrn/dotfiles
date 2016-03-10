@@ -53,7 +53,6 @@
 
      ;; frameworks
      react
-     jekyll
 
      ;; markdown
      (org :variables
@@ -65,7 +64,7 @@
 
      themes-megapack)
 
-   dotspacemacs-additional-packages '()
+   dotspacemacs-additional-packages '(evil-annoying-arrows)
    dotspacemacs-excluded-packages '()
    dotspacemacs-delete-orphan-packages t))
 
@@ -75,9 +74,9 @@
    dotspacemacs-verbose-loading nil
    dotspacemacs-startup-banner '999
    dotspacemacs-startup-lists '(recents projects)
-   dotspacemacs-themes '(zenburn
+   dotspacemacs-themes '(spacemacs-dark
+                         zenburn
                          misterioso
-                         spacemacs-dark
                          monokai)
    dotspacemacs-colorize-cursor-according-to-state t
    dotspacemacs-default-font '("Hack"
@@ -189,6 +188,8 @@
 (defun dotspacemacs/user-config ()
 ;; (indent-guide-global-mode)
   (global-linum-mode t)
+  (global-evil-annoying-arrows-mode)
+
   (linum-relative-toggle)
   (space-style)
 
@@ -212,7 +213,11 @@
   (add-to-list 'auto-mode-alist '("\\.js\\'" . react-mode))
 
   ;; different seperator for powerline
-  (setq powerline-default-separator 'alternate))
+  (setq powerline-default-separator 'alternate)
+
+  ;; ruby
+  (setq flycheck-disable-checker '(ruby-rubylint))
+  )
 
 
 ;; Do not write anything past this comment. This is where Emacs will

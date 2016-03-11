@@ -39,10 +39,12 @@ Plug 'vim-airline/vim-airline-themes'
 " Plug 'bling/vim-bufferline' " Show buffers in statusline
 
 " Syntax
-Plug 'scrooloose/syntastic'
+Plug 'benekastah/neomake'
+" Plug 'scrooloose/syntastic'
 Plug 'dvcrn/vim-niji'
 
 " javascript
+Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
 
 " Clojure
@@ -113,3 +115,4 @@ source ~/.dotfiles/vim/nvim/plugins/gitgutter.vim
 source ~/.dotfiles/vim/nvim/plugins/mediummode.vim
 source ~/.dotfiles/vim/nvim/plugins/hardtime.vim
 source ~/.dotfiles/vim/nvim/plugins/seek.vim
+source ~/.dotfiles/vim/nvim/plugins/neomake.vim

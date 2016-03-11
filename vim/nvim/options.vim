@@ -61,4 +61,7 @@ set smartcase           " ignore case if search string is all lower case, case-s
 " Make cursor a flat bar in insert mode
 :let $NVIM_TUI_ENABLE_CURSOR_SHAPE=1
 
-
+if exists('neovim_dot_app')
+  :set autochdir
+  :set noshowcmd
+endif

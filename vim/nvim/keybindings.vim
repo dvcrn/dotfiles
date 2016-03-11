@@ -72,6 +72,8 @@ nnoremap <leader>wh <C-w>s<C-w>j   " split horizontally
 nnoremap <Leader><Tab> :e#<CR> " switch to last buffer
 nnoremap <leader>bb :CtrlPBuffer<CR>
 nnoremap <leader>bd :bdelete<CR>
+nnoremap <leader>bn :bnext<CR>
+nnoremap <leader>bp :bprevious<CR>
 
 " toggles
 noremap <Leader>ti :set list!<CR>:echo 'Toggled special characters'<CR>" Toggle special characters

@@ -1,5 +1,14 @@
 set timeout timeoutlen=1000 ttimeoutlen=500
 
+" old stuf
+set nocompatible
+set directory=$HOME/.vimswap//
+set viewdir=$HOME/.vimviews//
+set backupdir=$HOME/.vimbackup//
+silent execute '!mkdir -p $HOME/.vimbackup'
+silent execute '!mkdir -p $HOME/.vimviews'
+silent execute '!mkdir -p $HOME/.vimswap'
+
 " basic options
 set laststatus=2                  " always show the status line
 set cmdheight=2                   " and use a two-line tall status line

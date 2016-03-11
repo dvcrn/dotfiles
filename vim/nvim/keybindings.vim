@@ -33,6 +33,10 @@ nnoremap <Leader>k <C-w>k<CR>
 
 nnoremap Q <nop>
 
+" always flash yank motion
+map y <Plug>(operator-flashy)
+
+" for when I forget sudo
 cmap w!! w !sudo tee > /dev/null %
 
 " fix Vim's regex handling

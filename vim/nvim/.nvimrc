@@ -26,12 +26,17 @@ Plug 'dvcrn/hardmode'
 Plug 'kbarrette/mediummode'
 Plug 'takac/vim-hardtime'
 
-" Themes
+" Style related packages
 Plug 'chriskempson/vim-tomorrow-theme'
+Plug 'marciomazza/vim-brogrammer-theme'
+Plug 'sjl/badwolf'
+Plug 'altercation/vim-colors-solarized'
+
 Plug 'nathanaelkane/vim-indent-guides'
-Plug 'powerline/powerline'
+" Plug 'powerline/powerline'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+" Plug 'bling/vim-bufferline' " Show buffers in statusline
 
 " Syntax
 Plug 'scrooloose/syntastic'

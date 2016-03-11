@@ -5,7 +5,8 @@ Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
 Plug 'scrooloose/nerdtree'
 Plug 'kien/ctrlp.vim'
 Plug 'airblade/vim-gitgutter'
-Plug 'Lokaltog/vim-easymotion'
+Plug 'easymotion/vim-easymotion'
+Plug 'goldfeld/vim-seek'
 
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-fugitive'
@@ -15,6 +16,10 @@ Plug 'tpope/vim-sensible'
 
 Plug 'jiangmiao/auto-pairs'
 Plug 'rking/ag.vim'
+
+" Flash yanks
+Plug 'kana/vim-operator-user'
+Plug 'haya14busa/vim-operator-flashy'
 
 " Hard mode to get rid of habits
 Plug 'dvcrn/hardmode'
@@ -99,3 +104,4 @@ source ~/.dotfiles/vim/nvim/plugins/airline.vim
 source ~/.dotfiles/vim/nvim/plugins/gitgutter.vim
 source ~/.dotfiles/vim/nvim/plugins/mediummode.vim
 source ~/.dotfiles/vim/nvim/plugins/hardtime.vim
+source ~/.dotfiles/vim/nvim/plugins/seek.vim

@@ -42,6 +42,9 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'scrooloose/syntastic'
 Plug 'dvcrn/vim-niji'
 
+" javascript
+Plug 'mxw/vim-jsx'
+
 " Clojure
 Plug 'tpope/vim-fireplace', { 'for': 'clojure' }
 Plug 'guns/vim-clojure-static', { 'for': 'clojure' }

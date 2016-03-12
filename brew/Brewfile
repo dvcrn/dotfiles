@@ -46,6 +46,7 @@ brew "leiningen"
 brew "node"
 
 # Dev tools
+brew "coreutils"
 brew "tmux"
 brew "vim"
 brew "macvim"

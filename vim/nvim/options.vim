@@ -1,3 +1,6 @@
+syntax on
+filetype plugin indent on
+
 set timeout timeoutlen=1000 ttimeoutlen=500
 
 " old stuf
@@ -10,6 +13,7 @@ silent execute '!mkdir -p $HOME/.vimviews'
 silent execute '!mkdir -p $HOME/.vimswap'
 
 " basic options
+set autochdir
 set laststatus=2                  " always show the status line
 set cmdheight=2                   " and use a two-line tall status line
 set showcmd                       " show the command
@@ -62,6 +66,5 @@ set smartcase           " ignore case if search string is all lower case, case-s
 :let $NVIM_TUI_ENABLE_CURSOR_SHAPE=1
 
 if exists('neovim_dot_app')
-  :set autochdir
   :set noshowcmd
 endif

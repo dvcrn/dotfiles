@@ -1,6 +1,7 @@
 call plug#begin('~/.vim/plugged')
 
 Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
+Plug 'neovim/node-host', { 'do': 'npm install' }
 
 Plug 'scrooloose/nerdtree'
 Plug 'kien/ctrlp.vim'
@@ -54,7 +55,7 @@ Plug 'guns/vim-clojure-highlight', { 'for': 'clojure' }
 Plug 'fwolanski/vim-clojure-conceal', { 'for': 'clojure' }
 Plug 'tpope/vim-sexp-mappings-for-regular-people', { 'for': 'clojure' }
 Plug 'guns/vim-sexp', { 'for': 'clojure' }
-Plug 'snoe/nvim-parinfer.js'
+Plug 'snoe/nvim-parinfer.js', { 'for': 'clojure' }
 
 " Swift
 Plug 'keith/swift.vim'
@@ -105,6 +106,7 @@ source ~/.dotfiles/vim/nvim/keybindings.vim
 source ~/.dotfiles/vim/nvim/lang/markdown.vim
 source ~/.dotfiles/vim/nvim/lang/ruby.vim
 source ~/.dotfiles/vim/nvim/lang/javascript.vim
+source ~/.dotfiles/vim/nvim/lang/clojure.vim
 
 source ~/.dotfiles/vim/nvim/plugins/ctrlp.vim
 source ~/.dotfiles/vim/nvim/plugins/syntastic.vim

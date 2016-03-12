@@ -49,6 +49,12 @@ function emacs
   end
 end
 
+function gnvim
+  set FILE $argv[1]
+  set ABSOLUTEPATH (realpath $FILE)
+  open -n -a ~/src/neovim-qt/build/bin/nvim-qt --args $ABSOLUTEPATH
+end
+
 function vim
   reattach-to-user-namespace nvim $argv[1]
 end

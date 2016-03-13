@@ -73,7 +73,7 @@ nnoremap <leader>_c :PlugClean<CR>
 nnoremap <silent> <leader>pt :NERDTreeToggle<CR>   " open a horizontal split and switch to it (,h)
 nnoremap <silent> <leader>pF :NERDTreeFind<CR>   " open a horizontal split and switch to it (,h)
 nnoremap <leader>pf :GitFiles<CR>
-nnoremap <leader>p/ :Lines<CR>
+nnoremap <leader>p/ :Ag<CR>
 nnoremap <leader>pr :History<CR>
 
 " window
@@ -81,8 +81,7 @@ nnoremap <leader>wv <C-w>v<C-w>l   " split vertically
 nnoremap <leader>wh <C-w>s<C-w>j   " split horizontally
 
 " file
-nnoremap <leader>ff :FZFR<CR>
-nnoremap <leader>p/ :BLines<CR>
+nnoremap <leader>ff :Files<CR>
 
 " buffer
 nnoremap <Leader><Tab> :e#<CR> " switch to last buffer
@@ -90,6 +89,8 @@ nnoremap <leader>bb :Buffers<CR>
 nnoremap <leader>bd :bdelete<CR>
 nnoremap <leader>bn :bnext<CR>
 nnoremap <leader>bp :bprevious<CR>
+nnoremap <leader>b/ :Lines<CR>
+nnoremap <leader>bl :BLines<CR>
 
 " toggles
 noremap <Leader>ti :set list!<CR>:echo 'Toggled special characters'<CR>" Toggle special characters
@@ -102,5 +103,6 @@ noremap <Leader>th :HardTimeToggle<CR>:echo 'Toggled hardtime'<CR>" Toggle hard 
 nnoremap <leader>gs :Gstatus<CR>
 nnoremap <leader>gc :Gcommit<CR>
 nnoremap <leader>gp :Gpush<CR>
+nnoremap <leader>gl :Commits<CR>
 
 " mode keybindings are inside each langs file

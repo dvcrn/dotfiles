@@ -36,4 +36,4 @@ if has('gui_running')
   :set guioptions-=M  " don't even source the menu script
 endif
 
-autocmd! BufRead * RainbowParentheses
+autocmd BufRead * RainbowParentheses

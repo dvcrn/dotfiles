@@ -1,4 +1,5 @@
-" Control-P
+Plug 'ctrlpvim/ctrlp.vim'
+"
 " Ignore some files we don't need
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.git/,*.pyc
 

@@ -5,6 +5,8 @@ Plug 'neovim/node-host', { 'do': 'npm install' }
 
 Plug 'scrooloose/nerdtree'
 Plug 'kien/ctrlp.vim'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
 Plug 'airblade/vim-gitgutter'
 Plug 'easymotion/vim-easymotion'
 Plug 'goldfeld/vim-seek'
@@ -118,3 +120,4 @@ source ~/.dotfiles/vim/nvim/plugins/mediummode.vim
 source ~/.dotfiles/vim/nvim/plugins/hardtime.vim
 source ~/.dotfiles/vim/nvim/plugins/seek.vim
 source ~/.dotfiles/vim/nvim/plugins/neomake.vim
+source ~/.dotfiles/vim/nvim/plugins/fzf.vim

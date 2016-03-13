@@ -66,7 +66,8 @@ nnoremap <leader>_c :PlugClean<CR>
 " project
 nnoremap <silent> <leader>pt :NERDTreeToggle<CR>   " open a horizontal split and switch to it (,h)
 nnoremap <silent> <leader>pF :NERDTreeFind<CR>   " open a horizontal split and switch to it (,h)
-nnoremap <leader>pf :CtrlP<CR>
+" nnoremap <leader>pf :CtrlP<CR>
+nnoremap <leader>pf :FZFR<CR>
 
 " window
 nnoremap <leader>wv <C-w>v<C-w>l   " split vertically
@@ -74,7 +75,7 @@ nnoremap <leader>wh <C-w>s<C-w>j   " split horizontally
 
 " buffer
 nnoremap <Leader><Tab> :e#<CR> " switch to last buffer
-nnoremap <leader>bb :CtrlPBuffer<CR>
+nnoremap <leader>bb :Buffers<CR>
 nnoremap <leader>bd :bdelete<CR>
 nnoremap <leader>bn :bnext<CR>
 nnoremap <leader>bp :bprevious<CR>

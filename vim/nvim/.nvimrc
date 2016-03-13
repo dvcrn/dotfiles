@@ -37,13 +37,6 @@ Plug 'takac/vim-hardtime'
 " Style related packages
 Plug 'nathanaelkane/vim-indent-guides'
 
-Plug 'chriskempson/vim-tomorrow-theme'
-Plug 'marciomazza/vim-brogrammer-theme'
-Plug 'sjl/badwolf'
-Plug 'altercation/vim-colors-solarized'
-Plug 'junegunn/seoul256.vim'
-
-
 " Syntax
 Plug 'benekastah/neomake'
 " Plug 'scrooloose/syntastic'
@@ -80,6 +73,8 @@ let g:ycm_autoclose_preview_window_after_insertion = 1 " YCM
 
 source ~/.dotfiles/vim/nvim/options.vim
 source ~/.dotfiles/vim/nvim/keybindings.vim
+source ~/.dotfiles/vim/nvim/statusline.vim
+source ~/.dotfiles/vim/nvim/style.vim
 
 source ~/.dotfiles/vim/nvim/lang/markdown.vim
 source ~/.dotfiles/vim/nvim/lang/ruby.vim
@@ -101,5 +96,3 @@ source ~/.dotfiles/vim/nvim/plugins/emoji.vim
 
 call plug#end()
 
-source ~/.dotfiles/vim/nvim/style.vim
-source ~/.dotfiles/vim/nvim/statusline.vim

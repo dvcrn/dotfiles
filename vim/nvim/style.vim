@@ -1,10 +1,17 @@
+Plug 'chriskempson/vim-tomorrow-theme'
+Plug 'marciomazza/vim-brogrammer-theme'
+Plug 'sjl/badwolf'
+Plug 'altercation/vim-colors-solarized'
+Plug 'junegunn/seoul256.vim'
+
+
 set background=dark
 set guifont=Hack:18
 syntax enable
 
 " silent! colorscheme Tomorrow-Night-Eighties
 " silent! colorscheme Tomorrow-Night
-colorscheme seoul256
+autocmd VimEnter * colorscheme seoul256
 " let g:solarized_termcolors=256
 " silent! colorscheme solarized
 

@@ -31,11 +31,9 @@ Plug 'dvcrn/hardmode'
 Plug 'kbarrette/mediummode'
 Plug 'takac/vim-hardtime'
 
-Plug 'nathanaelkane/vim-indent-guides'
-" Plug 'bling/vim-bufferline' " Show buffers in statusline
-" Plug 'powerline/powerline'
 
 " Style related packages
+Plug 'nathanaelkane/vim-indent-guides'
 
 Plug 'chriskempson/vim-tomorrow-theme'
 Plug 'marciomazza/vim-brogrammer-theme'

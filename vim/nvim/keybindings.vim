@@ -43,6 +43,12 @@ cmap w!! w !sudo tee > /dev/null %
 nnoremap / /\v
 vnoremap / /\v
 
+" Start interactive EasyAlign in visual mode (e.g. vipga)
+xmap ga <Plug>(EasyAlign)
+
+" Start interactive EasyAlign for a motion/text object (e.g. gaip)
+nmap ga <Plug>(EasyAlign)
+
 " Paste stuff
 " map <Leader>p :set paste<CR>o<esc>"*]p:set nopaste<cr>
 set pastetoggle=<F5>

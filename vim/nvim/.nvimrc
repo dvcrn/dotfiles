@@ -4,7 +4,7 @@ Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
 Plug 'neovim/node-host', { 'do': 'npm install' }
 
 Plug 'scrooloose/nerdtree'
-Plug 'kien/ctrlp.vim'
+" Plug 'kien/ctrlp.vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'airblade/vim-gitgutter'
@@ -20,6 +20,8 @@ Plug 'tpope/vim-sensible'
 Plug 'jiangmiao/auto-pairs'
 Plug 'rking/ag.vim'
 
+Plug 'junegunn/vim-easy-align'
+
 " Flash yanks
 Plug 'kana/vim-operator-user'
 Plug 'haya14busa/vim-operator-flashy'
@@ -29,45 +31,25 @@ Plug 'dvcrn/hardmode'
 Plug 'kbarrette/mediummode'
 Plug 'takac/vim-hardtime'
 
+Plug 'nathanaelkane/vim-indent-guides'
+" Plug 'bling/vim-bufferline' " Show buffers in statusline
+" Plug 'powerline/powerline'
+
 " Style related packages
+
 Plug 'chriskempson/vim-tomorrow-theme'
 Plug 'marciomazza/vim-brogrammer-theme'
 Plug 'sjl/badwolf'
 Plug 'altercation/vim-colors-solarized'
+Plug 'junegunn/seoul256.vim'
 
-Plug 'nathanaelkane/vim-indent-guides'
-" Plug 'powerline/powerline'
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
-" Plug 'bling/vim-bufferline' " Show buffers in statusline
 
 " Syntax
 Plug 'benekastah/neomake'
 " Plug 'scrooloose/syntastic'
 Plug 'dvcrn/vim-niji'
 
-" javascript
-Plug 'pangloss/vim-javascript'
-Plug 'mxw/vim-jsx'
-
-" Clojure
-Plug 'tpope/vim-fireplace', { 'for': 'clojure' }
-Plug 'guns/vim-clojure-static', { 'for': 'clojure' }
-Plug 'guns/vim-clojure-highlight', { 'for': 'clojure' }
-Plug 'fwolanski/vim-clojure-conceal', { 'for': 'clojure' }
-Plug 'tpope/vim-sexp-mappings-for-regular-people', { 'for': 'clojure' }
-Plug 'guns/vim-sexp', { 'for': 'clojure' }
-Plug 'snoe/nvim-parinfer.js', { 'for': 'clojure' }
-
-" Swift
-Plug 'keith/swift.vim'
-
-" Ruby
-Plug 'vim-ruby/vim-ruby'
-
-call plug#end()
-
-" autocmd VimEnter,BufNewFile,BufReadPost * silent! call HardMode()
+Plug 'keith/swift.vim', { 'for': 'swift' }
 
 " control whitespace preferences based on filetype
 filetype on
@@ -78,10 +60,7 @@ autocmd FileType * setlocal formatoptions-=r formatoptions-=o
 autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
 autocmd FileType python setlocal shiftwidth=4 tabstop=4
 
-autocmd BufNewFile,BufRead *.rss,*.atom setfiletype xml " treat .rss files as XML
-
-autocmd BufRead COMMIT_EDITMSG setlocal spell spelllang=en_us " spell check Git commit messages
-autocmd BufNewFile,BufRead COMMIT_EDITMSG call feedkeys('ggi', 't') " start commit message in insert mode
+autocmd BufEnter * silent! lcd %:p:h
 
 " Remove whitespaces on save
 fun! <SID>StripTrailingWhitespaces()
@@ -97,12 +76,9 @@ let g:jedi#use_tabs_not_buffers = 0
 let g:jedi#popup_on_dot = 0
 let g:jedi#completions_enabled = 0
 
-let g:clojure_conceal_extras = 1 " Lambda concealing for vim
-
 let g:ycm_autoclose_preview_window_after_insertion = 1 " YCM
 
 source ~/.dotfiles/vim/nvim/options.vim
-source ~/.dotfiles/vim/nvim/style.vim
 source ~/.dotfiles/vim/nvim/keybindings.vim
 
 source ~/.dotfiles/vim/nvim/lang/markdown.vim
@@ -121,3 +97,7 @@ source ~/.dotfiles/vim/nvim/plugins/hardtime.vim
 source ~/.dotfiles/vim/nvim/plugins/seek.vim
 source ~/.dotfiles/vim/nvim/plugins/neomake.vim
 source ~/.dotfiles/vim/nvim/plugins/fzf.vim
+
+call plug#end()
+
+source ~/.dotfiles/vim/nvim/style.vim

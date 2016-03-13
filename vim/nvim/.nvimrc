@@ -88,19 +88,20 @@ source ~/.dotfiles/vim/nvim/lang/ruby.vim
 source ~/.dotfiles/vim/nvim/lang/javascript.vim
 source ~/.dotfiles/vim/nvim/lang/clojure.vim
 
-source ~/.dotfiles/vim/nvim/plugins/ctrlp.vim
+" source ~/.dotfiles/vim/nvim/plugins/airline.vim
+" source ~/.dotfiles/vim/nvim/plugins/fzf.vim
+" source ~/.dotfiles/vim/nvim/plugins/ctrlp.vim
 source ~/.dotfiles/vim/nvim/plugins/syntastic.vim
 source ~/.dotfiles/vim/nvim/plugins/nerdtree.vim
 source ~/.dotfiles/vim/nvim/plugins/fugitive.vim
-source ~/.dotfiles/vim/nvim/plugins/airline.vim
 source ~/.dotfiles/vim/nvim/plugins/gitgutter.vim
 source ~/.dotfiles/vim/nvim/plugins/mediummode.vim
 source ~/.dotfiles/vim/nvim/plugins/hardtime.vim
 source ~/.dotfiles/vim/nvim/plugins/seek.vim
 source ~/.dotfiles/vim/nvim/plugins/neomake.vim
-source ~/.dotfiles/vim/nvim/plugins/fzf.vim
 source ~/.dotfiles/vim/nvim/plugins/emoji.vim
 
 call plug#end()
 
 source ~/.dotfiles/vim/nvim/style.vim
+source ~/.dotfiles/vim/nvim/statusline.vim

@@ -3,7 +3,8 @@ set guifont=Hack:18
 syntax enable
 
 " silent! colorscheme Tomorrow-Night-Eighties
-silent! colorscheme Tomorrow-Night
+" silent! colorscheme Tomorrow-Night
+colorscheme seoul256
 " let g:solarized_termcolors=256
 " silent! colorscheme solarized
 

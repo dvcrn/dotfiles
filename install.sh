@@ -9,6 +9,10 @@ cd ~/.dotfiles/brew/ && brew bundle
 cd ~/.dotfiles/
 echo "---> Brew done"
 
+echo "---> Post brew"
+/usr/local/opt/fzf/install --all
+echo "---> Post brew done"
+
 echo ""
 echo "---> Git"
 ln -s ~/.dotfiles/git/gitconfig ~/.gitconfig

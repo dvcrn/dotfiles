@@ -35,6 +35,7 @@ set foldenable                    " enable code folding
 set history=1000
 set ffs=unix,mac,dos              " default file types
 set autoread                      " automatically update file when editted outside of vim
+set noerrorbells visualbell t_vb= " no bell
 
 " Setup automatic text formatting/wrapping (previously: grn1 )
 set formatoptions=
@@ -61,6 +62,9 @@ set gdefault            " apply substitutions globally by default. add `g` for o
 set hlsearch            " highlight search results
 set ignorecase          " ignore case when searching
 set smartcase           " ignore case if search string is all lower case, case-sensitve otherwise
+
+" Set titlestring to current buffer
+set titlestring=%t%(\ %M%)%(\ (%{expand(\"%:p:h\")})%)%(\ %a%)\ -\ %{v:servername}
 
 " Make cursor a flat bar in insert mode
 :let $NVIM_TUI_ENABLE_CURSOR_SHAPE=1

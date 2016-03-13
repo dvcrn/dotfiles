@@ -1,3 +1,6 @@
+" ruby packages
+Plug 'vim-ruby/vim-ruby'
+
 " non ruby files related to Ruby
 autocmd BufNewFile,BufRead Gemfile,Gemfile.lock,Guardfile setfiletype ruby
 autocmd BufNewFile,BufRead Thorfile,config.ru,Vagrantfile setfiletype ruby

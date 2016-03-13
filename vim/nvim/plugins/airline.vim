@@ -1,3 +1,6 @@
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+
 set background=dark
 
 let g:airline#extensions#whitespace#trailing_format = 'trailing[%s]'

@@ -80,6 +80,7 @@ source ~/.dotfiles/vim/nvim/lang/markdown.vim
 source ~/.dotfiles/vim/nvim/lang/ruby.vim
 source ~/.dotfiles/vim/nvim/lang/javascript.vim
 source ~/.dotfiles/vim/nvim/lang/clojure.vim
+source ~/.dotfiles/vim/nvim/lang/elixir.vim
 
 " source ~/.dotfiles/vim/nvim/plugins/airline.vim
 " source ~/.dotfiles/vim/nvim/plugins/fzf.vim
@@ -93,6 +94,7 @@ source ~/.dotfiles/vim/nvim/plugins/hardtime.vim
 source ~/.dotfiles/vim/nvim/plugins/seek.vim
 source ~/.dotfiles/vim/nvim/plugins/neomake.vim
 source ~/.dotfiles/vim/nvim/plugins/emoji.vim
+
 
 call plug#end()
 

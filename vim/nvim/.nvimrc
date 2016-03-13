@@ -5,8 +5,14 @@ Plug 'neovim/node-host', { 'do': 'npm install' }
 
 Plug 'scrooloose/nerdtree'
 " Plug 'kien/ctrlp.vim'
+Plug 'junegunn/vim-pseudocl'
+Plug 'junegunn/vim-oblique'
+Plug 'junegunn/vim-fnr'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
+Plug 'junegunn/vim-peekaboo'
+Plug 'junegunn/vim-easy-align'
+
 Plug 'airblade/vim-gitgutter'
 Plug 'easymotion/vim-easymotion'
 Plug 'goldfeld/vim-seek'
@@ -19,8 +25,6 @@ Plug 'tpope/vim-sensible'
 
 Plug 'jiangmiao/auto-pairs'
 Plug 'rking/ag.vim'
-
-Plug 'junegunn/vim-easy-align'
 
 " Flash yanks
 Plug 'kana/vim-operator-user'
@@ -45,7 +49,7 @@ Plug 'junegunn/seoul256.vim'
 " Syntax
 Plug 'benekastah/neomake'
 " Plug 'scrooloose/syntastic'
-Plug 'dvcrn/vim-niji'
+Plug 'junegunn/rainbow_parentheses.vim'
 
 Plug 'keith/swift.vim', { 'for': 'swift' }
 
@@ -95,6 +99,7 @@ source ~/.dotfiles/vim/nvim/plugins/hardtime.vim
 source ~/.dotfiles/vim/nvim/plugins/seek.vim
 source ~/.dotfiles/vim/nvim/plugins/neomake.vim
 source ~/.dotfiles/vim/nvim/plugins/fzf.vim
+source ~/.dotfiles/vim/nvim/plugins/emoji.vim
 
 call plug#end()
 

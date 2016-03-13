@@ -28,3 +28,5 @@ if has('gui_running')
   :set guioptions-=L  "remove left-hand scroll bar
   :set guioptions-=M  " don't even source the menu script
 endif
+
+autocmd! BufRead * RainbowParentheses

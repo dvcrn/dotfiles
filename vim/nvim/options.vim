@@ -63,9 +63,6 @@ set hlsearch            " highlight search results
 set ignorecase          " ignore case when searching
 set smartcase           " ignore case if search string is all lower case, case-sensitve otherwise
 
-" Set titlestring to current buffer
-set titlestring=%t%(\ %M%)%(\ (%{expand(\"%:p:h\")})%)%(\ %a%)\ -\ %{v:servername}
-
 " Make cursor a flat bar in insert mode
 :let $NVIM_TUI_ENABLE_CURSOR_SHAPE=1
 

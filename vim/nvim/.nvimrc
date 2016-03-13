@@ -4,7 +4,6 @@ Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
 Plug 'neovim/node-host', { 'do': 'npm install' }
 
 Plug 'scrooloose/nerdtree'
-" Plug 'kien/ctrlp.vim'
 Plug 'junegunn/vim-pseudocl'
 Plug 'junegunn/vim-oblique'
 Plug 'junegunn/vim-fnr'
@@ -24,7 +23,6 @@ Plug 'tpope/vim-classpath'
 Plug 'tpope/vim-sensible'
 
 Plug 'jiangmiao/auto-pairs'
-Plug 'rking/ag.vim'
 
 " Flash yanks
 Plug 'kana/vim-operator-user'

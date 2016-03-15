@@ -24,6 +24,9 @@ Plug 'tpope/vim-sensible'
 
 Plug 'jiangmiao/auto-pairs'
 
+Plug 'kassio/neoterm'
+Plug 'hkupty/nvimux'
+
 " Flash yanks
 Plug 'kana/vim-operator-user'
 Plug 'haya14busa/vim-operator-flashy'

@@ -26,6 +26,7 @@ Plug 'jiangmiao/auto-pairs'
 
 Plug 'kassio/neoterm'
 Plug 'hkupty/nvimux'
+Plug 'airblade/vim-rooter'
 
 " Flash yanks
 Plug 'kana/vim-operator-user'
@@ -42,6 +43,7 @@ Plug 'nathanaelkane/vim-indent-guides'
 
 " Syntax
 Plug 'benekastah/neomake'
+Plug 'sheerun/vim-polyglot'
 " Plug 'scrooloose/syntastic'
 Plug 'junegunn/rainbow_parentheses.vim'
 
@@ -84,6 +86,7 @@ source ~/.dotfiles/vim/nvim/lang/ruby.vim
 source ~/.dotfiles/vim/nvim/lang/javascript.vim
 source ~/.dotfiles/vim/nvim/lang/clojure.vim
 source ~/.dotfiles/vim/nvim/lang/elixir.vim
+source ~/.dotfiles/vim/nvim/lang/html.vim
 
 " source ~/.dotfiles/vim/nvim/plugins/airline.vim
 " source ~/.dotfiles/vim/nvim/plugins/fzf.vim

@@ -13,7 +13,7 @@ silent execute '!mkdir -p $HOME/.vimviews'
 silent execute '!mkdir -p $HOME/.vimswap'
 
 " basic options
-set autochdir
+" set autochdir
 set laststatus=2                  " always show the status line
 set cmdheight=2                   " and use a two-line tall status line
 set showcmd                       " show the command

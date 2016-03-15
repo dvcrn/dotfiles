@@ -10,6 +10,6 @@ autocmd BufNewFile,BufRead Rakefile setfiletype rake
 autocmd BufNewFile,BufRead Rakefile set syntax=ruby
 autocmd BufNewFile,BufRead *.rake setfiletype rake
 autocmd BufNEwFile,BufRead *.rake set syntax=ruby
-autocmd FileType ruby,eruby set filetype=ruby.eruby.chef
+" autocmd FileType ruby,eruby set filetype=ruby.eruby.chef
 
 let g:syntastic_ruby_checkers = ['rubocop']

@@ -61,7 +61,7 @@ imap fd <esc>
 vno v <esc>
 
 " remap ESC to exit insert mode in terminal
-tnoremap <Esc> <C-\><C-n>
+" tnoremap <Esc> <C-\><C-n>
 
 " Searching
 " remove search highlighting with <F3>

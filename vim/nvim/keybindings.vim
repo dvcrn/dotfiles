@@ -101,6 +101,7 @@ noremap <Leader>tl :set relativenumber!<CR>:echo 'Toggled relative line numbers'
 noremap <Leader>tm :MediumModeToggle<CR>:echo 'Toggled medium mode'<CR>" Toggle medium mode
 noremap <Leader>tH :call ToggleHardMode()<CR>:echo 'Toggled hardmode'<CR>" Toggle hard mode
 noremap <Leader>th :HardTimeToggle<CR>:echo 'Toggled hardtime'<CR>" Toggle hard time
+noremap <Leader>tg :Goyo<CR>:echo 'Toggled Goyo'<CR>" Toggle goyo time
 
 " git
 nnoremap <leader>gs :Gstatus<CR>

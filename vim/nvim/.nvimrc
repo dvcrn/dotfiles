@@ -11,6 +11,7 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/vim-peekaboo'
 Plug 'junegunn/vim-easy-align'
+Plug 'junegunn/gv.vim'
 
 Plug 'airblade/vim-gitgutter'
 Plug 'easymotion/vim-easymotion'
@@ -100,6 +101,7 @@ source ~/.dotfiles/vim/nvim/plugins/hardtime.vim
 source ~/.dotfiles/vim/nvim/plugins/seek.vim
 source ~/.dotfiles/vim/nvim/plugins/neomake.vim
 source ~/.dotfiles/vim/nvim/plugins/emoji.vim
+source ~/.dotfiles/vim/nvim/plugins/goyo.vim
 
 
 call plug#end()

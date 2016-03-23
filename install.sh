@@ -1,6 +1,28 @@
 echo "Installing all your stuff!"
 echo ""
 
+echo ""
+echo "---> bash"
+if [ ! -e ~/.git-prompt.sh ]; then
+  curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh -o ~/.git-prompt.sh
+fi
+
+if [ ! -e ~/.jg ]; then
+  # jg bins. Since my bashrc is inspired by his, I am using his binaries as
+  # well
+  git clone git@github.com:junegunn/dotfiles.git ~/.jg
+fi
+
+ln -svf ~/.dotfiles/bash/bashrc ~/.bashrc
+ln -svf ~/.dotfiles/bash/git.bash ~/.git.bash
+
+# scripts
+mkdir -p ~/bin
+for bin in ~/.jg/bin/*; do
+  ln -svf $bin ~/bin
+done
+echo "---> bash done"
+
 # Brew
 echo ""
 echo "---> Brew"
@@ -72,9 +94,3 @@ echo "---> fish"
 mkdir -p ~/.config/
 ln -s ~/.dotfiles/fisherman ~/.config/fisherman
 echo "---> fish done"
-
-echo ""
-echo "---> peco"
-mkdir -p ~/.config/peco/
-ln -s ~/.dotfiles/peco/config.json ~/.config/peco/config.json
-echo "---> peco done"

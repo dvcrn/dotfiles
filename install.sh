@@ -14,6 +14,7 @@ if [ ! -e ~/.jg ]; then
 fi
 
 ln -svf ~/.dotfiles/bash/bashrc ~/.bashrc
+ln -svf ~/.dotfiles/bash/bash_profile ~/.bash_profile
 ln -svf ~/.dotfiles/bash/git.bash ~/.git.bash
 
 # scripts

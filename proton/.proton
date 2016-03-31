@@ -22,6 +22,7 @@
     :tools/linter
     :tools/build
     :tools/todo
+    :tools/terminal
     ;; :tools/bookmarks
     ;; :tools/minimap
 
@@ -35,7 +36,7 @@
     :lang/elixir
     :lang/markdown
     :lang/python
-    :lang/ruby
+    ;; :lang/ruby
 
     ;; -----------------------------------
     ;; Frameworks

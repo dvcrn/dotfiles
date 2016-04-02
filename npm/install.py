@@ -14,10 +14,13 @@ packages = [
     'gulp',
     'tern',
 
-    ## linting
+    # linting
     'eslint',
     'eslint-plugin-react',
-    'eslint-config-airbnb'
+    'eslint-config-airbnb',
+
+    # dev tools
+    'jpm'
 ]
 
 os.system('npm install -g %s' % ' '.join(packages))

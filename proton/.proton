@@ -63,6 +63,11 @@
     :language-salt
   ]
 
+  :disabled-packages
+  [
+    :linter-markdown
+  ]
+
   ;; Proton takes over your atom configuration. All settings that are not listed here will get wiped
   ;; Configurations are denoted as 2 element vector consisting of k/v
   ;; sub-vectors inside v will get treated like javascript arrays

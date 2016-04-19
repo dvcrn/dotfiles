@@ -64,7 +64,7 @@
 
      themes-megapack)
 
-   dotspacemacs-additional-packages '(evil-annoying-arrows)
+   dotspacemacs-additional-packages '()
    dotspacemacs-excluded-packages '()
    dotspacemacs-delete-orphan-packages t))
 

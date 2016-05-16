@@ -15,7 +15,6 @@ Plug 'junegunn/gv.vim'
 
 Plug 'airblade/vim-gitgutter'
 Plug 'easymotion/vim-easymotion'
-Plug 'goldfeld/vim-seek'
 
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-fugitive'
@@ -99,6 +98,7 @@ source ~/.dotfiles/vim/nvim/plugins/gitgutter.vim
 source ~/.dotfiles/vim/nvim/plugins/mediummode.vim
 source ~/.dotfiles/vim/nvim/plugins/hardtime.vim
 source ~/.dotfiles/vim/nvim/plugins/seek.vim
+" source ~/.dotfiles/vim/nvim/plugins/sneak.vim
 source ~/.dotfiles/vim/nvim/plugins/neomake.vim
 source ~/.dotfiles/vim/nvim/plugins/emoji.vim
 source ~/.dotfiles/vim/nvim/plugins/goyo.vim

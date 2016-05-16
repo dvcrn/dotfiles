@@ -71,6 +71,8 @@ nnoremap <silent> <leader>/ :nohlsearch<CR>
 " meta
 nnoremap <leader>_i :PlugInstall<CR>
 nnoremap <leader>_c :PlugClean<CR>
+nnoremap <leader>_u :PlugUpdate<CR>
+nnoremap <leader>_U :PlugUpgrade<CR>
 
 " project
 nnoremap <silent> <leader>pt :NERDTreeToggle<CR>   " open a horizontal split and switch to it (,h)

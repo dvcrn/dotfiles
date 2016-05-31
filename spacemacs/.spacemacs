@@ -46,10 +46,10 @@
      jabber
      emoji
      colors
-     (wakatime :variables
-               wakatime-api-key "*****"
-               wakatime-cli-path "/usr/local/bin/wakatime"
-               wakatime-python-bin "/usr/local/bin/python")
+     ;; (wakatime :variables
+     ;;           wakatime-api-key "*****"
+     ;;           wakatime-cli-path "/usr/local/bin/wakatime"
+     ;;           wakatime-python-bin "/usr/local/bin/python")
 
      ;; frameworks
      react
@@ -74,7 +74,8 @@
    dotspacemacs-verbose-loading nil
    dotspacemacs-startup-banner '999
    dotspacemacs-startup-lists '(recents projects)
-   dotspacemacs-themes '(spacemacs-dark
+   dotspacemacs-themes '(hc-zenburn
+                         spacemacs-dark
                          zenburn
                          misterioso
                          monokai)
@@ -91,7 +92,7 @@
    dotspacemacs-command-key ":"
    dotspacemacs-auto-save-file-location 'cache
    dotspacemacs-use-ido nil
-   dotspacemacs-helm-resize t
+   dotspacemacs-helm-resize nil
    dotspacemacs-helm-no-header t
    dotspacemacs-helm-position 'bottom
    dotspacemacs-enable-paste-micro-state nil
@@ -188,9 +189,9 @@
 (defun dotspacemacs/user-config ()
 ;; (indent-guide-global-mode)
   (global-linum-mode t)
-  (global-evil-annoying-arrows-mode)
+  (global-evil-annoying-arrows-mode t)
+  (linum-relative-global-mode t)
 
-  (linum-relative-toggle)
   (space-style)
 
   ;; Get rid off odd pasting behavior

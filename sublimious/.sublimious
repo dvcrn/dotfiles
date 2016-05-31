@@ -29,7 +29,7 @@ These packages will be installed through package control
 """
 additional_packages = [
     # "VintageLines",
-    "WakaTime",
+    # "WakaTime",
 ]
 
 """
@@ -52,7 +52,7 @@ user_config = {
     # "font_face": "Hack",
 
     # These lines are responsible for editor appearance
-    "line_numbers": False,
+    "line_numbers": True,
     # "draw_white_space": "selection",
     # "word_wrap": True,
 

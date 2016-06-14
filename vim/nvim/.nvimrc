@@ -86,6 +86,7 @@ source ~/.dotfiles/vim/nvim/lang/javascript.vim
 source ~/.dotfiles/vim/nvim/lang/clojure.vim
 source ~/.dotfiles/vim/nvim/lang/elixir.vim
 source ~/.dotfiles/vim/nvim/lang/html.vim
+source ~/.dotfiles/vim/nvim/lang/go.vim
 
 " source ~/.dotfiles/vim/nvim/plugins/airline.vim
 " source ~/.dotfiles/vim/nvim/plugins/fzf.vim

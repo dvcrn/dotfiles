@@ -190,7 +190,6 @@
 (defun dotspacemacs/user-config ()
 ;; (indent-guide-global-mode)
   (global-linum-mode t)
-  (global-evil-annoying-arrows-mode t)
   (linum-relative-global-mode t)
 
   (space-style)

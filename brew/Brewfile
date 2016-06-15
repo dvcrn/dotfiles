@@ -45,6 +45,7 @@ brew "python3"
 brew "go"
 brew "leiningen"
 brew "node"
+brew "elixir"
 
 # Dev tools
 brew "coreutils"

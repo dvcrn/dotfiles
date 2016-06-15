@@ -61,7 +61,7 @@ fi
 
 gnvim() {
   ABSOLUTEPATH=`realpath $1`
-  ~/src/neovim-qt/build/bin/nvim-qt -- $ABSOLUTEPATH
+  open -n -a ~/src/neovim-qt/build/bin/nvim-qt --args -- $ABSOLUTEPATH
 }
 
 ### emacs

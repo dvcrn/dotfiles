@@ -48,6 +48,8 @@ Plug 'junegunn/rainbow_parentheses.vim'
 
 Plug 'keith/swift.vim', { 'for': 'swift' }
 
+Plug 'equalsraf/neovim-gui-shim'
+
 " control whitespace preferences based on filetype
 filetype on
 

@@ -26,6 +26,7 @@
      django
      ruby
      swift
+     go
 
      ;; Apps
      chrome

@@ -1,3 +1,5 @@
+Plug 'airblade/vim-gitgutter'
+
 highlight clear SignColumn
 highlight GitGutterAdd ctermfg=green guifg=darkgreen
 highlight GitGutterChange ctermfg=yellow guifg=darkyellow

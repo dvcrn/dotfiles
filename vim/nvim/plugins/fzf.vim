@@ -1,3 +1,6 @@
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
+
 function! s:find_root()
   for vcs in ['.git', '.svn', '.hg']
     let dir = finddir(vcs.'/..', ';')

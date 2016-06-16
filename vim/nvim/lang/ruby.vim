@@ -1,5 +1,5 @@
 " ruby packages
-Plug 'vim-ruby/vim-ruby'
+Plug 'vim-ruby/vim-ruby', { 'for': 'ruby' }
 
 " non ruby files related to Ruby
 autocmd BufNewFile,BufRead Gemfile,Gemfile.lock,Guardfile setfiletype ruby

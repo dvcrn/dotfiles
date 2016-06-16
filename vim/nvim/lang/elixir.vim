@@ -1,4 +1,4 @@
-Plug 'Thinca/vim-ref'
-Plug 'Shougo/vimproc.vim', { 'do': 'make' }
-Plug 'elixir-lang/vim-elixir'
-Plug 'slashmili/alchemist.vim'
+Plug 'Thinca/vim-ref', { 'for': 'elixir' }
+Plug 'Shougo/vimproc.vim', { 'do': 'make', 'for': 'elixir' }
+Plug 'elixir-lang/vim-elixir', { 'for': 'elixir' }
+Plug 'slashmili/alchemist.vim', { 'for': 'elixir' }

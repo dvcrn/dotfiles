@@ -2,12 +2,9 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'neovim/node-host', { 'do': 'npm install' }
 
-Plug 'scrooloose/nerdtree'
 Plug 'junegunn/vim-pseudocl'
 Plug 'junegunn/vim-oblique'
 Plug 'junegunn/vim-fnr'
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-Plug 'junegunn/fzf.vim'
 Plug 'junegunn/vim-peekaboo'
 Plug 'junegunn/vim-easy-align'
 Plug 'junegunn/gv.vim'
@@ -33,15 +30,11 @@ Plug 'haya14busa/vim-operator-flashy'
 
 " Hard mode to get rid of habits
 Plug 'dvcrn/hardmode'
-Plug 'kbarrette/mediummode'
-Plug 'takac/vim-hardtime'
-
 
 " Style related packages
 Plug 'nathanaelkane/vim-indent-guides'
 
 " Syntax
-Plug 'benekastah/neomake'
 Plug 'sheerun/vim-polyglot'
 " Plug 'scrooloose/syntastic'
 Plug 'junegunn/rainbow_parentheses.vim'
@@ -111,4 +104,3 @@ source ~/.dotfiles/vim/nvim/plugins/snippets.vim
 
 
 call plug#end()
-

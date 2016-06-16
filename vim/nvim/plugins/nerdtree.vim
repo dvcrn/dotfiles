@@ -1,3 +1,5 @@
+Plug 'scrooloose/nerdtree'
+
 " NERDTree
 let g:NERDTreeHijackNetrw=0
 

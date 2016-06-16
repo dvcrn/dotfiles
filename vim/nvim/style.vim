@@ -19,14 +19,6 @@ autocmd VimEnter * colorscheme seoul256
 let g:indent_guides_start_level = 2
 let g:indent_guides_guide_size = 1
 
-" let g:Guifont=Hack\ Regular:h14
-" let g:guifont=DejaVu Sans Mono:h14
-
-" Neovim-qt Guifont command
-command -nargs=? Guifont call rpcnotify(0, 'Gui', 'SetFont', "<args>") | let g:Guifont="<args>"
-" Set the font to DejaVu Sans Mono:h13
-:Guifont Hack:h14
-
 if has('gui_running')
   set guifont=Hack\ Regular:h14
   :set guioptions-=m  "remove menu bar

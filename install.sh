@@ -63,10 +63,11 @@ echo "---> vim"
 # ln -s ~/.dotfiles/vim/.gvimrc ~/.gvimrc
 # ln -s ~/.dotfiles/vim/.ideavimrc ~/.ideavimrc
 mkdir -p ~/.config/nvim/
-ln -s ~/.dotfiles/vim/nvim/.nvimrc ~/.config/nvim/init.vim
-ln -s ~/.dotfiles/vim/nvim/.nvimrc ~/.vimrc
-ln -s ~/.dotfiles/vim/nvim/.nvimrc ~/.gvimrc
-ln -s ~/.dotfiles/vim/nvim/.nvimrc ~/.ideavimrc
+ln -s ~/.dotfiles/vim/nvim/init.vim ~/.config/nvim/init.vim
+ln -s ~/.dotfiles/vim/nvim/ginit.vim ~/.config/nvim/ginit.vim
+ln -s ~/.dotfiles/vim/nvim/init.vim ~/.vimrc
+ln -s ~/.dotfiles/vim/nvim/init.vim ~/.gvimrc
+ln -s ~/.dotfiles/vim/nvim/init.vim ~/.ideavimrc
 echo "---> vim done"
 
 echo ""

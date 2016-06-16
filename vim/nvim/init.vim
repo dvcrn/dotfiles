@@ -84,7 +84,7 @@ source ~/.dotfiles/vim/nvim/lang/html.vim
 source ~/.dotfiles/vim/nvim/lang/go.vim
 
 " source ~/.dotfiles/vim/nvim/plugins/airline.vim
-" source ~/.dotfiles/vim/nvim/plugins/fzf.vim
+source ~/.dotfiles/vim/nvim/plugins/fzf.vim
 " source ~/.dotfiles/vim/nvim/plugins/ctrlp.vim
 source ~/.dotfiles/vim/nvim/plugins/syntastic.vim
 source ~/.dotfiles/vim/nvim/plugins/nerdtree.vim

@@ -7,6 +7,8 @@ function! PostInstallVimgo(info)
 endfunction
 
 Plug 'fatih/vim-go', { 'for': 'go', 'do': function('PostInstallVimgo') }
+Plug 'nsf/gocode', { 'rtp': 'nvim', 'do': '~/.config/nvim/plugged/gocode/nvim/symlink.sh' }
+Plug 'zchee/deoplete-go', { 'do': 'make' }
 
 let g:go_highlight_functions = 1
 let g:go_highlight_methods = 1

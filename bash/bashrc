@@ -40,8 +40,10 @@ export HISTTIMEFORMAT="%Y/%m/%d %H:%M:%S:   "
 [ -z "$TMPDIR" ] && TMPDIR=/tmp
 
 ### Global
-export GOPATH=~/gosrc
+export GOPATH=~/go
 mkdir -p $GOPATH
+
+export PATH_EXPANDED=1
 if [ -z "$PATH_EXPANDED" ]; then
   export PATH=~/bin:~/ruby:/opt/bin:/usr/local/bin:/usr/local/share/python:$GOPATH/bin:/usr/local/opt/go/libexec/bin:$PATH
   export PATH_EXPANDED=1
@@ -506,4 +508,5 @@ act() {
 # unset _fzf_completion_loaded
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 [ -f ~/.git.bash ] && source ~/.git.bash
+[ -f ~/.local.bash ] && source ~/.local.bash
 

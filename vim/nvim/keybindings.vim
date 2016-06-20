@@ -2,17 +2,27 @@
 
 " Move line(s) up or down via C-j and C-k respectively
 
-" Normal mode
-nnoremap <C-j> :m .+1<CR>==
-nnoremap <C-k> :m .-2<CR>==
+"" Normal mode
+" nnoremap <C-j> :m .+1<CR>==
+" nnoremap <C-k> :m .-2<CR>==
+"
+" " Insert mode
+" inoremap <C-j> <ESC>:m .+1<CR>==gi
+" inoremap <C-k> <ESC>:m .-2<CR>==gi
+"
+" " Visual mode
+" vnoremap <C-j> :m '>+1<CR>gv=gv
+" vnoremap <C-k> :m '<-2<CR>gv=gv
 
-" Insert mode
-inoremap <C-j> <ESC>:m .+1<CR>==gi
-inoremap <C-k> <ESC>:m .-2<CR>==gi
+" Make c-j to act the same as c-n
+inoremap <C-j> <C-n>
+inoremap <C-k> <C-p>
 
-" Visual mode
-vnoremap <C-j> :m '>+1<CR>gv=gv
-vnoremap <C-k> :m '<-2<CR>gv=gv
+nnoremap <C-j> <C-n>
+nnoremap <C-k> <C-p>
+
+vnoremap <C-j> <C-n>
+vnoremap <C-k> <C-p>
 
 " Tab navigation
 nnoremap ‘ :bnext<CR> " alt-right-square-bracket

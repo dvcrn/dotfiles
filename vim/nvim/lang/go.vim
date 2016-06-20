@@ -3,7 +3,7 @@ function! PostInstallVimgo(info)
   " - name:   name of the plugin
   " - status: 'installed', 'updated', or 'unchanged'
   " - force:  set on PlugInstall! or PlugUpdate!
-  :GoInstallBinaries
+  GoInstallBinaries
 endfunction
 
 Plug 'fatih/vim-go', { 'for': 'go', 'do': function('PostInstallVimgo') }
@@ -15,6 +15,9 @@ let g:go_highlight_structs = 1
 let g:go_highlight_interfaces = 1
 let g:go_highlight_operators = 1
 let g:go_highlight_build_constraints = 1
+
+" Use goimports over gofmt
+let g:go_fmt_command = "goimports"
 
 " [g]o [d]definition
 au FileType go nmap <Leader>mgds <Plug>(go-def-split)

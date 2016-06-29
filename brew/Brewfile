@@ -68,6 +68,7 @@ brew "ack"
 brew "neovim-dot-app", args: ['HEAD']
 brew "peco"
 brew "fzf"
+cask "postman"
 
 # Quicklook plugins
 # https://github.com/sindresorhus/quick-look-plugins

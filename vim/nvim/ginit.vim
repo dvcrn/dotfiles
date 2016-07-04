@@ -5,5 +5,5 @@
 
 " Neovim-qt Guifont command
 " Set the font to DejaVu Sans Mono:h13
-:Guifont Hack:h14
+:Guifont Hack:h15
 

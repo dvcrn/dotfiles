@@ -36,7 +36,6 @@ Plug 'nathanaelkane/vim-indent-guides'
 
 " Syntax
 Plug 'sheerun/vim-polyglot'
-" Plug 'scrooloose/syntastic'
 Plug 'junegunn/rainbow_parentheses.vim'
 
 Plug 'keith/swift.vim', { 'for': 'swift' }
@@ -68,8 +67,6 @@ let g:jedi#use_tabs_not_buffers = 0
 let g:jedi#popup_on_dot = 0
 let g:jedi#completions_enabled = 0
 
-let g:ycm_autoclose_preview_window_after_insertion = 1 " YCM
-
 source ~/.dotfiles/vim/nvim/options.vim
 source ~/.dotfiles/vim/nvim/keybindings.vim
 source ~/.dotfiles/vim/nvim/statusline.vim
@@ -86,7 +83,7 @@ source ~/.dotfiles/vim/nvim/lang/go.vim
 " source ~/.dotfiles/vim/nvim/plugins/airline.vim
 source ~/.dotfiles/vim/nvim/plugins/fzf.vim
 " source ~/.dotfiles/vim/nvim/plugins/ctrlp.vim
-source ~/.dotfiles/vim/nvim/plugins/syntastic.vim
+" source ~/.dotfiles/vim/nvim/plugins/syntastic.vim
 source ~/.dotfiles/vim/nvim/plugins/nerdtree.vim
 source ~/.dotfiles/vim/nvim/plugins/fugitive.vim
 source ~/.dotfiles/vim/nvim/plugins/gitgutter.vim

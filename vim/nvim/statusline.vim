@@ -89,4 +89,4 @@ function! Emojify()
   endif
 endfunction
 
-autocmd VimEnter * call Emojify()
+" autocmd VimEnter * call Emojify()

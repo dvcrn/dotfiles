@@ -87,6 +87,7 @@ cask "provisionql"
 # Misc tools
 cask "osxfuse"
 brew "ntfs-3g"
+brew "hardlink-osx"
 
 # General Apps
 cask "skype"

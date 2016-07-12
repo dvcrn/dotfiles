@@ -53,7 +53,6 @@ brew "tmux"
 brew "vim"
 brew "macvim"
 brew "emacs-mac"
-# brew "emacs", args: ['with-cocoa', 'with-gnutls', 'srgb']
 brew "neovim", args: ['HEAD']
 brew "wget"
 brew "reattach-to-user-namespace"
@@ -65,7 +64,6 @@ brew "tree"
 brew "z"
 brew "ag"
 brew "ack"
-brew "neovim-dot-app", args: ['HEAD']
 brew "peco"
 brew "fzf"
 cask "postman"
@@ -90,9 +88,7 @@ brew "ntfs-3g"
 brew "hardlink-osx"
 
 # General Apps
-cask "skype"
 cask "slack"
-cask "alfred"
 cask "transmission"
 
 cask "google-chrome"
@@ -101,25 +97,27 @@ cask "1password"
 cask "dropbox"
 
 cask "sourcetree"
+cask "gitup"
+
 cask "little-snitch"
+cask "airserver"
 
 cask "iterm2"
 cask "cathode"
-cask "sublime-text3"
+
+cask "sublime-text"
+cask "sublime-text-dev"
 cask "intellij-idea"
 cask "atom"
 
 cask "alfred"
-cask "launchbar"
 cask "bartender"
 
 cask "shortcat"
-cask "apptivate"
 cask "hyperdock"
 cask "hyperswitch"
 cask "totalspaces"
 
 cask "google-japanese-ime"
 
-# cask "asepsis"
 cask "java"

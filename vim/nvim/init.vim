@@ -20,7 +20,7 @@ Plug 'tpope/vim-sensible'
 
 Plug 'jiangmiao/auto-pairs'
 
-Plug 'kassio/neoterm'
+Plug 'kassio/neoterm', { 'commit': '9e33da0a' }
 Plug 'hkupty/nvimux'
 Plug 'airblade/vim-rooter'
 

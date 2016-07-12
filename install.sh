@@ -10,7 +10,7 @@ fi
 if [ ! -e ~/.jg ]; then
   # jg bins. Since my bashrc is inspired by his, I am using his binaries as
   # well
-  git clone git@github.com:junegunn/dotfiles.git ~/.jg
+  git clone https://github.com/junegunn/dotfiles.git ~/.jg
 fi
 
 ln -svf ~/.dotfiles/bash/bashrc ~/.bashrc

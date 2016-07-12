@@ -20,7 +20,11 @@ packages = [
     'eslint-config-airbnb',
 
     # dev tools
-    'jpm'
+    'jpm',
+
+    # my stuff
+    'gpr',
+    'lab-cli'
 ]
 
 os.system('npm install -g %s' % ' '.join(packages))

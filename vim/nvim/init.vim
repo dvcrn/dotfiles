@@ -42,6 +42,11 @@ Plug 'keith/swift.vim', { 'for': 'swift' }
 
 Plug 'equalsraf/neovim-gui-shim'
 
+" global function
+function! DoRemote(args)
+  UpdateRemotePlugins
+endfunction
+
 " control whitespace preferences based on filetype
 filetype on
 

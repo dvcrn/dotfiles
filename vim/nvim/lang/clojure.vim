@@ -1,7 +1,3 @@
-function! DoRemote(arg)
-  UpdateRemotePlugins
-endfunction
-
 " Packages
 Plug 'tpope/vim-fireplace', { 'for': 'clojure' }
 Plug 'guns/vim-clojure-static', { 'for': 'clojure' }
@@ -9,8 +5,7 @@ Plug 'guns/vim-clojure-highlight', { 'for': 'clojure' }
 Plug 'fwolanski/vim-clojure-conceal', { 'for': 'clojure' }
 Plug 'tpope/vim-sexp-mappings-for-regular-people', { 'for': 'clojure' }
 Plug 'guns/vim-sexp', { 'for': 'clojure' }
-Plug 'snoe/nvim-parinfer.js', { 'for': 'clojure', 'do': function('DoRemote') }
-
+Plug 'snoe/nvim-parinfer.js', { 'do': function('DoRemote') }
 
 let g:clojure_conceal_extras = 1 " Lambda concealing for vim
 

@@ -29,8 +29,6 @@ Config is managed by [[https://github.com/dvcrn/sublimious][sublimious]]. Symlin
 ** proton / atom
 Config is managed by [[https://github.com/dvcrn/proton][proton]]. Symlink to =~/.proton= and install proton through apm.
 
-** iTerm2
-iTerm2 config. Just point iTerm to the folder holding the file and you should be good
 
 ** kwm
 config for [[kwm][https://github.com/koekeishiya/kwm]]. Symlink to =~/.kwm/kwmrc=
@@ -40,3 +38,4 @@ experimental fishshell config based on [[fisherman][https://github.com/fisherman
 
 ** peco
 config for peco search. Symlink the config into =~/.config/peco/config.json=
+*

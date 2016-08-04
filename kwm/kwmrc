@@ -31,7 +31,7 @@ kwmc bindsym hyper-h window -f west
 */
 
 // Set default values for screen padding
-kwmc config padding 40 20 20 20
+kwmc config padding 20 20 20 20
 
 // Set default values for container gaps
 kwmc config gap 15 15
@@ -85,13 +85,22 @@ kwmc config spawn left
    does not get tiled by Kwm by default.
    This is because some applications do not have the
    AXWindowRole and AXStandardWindowSubRole */
+
 kwmc rule owner="iTerm2" properties={role="AXDialog"}
+kwmc rule owner="Little Snitch Configuration" properties={role="AXStandardWindow"}
+kwmc rule owner="nvim-qt" properties={role="AXStandardWindow"}
+kwmc rule owner="LINE" properties={role="AXStandardWindow"}
+kwmc rule owner="Anki" properties={role="AXStandardWindow"}
 
 /* The following commands create rules that
    blacklists an application from Kwms tiling
 
    kwmc rule owner="Steam" properties={float="true"}
    kwmc rule owner="Photoshop" properties={float="true"} */
+
+kwmc rule owner="Fantastical" properties={float="true"}
+kwmc rule owner="Fantastical 2" properties={float="true"}
+kwmc rule owner="Little Snitch" properties={float="true"}
 
 /* The following command creates a rule that
    captures an application to the given screen,
@@ -157,6 +166,8 @@ kwmc bindsym cmd+alt+ctrl-l window -mk east wrap
 kwmc bindsym cmd+alt+ctrl-j window -mk south wrap
 kwmc bindsym cmd+alt+ctrl-k window -mk north wrap
 
+// focus
+
 // Give Focus To Window
 kwmc bindsym cmd+alt-h window -f west
 kwmc bindsym cmd+alt-l window -f east
@@ -170,6 +181,10 @@ kwmc bindsym cmd+alt-m window -fm next
 kwmc bindsym cmd+alt-1 display -f 0
 kwmc bindsym cmd+alt-2 display -f 1
 kwmc bindsym cmd+alt-3 display -f 2
+
+// Same but with David-style better keybindings
+kwmc bindsym cmd+ctrl-h display -f 0
+kwmc bindsym cmd+ctrl-l display -f 1
 
 // Swap Focused Window
 kwmc bindsym ctrl+alt-h window -s west
@@ -201,6 +216,10 @@ kwmc bindsym ctrl+alt-right window -m space right
 kwmc bindsym ctrl+alt-1 window -m display 0
 kwmc bindsym ctrl+alt-2 window -m display 1
 kwmc bindsym ctrl+alt-3 window -m display 2
+
+// Same but with David-style better keybindings
+kwmc bindsym cmd+shift-h window -m display 0
+kwmc bindsym cmd+shift-l window -m display 1
 
 // Increase Container Gaps
 kwmc bindsym prefix-x space -g increase horizontal

@@ -17,10 +17,11 @@ layers = [
     'git',
     'python',
     'clojure',
-    'javascript',
+#     'javascript',
     'markdown',
     'php',
-    'coffee'
+    'coffee',
+    'go'
 ]
 
 """
@@ -41,8 +42,6 @@ user_config = {
     "shortcut_overlay_timeout": 0,
     "show_shortcut_overlay": True,
 
-    "vintage_lines.force_mode": True,
-
     "use_es6": True,
 
     # Style!
@@ -50,6 +49,7 @@ user_config = {
     # "theme": "Soda Dark.sublime-theme",
     # "color_scheme": "Packages/User/base16-ocean.dark (SL).tmTheme",
     # "font_face": "Hack",
+    "font_size": 14,
 
     # These lines are responsible for editor appearance
     "line_numbers": True,
@@ -57,9 +57,9 @@ user_config = {
     # "word_wrap": True,
 
     # How should sublime text deal with spaces and encodings?
-    # "translate_tabs_to_spaces": True,
-    # "ensure_newline_at_eof_on_save": True,
-    # "trim_trailing_white_space_on_save": True,
+    "translate_tabs_to_spaces": True,
+    "ensure_newline_at_eof_on_save": True,
+    "trim_trailing_white_space_on_save": True,
 
     # Sublimious comes pre-configured with a lot of good settings
     # But if you are not happy with them, overwrite them here
@@ -72,6 +72,9 @@ user_config = {
         },
         "WakaTime": {
             "api_key": "*****"
+        },
+        "GoSublime": {
+            "fmt_cmd": ["goimports", "-srcdir", "$_dir"]
         }
     }
 }

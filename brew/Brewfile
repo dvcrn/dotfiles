@@ -90,6 +90,7 @@ brew "hardlink-osx"
 # General Apps
 cask "slack"
 cask "transmission"
+cask "anki"
 
 cask "google-chrome"
 cask "google-drive"

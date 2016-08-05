@@ -92,6 +92,9 @@ kwmc rule owner="nvim-qt" properties={role="AXStandardWindow"}
 kwmc rule owner="LINE" properties={role="AXStandardWindow"}
 kwmc rule owner="Anki" properties={role="AXStandardWindow"}
 
+kwmc whitelist neovim-qt
+kwmc whitelist nvim-qt
+
 /* The following commands create rules that
    blacklists an application from Kwms tiling
 

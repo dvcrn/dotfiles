@@ -134,7 +134,15 @@ kwmc bindsym ctrl-s mode activate prefix
 kwmc bindsym cmd+alt+ctrl-q quit
 
 // Launch iTerm2
-kwmc bindsym cmd-return exec open -na /Applications/iTerm2.app
+// kwmc bindsym cmd-return exec open -na /Applications/iTerm2.app
+
+// Switch between spaces
+kwmc bindsym ctrl-left space -fExperimental left
+kwmc bindsym ctrl-right space -fExperimental right
+kwmc bindsym ctrl-1 space -fExperimental 1
+kwmc bindsym ctrl-2 space -fExperimental 2
+kwmc bindsym ctrl-3 space -fExperimental 3
+kwmc bindsym ctrl-4 space -fExperimental 4
 
 // Set Space Tiling Mode To BSP
 kwmc bindsym cmd+ctrl-a space -t bsp
@@ -211,6 +219,10 @@ kwmc bindsym ctrl+shift-x window -m mark
 // Move Focused Window To Space
 kwmc bindsym ctrl+alt-left window -m space left
 kwmc bindsym ctrl+alt-right window -m space right
+kwmc bindsym ctrl+alt-1 window -m space 1
+kwmc bindsym ctrl+alt-2 window -m space 2
+kwmc bindsym ctrl+alt-3 window -m space 3
+kwmc bindsym ctrl+alt-4 window -m space 4
 
 // Move Focused Window To Screen
 kwmc bindsym ctrl+alt-1 window -m display 0

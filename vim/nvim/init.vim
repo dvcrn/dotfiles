@@ -100,6 +100,7 @@ source ~/.dotfiles/vim/nvim/plugins/neomake.vim
 source ~/.dotfiles/vim/nvim/plugins/emoji.vim
 source ~/.dotfiles/vim/nvim/plugins/goyo.vim
 source ~/.dotfiles/vim/nvim/plugins/org.vim
+source ~/.dotfiles/vim/nvim/plugins/multiplecursors.vim
 
 " source ~/.dotfiles/vim/nvim/plugins/ycm.vim
 source ~/.dotfiles/vim/nvim/plugins/deoplete.vim

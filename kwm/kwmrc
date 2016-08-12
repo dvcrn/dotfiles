@@ -259,6 +259,6 @@ kwmc bindsym prefix+shift-down space -p decrease bottom
 kwmc bindsym prefix+shift-p space -p decrease all
 
 // Autowrite
-kwmc bindsym cmd-7 write \
-kwmc bindsym cmd-8 write {
-kwmc bindsym cmd-9 write }
+// kwmc bindsym cmd-7 write \
+// kwmc bindsym cmd-8 write {
+// kwmc bindsym cmd-9 write }

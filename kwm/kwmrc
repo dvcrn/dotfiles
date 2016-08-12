@@ -91,6 +91,7 @@ kwmc rule owner="Little Snitch Configuration" properties={role="AXStandardWindow
 kwmc rule owner="nvim-qt" properties={role="AXStandardWindow"}
 kwmc rule owner="LINE" properties={role="AXStandardWindow"}
 kwmc rule owner="Anki" properties={role="AXStandardWindow"}
+kwmc rule owner="FirefoxDeveloperEdition" properties={role="AXStandardWindow"}
 
 kwmc whitelist neovim-qt
 kwmc whitelist nvim-qt
@@ -220,21 +221,20 @@ kwmc bindsym ctrl+shift-h window -m west
 kwmc bindsym ctrl+shift-x window -m mark
 
 // Move Focused Window To Space
-kwmc bindsym ctrl+alt-left window -m space left
-kwmc bindsym ctrl+alt-right window -m space right
-kwmc bindsym ctrl+alt-1 window -m space 1
-kwmc bindsym ctrl+alt-2 window -m space 2
-kwmc bindsym ctrl+alt-3 window -m space 3
-kwmc bindsym ctrl+alt-4 window -m space 4
+kwmc bindsym cmd+ctrl+alt-l window -m space left
+kwmc bindsym cmd+ctrl+alt-h window -m space right
+
+kwmc bindsym cmd+ctrl+alt-1 window -m space 1
+kwmc bindsym cmd+ctrl+alt-2 window -m space 2
+kwmc bindsym cmd+ctrl+alt-3 window -m space 3
+kwmc bindsym cmd+ctrl+alt-4 window -m space 4
 
 // Move Focused Window To Screen
+kwmc bindsym cmd+ctrl+shift-h window -m display 0
+kwmc bindsym cmd+ctrl+shift-l window -m display 1
+
 kwmc bindsym ctrl+alt-1 window -m display 0
 kwmc bindsym ctrl+alt-2 window -m display 1
-kwmc bindsym ctrl+alt-3 window -m display 2
-
-// Same but with David-style better keybindings
-kwmc bindsym cmd+shift-h window -m display 0
-kwmc bindsym cmd+shift-l window -m display 1
 
 // Increase Container Gaps
 kwmc bindsym prefix-x space -g increase horizontal

@@ -113,6 +113,7 @@ cask "atom"
 
 cask "alfred"
 cask "bartender"
+cask "keyboard-maestro"
 
 cask "shortcat"
 cask "hyperdock"

@@ -92,6 +92,7 @@ cask "slack"
 cask "transmission"
 cask "anki"
 
+cask "google-japanese-ime"
 cask "google-chrome"
 cask "google-drive"
 cask "1password"
@@ -101,6 +102,7 @@ cask "sourcetree"
 cask "gitup"
 
 cask "little-snitch"
+cask "sidestep"
 cask "airserver"
 
 cask "iterm2"
@@ -111,15 +113,14 @@ cask "sublime-text-dev"
 cask "intellij-idea"
 cask "atom"
 
-cask "alfred"
 cask "bartender"
-cask "keyboard-maestro"
 
+cask "keyboard-maestro"
+cask "alfred"
 cask "shortcat"
+
 cask "hyperdock"
 cask "hyperswitch"
 cask "totalspaces"
-
-cask "google-japanese-ime"
 
 cask "java"

@@ -74,7 +74,10 @@ user_config = {
             "api_key": "*****"
         },
         "GoSublime": {
-            "fmt_cmd": ["goimports", "-srcdir", "$_dir"]
+            "fmt_cmd": ["goimports", "-srcdir", "$_dir"],
+            "env": {
+                "GOPATH": "$HOME/go"
+            }
         }
     }
 }

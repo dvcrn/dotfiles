@@ -97,3 +97,9 @@ echo "---> fish"
 mkdir -p ~/.config/
 ln -s ~/.dotfiles/fisherman ~/.config/fisherman
 echo "---> fish done"
+
+echo ""
+echo "---> karabiner"
+mkdir -p ~/Library/Application\ Support/Karabiner/
+ln -s ~/.dotfiles/karabiner/private.xml ~/Library/Application\ Support/Karabiner/private.xml
+echo "---> karabiner done"

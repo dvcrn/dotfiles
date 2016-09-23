@@ -147,6 +147,12 @@ kwmc bindsym ctrl-1 space -fExperimental 1
 kwmc bindsym ctrl-2 space -fExperimental 2
 kwmc bindsym ctrl-3 space -fExperimental 3
 kwmc bindsym ctrl-4 space -fExperimental 4
+kwmc bindsym ctrl-5 space -fExperimental 5
+kwmc bindsym ctrl-6 space -fExperimental 6
+kwmc bindsym ctrl-7 space -fExperimental 7
+kwmc bindsym ctrl-8 space -fExperimental 8
+kwmc bindsym ctrl-9 space -fExperimental 9
+kwmc bindsym ctrl-0 space -fExperimental 10
 
 // Set Space Tiling Mode To BSP
 kwmc bindsym cmd+ctrl-a space -t bsp
@@ -228,6 +234,12 @@ kwmc bindsym alt+ctrl+shift-1 window -m space 1
 kwmc bindsym alt+ctrl+shift-2 window -m space 2
 kwmc bindsym alt+ctrl+shift-3 window -m space 3
 kwmc bindsym alt+ctrl+shift-4 window -m space 4
+kwmc bindsym alt+ctrl+shift-5 window -m space 5
+kwmc bindsym alt+ctrl+shift-6 window -m space 6
+kwmc bindsym alt+ctrl+shift-7 window -m space 7
+kwmc bindsym alt+ctrl+shift-8 window -m space 8
+kwmc bindsym alt+ctrl+shift-9 window -m space 9
+kwmc bindsym alt+ctrl+shift-0 window -m space 10
 
 // Move Focused Window To Screen
 kwmc bindsym cmd+ctrl+shift-h window -m display 0

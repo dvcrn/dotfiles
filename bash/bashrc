@@ -63,7 +63,7 @@ fi
 
 gnvim() {
   ABSOLUTEPATH=`realpath $1`
-  open -n -a ~/src/neovim-qt/build/bin/nvim-qt --args -- $ABSOLUTEPATH
+  reattach-to-user-namespace open -a ~/src/neovim-qt/build/bin/nvim-qt.app $1
 }
 
 ### emacs

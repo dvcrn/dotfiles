@@ -7,7 +7,11 @@
    dotspacemacs-configuration-layers
    '(
      osx
-     auto-completion
+     (auto-completion :variables
+                      auto-completion-enable-sort-by-usage t
+                      auto-completion-enable-snippets-in-popup t
+                      auto-completion-return-key-behavior 'complete
+                      auto-completion-tab-key-behavior 'complete)
      better-defaults
 
      ;; Languages
@@ -16,7 +20,6 @@
      (c-c++ :variables c-c++-enable-clang-support t)
      javascript
      html
-     php
      typescript
      erlang
      elixir
@@ -39,7 +42,6 @@
      ;; vim
      ;; vim-powerline
      evil-snipe
-     unimpaired
 
      ;; etc
      shell
@@ -61,12 +63,13 @@
      spell-checking
      syntax-checking
      version-control
-     ;; vim-powerline
 
-     themes-megapack)
+     themes-megapack
+     slack
+     )
 
    dotspacemacs-additional-packages '()
-   dotspacemacs-excluded-packages '()
+   dotspacemacs-excluded-packages '(auto-complete)
    dotspacemacs-delete-orphan-packages t))
 
 (defun dotspacemacs/init ()
@@ -75,7 +78,7 @@
    dotspacemacs-verbose-loading nil
    dotspacemacs-startup-banner '999
    dotspacemacs-startup-lists '(recents projects)
-   dotspacemacs-themes '(hc-zenburn
+   dotspacemacs-themes '(
                          spacemacs-dark
                          zenburn
                          misterioso
@@ -191,6 +194,10 @@
 ;; (indent-guide-global-mode)
   (global-linum-mode t)
   (linum-relative-global-mode t)
+  (global-company-mode)
+
+  ;; trigger auto-complete vim style
+  (global-set-key (kbd "C-n") 'company-dabbrev)
 
   (space-style)
 
@@ -199,7 +206,6 @@
 
   ;; get rid of symbolic link question
   (setq vc-follow-symlinks t)
-  (global-company-mode)
 
   ;; Always launch magit in fullscreen
   (setq-default git-magit-status-fullscreen t)

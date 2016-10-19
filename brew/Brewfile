@@ -23,6 +23,7 @@ brew "heroku-toolbelt"
 brew "mozilla-addon-sdk"
 brew "awscli"
 brew "gdb"
+cask "google-cloud-sdk"
 
 # Git
 brew "hub"

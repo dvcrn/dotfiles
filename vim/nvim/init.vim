@@ -39,6 +39,7 @@ Plug 'sheerun/vim-polyglot'
 Plug 'junegunn/rainbow_parentheses.vim'
 
 Plug 'keith/swift.vim', { 'for': 'swift' }
+Plug 'saltstack/salt-vim'
 Plug 'dearrrfish/vim-applescript', { 'for': 'applescript' }
 
 

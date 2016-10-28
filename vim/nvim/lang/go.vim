@@ -42,6 +42,9 @@ au FileType go nmap <Leader>mi <Plug>(go-info)
 " [r]ename
 au FileType go nmap <Leader>mr <Plug>(go-rename)
 
+" [t]ags
+au FileType go nmap <Leader>mt :GoAddTags<space>
+
 
 " -- everything again for ,
 " TODO: learn vimscript and combine them
@@ -66,3 +69,6 @@ au FileType go nmap ,i <Plug>(go-info)
 
 " [r]ename
 au FileType go nmap ,r <Plug>(go-rename)
+
+" [t]ags
+au FileType go nmap ,t :GoAddTags<space>

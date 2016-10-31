@@ -90,6 +90,7 @@ echo ""
 echo "---> kwm"
 mkdir -p ~/.kwm/
 ln -s ~/.dotfiles/kwm/kwmrc ~/.kwm/kwmrc
+ln -s ~/.dotfiles/khd/kwmrc ~/.kwm/.khdrc
 echo "---> kwm done"
 
 echo ""

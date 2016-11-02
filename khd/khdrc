@@ -16,9 +16,6 @@ ctrl - s                 :    /usr/local/bin/khd -e "mode activate prefix"
 # Quit Kwm
 cmd + alt + ctrl - q     :    /usr/local/bin/kwmc quit
 
-# Launch iTerm2
-cmd - return             :    open -na /Applications/iTerm2.app
-
 # Set Space Tiling Mode To BSP
 cmd + ctrl - a           :    /usr/local/bin/kwmc space -t bsp
 

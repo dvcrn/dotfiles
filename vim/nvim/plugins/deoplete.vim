@@ -19,6 +19,6 @@ inoremap <expr><C-n> pumvisible() ? "\<C-n>" :
 		endfunction"}}}
 
 " Use partial fuzzy matches like YouCompleteMe
-call deoplete#custom#set('_', 'matchers', ['matcher_fuzzy'])
-call deoplete#custom#set('_', 'converters', ['converter_remove_paren'])
-call deoplete#custom#set('_', 'disabled_syntaxes', ['Comment', 'String'])
+au VimEnter * call deoplete#custom#set('_', 'matchers', ['matcher_fuzzy'])
+au VimEnter * call deoplete#custom#set('_', 'converters', ['converter_remove_paren'])
+au VimEnter * call deoplete#custom#set('_', 'disabled_syntaxes', ['Comment', 'String'])

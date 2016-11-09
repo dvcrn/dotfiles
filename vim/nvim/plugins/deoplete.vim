@@ -8,8 +8,6 @@ let g:deoplete#ignore_sources = {}
 let g:deoplete#ignore_sources._ = ['buffer', 'member', 'tag', 'file', 'neosnippet']
 let g:deoplete#auto_complete_delay = 0
 
-" imap <expr><TAB> pumvisible() ? "\<C-n>" : neosnippet#expandable_or_jumpable() ? "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
-
 inoremap <expr><C-n> pumvisible() ? "\<C-n>" :
 		\ <SID>check_back_space() ? "\<TAB>" :
 		\ deoplete#mappings#manual_complete()
@@ -17,6 +15,10 @@ inoremap <expr><C-n> pumvisible() ? "\<C-n>" :
       let col = col('.') - 1
       return !col || getline('.')[col - 1]  =~ '\s'
 		endfunction"}}}
+
+
+" no new line after hitting enter
+inoremap <silent><expr><CR> pumvisible() ? deoplete#mappings#close_popup() : "\<CR>"
 
 " Use partial fuzzy matches like YouCompleteMe
 au VimEnter * call deoplete#custom#set('_', 'matchers', ['matcher_fuzzy'])

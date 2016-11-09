@@ -1,3 +1,5 @@
 Plug 'benekastah/neomake'
 
-autocmd! BufWritePost * Neomake
+autocmd! BufWritePost,BufEnter * Neomake
+autocmd InsertChange,TextChanged * update | Neomake
+

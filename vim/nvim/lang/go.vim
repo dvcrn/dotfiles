@@ -25,6 +25,17 @@ let g:go_highlight_build_constraints = 1
 " Use goimports over gofmt
 let g:go_fmt_command = "goimports"
 
+let g:neomake_go_gobuild_maker = {
+    \ 'exe': 'sh',
+    \ 'args': ['-c', 'go build -o /dev/null ./\$0', '%:h'],
+    \ 'errorformat':
+        \ '%W%f:%l: warning: %m,' .
+        \ '%E%f:%l:%c:%m,' .
+        \ '%E%f:%l:%m,' .
+        \ '%C%\s%\+%m,' .
+        \ '%-G#%.%#'
+\ }
+
 " [g]o [d]definition
 au FileType go nmap <Leader>mgds <Plug>(go-def-split)
 au FileType go nmap <Leader>mgdv <Plug>(go-def-vertical)

@@ -14,10 +14,11 @@ function! g:UltiSnips_Complete()
   if g:ulti_expand_res == 0
     if pumvisible()
       " test to always jump to next suggestion
-      return "\<TAB>"
+      call UltiSnips#JumpForwards()
 
+      " return "\<TAB>"
       " use tab to jump to the next result by triggering 'go-down'
-      return "\<C-n>"
+      " return "\<C-n>"
     else
       call UltiSnips#JumpForwards()
       if g:ulti_jump_forwards_res == 0

@@ -20,7 +20,13 @@ Adds tmux configuration to work with vim-friendly shorcuts and a better style. C
 Also adds a terminfo file for adding italic font support to tmux
 
 ** vim
-Awesome vim config you should try out. Put it (and .gvimrc, .ideavimrc) under =~/.vimrc=,  =~/.gvimrc= and =~/.ideavimrc=. Install plugins with [[https://github.com/VundleVim/Vundle.vim][Vundle]].
+This is basically a **nvim** config and not intended for normal vim.
+
+Symlink under =~/.config/nvim/init.vim= and =~/.config/nvim/ginit.vim=.
+
+Also comes with a =~/.xvimrc= for use with XVim (xcode)
+
+Install plugins with [[https://github.com/VundleVim/Vundle.vim][Vundle]].
 
 ** spacemacs
 My spacemacs config. Heavily opinionated. [[https://github.com/syl20bnr/spacemacs][Install spacemacs here.]] and symlink to =~/.spacemacs=.

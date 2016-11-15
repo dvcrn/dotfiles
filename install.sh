@@ -61,16 +61,13 @@ echo "---> tmux done"
 
 echo ""
 echo "---> vim"
-# ln -s ~/.dotfiles/vim/.vimrc ~/.vimrc
-# ln -s ~/.dotfiles/vim/.gvimrc ~/.gvimrc
-# ln -s ~/.dotfiles/vim/.ideavimrc ~/.ideavimrc
 mkdir -p ~/.config/nvim/
-ln -s ~/.dotfiles/vim/nvim/init.vim ~/.config/nvim/init.vim
-ln -s ~/.dotfiles/vim/nvim/ginit.vim ~/.config/nvim/ginit.vim
-ln -s ~/.dotfiles/vim/nvim/init.vim ~/.vimrc
-ln -s ~/.dotfiles/vim/nvim/init.vim ~/.gvimrc
-ln -s ~/.dotfiles/vim/nvim/init.vim ~/.ideavimrc
-ln -s ~/.dotfiles/xvim/.xvimrc ~/.xvimrc
+ln -s ~/.dotfiles/vim/init.vim ~/.config/nvim/init.vim
+ln -s ~/.dotfiles/vim/ginit.vim ~/.config/nvim/ginit.vim
+ln -s ~/.dotfiles/vim/init.vim ~/.vimrc
+ln -s ~/.dotfiles/vim/init.vim ~/.gvimrc
+ln -s ~/.dotfiles/vim/init.vim ~/.ideavimrc
+ln -s ~/.dotfiles/vim/xvimrc.vim ~/.xvimrc
 echo "---> vim done"
 
 echo ""

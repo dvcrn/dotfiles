@@ -24,9 +24,6 @@ nnoremap <C-k> <C-p>
 vnoremap <C-j> <C-n>
 vnoremap <C-k> <C-p>
 
-" Tab navigation
-nnoremap ‘ :bnext<CR> " alt-right-square-bracket
-nnoremap “ :bprevious<CR> " alt-left-square-bracket
 nnoremap ≈ :bp\|bd #<CR> " alt-x
 
 " use <C>hjkl to switch between splits
@@ -42,16 +39,6 @@ nnoremap <Leader>j <C-w>j<CR>
 nnoremap <Leader>k <C-w>k<CR>
 
 nnoremap Q <nop>
-
-" always flash yank motion
-map y <Plug>(operator-flashy)
-
-" for when I forget sudo
-cmap w!! w !sudo tee > /dev/null %
-
-" fix Vim's regex handling
-nnoremap / /\v
-vnoremap / /\v
 
 " Start interactive EasyAlign in visual mode (e.g. vipga)
 xmap ga <Plug>(EasyAlign)
@@ -85,8 +72,6 @@ nnoremap <leader>_u :PlugUpdate<CR>
 nnoremap <leader>_U :PlugUpgrade<CR>
 
 " project
-nnoremap <silent> <leader>pt :NERDTreeToggle<CR>   " open a horizontal split and switch to it (,h)
-nnoremap <silent> <leader>pF :NERDTreeFind<CR>   " open a horizontal split and switch to it (,h)
 nnoremap <leader>pf :GitFiles<CR>
 nnoremap <leader>p/ :Ag<CR>
 nnoremap <leader>pr :History<CR>
@@ -110,15 +95,4 @@ nnoremap <leader>bl :BLines<CR>
 " toggles
 noremap <Leader>ti :set list!<CR>:echo 'Toggled special characters'<CR>" Toggle special characters
 noremap <Leader>tl :set relativenumber!<CR>:echo 'Toggled relative line numbers'<CR>" Toggle relative line numbers
-noremap <Leader>tm :MediumModeToggle<CR>:echo 'Toggled medium mode'<CR>" Toggle medium mode
-noremap <Leader>tH :call ToggleHardMode()<CR>:echo 'Toggled hardmode'<CR>" Toggle hard mode
-noremap <Leader>th :HardTimeToggle<CR>:echo 'Toggled hardtime'<CR>" Toggle hard time
 noremap <Leader>tg :Goyo<CR>:echo 'Toggled Goyo'<CR>" Toggle goyo time
-
-" git
-nnoremap <leader>gs :Gstatus<CR>
-nnoremap <leader>gc :Gcommit<CR>
-nnoremap <leader>gp :Gpush<CR>
-nnoremap <leader>gl :Commits<CR>
-
-" mode keybindings are inside each langs file

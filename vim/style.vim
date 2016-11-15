@@ -1,8 +1,19 @@
-Plug 'chriskempson/vim-tomorrow-theme'
-Plug 'marciomazza/vim-brogrammer-theme'
-Plug 'sjl/badwolf'
-Plug 'altercation/vim-colors-solarized'
+source ~/.dotfiles/vim/statusline.vim
+
+"Plug 'chriskempson/vim-tomorrow-theme'
+"Plug 'marciomazza/vim-brogrammer-theme'
+"Plug 'sjl/badwolf'
+"Plug 'altercation/vim-colors-solarized'
 Plug 'junegunn/seoul256.vim'
+Plug 'ryanoasis/vim-devicons'
+Plug 'nathanaelkane/vim-indent-guides'
+
+" Flash yanks
+Plug 'kana/vim-operator-user'
+Plug 'haya14busa/vim-operator-flashy'
+
+" always flash yank motion
+map y <Plug>(operator-flashy)
 
 syntax enable
 set background=dark
@@ -25,6 +36,9 @@ autocmd VimEnter * highlight Comment cterm=italic
 " Indent guides
 let g:indent_guides_start_level = 2
 let g:indent_guides_guide_size = 1
+
+" fix nerdtree devicons
+autocmd FileType nerdtree setlocal nolist
 
 autocmd BufRead * RainbowParentheses
 

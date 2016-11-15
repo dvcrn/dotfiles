@@ -3,7 +3,6 @@ call plug#begin('~/.vim/plugged')
 Plug 'neovim/node-host', { 'do': 'npm install' }
 
 Plug 'junegunn/vim-pseudocl'
-Plug 'junegunn/vim-oblique'
 Plug 'junegunn/vim-fnr'
 Plug 'junegunn/vim-peekaboo'
 Plug 'junegunn/vim-easy-align'
@@ -13,33 +12,21 @@ Plug 'airblade/vim-gitgutter'
 Plug 'easymotion/vim-easymotion'
 
 Plug 'tpope/vim-repeat'
-Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-classpath'
 Plug 'tpope/vim-sensible'
 
 Plug 'jiangmiao/auto-pairs'
 
-Plug 'kassio/neoterm', { 'commit': '9e33da0a' }
-Plug 'hkupty/nvimux'
 Plug 'airblade/vim-rooter'
-
-" Flash yanks
-Plug 'kana/vim-operator-user'
-Plug 'haya14busa/vim-operator-flashy'
-
-" Hard mode to get rid of habits
-Plug 'dvcrn/hardmode'
-
-" Style related packages
-Plug 'nathanaelkane/vim-indent-guides'
 
 " Syntax
 Plug 'sheerun/vim-polyglot'
 Plug 'junegunn/rainbow_parentheses.vim'
 
+Plug 'Shougo/neco-vim', {'for': 'vim'}
 Plug 'keith/swift.vim', { 'for': 'swift' }
-Plug 'saltstack/salt-vim'
+Plug 'saltstack/salt-vim', { 'for': 'salt' }
 Plug 'dearrrfish/vim-applescript', { 'for': 'applescript' }
 
 
@@ -77,7 +64,6 @@ let g:jedi#completions_enabled = 0
 
 source ~/.dotfiles/vim/options.vim
 source ~/.dotfiles/vim/keybindings.vim
-source ~/.dotfiles/vim/statusline.vim
 source ~/.dotfiles/vim/style.vim
 
 source ~/.dotfiles/vim/lang/markdown.vim
@@ -90,25 +76,19 @@ source ~/.dotfiles/vim/lang/go.vim
 
 " source ~/.dotfiles/vim/plugins/airline.vim
 source ~/.dotfiles/vim/plugins/fzf.vim
-" source ~/.dotfiles/vim/plugins/ctrlp.vim
-" source ~/.dotfiles/vim/plugins/syntastic.vim
 source ~/.dotfiles/vim/plugins/nerdtree.vim
-source ~/.dotfiles/vim/plugins/fugitive.vim
-source ~/.dotfiles/vim/plugins/gitgutter.vim
-source ~/.dotfiles/vim/plugins/mediummode.vim
 source ~/.dotfiles/vim/plugins/hardtime.vim
 source ~/.dotfiles/vim/plugins/seek.vim
-" source ~/.dotfiles/vim/plugins/sneak.vim
 source ~/.dotfiles/vim/plugins/neomake.vim
 source ~/.dotfiles/vim/plugins/emoji.vim
 source ~/.dotfiles/vim/plugins/goyo.vim
 source ~/.dotfiles/vim/plugins/org.vim
 source ~/.dotfiles/vim/plugins/multiplecursors.vim
+source ~/.dotfiles/vim/plugins/slash.vim
 
-" source ~/.dotfiles/vim/plugins/ycm.vim
 source ~/.dotfiles/vim/plugins/deoplete.vim
-" source ~/.dotfiles/vim/plugins/supertab.vim
 source ~/.dotfiles/vim/plugins/snippets.vim
+source ~/.dotfiles/vim/plugins/git.vim
 
 
 call plug#end()

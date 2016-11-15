@@ -10,6 +10,9 @@ highlight clear SignColumn " Fix odd behaviour
 
 let g:gitgutter_map_keys = 1
 
+nmap ]c <Plug>GitGutterNextHunk
+nmap [c <Plug>GitGutterPrevHunk
+
 nmap <Leader>gha <Plug>GitGutterStageHunk
 nmap <Leader>ghu <Plug>GitGutterUndoHunk
 nmap <Leader>ghp <Plug>GitGutterPreviewHunk

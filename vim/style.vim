@@ -8,6 +8,8 @@ Plug 'junegunn/seoul256.vim'
 Plug 'ryanoasis/vim-devicons'
 Plug 'nathanaelkane/vim-indent-guides'
 
+Plug 'junegunn/rainbow_parentheses.vim'
+
 " Flash yanks
 Plug 'kana/vim-operator-user'
 Plug 'haya14busa/vim-operator-flashy'

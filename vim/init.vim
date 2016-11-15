@@ -8,8 +8,10 @@ Plug 'junegunn/vim-peekaboo'
 Plug 'junegunn/vim-easy-align'
 Plug 'junegunn/gv.vim'
 
+Plug 'airblade/vim-rooter'
 Plug 'airblade/vim-gitgutter'
-Plug 'easymotion/vim-easymotion'
+
+" Plug 'easymotion/vim-easymotion'
 
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
@@ -18,17 +20,13 @@ Plug 'tpope/vim-sensible'
 
 Plug 'jiangmiao/auto-pairs'
 
-Plug 'airblade/vim-rooter'
-
 " Syntax
 Plug 'sheerun/vim-polyglot'
-Plug 'junegunn/rainbow_parentheses.vim'
 
 Plug 'Shougo/neco-vim', {'for': 'vim'}
 Plug 'keith/swift.vim', { 'for': 'swift' }
 Plug 'saltstack/salt-vim', { 'for': 'salt' }
 Plug 'dearrrfish/vim-applescript', { 'for': 'applescript' }
-
 
 Plug 'equalsraf/neovim-gui-shim'
 

@@ -17,6 +17,8 @@ Same as pip but for node packages. Run ~python install.py~
 ** tmux
 Adds tmux configuration to work with vim-friendly shorcuts and a better style. Comment the last line inside ~.tmux.conf~ in to use vim-tmuxline instead. Has to go under =~/.tmux.conf=
 
+Also adds a terminfo file for adding italic font support to tmux
+
 ** vim
 Awesome vim config you should try out. Put it (and .gvimrc, .ideavimrc) under =~/.vimrc=,  =~/.gvimrc= and =~/.ideavimrc=. Install plugins with [[https://github.com/VundleVim/Vundle.vim][Vundle]].
 
@@ -39,3 +41,5 @@ experimental fishshell config based on [[fisherman][https://github.com/fisherman
 ** peco
 config for peco search. Symlink the config into =~/.config/peco/config.json=
 *
+** term
+terminfo files for adding italic font support to xterm

@@ -7,4 +7,4 @@
 " Set the font to DejaVu Sans Mono:h13
 " :Guifont Hack:h15
 :Guifont Operator\ Mono:h16
-
+highlight Comment cterm=italic gui=italic

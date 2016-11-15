@@ -56,6 +56,7 @@ echo "---> NPM done"
 echo ""
 echo "---> tmux"
 ln -s ~/.dotfiles/tmux/.tmux.conf ~/.tmux.conf
+tic -x ~/.dotfiles/tmux/tmux.terminfo
 echo "---> tmux done"
 
 echo ""
@@ -99,6 +100,14 @@ echo "---> fish"
 mkdir -p ~/.config/
 ln -s ~/.dotfiles/fisherman ~/.config/fisherman
 echo "---> fish done"
+
+
+echo ""
+echo "---> term"
+tic -x ~/.dotfiles/term/xterm-256color-italic.terminfo
+echo "---> term done"
+
+
 
 echo ""
 echo "---> karabiner"

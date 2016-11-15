@@ -32,14 +32,8 @@ Config is managed by [[https://github.com/dvcrn/sublimious][sublimious]]. Symlin
 Config is managed by [[https://github.com/dvcrn/proton][proton]]. Symlink to =~/.proton= and install proton through apm.
 
 
-** kwm
-config for [[kwm][https://github.com/koekeishiya/kwm]]. Symlink to =~/.kwm/kwmrc=
+** kwm / khdr
+config for [[kwm][https://github.com/koekeishiya/kwm]]. Symlink to =~/.kwm/kwmrc= and =~/.khdrc=
 
-** fisherman
-experimental fishshell config based on [[fisherman][https://github.com/fisherman/fisherman]]. Symlink entire folder to =~/.config/fisherman= and install fisherman.
-
-** peco
-config for peco search. Symlink the config into =~/.config/peco/config.json=
-*
 ** term
 terminfo files for adding italic font support to xterm

@@ -96,18 +96,9 @@ ln -s ~/.dotfiles/khd/kwmrc ~/.kwm/.khdrc
 echo "---> kwm done"
 
 echo ""
-echo "---> fish"
-mkdir -p ~/.config/
-ln -s ~/.dotfiles/fisherman ~/.config/fisherman
-echo "---> fish done"
-
-
-echo ""
 echo "---> term"
 tic -x ~/.dotfiles/term/xterm-256color-italic.terminfo
 echo "---> term done"
-
-
 
 echo ""
 echo "---> karabiner"

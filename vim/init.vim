@@ -75,40 +75,40 @@ let g:jedi#use_tabs_not_buffers = 0
 let g:jedi#popup_on_dot = 0
 let g:jedi#completions_enabled = 0
 
-source ~/.dotfiles/vim/nvim/options.vim
-source ~/.dotfiles/vim/nvim/keybindings.vim
-source ~/.dotfiles/vim/nvim/statusline.vim
-source ~/.dotfiles/vim/nvim/style.vim
+source ~/.dotfiles/vim/options.vim
+source ~/.dotfiles/vim/keybindings.vim
+source ~/.dotfiles/vim/statusline.vim
+source ~/.dotfiles/vim/style.vim
 
-source ~/.dotfiles/vim/nvim/lang/markdown.vim
-source ~/.dotfiles/vim/nvim/lang/ruby.vim
-source ~/.dotfiles/vim/nvim/lang/javascript.vim
-source ~/.dotfiles/vim/nvim/lang/clojure.vim
-source ~/.dotfiles/vim/nvim/lang/elixir.vim
-source ~/.dotfiles/vim/nvim/lang/html.vim
-source ~/.dotfiles/vim/nvim/lang/go.vim
+source ~/.dotfiles/vim/lang/markdown.vim
+source ~/.dotfiles/vim/lang/ruby.vim
+source ~/.dotfiles/vim/lang/javascript.vim
+source ~/.dotfiles/vim/lang/clojure.vim
+source ~/.dotfiles/vim/lang/elixir.vim
+source ~/.dotfiles/vim/lang/html.vim
+source ~/.dotfiles/vim/lang/go.vim
 
-" source ~/.dotfiles/vim/nvim/plugins/airline.vim
-source ~/.dotfiles/vim/nvim/plugins/fzf.vim
-" source ~/.dotfiles/vim/nvim/plugins/ctrlp.vim
-" source ~/.dotfiles/vim/nvim/plugins/syntastic.vim
-source ~/.dotfiles/vim/nvim/plugins/nerdtree.vim
-source ~/.dotfiles/vim/nvim/plugins/fugitive.vim
-source ~/.dotfiles/vim/nvim/plugins/gitgutter.vim
-source ~/.dotfiles/vim/nvim/plugins/mediummode.vim
-source ~/.dotfiles/vim/nvim/plugins/hardtime.vim
-source ~/.dotfiles/vim/nvim/plugins/seek.vim
-" source ~/.dotfiles/vim/nvim/plugins/sneak.vim
-source ~/.dotfiles/vim/nvim/plugins/neomake.vim
-source ~/.dotfiles/vim/nvim/plugins/emoji.vim
-source ~/.dotfiles/vim/nvim/plugins/goyo.vim
-source ~/.dotfiles/vim/nvim/plugins/org.vim
-source ~/.dotfiles/vim/nvim/plugins/multiplecursors.vim
+" source ~/.dotfiles/vim/plugins/airline.vim
+source ~/.dotfiles/vim/plugins/fzf.vim
+" source ~/.dotfiles/vim/plugins/ctrlp.vim
+" source ~/.dotfiles/vim/plugins/syntastic.vim
+source ~/.dotfiles/vim/plugins/nerdtree.vim
+source ~/.dotfiles/vim/plugins/fugitive.vim
+source ~/.dotfiles/vim/plugins/gitgutter.vim
+source ~/.dotfiles/vim/plugins/mediummode.vim
+source ~/.dotfiles/vim/plugins/hardtime.vim
+source ~/.dotfiles/vim/plugins/seek.vim
+" source ~/.dotfiles/vim/plugins/sneak.vim
+source ~/.dotfiles/vim/plugins/neomake.vim
+source ~/.dotfiles/vim/plugins/emoji.vim
+source ~/.dotfiles/vim/plugins/goyo.vim
+source ~/.dotfiles/vim/plugins/org.vim
+source ~/.dotfiles/vim/plugins/multiplecursors.vim
 
-" source ~/.dotfiles/vim/nvim/plugins/ycm.vim
-source ~/.dotfiles/vim/nvim/plugins/deoplete.vim
-" source ~/.dotfiles/vim/nvim/plugins/supertab.vim
-source ~/.dotfiles/vim/nvim/plugins/snippets.vim
+" source ~/.dotfiles/vim/plugins/ycm.vim
+source ~/.dotfiles/vim/plugins/deoplete.vim
+" source ~/.dotfiles/vim/plugins/supertab.vim
+source ~/.dotfiles/vim/plugins/snippets.vim
 
 
 call plug#end()

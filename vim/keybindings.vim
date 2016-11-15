@@ -24,8 +24,6 @@ nnoremap <C-k> <C-p>
 vnoremap <C-j> <C-n>
 vnoremap <C-k> <C-p>
 
-nnoremap ≈ :bp\|bd #<CR> " alt-x
-
 " use <C>hjkl to switch between splits
 nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
@@ -95,4 +93,4 @@ nnoremap <leader>bl :BLines<CR>
 " toggles
 noremap <Leader>ti :set list!<CR>:echo 'Toggled special characters'<CR>" Toggle special characters
 noremap <Leader>tl :set relativenumber!<CR>:echo 'Toggled relative line numbers'<CR>" Toggle relative line numbers
-noremap <Leader>tg :Goyo<CR>:echo 'Toggled Goyo'<CR>" Toggle goyo time
+

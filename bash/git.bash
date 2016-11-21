@@ -156,3 +156,26 @@ alias gwc="git clean -n"
 alias gwC="git clean -f"
 alias gwx="git rm -r"
 alias gwX="git rm -rf"
+
+# Function shortcuts
+gcac() {
+  echo "Author -> Commiter"
+
+  git filter-branch -f --env-filter '
+    export GIT_COMMITTER_EMAIL="$GIT_AUTHOR_EMAIL"
+    export GIT_COMMITTER_NAME="$GIT_AUTHOR_NAME"
+    '  HEAD^..HEAD
+
+  git show HEAD --pretty=fuller
+}
+
+gcca() {
+  echo "Commiter -> Author"
+
+  git filter-branch -f --env-filter '
+    export GIT_AUTHOR_EMAIL="$GIT_COMMITTER_EMAIL"
+    export GIT_AUTHOR_NAME="$GIT_COMMITTER_NAME"
+    '  HEAD^..HEAD
+
+  git show HEAD --pretty=fuller
+}

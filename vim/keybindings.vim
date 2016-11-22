@@ -90,6 +90,19 @@ nnoremap <leader>bp :bprevious<CR>
 nnoremap <leader>b/ :Lines<CR>
 nnoremap <leader>bl :BLines<CR>
 
+nnoremap <leader>tc :tabnew<cr>
+nnoremap <leader>tx :tabclose<cr>
+nnoremap <leader>tn :tabnext<cr>
+nnoremap <leader>tp :tabprevious<cr>
+nnoremap <leader>tt :Windows<cr>
+
+let g:lasttab = 1
+nmap <Leader>t<Tab> :exe "tabn ".g:lasttab<CR>
+au TabLeave * let g:lasttab = tabpagenr()
+
+" faster access to Blines
+nnoremap ,/ :BLines<cr>
+
 " toggles
 noremap <Leader>ti :set list!<CR>:echo 'Toggled special characters'<CR>" Toggle special characters
 noremap <Leader>tl :set relativenumber!<CR>:echo 'Toggled relative line numbers'<CR>" Toggle relative line numbers

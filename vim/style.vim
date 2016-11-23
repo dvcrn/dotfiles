@@ -22,9 +22,9 @@ set background=dark
 
 " trial & error. These 3 lines seem to cause most of the performance problems I
 " was experiencing. Adding these here reduces most of that rendering lag.
-syntax sync minlines=256
-set nocursorcolumn
-set re=1
+" syntax sync minlines=256
+" set nocursorcolumn
+" set re=1
 
 " silent! colorscheme Tomorrow-Night-Eighties
 " silent! colorscheme Tomorrow-Night

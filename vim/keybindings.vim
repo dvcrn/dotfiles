@@ -70,6 +70,9 @@ nnoremap <leader>_u :PlugUpdate<CR>
 nnoremap <leader>_U :PlugUpgrade<CR>
 
 " project
+" shortcut for really often used things
+nnoremap <c-p> :Files<CR>
+
 nnoremap <leader>pf :GitFiles<CR>
 nnoremap <leader>p/ :Ag<CR>
 nnoremap <leader>pr :History<CR>

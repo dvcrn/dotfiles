@@ -21,7 +21,6 @@ Plug 'tpope/vim-sensible'
 Plug 'jiangmiao/auto-pairs'
 
 " Syntax
-Plug 'sheerun/vim-polyglot'
 
 Plug 'Shougo/neco-vim', {'for': 'vim'}
 Plug 'keith/swift.vim', { 'for': 'swift' }
@@ -37,8 +36,6 @@ endfunction
 
 " control whitespace preferences based on filetype
 filetype on
-
-autocmd FileType * setlocal formatoptions-=r formatoptions-=o
 
 " syntax of these languages is fussy over tabs Vs spaces
 autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
@@ -88,5 +85,7 @@ source ~/.dotfiles/vim/plugins/deoplete.vim
 source ~/.dotfiles/vim/plugins/snippets.vim
 source ~/.dotfiles/vim/plugins/git.vim
 
+
+Plug 'sheerun/vim-polyglot'
 
 call plug#end()

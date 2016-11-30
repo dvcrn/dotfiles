@@ -27,6 +27,7 @@ function! Emojify()
       \ 'vim':        'poop',
       \ 'vim-plug':   'electric_plug',
       \ 'yaml':       'yum',
+      \ 'elixir':     'droplet',
       \ 'yaml.jinja': 'yum'
     \ }, 'emoji#for(v:val)')
 

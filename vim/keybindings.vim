@@ -82,6 +82,9 @@ nnoremap <leader>wh <C-w>s<C-w>j   " split horizontally
 nnoremap <leader>ff :Files<CR>
 
 " buffer
+" shortcut for really often used things
+nnoremap <c-b> :Buffers<CR>
+
 nnoremap <Leader><Tab> :e#<CR> " switch to last buffer
 nnoremap <leader>bb :Buffers<CR>
 nnoremap <leader>bd :bdelete<CR>

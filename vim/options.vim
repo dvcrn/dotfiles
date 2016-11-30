@@ -17,11 +17,11 @@ silent execute '!mkdir -p $HOME/.vimswap'
 set laststatus=2                  " always show the status line
 set cmdheight=2                   " and use a two-line tall status line
 set showcmd                       " show the command
-set noshowmode                    " don't show the mode, vim-airline will do that for us
+set noshowmode                    " don't show the mode
 set autoindent                    " turns it on
 set cursorline
-set smartindent                   " does the right thing (mostly) in programs
-set linespace=3                   " prefer a slight higher line height
+" set smartindent                   " does the right thing (mostly) in programs
+" set linespace=3                   " prefer a slight higher line height
 set linebreak                     " wrap intelligently, won't insert hard line breaks
 set wrap                          " use line wrapping
 set textwidth=79                  " at column 79
@@ -39,10 +39,11 @@ set noerrorbells visualbell t_vb= " no bell
 
 " Setup automatic text formatting/wrapping (previously: grn1 )
 set formatoptions=
-set formatoptions-=t              " don't autowrap text
+" set formatoptions-=t              " don't autowrap text
+" set formatoptions-=o              " don't automatically continue comments when hitting 'o' or 'O'
+
 set formatoptions+=c              " do autowrap comments
 set formatoptions+=r              " automatically continue comments
-set formatoptions+=o              " automatically continue comments when hitting 'o' or 'O'
 set formatoptions+=q              " allow formating of comments with 'gq'
 set formatoptions+=n              " recognize numbered lists
 set formatoptions+=l              " don't break long lines that were already there

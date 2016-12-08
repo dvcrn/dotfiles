@@ -4,8 +4,8 @@ Plug 'elixir-lang/vim-elixir', { 'for': 'elixir' }
 Plug 'slashmili/alchemist.vim', { 'for': 'elixir' }
 
 " Shortcut for ExDef without leader
-au FileType elixir nmap gd :ExDef
+au FileType elixir nmap gd :ExDef<CR>
 
-au FileType elixir nmap ,gd :ExDef
+au FileType elixir nmap ,gd :ExDef<CR>
 
-au FileType elixir nmap <leader>mgd :ExDef
+au FileType elixir nmap <leader>mgd :ExDef<CR>

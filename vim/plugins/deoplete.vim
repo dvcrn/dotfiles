@@ -5,7 +5,7 @@ set completeopt-=preview " get rid of vim complete window. Never used it, don't 
 
 let g:deoplete#enable_at_startup = 1
 let g:deoplete#ignore_sources = {}
-let g:deoplete#ignore_sources._ = ['buffer', 'member', 'tag', 'file', 'neosnippet']
+let g:deoplete#ignore_sources._ = ['member', 'tag', 'neosnippet']
 let g:deoplete#auto_complete_delay = 0
 
 inoremap <expr><C-n> pumvisible() ? "\<C-n>" :

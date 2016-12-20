@@ -3,6 +3,8 @@
 Plug 'elixir-lang/vim-elixir', { 'for': 'elixir' }
 Plug 'slashmili/alchemist.vim', { 'for': 'elixir' }
 
+let g:elixir_use_markdown_for_docs = 1
+
 " Shortcut for ExDef without leader
 au FileType elixir nmap gd :ExDef<CR>
 

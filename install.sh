@@ -60,6 +60,11 @@ tic -x ~/.dotfiles/tmux/tmux.terminfo
 echo "---> tmux done"
 
 echo ""
+echo "---> Alacritty"
+ln -s ~/.dotfiles/alacritty/alacritty.yml ~/.config/alacritty.yml
+echo "---> Alacritty done"
+
+echo ""
 echo "---> vim"
 mkdir -p ~/.config/nvim/
 ln -s ~/.dotfiles/vim/init.vim ~/.config/nvim/init.vim

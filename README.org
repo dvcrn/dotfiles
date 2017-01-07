@@ -19,6 +19,11 @@ Adds tmux configuration to work with vim-friendly shorcuts and a better style. C
 
 Also adds a terminfo file for adding italic font support to tmux
 
+** Alacritty
+Config file for [[https://github.com/jwilm/alacritty][Alacritty]], a GPU-accelerated terminal emulator
+
+Symlink under =~/.config/alacritty.yml=
+
 ** vim
 This is basically a **nvim** config and not intended for normal vim.
 

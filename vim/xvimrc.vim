@@ -24,10 +24,6 @@ vnoremap <C-k> <C-p>
 
 nnoremap Q <nop>
 
-" fix Vim's regex handling
-nnoremap / /\v
-vnoremap / /\v
-
 " better esc
 imap fd <esc>
 vno v <esc>

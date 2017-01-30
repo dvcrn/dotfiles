@@ -71,7 +71,7 @@ ln -s ~/.dotfiles/vim/init.vim ~/.config/nvim/init.vim
 ln -s ~/.dotfiles/vim/ginit.vim ~/.config/nvim/ginit.vim
 ln -s ~/.dotfiles/vim/init.vim ~/.vimrc
 ln -s ~/.dotfiles/vim/init.vim ~/.gvimrc
-ln -s ~/.dotfiles/vim/init.vim ~/.ideavimrc
+ln -s ~/.dotfiles/vim/ideavimrc.vim ~/.ideavimrc
 ln -s ~/.dotfiles/vim/xvimrc.vim ~/.xvimrc
 echo "---> vim done"
 

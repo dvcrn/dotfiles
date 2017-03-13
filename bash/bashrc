@@ -82,6 +82,12 @@ emacs() {
   fi
 }
 
+### DEVONThink
+devon() {
+  ABSOLUTEPATH=`realpath $1`
+  cp -r $1 /Users/d/Library/Application\ Support/DEVONthink\ Pro\ 2/Inbox
+  echo "OK!"
+}
 
 ### OS X
 export COPYFILE_DISABLE=true

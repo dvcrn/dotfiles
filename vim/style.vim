@@ -34,6 +34,7 @@ autocmd VimEnter * colorscheme seoul256
 
 " make comments italic
 autocmd VimEnter * highlight Comment cterm=italic
+highlight Comment cterm=italic gui=italic
 
 " Indent guides
 let g:indent_guides_start_level = 2

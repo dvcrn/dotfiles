@@ -84,8 +84,8 @@ emacs() {
 
 ### DEVONThink
 devon() {
-  ABSOLUTEPATH=`realpath $1`
-  cp -r $1 /Users/d/Library/Application\ Support/DEVONthink\ Pro\ 2/Inbox
+  ABSOLUTEPATH=`realpath "$1"`
+  cp -r "$ABSOLUTEPATH" /Users/d/Library/Application\ Support/DEVONthink\ Pro\ 2/Inbox
   echo "OK!"
 }
 
@@ -520,4 +520,3 @@ act() {
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 [ -f ~/.git.bash ] && source ~/.git.bash
 [ -f ~/.local.bash ] && source ~/.local.bash
-

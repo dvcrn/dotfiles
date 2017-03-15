@@ -64,9 +64,9 @@ cmd + alt - n            :    /usr/local/bin/kwmc window -fm prev
 cmd + alt - m            :    /usr/local/bin/kwmc window -fm next
 
 # Give Focus To Screen
-cmd + alt - 1            :    /usr/local/bin/kwmc display -f 0
-cmd + alt - 2            :    /usr/local/bin/kwmc display -f 1
-cmd + alt - 3            :    /usr/local/bin/kwmc display -f 2
+# cmd + alt - 1            :    /usr/local/bin/kwmc display -f 0
+# cmd + alt - 2            :    /usr/local/bin/kwmc display -f 1
+# cmd + alt - 3            :    /usr/local/bin/kwmc display -f 2
 
 # Swap Focused Window
 ctrl + alt - h           :    /usr/local/bin/kwmc window -s west

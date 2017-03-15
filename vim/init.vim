@@ -50,7 +50,11 @@ fun! <SID>StripTrailingWhitespaces()
   %s/\s\+$//e
   call cursor(l, c)
 endfun
+
 autocmd BufWritePre * :call <SID>StripTrailingWhitespaces()
+
+autocmd BufWritePost * mkview
+autocmd FileReadPost * silent! loadview
 
 " Use buffers instead of tabs with jedi
 let g:jedi#use_tabs_not_buffers = 0

@@ -48,8 +48,8 @@ user_config = {
     # Uncomment the following lines to overwrite the basic appearance and color
     # "theme": "Soda Dark.sublime-theme",
     # "color_scheme": "Packages/User/base16-ocean.dark (SL).tmTheme",
-    # "font_face": "Hack",
-    "font_size": 14,
+    "font_face": "Operator Mono",
+    "font_size": 16,
 
     # These lines are responsible for editor appearance
     "line_numbers": True,
@@ -77,7 +77,9 @@ user_config = {
             "fmt_cmd": ["goimports", "-srcdir", "$_dir"],
             "env": {
                 "GOPATH": "$HOME/go"
-            }
+            },
+            "ipc_timeout": 30,
+            "shell": ["/bin/bash", "--login", "-c", "$CMD"]
         }
     }
 }

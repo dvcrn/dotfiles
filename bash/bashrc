@@ -131,6 +131,8 @@ tping() {
   done
 }
 
+alias ssh="export TERM=xterm-256color && ssh"
+
 ### Colored ls
 if [ -x /usr/bin/dircolors ]; then
   eval "`dircolors -b`"

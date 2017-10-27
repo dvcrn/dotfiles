@@ -6,7 +6,6 @@ packages = [
     'react-native',
 
     # clojurescript
-    'natal',
     're-natal',
 
     # javascript

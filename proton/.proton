@@ -36,6 +36,7 @@
     :lang/elixir
     :lang/markdown
     :lang/python
+    :lang/go
     ;; :lang/ruby
 
     ;; -----------------------------------
@@ -48,7 +49,7 @@
     ;; etc
     ;; Get more at github.com/dvcrn/proton/tree/master/src/proton/layers/fun
     ;; -----------------------------------
-    :fun/power_mode
+    ; :fun/power_mode
   ]
 
   ;; Packages that are not part of a layer. List them here as keyword
@@ -56,9 +57,6 @@
   ;; Will get uninstalled so choose wisely!
   :additional-packages
   [
-    ;; :pigments
-    :monokai
-    :zenburn
     :highlight-selected
     :language-salt
   ]
@@ -85,7 +83,7 @@
     ["proton.core.relativeLineNumbers" true]
 
     ;; prefer classic vim mode over vim-mode-plus? Change this to :vim-mode
-    ["proton.core.vim-provider" :vim-mode-plus]
+    ["proton.core.inputProvider" :vim-mode-plus]
     ["proton.lang.javascript.linter" :eslint]
 
     ;; linters

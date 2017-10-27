@@ -36,6 +36,9 @@ let g:neomake_go_gobuild_maker = {
         \ '%-G#%.%#'
 \ }
 
+" Automatically GoInstall go projects to make gocode work
+" autocmd FileType go :silent autocmd BufWritePost :GoInstall
+
 " [g]o [d]definition
 au FileType go nmap <Leader>mgds <Plug>(go-def-split)
 au FileType go nmap <Leader>mgdv <Plug>(go-def-vertical)
@@ -59,6 +62,10 @@ au FileType go nmap <Leader>mr <Plug>(go-rename)
 
 " [t]ags
 au FileType go nmap <Leader>mt :GoAddTags<space>
+
+" [b]build, [i]nstall
+au FileType go nmap <Leader>mi :GoInstall<space>
+au FileType go nmap <Leader>mb :GoBuild<space>
 
 
 " -- everything again for ,
@@ -87,3 +94,7 @@ au FileType go nmap ,r <Plug>(go-rename)
 
 " [t]ags
 au FileType go nmap ,t :GoAddTags<space>
+
+" [b]build, [i]nstall
+au FileType go nmap <Leader>,i :GoInstall<space>
+au FileType go nmap <Leader>,b :GoBuild<space>

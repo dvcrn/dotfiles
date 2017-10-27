@@ -44,10 +44,9 @@ export GOPATH=~/go
 mkdir -p $GOPATH
 
 export PATH_EXPANDED=1
-if [ -z "$PATH_EXPANDED" ]; then
   export PATH=~/bin:~/ruby:/opt/bin:/usr/local/bin:/usr/local/share/python:$GOPATH/bin:/usr/local/opt/go/libexec/bin:$PATH
+  export PATH=$GOPATH/bin:$PATH
   export PATH_EXPANDED=1
-fi
 
 ### google cloud stuff
 [ -f /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.bash.inc ] && source /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.bash.inc
@@ -89,6 +88,17 @@ devon() {
   echo "OK!"
 }
 
+wip() {
+  git add .
+  git commit -m 'wip'
+}
+
+amend() {
+  git add .
+  git commit -m 'wip' --amend
+}
+
+
 ### OS X
 export COPYFILE_DISABLE=true
 
@@ -123,7 +133,7 @@ if [ "$PLATFORM" = 'Darwin' ]; then
 fi
 
 ### Tmux
-alias tmux="tmux -2"
+alias tmux="reattach-to-user-namespace tmux -2"
 alias tmuxls="ls $TMPDIR/tmux*/"
 tping() {
   for p in $(tmux list-windows -F "#{pane_id}"); do
@@ -261,6 +271,10 @@ repeat() {
   for _ in $(seq $1); do
     eval "$2"
   done
+}
+
+replace() {
+  ag -l $1 | xargs gsed -ri '' -e "s/$1/$2/g"
 }
 
 EXTRA=$BASE/bashrc-extra
@@ -522,3 +536,6 @@ act() {
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 [ -f ~/.git.bash ] && source ~/.git.bash
 [ -f ~/.local.bash ] && source ~/.local.bash
+
+
+. /Users/d/torch/install/bin/torch-activate

@@ -4,15 +4,8 @@
 tap "homebrew/dupes"
 tap "homebrew/versions"
 tap "homebrew/fuse"
-tap "caskroom/cask"
-tap "caskroom/versions"
-tap "rogual/neovim-dot-app"
 tap "neovim/neovim"
-# tap "railwaycat/emacsmacport"
 tap "d12frosted/emacs-plus"
-
-# Cask
-brew "brew-cask"
 
 # Build tools
 brew "cmake"
@@ -24,6 +17,7 @@ brew "mozilla-addon-sdk"
 brew "awscli"
 brew "gdb"
 cask "google-cloud-sdk"
+cask "docker"
 
 # Git
 brew "hub"
@@ -54,7 +48,6 @@ brew "coreutils"
 brew "tmux"
 brew "vim"
 brew "macvim"
-# brew "emacs-mac"
 brew "emacs-plus"
 brew "neovim", args: ['HEAD']
 brew "wget"
@@ -67,9 +60,10 @@ brew "tree"
 brew "z"
 brew "ag"
 brew "ack"
-brew "peco"
 brew "fzf"
 cask "postman"
+brew "gpg"
+brew "gnu-sed"
 
 # Quicklook plugins
 # https://github.com/sindresorhus/quick-look-plugins
@@ -97,11 +91,9 @@ cask "anki"
 
 cask "google-japanese-ime"
 cask "google-chrome"
-cask "google-drive"
 cask "1password"
 cask "dropbox"
 
-cask "sourcetree"
 cask "gitup"
 
 cask "little-snitch"
@@ -113,7 +105,6 @@ cask "cathode"
 
 cask "sublime-text"
 cask "sublime-text-dev"
-cask "intellij-idea"
 cask "atom"
 
 cask "bartender"

@@ -10,7 +10,6 @@ json-rpc
 
 virtualenv
 
-service-factory
 yapf
 
 neovim

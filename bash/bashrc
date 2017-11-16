@@ -536,6 +536,3 @@ act() {
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 [ -f ~/.git.bash ] && source ~/.git.bash
 [ -f ~/.local.bash ] && source ~/.local.bash
-
-
-. /Users/d/torch/install/bin/torch-activate

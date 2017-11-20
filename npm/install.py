@@ -12,6 +12,8 @@ packages = [
     'mocha',
     'gulp',
     'tern',
+    'yarn',
+    'n',
 
     # linting
     'eslint',

@@ -6,5 +6,9 @@
 " Neovim-qt Guifont command
 " Set the font to DejaVu Sans Mono:h13
 " :Guifont Hack:h15
-:Guifont OperatorMono\ Nerd\ Font:h16
-highlight Comment cterm=italic gui=italic
+autocmd VimEnter * highlight Comment cterm=italic gui=italic
+
+" vimr doesn't support :Guifont
+if !has("gui_vimr")
+	:Guifont OperatorMono\ Nerd\ Font:h16
+endif

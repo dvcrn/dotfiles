@@ -45,3 +45,7 @@ autocmd FileType nerdtree setlocal nolist
 
 autocmd BufRead * RainbowParentheses
 
+
+if has("gui_vimr")
+  source ~/.config/nvim/ginit.vim
+endif

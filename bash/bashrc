@@ -312,7 +312,7 @@ fi
 # fzf (https://github.com/junegunn/fzf)
 # --------------------------------------------------------------------
 
-export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -g ""'
+export FZF_DEFAULT_COMMAND='ag --hidden --ignore ".git" --ignore "node_modules" -g "" '
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 
 # fd - cd to selected directory

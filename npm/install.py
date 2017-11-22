@@ -16,6 +16,7 @@ packages = [
     'n',
 
     # linting
+    'jslint',
     'eslint',
     'eslint-plugin-react',
     'eslint-config-airbnb',

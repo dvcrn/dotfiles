@@ -72,6 +72,7 @@ source ~/.dotfiles/vim/lang/clojure.vim
 source ~/.dotfiles/vim/lang/elixir.vim
 source ~/.dotfiles/vim/lang/html.vim
 source ~/.dotfiles/vim/lang/go.vim
+source ~/.dotfiles/vim/lang/php.vim
 
 " source ~/.dotfiles/vim/plugins/airline.vim
 source ~/.dotfiles/vim/plugins/fzf.vim

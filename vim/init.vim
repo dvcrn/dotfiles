@@ -29,11 +29,6 @@ Plug 'dearrrfish/vim-applescript', { 'for': 'applescript' }
 
 Plug 'equalsraf/neovim-gui-shim'
 
-" global function
-function! DoRemote(args)
-  UpdateRemotePlugins
-endfunction
-
 " control whitespace preferences based on filetype
 filetype on
 

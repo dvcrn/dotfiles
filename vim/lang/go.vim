@@ -14,6 +14,9 @@ let g:go_highlight_interfaces = 1
 let g:go_highlight_operators = 1
 let g:go_highlight_build_constraints = 1
 
+let g:go_gocode_autobuild = 1
+let g:go_gocode_propose_builtins = 1
+
 " Use goimports over gofmt
 let g:go_fmt_command = "goimports"
 
@@ -56,8 +59,8 @@ au FileType go nmap <Leader>mr <Plug>(go-rename)
 au FileType go nmap <Leader>mt :GoAddTags<space>
 
 " [b]build, [i]nstall
-au FileType go nmap <Leader>mi :GoInstall<space>
-au FileType go nmap <Leader>mb :GoBuild<space>
+au FileType go nmap <Leader>mI :GoInstall<CR>
+au FileType go nmap <Leader>mB :GoBuild<CR>
 
 
 " -- everything again for ,
@@ -85,8 +88,8 @@ au FileType go nmap ,i <Plug>(go-info)
 au FileType go nmap ,r <Plug>(go-rename)
 
 " [t]ags
-au FileType go nmap ,t :GoAddTags<space>
+au FileType go nmap ,t :GoAddTags<CR>
 
 " [b]build, [i]nstall
-au FileType go nmap <Leader>,i :GoInstall<space>
-au FileType go nmap <Leader>,b :GoBuild<space>
+au FileType go nmap ,I :GoInstall<CR>
+au FileType go nmap ,B :GoBuild<CR>

@@ -31,10 +31,10 @@ nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
 " also space hjkl
-nnoremap <Leader>h <C-w>h<CR>
-nnoremap <Leader>l <C-w>l<CR>
-nnoremap <Leader>j <C-w>j<CR>
-nnoremap <Leader>k <C-w>k<CR>
+nnoremap <Leader>h <C-w>h
+nnoremap <Leader>l <C-w>l
+nnoremap <Leader>j <C-w>j
+nnoremap <Leader>k <C-w>k
 
 nnoremap Q <nop>
 
@@ -90,11 +90,13 @@ nnoremap <c-b> :Buffers<CR>
 
 nnoremap <Leader><Tab> :e#<CR> " switch to last buffer
 nnoremap <leader>bb :Buffers<CR>
-nnoremap <leader>bd :bdelete<CR>
+nnoremap <leader>bd :b#<bar>bd#<CR>
+nnoremap <leader>bc :b#<bar>bd#<CR>
 nnoremap <leader>bn :bnext<CR>
 nnoremap <leader>bp :bprevious<CR>
 nnoremap <leader>b/ :Lines<CR>
 nnoremap <leader>bl :BLines<CR>
+nnoremap <Leader>b= :normal migg=G`izz:w<CR>
 
 nnoremap <leader>tc :tabnew<cr>
 nnoremap <leader>tx :tabclose<cr>
@@ -107,7 +109,10 @@ nmap <Leader>t<Tab> :exe "tabn ".g:lasttab<CR>
 au TabLeave * let g:lasttab = tabpagenr()
 
 " faster access to Blines
-nnoremap ,/ :BLines<cr>
+nnoremap <Leader>/ :BLines<cr>
+
+" faster access to indent
+nnoremap <Leader>= :normal migg=G`izz:w<CR>
 
 " toggles
 noremap <Leader>ti :set list!<CR>:echo 'Toggled special characters'<CR>" Toggle special characters

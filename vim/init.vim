@@ -40,16 +40,16 @@ autocmd BufEnter * silent! lcd %:p:h
 
 " Remove whitespaces on save
 fun! <SID>StripTrailingWhitespaces()
-  let l = line(".")
-  let c = col(".")
-  %s/\s\+$//e
-  call cursor(l, c)
+	let l = line(".")
+	let c = col(".")
+	%s/\s\+$//e
+	call cursor(l, c)
 endfun
 
 autocmd BufWritePre * :call <SID>StripTrailingWhitespaces()
+autocmd BufWinLeave *.* mkview
+autocmd BufWinEnter *.* silent! loadview
 
-autocmd BufWritePost * mkview
-autocmd FileReadPost * silent! loadview
 
 " Use buffers instead of tabs with jedi
 let g:jedi#use_tabs_not_buffers = 0

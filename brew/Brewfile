@@ -4,26 +4,22 @@
 tap "homebrew/dupes"
 tap "homebrew/versions"
 tap "homebrew/fuse"
+tap "homebrew/php"
 tap "neovim/neovim"
 tap "d12frosted/emacs-plus"
-
 # Build tools
 brew "cmake"
 
 # Dev tools
 brew "android-platform-tools"
 brew "heroku-toolbelt"
-brew "mozilla-addon-sdk"
 brew "awscli"
 brew "gdb"
 cask "google-cloud-sdk"
 cask "docker"
 
 # Git
-brew "hub"
-brew "hubflow"
 brew "git"
-brew "git-flow"
 
 # Libraries
 brew "msgpack"
@@ -42,12 +38,12 @@ brew "go"
 brew "leiningen"
 brew "node"
 brew "elixir"
+brew "composer"
 
 # Dev tools
 brew "coreutils"
 brew "tmux"
 brew "vim"
-brew "macvim"
 brew "emacs-plus"
 brew "neovim", args: ['HEAD']
 brew "wget"
@@ -98,7 +94,6 @@ cask "gitup"
 
 cask "little-snitch"
 cask "sidestep"
-cask "airserver"
 
 cask "iterm2"
 cask "cathode"
@@ -109,6 +104,7 @@ cask "atom"
 
 cask "bartender"
 
+# Automation
 cask "keyboard-maestro"
 cask "alfred"
 cask "shortcat"
@@ -118,3 +114,7 @@ cask "hyperswitch"
 cask "totalspaces"
 
 cask "java"
+
+# ETC
+cask "beamer"
+cask "airserver"

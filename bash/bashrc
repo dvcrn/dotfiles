@@ -533,6 +533,9 @@ act() {
 # source $(brew --prefix)/etc/bash_completion
 # source ~/git-completion.bash
 # unset _fzf_completion_loaded
+
+test -s "$HOME/.kiex/scripts/kiex" && source "$HOME/.kiex/scripts/kiex"
+
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 [ -f ~/.git.bash ] && source ~/.git.bash
 [ -f ~/.local.bash ] && source ~/.local.bash

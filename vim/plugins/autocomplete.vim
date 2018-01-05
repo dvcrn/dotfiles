@@ -47,7 +47,8 @@ function UseDeoplete()
   let g:deoplete#auto_complete_delay = 0
 endfunction
 
-call UseDeoplete()
+"call UseDeoplete()
+call UseNCM()
 
 :command UseDeoplete call UseDeoplete()
 :command UseNCM call UseNCM()

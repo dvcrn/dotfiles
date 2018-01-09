@@ -14,3 +14,16 @@ func(v interface{}) {
 	fmt.Printf("%v\n", buf.String())
 }(${0:${VISUAL}})
 endsnippet
+
+snippet jpri "JSON Print Indent" b
+// TODO: for debug. remove me.
+func(v interface{}) {
+	j, err := json.MarshalIndent(v, "", "  ")
+	if err != nil {
+		fmt.Printf("%v\n", err)
+		return
+	}
+	buf := bytes.NewBuffer(j)
+	fmt.Printf("%v\n", buf.String())
+}(${0:${VISUAL}})
+endsnippet

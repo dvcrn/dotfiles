@@ -1,7 +1,7 @@
 [user]
   name = David Mohl
-  email = me@dave.cx
-	signingkey = CE0A1434
+  email = git@davemail.io
+	signingkey = E75DA8BA
 [core]
   editor = nvim
   whitespace = fix,-indent-with-non-tab,trailing-space,cr-at-eol
@@ -41,7 +41,7 @@
 	helper = osxkeychain
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path = 
+	path =
 [mergetool "sourcetree"]
 	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true

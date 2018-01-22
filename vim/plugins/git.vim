@@ -22,9 +22,7 @@ nmap <Leader>gp <Plug>GitGutterPrevHunk
 
 nmap <Leader>gP <Plug>Gpush
 
-" git
 nnoremap <leader>gs :Gstatus<CR>
 nnoremap <leader>gc :Gcommit<CR>
-nnoremap <leader>gp :Gpush<CR>
 nnoremap <leader>gl :Commits<CR>
 

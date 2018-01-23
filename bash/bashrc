@@ -88,17 +88,6 @@ devon() {
   echo "OK!"
 }
 
-wip() {
-  git add .
-  git commit -m 'wip'
-}
-
-amend() {
-  git add .
-  git commit -m 'wip' --amend
-}
-
-
 ### OS X
 export COPYFILE_DISABLE=true
 

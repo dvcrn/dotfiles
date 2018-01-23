@@ -32,6 +32,13 @@ alias gcR="git reset 'HEAD^'"
 alias gcs="git show"
 alias gcl="git-commit-lost"
 
+alias ga="git commit --amend"
+alias gaa="git commit --all --amend"
+alias gaf="git commit --amend --no-edit"
+alias gaaf="git commit --all --amend --no-edit"
+
+alias wip="git commit -am 'wip'"
+
 # Conflict (C)
 alias gCl="git status | sed -n 's/^.*both [a-z]*ed: *//p'"
 alias gCa="git add (gCl)"

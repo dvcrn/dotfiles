@@ -1,6 +1,6 @@
 # Snippets for Go
 
-priority -50
+priority 500
 
 snippet jpr "JSON Print" b
 // TODO: for debug. remove me.
@@ -26,4 +26,11 @@ func(v interface{}) {
 	buf := bytes.NewBuffer(j)
 	fmt.Printf("%v\n", buf.String())
 }(${0:${VISUAL}})
+endsnippet
+
+snippet err "Basic error handling" b
+if err != nil {
+	$1
+}
+$2
 endsnippet

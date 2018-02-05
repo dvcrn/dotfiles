@@ -14,8 +14,12 @@ Plug 'junegunn/rainbow_parentheses.vim'
 Plug 'kana/vim-operator-user'
 Plug 'haya14busa/vim-operator-flashy'
 
+" Highlight word under cursor
+Plug 'itchyny/vim-cursorword'
+
 " always flash yank motion
 map y <Plug>(operator-flashy)
+nmap Y <Plug>(operator-flashy)$
 
 syntax enable
 set background=dark

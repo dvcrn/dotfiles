@@ -79,6 +79,8 @@ cask "provisionql"
 cask "osxfuse"
 brew "ntfs-3g"
 brew "hardlink-osx"
+cask "soundflower"
+cask "soundflowerbed"
 
 # General Apps
 cask "slack"

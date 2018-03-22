@@ -92,6 +92,7 @@ nnoremap <Leader><Tab> :e#<CR> " switch to last buffer
 nnoremap <leader>bb :Buffers<CR>
 nnoremap <leader>bd :b#<bar>bd#<CR>
 nnoremap <leader>bc :b#<bar>bd#<CR>
+nnoremap <leader>bx :b#<bar>bd#<CR>
 nnoremap <leader>bn :bnext<CR>
 nnoremap <leader>bp :bprevious<CR>
 nnoremap <leader>b/ :Lines<CR>

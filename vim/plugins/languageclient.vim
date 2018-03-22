@@ -5,6 +5,7 @@ Plug 'autozimu/LanguageClient-neovim', {
 
 " Required for operations modifying multiple buffers like rename.
 set hidden
+let g:LanguageClient_loadSettings = 1
 
 " Implementations
 " Go: https://github.com/sourcegraph/go-langserver

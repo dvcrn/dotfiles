@@ -14,8 +14,5 @@ endfunction
 
 autocmd VimEnter * :call InitNeomake()
 
-noremap <Leader>ln :lne<CR>
-noremap <Leader>lp :lp<CR>
-
 noremap ]q :lne<CR>
 noremap [q :lp<CR>

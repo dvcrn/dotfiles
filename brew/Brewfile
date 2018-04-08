@@ -39,6 +39,7 @@ brew "leiningen"
 brew "node"
 brew "elixir"
 brew "composer"
+brew "rust"
 
 # Dev tools
 brew "coreutils"

@@ -1,4 +1,6 @@
 " Packages
+Plug 'dvcrn/paredit', { 'for': 'clojure' }
+
 Plug 'tpope/vim-fireplace', { 'for': 'clojure' }
 Plug 'guns/vim-clojure-static', { 'for': 'clojure' }
 Plug 'guns/vim-clojure-highlight', { 'for': 'clojure' }
@@ -7,8 +9,8 @@ Plug 'fwolanski/vim-clojure-conceal', { 'for': 'clojure' }
 Plug 'tpope/vim-sexp-mappings-for-regular-people', { 'for': 'clojure' }
 Plug 'guns/vim-sexp', { 'for': 'clojure' }
 
-Plug 'eraserhd/parinfer-rust', {'do':
-	\  'cargo build --manifest-path=cparinfer/Cargo.toml --release'}
+" Plug 'eraserhd/parinfer-rust', {'do':
+" 	\  'cargo build --manifest-path=cparinfer/Cargo.toml --release'}
 
 let g:clojure_conceal_extras = 1 " Lambda concealing for vim
 

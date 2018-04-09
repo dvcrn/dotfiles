@@ -5,8 +5,7 @@
    dotspacemacs-distribution 'spacemacs
    dotspacemacs-configuration-layer-path '()
    dotspacemacs-configuration-layers
-   '(
-     osx
+   '(osx
      (auto-completion :variables
                       auto-completion-enable-sort-by-usage t
                       auto-completion-enable-snippets-in-popup t
@@ -17,18 +16,12 @@
      ;; Languages
      emacs-lisp
      clojure
-     (c-c++ :variables c-c++-enable-clang-support t)
      javascript
      html
-     typescript
+
      erlang
      elixir
-     ;; salt
-     ;; puppet
-     python
-     django
-     ruby
-     swift
+
      (go :variables
          go-use-gometalinter t
          gofmt-command "goimports")
@@ -42,7 +35,6 @@
      version-control
 
      ;; vim
-     ;; vim-powerline
      evil-snipe
 
      ;; etc
@@ -51,23 +43,16 @@
      ;; jabber
      emoji
      colors
-     ;; (wakatime :variables
-     ;;           wakatime-api-key "*****"
-     ;;           wakatime-cli-path "/usr/local/bin/wakatime"
-     ;;           wakatime-python-bin "/usr/local/bin/python")
 
-     ;; frameworks
-     react
-
-     ;; markdown
+     markdown
      (org :variables
           org-enable-github-support t)
+
      spell-checking
      syntax-checking
      version-control
 
      themes-megapack
-     slack
      )
 
    dotspacemacs-additional-packages '()
@@ -110,11 +95,13 @@
    dotspacemacs-maximized-at-startup nil
    dotspacemacs-active-transparency 90
    dotspacemacs-inactive-transparency 90
+   dotspacemacs-mode-line-theme 'spacemacs
    dotspacemacs-mode-line-unicode-symbols nil
    dotspacemacs-smooth-scrolling t
    dotspacemacs-smartparens-strict-mode nil
    dotspacemacs-highlight-delimiters 'all
-   dotspacemacs-persistent-server t
+   ;; dotspacemacs-persistent-server t
+
    dotspacemacs-search-tools '("ag" "pt" "ack" "grep")
    dotspacemacs-default-package-repository nil)
 
@@ -158,39 +145,14 @@
     (add-to-list 'web-mode-indentation-params '("lineup-calls" . nil))))
 
 
-(defun erc-gitter-connect ()
-  (interactive)
-  ;; clean up old buffers if they exist
-  (dolist (buf '("irc.gitter.im:6667" "#syl20bnr/spacemacs"))
-    (when (get-buffer buf) (kill-buffer buf)))
-
-  (erc-ssl :server "irc.gitter.im"
-           :port 6667
-           :nick "dvcrn"
-           :password "*****"))
-
 (defun figwheel-repl ()
   (interactive)
   (save-some-buffers)
   (with-current-buffer (cider-current-repl-buffer)
     (goto-char (point-max))
     (insert "(require 'figwheel-sidecar.repl-api)
-             (figwheel-sidecar.repl-api/cljs-repl)")
+             (cljs-repl)")
     (cider-repl-return)))
-
-; (defun ambly-repl ()
-; 		(interactive)
-; 		(with-current-buffer (cider-current-repl-buffer)
-; 				(goto-char (point-max))
-; 				(insert "
-; (require
-;   '[cljs.repl :as repl]
-;   '[cemerick.piggieback]
-;   '[ambly.core :as ambly])
-;
-; (cemerick.piggieback/cljs-repl
-; 	(ambly/repl-env :choose-first-discovered true))")
-; (cider-repl-return)
 
 
 (defun dotspacemacs/user-init ()
@@ -204,6 +166,9 @@
 
   ;; trigger auto-complete vim style
   (global-set-key (kbd "C-n") 'company-dabbrev)
+
+  ;; project
+  (global-set-key (kbd "C-p") 'helm-projectile-find-file)
 
   (space-style)
 
@@ -222,14 +187,8 @@
   ;; Make clojure prettier
   (setq clojure-enable-fancify-symbols t)
 
-  ;; always use react mode with js files
-  (add-to-list 'auto-mode-alist '("\\.js\\'" . react-mode))
-
   ;; different seperator for powerline
   (setq powerline-default-separator 'alternate)
-
-  ;; ruby
-  (setq flycheck-disable-checker '(ruby-rubylint))
   )
 
 

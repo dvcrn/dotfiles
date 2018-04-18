@@ -189,6 +189,15 @@ tt() {
 # Shortcut functions
 # --------------------------------------------------------------------
 
+vrsync() {
+  if [ $# -lt 1 ]; then
+    echo 'usage: vrsync source target'
+    return 1
+  fi
+
+  rsync -ap --no-i-r --info=progress2 --human-readable $1 $2
+}
+
 viw() {
   vim `which "$1"`
 }

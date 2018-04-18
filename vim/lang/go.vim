@@ -19,6 +19,7 @@ let g:go_gocode_propose_builtins = 1
 
 " Use goimports over gofmt
 let g:go_fmt_command = "goimports"
+let g:go_fmt_experimental = 1
 
 let g:neomake_go_gobuild_maker = {
     \ 'exe': 'sh',

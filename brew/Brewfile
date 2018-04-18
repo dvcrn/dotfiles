@@ -1,5 +1,3 @@
-# brew tap Homebrew/bundle ; has to come first.
-
 # Taps
 tap "homebrew/dupes"
 tap "homebrew/versions"
@@ -7,11 +5,11 @@ tap "homebrew/fuse"
 tap "homebrew/php"
 tap "neovim/neovim"
 tap "d12frosted/emacs-plus"
+
 # Build tools
 brew "cmake"
 
 # Dev tools
-brew "android-platform-tools"
 brew "heroku-toolbelt"
 brew "awscli"
 brew "gdb"
@@ -40,6 +38,7 @@ brew "node"
 brew "elixir"
 brew "composer"
 brew "rust"
+cask "java"
 
 # Dev tools
 brew "coreutils"
@@ -68,20 +67,16 @@ cask "qlcolorcode"
 cask "qlstephen"
 cask "qlmarkdown"
 cask "quicklook-json"
-cask "qlprettypatch"
-cask "quicklook-csv"
-cask "betterzipql"
 cask "qlimagesize"
 cask "webpquicklook"
 cask "suspicious-package"
-cask "provisionql"
+cask "quicklookase"
+cask "qlvideo"
 
 # Misc tools
 cask "osxfuse"
 brew "ntfs-3g"
 brew "hardlink-osx"
-cask "soundflower"
-cask "soundflowerbed"
 
 # General Apps
 cask "slack"
@@ -107,6 +102,11 @@ cask "atom"
 
 cask "bartender"
 
+cask "beamer"
+cask "airserver"
+cask "soundflower"
+cask "soundflowerbed"
+
 # Automation
 cask "keyboard-maestro"
 cask "alfred"
@@ -115,9 +115,3 @@ cask "shortcat"
 cask "hyperdock"
 cask "hyperswitch"
 cask "totalspaces"
-
-cask "java"
-
-# ETC
-cask "beamer"
-cask "airserver"

@@ -44,9 +44,10 @@ export GOPATH=~/go
 mkdir -p $GOPATH
 
 export PATH_EXPANDED=1
-  export PATH=~/bin:~/ruby:/opt/bin:/usr/local/bin:/usr/local/share/python:$GOPATH/bin:/usr/local/opt/go/libexec/bin:$PATH
-  export PATH=$GOPATH/bin:$PATH
-  export PATH_EXPANDED=1
+export PATH=~/bin:~/ruby:/opt/bin:/usr/local/bin:/usr/local/share/python:$GOPATH/bin:/usr/local/opt/go/libexec/bin:$PATH
+export PATH=$GOPATH/bin:$PATH
+export PATH_EXPANDED=1
+
 ## Fix GPG
 export GPG_TTY=$(tty)
 
@@ -208,20 +209,6 @@ csbuild() {
   cscope -b -q && rm cscope.files
 }
 
-gems() {
-  for v in 2.0.0 1.8.7 jruby 1.9.3; do
-    rvm use $v
-    gem $@
-  done
-}
-
-rakes() {
-  for v in 2.0.0 1.8.7 jruby 1.9.3; do
-    rvm use $v
-    rake $@
-  done
-}
-
 tx() {
   tmux splitw "$*; echo -n Press enter to finish.; read"
   tmux select-layout tiled
@@ -272,33 +259,6 @@ EXTRA=$BASE/bashrc-extra
 [ -f "$EXTRA" ] && source "$EXTRA"
 
 
-# boot2docker
-# --------------------------------------------------------------------
-if [ "$PLATFORM" = 'Darwin' ]; then
-  dockerinit() {
-    [ $(docker-machine status default) = 'Running' ] || docker-machine start default
-    eval "$(docker-machine env default)"
-  }
-
-  dockerstop() {
-    docker-machine stop default
-  }
-
-  resizes() {
-    mkdir -p out &&
-    for jpg in *.JPG; do
-      echo $jpg
-      [ -e out/$jpg ] || sips -Z 2048 --setProperty formatOptions 80 $jpg --out out/$jpg
-    done
-  }
-
-  j() { export JAVA_HOME=$(/usr/libexec/java_home -v1.$1); }
-
-  # https://gist.github.com/Andrewpk/7558715
-  alias startvpn="sudo launchctl load -w /Library/LaunchDaemons/net.juniper.AccessService.plist; open -a '/Applications/Junos Pulse.app/Contents/Plugins/JamUI/PulseTray.app/Contents/MacOS/PulseTray'"
-  alias quitvpn="osascript -e 'tell application \"PulseTray.app\" to quit';sudo launchctl unload -w /Library/LaunchDaemons/net.juniper.AccessService.plist"
-fi
-
 
 # fzf (https://github.com/junegunn/fzf)
 # --------------------------------------------------------------------
@@ -315,13 +275,6 @@ fd() {
 # fda - including hidden directories
 fda() {
   DIR=`find ${1:-.} -type d 2> /dev/null | fzf-tmux` && cd "$DIR"
-}
-
-# Figlet font selector
-fgl() {
-  cd /usr/local/Cellar/figlet/*/share/figlet/fonts
-  BASE=`pwd`
-  figlet -f `ls *.flf | sort | fzf` $*
 }
 
 # fbr - checkout git branch
@@ -493,10 +446,6 @@ c() {
     }.join + " " * (2 + cols - len) + "\x1b[m" + url' |
   fzf --ansi --multi --no-hscroll --tiebreak=index |
   sed 's#.*\(https*://\)#\1#' | xargs open
-}
-
-acdul() {
-  acdcli ul -x 8 -r 4 -o "$@"
 }
 
 make-patch() {

@@ -60,6 +60,7 @@ brew "fzf"
 cask "postman"
 brew "gpg"
 brew "gnu-sed"
+brew "rsync"
 
 # Quicklook plugins
 # https://github.com/sindresorhus/quick-look-plugins

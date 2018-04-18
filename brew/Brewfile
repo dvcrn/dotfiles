@@ -107,6 +107,8 @@ cask "airserver"
 cask "soundflower"
 cask "soundflowerbed"
 
+cask "marta"
+
 # Automation
 cask "keyboard-maestro"
 cask "alfred"

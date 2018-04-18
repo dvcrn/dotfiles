@@ -16,6 +16,3 @@ au FileType elixir nmap ,= :call LanguageClient_textDocument_formatting()<CR>
 "au FileType elixir nmap mgd :ExDef<CR>
 au FileType elixir nmap mgd :call LanguageClient_textDocument_definition()<CR>
 au FileType elixir nmap m= :call LanguageClient_textDocument_formatting()<CR>
-
-autocmd BufWritePost *.exs silent :call LanguageClient_textDocument_formatting()
-autocmd BufWritePost *.ex silent :call LanguageClient_textDocument_formatting()

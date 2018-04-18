@@ -9,7 +9,6 @@ packages = [
     're-natal',
 
     # javascript
-    'mocha',
     'gulp',
     'tern',
     'yarn',

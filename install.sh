@@ -33,7 +33,7 @@ cd ~/.dotfiles/
 echo "---> Brew done"
 
 echo "---> Post brew"
-/usr/local/opt/fzf/install --all
+$(brew --prefix)/opt/fzf/install
 echo "---> Post brew done"
 
 echo ""
@@ -102,9 +102,3 @@ echo ""
 echo "---> term"
 tic -x ~/.dotfiles/term/xterm-256color-italic.terminfo
 echo "---> term done"
-
-echo ""
-echo "---> karabiner"
-mkdir -p ~/Library/Application\ Support/Karabiner/
-ln -s ~/.dotfiles/karabiner/private.xml ~/Library/Application\ Support/Karabiner/private.xml
-echo "---> karabiner done"

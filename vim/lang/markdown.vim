@@ -1,7 +1,7 @@
 Plug 'tpope/vim-markdown', { 'for': 'markdown' }
 Plug 'mzlogin/vim-markdown-toc', { 'for': 'markdown' }
 
-let g:markdown_fenced_languages = ['html', 'python', 'bash=sh', 'golang']
+" let g:markdown_fenced_languages = ['html', 'python', 'bash=sh', 'golang']
 
 " For TOC
 let g:vmt_auto_update_on_save = 1

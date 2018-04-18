@@ -146,9 +146,9 @@
 
 
 (defun figwheel-repl ()
-  (interactive)
-  (save-some-buffers)
-  (with-current-buffer (cider-current-repl-buffer)
+  ;;(interactive)
+  ;;(save-some-buffers)
+  (with-current-buffer (cider-connect)
     (goto-char (point-max))
     (insert "(require 'figwheel-sidecar.repl-api)
              (cljs-repl)")

@@ -1,7 +1,7 @@
 syntax on
 filetype plugin indent on
 
-set timeout timeoutlen=1000 ttimeoutlen=500
+" set timeout timeoutlen=1000 ttimeoutlen=500
 
 " old stuf
 set nocompatible

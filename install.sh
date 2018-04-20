@@ -69,7 +69,7 @@ echo "---> vim"
 mkdir -p ~/.config/nvim/
 ln -s ~/.dotfiles/vim/init.vim ~/.config/nvim/init.vim
 ln -s ~/.dotfiles/vim/ginit.vim ~/.config/nvim/ginit.vim
-ln -s ~/.dotfiles/vim/UltiSnips ~/.config/nvim/UltiSnips
+ln -s ~/.dotfiles/vim/UltiSnips/ ~/.config/nvim/UltiSnips
 ln -s ~/.dotfiles/vim/init.vim ~/.vimrc
 ln -s ~/.dotfiles/vim/init.vim ~/.gvimrc
 ln -s ~/.dotfiles/vim/ideavimrc.vim ~/.ideavimrc

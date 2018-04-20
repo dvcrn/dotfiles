@@ -1,8 +1,4 @@
 # Taps
-tap "homebrew/dupes"
-tap "homebrew/versions"
-tap "homebrew/fuse"
-tap "homebrew/php"
 tap "neovim/neovim"
 tap "d12frosted/emacs-plus"
 
@@ -98,8 +94,8 @@ cask "iterm2"
 cask "cathode"
 
 cask "sublime-text"
-cask "sublime-text-dev"
 cask "atom"
+cask "vimr"
 
 cask "bartender"
 

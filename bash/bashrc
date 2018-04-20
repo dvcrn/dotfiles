@@ -189,6 +189,10 @@ tt() {
 # Shortcut functions
 # --------------------------------------------------------------------
 
+lb() {
+  open -a LaunchBar $1
+}
+
 vrsync() {
   if [ $# -lt 1 ]; then
     echo 'usage: vrsync source target'

@@ -21,6 +21,7 @@ brew "libxml2"
 brew "libyaml"
 brew "openssl"
 brew "gnupg"
+cask "gpg-suite"
 
 # Languages
 brew "pypy"
@@ -101,8 +102,6 @@ cask "bartender"
 
 cask "beamer"
 cask "airserver"
-cask "soundflower"
-cask "soundflowerbed"
 
 cask "marta"
 

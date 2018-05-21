@@ -13,6 +13,8 @@ let g:go_highlight_structs = 1
 let g:go_highlight_interfaces = 1
 let g:go_highlight_operators = 1
 let g:go_highlight_build_constraints = 1
+let g:go_gocode_unimported_packages = 1
+let g:go_template_use_pkg = 1
 
 let g:go_gocode_autobuild = 1
 let g:go_gocode_propose_builtins = 1

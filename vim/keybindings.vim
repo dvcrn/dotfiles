@@ -105,6 +105,9 @@ nnoremap <leader>tn :tabnext<cr>
 nnoremap <leader>tp :tabprevious<cr>
 nnoremap <leader>tt :Windows<cr>
 
+" text
+nnoremap <leader>tr :%s/<C-r><C-w>/
+
 let g:lasttab = 1
 nmap <Leader>t<Tab> :exe "tabn ".g:lasttab<CR>
 au TabLeave * let g:lasttab = tabpagenr()

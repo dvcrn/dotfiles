@@ -29,6 +29,8 @@ Plug 'dearrrfish/vim-applescript', { 'for': 'applescript' }
 
 Plug 'equalsraf/neovim-gui-shim'
 
+Plug 'chiedo/vim-case-convert'
+
 " control whitespace preferences based on filetype
 filetype on
 

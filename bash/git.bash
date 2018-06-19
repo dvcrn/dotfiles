@@ -105,8 +105,16 @@ alias gpf="git push --force"
 alias gpa="git push --all"
 alias gpA="git push --all; and git push --tags"
 alias gpt="git push --tags"
-alias gpc="git push --set-upstream origin '(git-branch-current 2> /dev/null)'"
-alias gpp="git pull origin '(git-branch-current 2> /dev/null)'; and git push origin '(git-branch-current 2> /dev/null)'"
+
+gpc() {
+  branch=$(git rev-parse --abbrev-ref HEAD 2> /dev/null)
+  git push -u origin $branch
+}
+
+gpp() {
+  branch=$(git rev-parse --abbrev-ref HEAD 2> /dev/null)
+  git pull origin $branch; git push origin $branch
+}
 
 # Rebase (r)
 alias gr="git rebase"

@@ -38,6 +38,10 @@ nnoremap <Leader>k <C-w>k
 
 nnoremap Q <nop>
 
+" Fix block cursor weirdness
+map p <Plug>(miniyank-autoput)
+map P <Plug>(miniyank-autoPut)
+
 " Start interactive EasyAlign in visual mode (e.g. vipga)
 xmap ga <Plug>(EasyAlign)
 

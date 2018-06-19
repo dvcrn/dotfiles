@@ -20,6 +20,8 @@ Plug 'tpope/vim-sensible'
 
 Plug 'jiangmiao/auto-pairs'
 
+Plug 'bfredl/nvim-miniyank'
+
 " Syntax
 
 Plug 'Shougo/neco-vim', {'for': 'vim'}

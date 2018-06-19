@@ -6,6 +6,8 @@ Plug 'zchee/deoplete-go', { 'do': 'make' }
 let g:deoplete#sources#go#sort_class = ['func', 'type', 'var', 'const']
 let g:deoplete#sources#go#align_class = 1
 
+" let g:go_auto_type_info = 1
+
 let g:go_highlight_functions = 1
 let g:go_highlight_methods = 1
 let g:go_highlight_fields = 1
@@ -60,12 +62,16 @@ au FileType go nmap <Leader>mi <Plug>(go-info)
 " [r]ename
 au FileType go nmap <Leader>mr <Plug>(go-rename)
 
-" [t]ags
-au FileType go nmap <Leader>mt :GoAddTags<space>
+" [T]ags
+au FileType go nmap <Leader>mT :GoAddTags<space>
 
 " [b]build, [i]nstall
 au FileType go nmap <Leader>mI :GoInstall<CR>
 au FileType go nmap <Leader>mB :GoBuild<CR>
+"
+" [t]est file
+au FileType go nmap <Leader>mt :GoAlternate<CR>
+
 
 
 " -- everything again for ,
@@ -92,8 +98,11 @@ au FileType go nmap ,i <Plug>(go-info)
 " [r]ename
 au FileType go nmap ,r <Plug>(go-rename)
 
-" [t]ags
-au FileType go nmap ,t :GoAddTags<space>
+" [T]ags
+au FileType go nmap ,T :GoAddTags<space>
+
+" [t]est file
+au FileType go nmap ,t :GoAlternate<CR>
 
 " [b]build, [i]nstall
 au FileType go nmap ,I :GoInstall<CR>

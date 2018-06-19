@@ -8,7 +8,7 @@ function! InitNeomake()
   if MyOnBattery()
     call neomake#configure#automake('w')
   else
-    call neomake#configure#automake('nw', 1000)
+    call neomake#configure#automake('nrwi', 1000)
   endif
 endfunction
 

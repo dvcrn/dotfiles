@@ -105,8 +105,14 @@ nnoremap <leader>tn :tabnext<cr>
 nnoremap <leader>tp :tabprevious<cr>
 nnoremap <leader>tt :Windows<cr>
 
-" text
-nnoremap <leader>tr :%s/<C-r><C-w>/
+" te[x]t
+" replace
+nnoremap <leader>xr :.s/<C-r><C-w>//<left>
+nnoremap <leader>xR :%s/<C-r><C-w>//<left>
+
+" modify
+nnoremap <leader>xm :.s/<C-r><C-w>/<C-r><C-w>/<left>
+nnoremap <leader>xM :%s/<C-r><C-w>/<C-r><C-w>/<left>
 
 let g:lasttab = 1
 nmap <Leader>t<Tab> :exe "tabn ".g:lasttab<CR>

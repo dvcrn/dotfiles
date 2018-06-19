@@ -38,3 +38,10 @@ if err != nil {
 }
 $2
 endsnippet
+
+snippet ifin "In map?" b
+if val, ok := ${1:dict}[${2:"key"}]; ok {
+	$3
+}
+$4
+endsnippet

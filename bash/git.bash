@@ -4,6 +4,7 @@
 
 # Git
 alias g="git"
+alias git=hub
 
 # Branch (b)
 alias gb="git branch"
@@ -37,7 +38,6 @@ alias gcF="git commit --verbose --amend"
 alias gcaF="git commit --all --amend"
 alias gcaf="git commit --all --amend --no-edit"
 
-alias wip="git commit -am 'wip'"
 
 # Conflict (C)
 alias gCl="git status | sed -n 's/^.*both [a-z]*ed: *//p'"
@@ -193,4 +193,8 @@ gcca() {
     '  HEAD^..HEAD
 
   git show HEAD --pretty=fuller
+}
+
+wip() {
+  git commit -am "wip $(date)"
 }

@@ -1,5 +1,6 @@
 Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-rhubarb'
 
 highlight clear SignColumn
 highlight GitGutterAdd ctermfg=green guifg=darkgreen

@@ -93,6 +93,7 @@ cask "little-snitch"
 cask "sidestep"
 
 cask "iterm2"
+cask "kitty"
 cask "cathode"
 
 cask "sublime-text"

@@ -172,6 +172,8 @@ alias gwC="git clean -f"
 alias gwx="git rm -r"
 alias gwX="git rm -rf"
 
+alias ff="git pull --ff-only"
+
 # Function shortcuts
 gcac() {
   echo "Author -> Commiter"

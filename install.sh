@@ -60,9 +60,10 @@ tic -x ~/.dotfiles/tmux/tmux.terminfo
 echo "---> tmux done"
 
 echo ""
-echo "---> Alacritty"
-ln -s ~/.dotfiles/alacritty/alacritty.yml ~/.config/alacritty.yml
-echo "---> Alacritty done"
+echo "---> Kitty"
+mkdir -p ~/.config/kitty/
+ln -s ~/.dotfiles/kitty/kitty.conf ~/.config/kitty/kitty.conf
+echo "---> Kitty done"
 
 echo ""
 echo "---> vim"
@@ -90,13 +91,6 @@ echo ""
 echo "---> sublimious"
 ln -s ~/.dotfiles/sublimious/.sublimious ~/.sublimious
 echo "---> sublimious done"
-
-echo ""
-echo "---> kwm"
-mkdir -p ~/.kwm/
-ln -s ~/.dotfiles/kwm/kwmrc ~/.kwm/kwmrc
-ln -s ~/.dotfiles/khd/kwmrc ~/.kwm/.khdrc
-echo "---> kwm done"
 
 echo ""
 echo "---> term"

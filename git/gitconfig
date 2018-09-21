@@ -6,6 +6,7 @@
   editor = nvim
   whitespace = fix,-indent-with-non-tab,trailing-space,cr-at-eol
 	excludesfile = /Users/d/.gitignore_global
+	commentChar = %
 [web]
   browser = google-chrome
 [rerere]

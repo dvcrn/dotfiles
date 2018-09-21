@@ -66,3 +66,15 @@ set smartcase           " ignore case if search string is all lower case, case-s
 
 " Make cursor a flat bar in insert mode
 :let $NVIM_TUI_ENABLE_CURSOR_SHAPE=1
+
+" add useful stuff to title bar (file name, flags, cwd)
+set titlestring=
+set titlestring+=%f
+set titlestring+=%h%m%r%w
+"set titlestring+=\ -\ %{v:progname}
+set titlestring+=\ -\ %{substitute(getcwd(),\ $HOME,\ '~',\ '')}
+set title
+
+"autocmd BufReadPost,FileReadPost,BufNewFile * call system("tmux rename-window " . expand("%:t"))
+"autocmd BufReadPost,FileReadPost,BufNewFile * call system("tmux set-titles-string " . expand("%:t"))
+

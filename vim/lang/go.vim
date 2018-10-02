@@ -1,6 +1,7 @@
 Plug 'fatih/vim-go', { 'for': 'go', 'do': ':GoInstallBinaries' }
-Plug 'nsf/gocode', { 'rtp': 'nvim', 'do': '~/.config/nvim/plugged/gocode/nvim/symlink.sh' }
-Plug 'zchee/deoplete-go', { 'do': 'make' }
+" Plug 'nsf/gocode', { 'rtp': 'nvim', 'do': '~/.config/nvim/plugged/gocode/nvim/symlink.sh' }
+" Plug 'zchee/deoplete-go', { 'do': 'make' }
+Plug 'ncm2/ncm2-go'
 
 " options for deoplete
 let g:deoplete#sources#go#sort_class = ['func', 'type', 'var', 'const']

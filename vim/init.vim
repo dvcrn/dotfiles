@@ -85,8 +85,8 @@ source ~/.dotfiles/vim/plugins/org.vim
 source ~/.dotfiles/vim/plugins/multiplecursors.vim
 source ~/.dotfiles/vim/plugins/slash.vim
 source ~/.dotfiles/vim/plugins/languageclient.vim
-source ~/.dotfiles/vim/plugins/autocomplete.vim
 source ~/.dotfiles/vim/plugins/snippets.vim
+source ~/.dotfiles/vim/plugins/autocomplete.vim
 source ~/.dotfiles/vim/plugins/git.vim
 
 

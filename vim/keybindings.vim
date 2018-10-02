@@ -122,6 +122,8 @@ let g:lasttab = 1
 nmap <Leader>t<Tab> :exe "tabn ".g:lasttab<CR>
 au TabLeave * let g:lasttab = tabpagenr()
 
+nnoremap <Tab><Tab> :exe "tabn ".g:lasttab<CR> " switch to last tab
+
 " faster access to Blines
 nnoremap <Leader>/ :BLines<cr>
 

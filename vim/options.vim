@@ -76,5 +76,4 @@ set titlestring+=\ -\ %{substitute(getcwd(),\ $HOME,\ '~',\ '')}
 set title
 
 "autocmd BufReadPost,FileReadPost,BufNewFile * call system("tmux rename-window " . expand("%:t"))
-"autocmd BufReadPost,FileReadPost,BufNewFile * call system("tmux set-titles-string " . expand("%:t"))
 

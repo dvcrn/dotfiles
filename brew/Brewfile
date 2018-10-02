@@ -43,7 +43,7 @@ brew "coreutils"
 brew "tmux"
 brew "vim"
 brew "emacs-plus"
-brew "neovim", args: ['HEAD']
+brew "neovim"
 brew "wget"
 brew "reattach-to-user-namespace"
 brew "watch"

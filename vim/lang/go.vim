@@ -19,26 +19,18 @@ let g:go_highlight_build_constraints = 1
 let g:go_gocode_unimported_packages = 1
 let g:go_template_use_pkg = 1
 
-let g:go_gocode_autobuild = 1
-let g:go_gocode_propose_builtins = 1
-
 " Use goimports over gofmt
 let g:go_fmt_command = "goimports"
 let g:go_fmt_experimental = 1
 
-let g:neomake_go_gobuild_maker = {
-    \ 'exe': 'sh',
-    \ 'args': ['-c', 'go build -o /dev/null ./\$0', '%:h'],
-    \ 'errorformat':
-        \ '%W%f:%l: warning: %m,' .
-        \ '%E%f:%l:%c:%m,' .
-        \ '%E%f:%l:%m,' .
-        \ '%C%\s%\+%m,' .
-        \ '%-G#%.%#'
-\ }
+let g:neomake_go_goinstall_maker = {
+      \ 'exe': 'go',
+      \ 'args': ['install', '-i'],
+      \ 'errorformat': '%f:%l:%c: %m',
+      \ 'tempfile_enabled': 0,
+      \ }
 
-" Automatically GoInstall go projects to make gocode work
-" autocmd FileType go :silent autocmd BufWritePost :GoInstall
+let g:neomake_go_enabled_makers = ['go', 'gometalinter', 'goinstall']
 
 au FileType go nmap gd :call LanguageClient_textDocument_definition()<CR>
 

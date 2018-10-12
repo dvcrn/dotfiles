@@ -26,11 +26,13 @@ let g:go_fmt_experimental = 1
 let g:neomake_go_goinstall_maker = {
       \ 'exe': 'go',
       \ 'args': ['install', '-i'],
+      \ 'append_file': 0,
       \ 'errorformat': '%f:%l:%c: %m',
       \ 'tempfile_enabled': 0,
+      \ 'cwd': '%:h',
       \ }
 
-let g:neomake_go_enabled_makers = ['go', 'gometalinter', 'goinstall']
+let g:neomake_go_enabled_makers = ['goinstall', 'gometalinter']
 
 au FileType go nmap gd :call LanguageClient_textDocument_definition()<CR>
 

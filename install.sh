@@ -2,6 +2,11 @@ echo "Installing all your stuff!"
 echo ""
 
 echo ""
+echo "---> ssh"
+ln -s ~/.dotfiles/ssh/config ~/.ssh/config
+echo "---> ssh done"
+
+echo ""
 echo "---> bash"
 if [ ! -e ~/.git-prompt.sh ]; then
   curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh -o ~/.git-prompt.sh

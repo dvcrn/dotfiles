@@ -1,64 +1,34 @@
-# Taps
-tap "neovim/neovim"
-tap "d12frosted/emacs-plus"
-
-# Build tools
-brew "cmake"
-
 # Dev tools
 brew "heroku-toolbelt"
-brew "awscli"
-brew "gdb"
 cask "google-cloud-sdk"
 cask "docker"
 
-# Git
-brew "git"
-brew "hub"
-
-# Libraries
-brew "msgpack"
-brew "libxml2"
-brew "libyaml"
-brew "openssl"
-brew "gnupg"
-cask "gpg-suite"
-
 # Languages
-brew "pypy"
 brew "python"
-brew "pyenv"
-brew "pyenv-virtualenv"
 brew "python3"
 brew "go"
 brew "leiningen"
 brew "node"
 brew "elixir"
-brew "composer"
-brew "rust"
 cask "java"
 
 # Dev tools
+brew "openssl"
+cask "gpg-suite"
 brew "coreutils"
 brew "tmux"
-brew "vim"
-brew "emacs-plus"
 brew "neovim"
 brew "wget"
 brew "reattach-to-user-namespace"
 brew "watch"
 brew "readline"
-brew "zsh"
-brew "zsh-lovers"
-brew "tree"
 brew "z"
 brew "ag"
 brew "ack"
 brew "fzf"
-cask "postman"
-brew "gpg"
 brew "gnu-sed"
-brew "rsync"
+brew "git"
+brew "hub"
 
 # Quicklook plugins
 # https://github.com/sindresorhus/quick-look-plugins
@@ -77,41 +47,27 @@ cask "osxfuse"
 brew "ntfs-3g"
 brew "hardlink-osx"
 
+# Dev Apps
+cask "gitup"
+cask "little-snitch"
+cask "kitty"
+cask "sublime-text"
+cask "vimr"
+cask "dash"
+
+# Automation // Productivity
+cask "keyboard-maestro"
+cask "alfred"
+cask "hyperswitch"
+
 # General Apps
 cask "slack"
 cask "transmission"
 cask "anki"
-
 cask "google-japanese-ime"
-cask "google-chrome"
 cask "1password"
 cask "dropbox"
-
-cask "gitup"
-
-cask "little-snitch"
-cask "sidestep"
-
-cask "iterm2"
-cask "kitty"
-cask "cathode"
-
-cask "sublime-text"
-cask "atom"
-cask "vimr"
-
 cask "bartender"
-
 cask "beamer"
 cask "airserver"
 
-cask "marta"
-
-# Automation
-cask "keyboard-maestro"
-cask "alfred"
-cask "shortcat"
-
-cask "hyperdock"
-cask "hyperswitch"
-cask "totalspaces"

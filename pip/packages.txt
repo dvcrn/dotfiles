@@ -9,7 +9,6 @@ jedi
 json-rpc
 
 virtualenv
-
 yapf
 
 neovim

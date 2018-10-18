@@ -49,8 +49,7 @@ echo "---> Git done"
 
 echo ""
 echo "---> Python / pip"
-pip install -r ~/.dotfiles/pip/packages.txt
-pip3 install -r ~/.dotfiles/pip/packages3.txt
+pip3 install -r ~/.dotfiles/pip/packages.txt
 echo "---> Python / pip done"
 
 echo ""

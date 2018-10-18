@@ -204,6 +204,10 @@ tt() {
 # Shortcut functions
 # --------------------------------------------------------------------
 
+
+agr() {
+  ag -0 -l $1 | xargs -0 gsed -ri'' -e "s/$1/$2/g"
+}
 lb() {
   open -a LaunchBar $1
 }

@@ -80,6 +80,9 @@ ln -s ~/.dotfiles/vim/init.vim ~/.vimrc
 ln -s ~/.dotfiles/vim/init.vim ~/.gvimrc
 ln -s ~/.dotfiles/vim/ideavimrc.vim ~/.ideavimrc
 ln -s ~/.dotfiles/vim/xvimrc.vim ~/.xvimrc
+echo "---> vim plug"
+curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 echo "---> vim done"
 
 echo ""
@@ -101,3 +104,4 @@ echo ""
 echo "---> term"
 tic -x ~/.dotfiles/term/xterm-256color-italic.terminfo
 echo "---> term done"
+

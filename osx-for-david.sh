@@ -152,6 +152,7 @@ defaults write com.apple.screensaver askForPassword -int 1
 defaults write com.apple.screensaver askForPasswordDelay -int 0
 
 # Save screenshots into ~/Screenshots/ instead of desktop
+mkdir -p ~/Screenshots/
 defaults write com.apple.screencapture location ~/Screenshots/
 
 # Save screenshots in PNG format (other options: BMP, GIF, JPG, PDF, TIFF)
@@ -310,6 +311,12 @@ defaults write com.apple.dock dashboard-in-overlay -bool true
 
 # Don’t automatically rearrange Spaces based on most recent use
 defaults write com.apple.dock mru-spaces -bool false
+
+# Disable 'drag to other spaces'
+defaults write com.apple.dock workspaces-edge-delay -float 60
+
+# Reduce motion
+defaults write com.apple.universalaccess reduceMotion -bool true
 
 # Remove the auto-hiding Dock delay
 defaults write com.apple.dock autohide-delay -float 0

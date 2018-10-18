@@ -45,3 +45,26 @@ if val, ok := ${1:dict}[${2:"key"}]; ok {
 }
 $4
 endsnippet
+
+snippet noe "require.NoError" b
+require.NoError(t, ${1:err})
+$2
+endsnippet
+
+snippet sprintf "fmt.Sprintf" b
+fmt.Sprintf("${1:%v}", ${2})
+endsnippet
+
+snippet pr "fmt.Printf()" b
+fmt.Println("$1")
+endsnippet
+
+snippet prf "fmt.Printf()" b
+fmt.Printf("${1:%v}\n", $2)
+endsnippet
+
+snippet funca "fmt.Printf()" b
+$2 func() $1 {
+	$3
+}()
+endsnippet

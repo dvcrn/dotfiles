@@ -1,0 +1,14 @@
+snippet model "Ecto Model" b
+defmodule $1 do
+  use Ecto.Schema
+
+  schema "${2:user}s" do
+  end
+
+  def changeset(`!p snip.rv = t[2]`, params \\\ %{}) do
+    `!p snip.rv = t[2]`
+    |> Ecto.Changeset.cast(params, [])
+    |> Ecto.Changeset.validate_required([])
+  end
+end
+endsnippet

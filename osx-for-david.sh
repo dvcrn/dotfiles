@@ -598,6 +598,10 @@ defaults write org.m0k.transmission DownloadLocationConstant -bool true
 defaults write org.m0k.transmission DownloadAsk -bool false
 defaults write org.m0k.transmission MagnetOpenAsk -bool false
 
+# Auto-add torrent files
+defaults write org.m0k.transmission AutoImport -bool true
+defaults write org.m0k.transmission AutoImportDirectory -string "${HOME}/Downloads"
+
 # Don’t prompt for confirmation before removing non-downloading active transfers
 defaults write org.m0k.transmission CheckRemoveDownloading -bool true
 

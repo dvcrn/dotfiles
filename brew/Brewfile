@@ -10,10 +10,10 @@ cask "docker"
 brew "python"
 brew "python3"
 brew "go"
+brew "clojure"
 brew "leiningen"
 brew "node"
 brew "elixir"
-cask "java"
 
 # Dev tools
 brew "openssl"
@@ -58,6 +58,7 @@ cask "kitty"
 cask "sublime-text"
 cask "vimr"
 cask "dash"
+mas "Xcode", id: 497799835
 
 # Automation // Productivity
 cask "keyboard-maestro"

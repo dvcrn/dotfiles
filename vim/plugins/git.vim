@@ -26,4 +26,8 @@ nmap <Leader>gP <Plug>Gpush
 nnoremap <leader>gs :Gstatus<CR>
 nnoremap <leader>gc :Gcommit<CR>
 nnoremap <leader>gl :Commits<CR>
+nnoremap <leader>gb :Gbrowse<CR>
+
+nnoremap <leader>gb :Gbrowse<CR>
+vnoremap <leader>gb :Gbrowse<CR>
 

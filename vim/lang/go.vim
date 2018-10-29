@@ -1,11 +1,5 @@
 Plug 'fatih/vim-go', { 'for': 'go', 'do': ':GoInstallBinaries' }
-" Plug 'nsf/gocode', { 'rtp': 'nvim', 'do': '~/.config/nvim/plugged/gocode/nvim/symlink.sh' }
-" Plug 'zchee/deoplete-go', { 'do': 'make' }
 Plug 'ncm2/ncm2-go'
-
-" options for deoplete
-let g:deoplete#sources#go#sort_class = ['func', 'type', 'var', 'const']
-let g:deoplete#sources#go#align_class = 1
 
 " let g:go_auto_type_info = 1
 
@@ -16,8 +10,12 @@ let g:go_highlight_structs = 1
 let g:go_highlight_interfaces = 1
 let g:go_highlight_operators = 1
 let g:go_highlight_build_constraints = 1
-let g:go_gocode_unimported_packages = 1
+
 let g:go_template_use_pkg = 1
+
+let g:go_gocode_unimported_packages = 1
+let g:go_gocode_propose_builtins = 1
+let g:go_gocode_propose_source = 1
 
 " Use goimports over gofmt
 let g:go_fmt_command = "goimports"
@@ -32,7 +30,7 @@ let g:neomake_go_goinstall_maker = {
       \ 'cwd': '%:h',
       \ }
 
-let g:neomake_go_enabled_makers = ['goinstall', 'gometalinter']
+let g:neomake_go_enabled_makers = ['go', 'goinstall', 'gometalinter']
 
 au FileType go nmap gd :call LanguageClient_textDocument_definition()<CR>
 

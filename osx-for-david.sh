@@ -19,7 +19,7 @@ sudo pmset -a standbydelay 86400
 sudo nvram SystemAudioVolume=" "
 
 # Never re-open previous windows
-defaults write -g ApplePersistence -bool no
+defaults delete NSGlobalDomain ApplePersistence
 
 # goodbye gatekeeper
 sudo spctl --master-disable

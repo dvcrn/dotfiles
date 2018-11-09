@@ -17,6 +17,7 @@ brew "elixir"
 
 # Dev tools
 brew "openssl"
+brew "ffmpeg"
 cask "gpg-suite"
 brew "coreutils"
 brew "tmux"
@@ -50,6 +51,7 @@ cask "osxfuse"
 brew "ntfs-3g"
 brew "hardlink-osx"
 mas "The Unarchiver", id: 425424353
+brew "youtube-dl"
 
 # Dev Apps
 cask "gitup"

@@ -13,6 +13,7 @@ packages = [
     'tern',
     'yarn',
     'n',
+    'javascript-typescript-langserver',
 
     # linting
     'jslint',

@@ -53,6 +53,12 @@ pip3 install -r ~/.dotfiles/pip/packages.txt
 echo "---> Python / pip done"
 
 echo ""
+echo "---> Go "
+bash ~/.dotfiles/go/install.sh
+echo "---> Go done"
+
+
+echo ""
 echo "---> NPM"
 python ~/.dotfiles/npm/install.py
 echo "---> NPM done"

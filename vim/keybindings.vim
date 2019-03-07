@@ -113,10 +113,14 @@ nnoremap <leader>tt :Windows<cr>
 " replace
 nnoremap <leader>xr :.s/<C-r><C-w>//<left>
 nnoremap <leader>xR :%s/<C-r><C-w>//<left>
+vnoremap <leader>xr :s/<C-r>"//<left>
 
 " modify
 nnoremap <leader>xm :.s/<C-r><C-w>/<C-r><C-w>/<left>
 nnoremap <leader>xM :%s/<C-r><C-w>/<C-r><C-w>/<left>
+vnoremap <leader>xm :s/<C-r>"/<C-r>"/<left>
+vnoremap ,m :s/<C-r>"//<left>
+nnoremap ,m :.s/<C-r><C-w>//<left>
 
 let g:lasttab = 1
 nmap <Leader>t<Tab> :exe "tabn ".g:lasttab<CR>

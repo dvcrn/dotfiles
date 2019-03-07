@@ -10,10 +10,7 @@ let g:go_highlight_structs = 1
 let g:go_highlight_interfaces = 1
 let g:go_highlight_operators = 1
 let g:go_highlight_build_constraints = 1
-
-let g:go_template_use_pkg = 1
-
-let g:go_gocode_propose_builtins = 1
+let g:go_highlight_string_spellcheck = 0
 
 " Use goimports over gofmt
 let g:go_fmt_command = "goimports"
@@ -28,7 +25,12 @@ let g:neomake_go_goinstall_maker = {
       \ 'cwd': '%:h',
       \ }
 
-let g:neomake_go_enabled_makers = ['go', 'goinstall', 'gometalinter']
+let g:neomake_go_enabled_makers = ['go', 'goinstall', 'golint']
+
+let g:go_metalinter_autosave = 0
+let g:go_metalinter_enabled = ['vet', 'golint', 'errcheck']
+let g:go_metalinter_deadline = "5s"
+let g:go_metalinter_autosave_enabled = ['vet', 'golint', 'errcheck']
 
 au FileType go nmap gd :call LanguageClient_textDocument_definition()<CR>
 
@@ -48,20 +50,21 @@ au FileType go nmap <Leader>mdh <Plug>(go-doc)
 au FileType go nmap <Leader>mdv <Plug>(go-doc-vertical)
 
 " [i]nfo
-au FileType go nmap <Leader>mi <Plug>(go-info)
+au FileType go nmap <Leader>mi :call LanguageClient_textDocument_hover()<CR>
 
 " [r]ename
-au FileType go nmap <Leader>mr <Plug>(go-rename)
+au FileType go nmap <Leader>mr :call LanguageClient#textDocument_rename()<CR>
 
 " [T]ags
 au FileType go nmap <Leader>mT :GoAddTags<space>
-
-" [b]build, [i]nstall
-au FileType go nmap <Leader>mI :GoInstall<CR>
+" [b]build, [i]nstall au FileType go nmap <Leader>mI :GoInstall<CR>
 au FileType go nmap <Leader>mB :GoBuild<CR>
 "
 " [t]est file
 au FileType go nmap <Leader>mt :GoAlternate<CR>
+"
+" [l]ist [r]eferences
+au FileType go nmap mlr :call LanguageClient_textDocument_references()<CR>
 
 
 
@@ -84,10 +87,10 @@ au FileType go nmap ,dh <Plug>(go-doc)
 au FileType go nmap ,dv <Plug>(go-doc-vertical)
 
 " [i]nfo
-au FileType go nmap ,i <Plug>(go-info)
+au FileType go nmap ,i :call LanguageClient_textDocument_hover()<CR>
 
 " [r]ename
-au FileType go nmap ,r <Plug>(go-rename)
+au FileType go nmap ,r :call LanguageClient#textDocument_rename()<CR>
 
 " [T]ags
 au FileType go nmap ,T :GoAddTags<space>
@@ -98,3 +101,6 @@ au FileType go nmap ,t :GoAlternate<CR>
 " [b]build, [i]nstall
 au FileType go nmap ,I :GoInstall<CR>
 au FileType go nmap ,B :GoBuild<CR>
+
+" [l]ist [r]eferences
+au FileType go nmap ,lr :call LanguageClient_textDocument_references()<CR>

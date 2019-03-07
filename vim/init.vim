@@ -17,6 +17,7 @@ Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-classpath'
 Plug 'tpope/vim-sensible'
+Plug 'tpope/vim-abolish'
 
 Plug 'jiangmiao/auto-pairs'
 

@@ -1,7 +1,7 @@
 Plug 'neomake/neomake'
 
 function! MyOnBattery()
-  return readfile('/tmp/on_battery') == ['0']
+  return readfile('/tmp/on_battery') == ['1']
 endfunction
 
 function! InitNeomake()

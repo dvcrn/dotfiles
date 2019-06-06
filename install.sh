@@ -1,3 +1,10 @@
+# Ask for the administrator password upfront
+sudo -v
+
+# Keep-alive: update existing `sudo` time stamp until `this script` has finished
+while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
+
+
 echo "Installing all your stuff!"
 echo ""
 
@@ -5,12 +12,6 @@ echo ""
 echo "---> ssh"
 ln -s ~/.dotfiles/ssh/config ~/.ssh/config
 echo "---> ssh done"
-
-echo ""
-echo "---> bash"
-if [ ! -e ~/.git-prompt.sh ]; then
-  curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh -o ~/.git-prompt.sh
-fi
 
 if [ ! -e ~/.jg ]; then
   # jg bins. Since my bashrc is inspired by his, I am using his binaries as
@@ -57,6 +58,17 @@ echo "---> Go "
 bash ~/.dotfiles/go/install.sh
 echo "---> Go done"
 
+echo ""
+echo "---> bash"
+if [ ! -e ~/.git-prompt.sh ]; then
+  curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh -o ~/.git-prompt.sh
+fi
+
+if ! grep -q /usr/local/bin/bash "/etc/shells"
+then
+  sudo sh -c "echo '/usr/local/bin/bash' >> /etc/shells"
+fi
+chsh -s /usr/local/bin/bash
 
 echo ""
 echo "---> NPM"
@@ -89,6 +101,10 @@ echo "---> vim plug"
 curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 echo "---> vim done"
+
+echo ""
+echo "---> emacs"
+ln -s ~/.dotfiles/emacs ~/.emacs.d
 
 echo ""
 echo "---> spacemacs"

@@ -80,7 +80,7 @@ emacs() {
   if [ "$number" -gt 1 ]; then
     reattach-to-user-namespace emacsclient -n $1
   else
-    reattach-to-user-namespace open -a /usr/local/Cellar/emacs-plus/25.3/Emacs.app $1
+    reattach-to-user-namespace open -a /Applications/Emacs.app $1
   fi
 }
 

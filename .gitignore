@@ -10,3 +10,5 @@ custom.el
 *.elc
 fisherman/cache
 npm-debug.log
+*~
+emacs/projectile-bookmarks.eld

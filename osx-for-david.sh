@@ -11,6 +11,10 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 ###############################################################################
 # General UI/UX                                                               #
 ###############################################################################
+sudo scutil --set ComputerName Davebook
+sudo scutil --set HostName Davebook
+sudo scutil --set LocalHostName Davebook
+sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string Davebook
 
 # Set standby delay to 24 hours (default is 1 hour)
 sudo pmset -a standbydelay 86400
@@ -35,7 +39,8 @@ defaults write NSGlobalDomain NSWindowResizeTime -float 0.001
 
 # Expand save panel by default
 defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
-defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode2 -bool true
+defaults write NSGlobalDomain PMPrintingExpandedStateForPrint -bool true
+defaults write NSGlobalDomain PMPrintingExpandedStateForPrint2 -bool true
 
 # Expand print panel by default
 defaults write NSGlobalDomain PMPrintingExpandedStateForPrint -bool true
@@ -91,19 +96,46 @@ defaults write NSGlobalDomain NSAutomaticQuoteSubstitutionEnabled -bool false
 # Disable auto-correct
 defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
 
+# Disable spotlight index for volumes
+sudo defaults write /.Spotlight-V100/VolumeConfiguration Exclusions -array "/Volumes"
+
+# Change spotlight sorting
+defaults write com.apple.spotlight orderedItems -array \
+		 '{"enabled" = 1;"name" = "APPLICATIONS";}' \
+		 '{"enabled" = 1;"name" = "SYSTEM_PREFS";}' \
+		 '{"enabled" = 1;"name" = "DIRECTORIES";}' \
+		 '{"enabled" = 1;"name" = "PDF";}' \
+		 '{"enabled" = 1;"name" = "FONTS";}' \
+		 '{"enabled" = 0;"name" = "DOCUMENTS";}' \
+		 '{"enabled" = 0;"name" = "MESSAGES";}' \
+		 '{"enabled" = 0;"name" = "CONTACT";}' \
+		 '{"enabled" = 0;"name" = "EVENT_TODO";}' \
+		 '{"enabled" = 0;"name" = "IMAGES";}' \
+		 '{"enabled" = 0;"name" = "BOOKMARKS";}' \
+		 '{"enabled" = 0;"name" = "MUSIC";}' \
+		 '{"enabled" = 0;"name" = "MOVIES";}' \
+		 '{"enabled" = 0;"name" = "PRESENTATIONS";}' \
+		 '{"enabled" = 0;"name" = "SPREADSHEETS";}' \
+		 '{"enabled" = 0;"name" = "SOURCE";}' \
+		 '{"enabled" = 0;"name" = "MENU_DEFINITION";}' \
+		 '{"enabled" = 0;"name" = "MENU_OTHER";}' \
+		 '{"enabled" = 0;"name" = "MENU_CONVERSION";}' \
+		 '{"enabled" = 0;"name" = "MENU_EXPRESSION";}' \
+		 '{"enabled" = 0;"name" = "MENU_WEBSEARCH";}' \
+		 '{"enabled" = 0;"name" = "MENU_SPOTLIGHT_SUGGESTIONS";}'
+# Load new settings before rebuilding the index
+killall mds > /dev/null 2>&1
+# Make sure indexing is enabled for the main volume
+sudo mdutil -i on / > /dev/null
+# Rebuild the index from scratch
+sudo mdutil -E / > /dev/null
+
 ###############################################################################
 # SSD-specific tweaks                                                         #
 ###############################################################################
 
 # Disable hibernation (speeds up entering sleep mode)
 sudo pmset -a hibernatemode 0
-
-# Remove the sleep image file to save disk space
-sudo rm /private/var/vm/sleepimage
-# Create a zero-byte file instead…
-sudo touch /private/var/vm/sleepimage
-# …and make sure it can’t be rewritten
-sudo chflags uchg /private/var/vm/sleepimage
 
 ###############################################################################
 # Trackpad, mouse, keyboard, Bluetooth accessories, and input                 #
@@ -138,8 +170,9 @@ sudo systemsetup -settimezone "Asia/Tokyo" > /dev/null
 # Set language and text formats
 # Note: if you’re in the US, replace `EUR` with `USD`, `Centimeters` with
 # `Inches`, `en_GB` with `en_US`, and `true` with `false`.
-defaults write NSGlobalDomain AppleLanguages -array "en-US" "ja-US" "ko-US" "ja"
-defaults write NSGlobalDomain AppleLocale -string "en_US@currency=JPY"
+defaults write NSGlobalDomain AppleLanguages -array "en-JP" "ja-JP" "ko-JP"
+defaults write NSGlobalDomain AppleFirstWeekday -dict gregorian -int 2
+defaults write NSGlobalDomain AppleLocale -string "en_JP"
 defaults write NSGlobalDomain AppleMeasurementUnits -string "Centimeters"
 defaults write NSGlobalDomain AppleMetricUnits -bool true
 
@@ -333,10 +366,6 @@ defaults write com.apple.dock showhidden -bool true
 # Reset Launchpad, but keep the desktop wallpaper intact
 find "${HOME}/Library/Application Support/Dock" -name "*-*.db" -maxdepth 1 -delete
 
-# Add iOS & Watch Simulator to Launchpad
-sudo ln -sf "/Applications/Xcode.app/Contents/Developer/Applications/Simulator.app" "/Applications/Simulator.app"
-sudo ln -sf "/Applications/Xcode.app/Contents/Developer/Applications/Simulator (Watch).app" "/Applications/Simulator (Watch).app"
-
 ###############################################################################
 # Safari & WebKit                                                             #
 ###############################################################################
@@ -365,6 +394,9 @@ defaults write com.apple.Safari ShowSidebarInTopSites -bool false
 
 # Disable Safari’s thumbnail cache for History and Top Sites
 defaults write com.apple.Safari DebugSnapshotsUpdatePolicy -int 2
+
+# Show icons in tabs
+defaults write com.apple.Safari ShowIconsInTabs -int 1
 
 # Enable Safari’s debug menu
 defaults write com.apple.Safari IncludeInternalDebugMenu -bool true
@@ -515,6 +547,9 @@ defaults write com.apple.appstore WebKitDeveloperExtras -bool true
 # Enable Debug Menu in the Mac App Store
 defaults write com.apple.appstore ShowDebugMenu -bool true
 
+# Reveal IP address, hostname, OS version, etc. when clicking the clock in the login window
+sudo defaults write /Library/Preferences/com.apple.loginwindow AdminHostInfo HostName
+
 # Enable the automatic update check
 defaults write com.apple.SoftwareUpdate AutomaticCheckEnabled -bool true
 
@@ -535,6 +570,10 @@ defaults write com.apple.commerce AutoUpdate -bool true
 
 # Allow the App Store to reboot machine on macOS updates
 defaults write com.apple.commerce AutoUpdateRestartRequired -bool true
+
+# Removing duplicates in the 'Open With' menu
+/System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister -kill -r -domain local -domain system -domain user
+
 
 ###############################################################################
 # Photos                                                                      #

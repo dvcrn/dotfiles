@@ -2,11 +2,13 @@ tap "mas-cli/tap", pin: true
 brew "mas"
 
 # Dev tools
-brew "heroku-toolbelt"
+tap "heroku/brew"
+brew "heroku"
 cask "google-cloud-sdk"
 cask "docker"
 
 # Languages
+cask "adoptopenjdk"
 brew "python"
 brew "python3"
 brew "go"
@@ -21,6 +23,7 @@ brew "ffmpeg"
 cask "gpg-suite"
 brew "coreutils"
 brew "tmux"
+brew "bash"
 brew "neovim"
 brew "wget"
 brew "reattach-to-user-namespace"
@@ -50,7 +53,6 @@ cask "qlvideo"
 cask "osxfuse"
 brew "ntfs-3g"
 brew "hardlink-osx"
-mas "The Unarchiver", id: 425424353
 brew "youtube-dl"
 
 # Dev Apps
@@ -78,8 +80,19 @@ cask "dropbox"
 cask "bartender"
 cask "beamer"
 cask "airserver"
+mas "Agenda", id: "1287445660"
+
+mas "The Unarchiver", id: "425424353"
+mas "Pixelmator Pro", id: "1289583905"
 mas "Day One", id: 1055511498
 mas "KakaoTalk", id: 869223134
 mas "LINE", id: 539883307
 mas "Reeder", id: 880001334
 mas "Unsplash Wallpapers", id: 1284863847
+
+mas "Wipr", id: 1320666476
+mas "StopTheMadness", id: 1376402589
+
+mas "Numbers", id: 409203825
+mas "Keynote", id: 409183694
+mas "Pages", id: 409201541

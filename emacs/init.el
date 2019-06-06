@@ -7,10 +7,6 @@
 ;; set up melpa
 (require 'package)
 
-;; update package list if not available
-(when (not package-archive-contents)
-    (package-refresh-contents))
-
 (let* ((no-ssl (and (memq system-type '(windows-nt ms-dos))
                     (not (gnutls-available-p))))
        (proto (if no-ssl "http" "https")))
@@ -28,7 +24,7 @@ There are two things you can do about this warning:
     ;; For important compatibility libraries like cl-lib
     (add-to-list 'package-archives (cons "gnu" (concat proto "://elpa.gnu.org/packages/")))))
 (package-initialize)
-;;(package-refresh-contents)
+;; (package-refresh-contents)
 
 ;; done with melpa
 
@@ -75,6 +71,21 @@ There are two things you can do about this warning:
   (company-mode)
   (define-key company-active-map (kbd "C-n") 'company-select-next-or-abort)
   (define-key company-active-map (kbd "C-p") 'company-select-previous-or-abort))
+
+(use-package neotree
+  :ensure t
+  :config
+  (define-key evil-normal-state-map " pt" 'neotree-toggle)
+  (define-key evil-normal-state-map " pF" 'neotree-find)
+  (evil-define-key 'normal neotree-mode-map (kbd "TAB") 'neotree-enter)
+  (evil-define-key 'normal neotree-mode-map (kbd "SPC") 'neotree-quick-look)
+  (evil-define-key 'normal neotree-mode-map (kbd "q") 'neotree-hide)
+  (evil-define-key 'normal neotree-mode-map (kbd "RET") 'neotree-enter)
+  (evil-define-key 'normal neotree-mode-map (kbd "g") 'neotree-refresh)
+  (evil-define-key 'normal neotree-mode-map (kbd "n") 'neotree-next-line)
+  (evil-define-key 'normal neotree-mode-map (kbd "p") 'neotree-previous-line)
+  (evil-define-key 'normal neotree-mode-map (kbd "A") 'neotree-stretch-toggle)
+  (evil-define-key 'normal neotree-mode-map (kbd "H") 'neotree-hidden-file-toggle))
 
 (use-package exec-path-from-shell :ensure t)
 
@@ -124,7 +135,7 @@ There are two things you can do about this warning:
 (setq inhibit-startup-screen t)
 (scroll-bar-mode -1)
 (tool-bar-mode -1)
-(menu-bar-mode -1)
+(menu-bar-mode 1)
 (global-linum-mode 1)
 
 ;; font
@@ -146,11 +157,18 @@ There are two things you can do about this warning:
 (define-key evil-normal-state-map  " p/" 'counsel-projectile-ag)
 (define-key evil-normal-state-map  (kbd "C-p") 'counsel-projectile-find-file)
 
-(define-key projectile-mode-map  " pf" 'counsel-projectile-find-file)
-(define-key projectile-mode-map  " p/" 'counsel-projectile-ag)
-(define-key projectile-mode-map  (kbd "C-p") 'counsel-projectile-find-file)
+;(define-key projectile-mode-map  " pf" 'counsel-projectile-find-file)
+;(define-key projectile-mode-map  " p/" 'counsel-projectile-ag)
+;(define-key projectile-mode-map  (kbd "C-p") 'counsel-projectile-find-file)
 
 (define-key evil-normal-state-map  " ff" 'counsel-projectile)
+
+;; navigate with ctrl
+(define-key evil-normal-state-map (kbd "C-h") 'evil-window-left)
+(define-key evil-normal-state-map (kbd "C-l") 'evil-window-right)
+(define-key evil-normal-state-map (kbd "C-j") 'evil-window-down)
+(define-key evil-normal-state-map (kbd "C-k") 'evil-window-up)
+
 
 ;; switch to last tab
 (defun switch-to-last-buffer ()
@@ -163,21 +181,34 @@ There are two things you can do about this warning:
 (define-key ivy-minibuffer-map [escape] 'minibuffer-keyboard-quit)
 (define-key swiper-map [escape] 'minibuffer-keyboard-quit)
 
-;; ----------------------------------
+	;; Keybonds
+(global-set-key [(hyper a)] 'mark-whole-buffer)
+(global-set-key [(hyper v)] 'yank)
+(global-set-key [(hyper c)] 'kill-ring-save)
+(global-set-key [(hyper s)] 'save-buffer)
+(global-set-key [(hyper l)] 'goto-line)
+(global-set-key [(hyper w)]
+                (lambda () (interactive) (delete-window)))
+(global-set-key [(hyper z)] 'undo)
+
+(setq mac-option-modifier 'meta)
+(setq mac-command-modifier 'hyper)
+
+(setq scroll-step            1
+      scroll-conservatively  10000)
+;;---------
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(global-hl-line-mode t)
- '(ivy-mode t)
  '(package-selected-packages
    (quote
-    (exec-path-from-shell company-go flycheck-gometalinter go-mode flycheck counsel-projectile projectile counsel ivy company company-mode evil-surround linum-relative seoul256-theme use-package-chords spacemacs-theme evil))))
+    (neotree use-package-chords seoul256-theme flycheck-gometalinter exec-path-from-shell evil-surround counsel-projectile company-go))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:family "Operator Mono" :foundry "nil" :slant normal :weight normal :height 150 :width normal)))))
+ )

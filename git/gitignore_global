@@ -8,3 +8,13 @@ sftp-config.json
 *.vagrant/*
 .idea
 .tern-port
+
+# emacs autosave
+.\#*
+\#*\#
+
+# Flycheck
+flycheck_*.el
+
+# projectiles files
+.projectile

@@ -16,6 +16,7 @@ brew "clojure"
 brew "leiningen"
 brew "node"
 brew "elixir"
+brew "clojure-lsp"
 
 # Dev tools
 brew "openssl"

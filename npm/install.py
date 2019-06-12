@@ -11,9 +11,11 @@ packages = [
     # javascript
     'gulp',
     'tern',
-    'yarn',
     'n',
-    'javascript-typescript-langserver',
+
+    # lsp
+    'typescript-language-server',
+    'bash-language-server',
 
     # linting
     'jslint',
@@ -22,4 +24,5 @@ packages = [
     'eslint-config-airbnb',
 ]
 
-os.system('npm install -g %s' % ' '.join(packages))
+os.system('npm install -g yarn')
+os.system('yarn global add %s' % ' '.join(packages))

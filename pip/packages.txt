@@ -11,3 +11,5 @@ virtualenv
 yapf
 
 neovim
+
+python-language-server[all]

@@ -144,6 +144,8 @@ elif [ "$PLATFORM" = Darwin ]; then
   alias ls='ls -G'
 fi
 
+### kubernetes
+alias k=kubectl
 # https://theptrk.com/2018/07/11/did-txt-file/
 alias did="vim +'normal Go' +'r!date'  ~/did.md"
 # debug this sometime
@@ -517,6 +519,7 @@ fi
 
 test -s "$HOME/.kiex/scripts/kiex" && source "$HOME/.kiex/scripts/kiex"
 
+eval "$(direnv hook bash)"
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 [ -f ~/.git.bash ] && source ~/.git.bash
 [ -f ~/.local.bash ] && source ~/.local.bash

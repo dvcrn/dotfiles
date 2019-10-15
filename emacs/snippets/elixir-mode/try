@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+# name: try
+# key: try
+# --
+try do
+    $1
+rescue
+    e in $2 -> e
+end

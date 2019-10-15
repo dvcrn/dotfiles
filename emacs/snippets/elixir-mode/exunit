@@ -1,0 +1,12 @@
+# -*- mode: snippet -*-
+# name: exunit
+# key: exunit
+# --
+defmodule $1Test do
+  use ExUnit.Case
+  doctest $1
+
+  test "$2" do
+      $0
+  end
+end

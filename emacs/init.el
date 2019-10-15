@@ -49,18 +49,6 @@ There are two things you can do about this warning:
   (setq ivy-display-style 'fancy)
   (ivy-mode 1))
 
-(use-package magit
-  :ensure t
-  :config
-  (with-eval-after-load 'evil-maps
-    (define-key evil-normal-state-map " gs" 'magit-status)))
-
-(use-package diff-hl
-  :ensure t
-  :config
-  (add-hook 'magit-post-refresh-hook 'diff-hl-magit-post-refresh)
-  (global-diff-hl-mode))
-
 (use-package evil
   :ensure t
   :init
@@ -82,6 +70,30 @@ There are two things you can do about this warning:
   :config
   (evil-collection-init))
 
+(use-package magit
+  :ensure t
+  :config
+  (with-eval-after-load 'evil-maps
+    (define-key evil-normal-state-map " gs" 'magit-status)))
+
+(use-package evil-magit :ensure t)
+
+
+(use-package diff-hl
+  :ensure t
+  :config
+  (add-hook 'magit-post-refresh-hook 'diff-hl-magit-post-refresh)
+  (global-diff-hl-mode))
+
+(use-package magit-gh-pulls :ensure t
+  :config
+  (add-hook 'magit-mode-hook 'turn-on-magit-gh-pulls))
+(use-package gist :ensure t)
+(use-package git-link :ensure t)
+(use-package github-browse-file :ensure t)
+(use-package github-clone :ensure t)
+
+
 (use-package company
   :ensure t
   :config
@@ -93,7 +105,7 @@ There are two things you can do about this warning:
 (use-package neotree
   :ensure t
   :config
-  (define-key evil-normal-state-map " pt" 'neotree-toggle)
+  (define-key evil-normal-state-map " pt" 'neotree-projectile-action)
   (define-key evil-normal-state-map " pF" 'neotree-find)
   (evil-define-key 'normal neotree-mode-map (kbd "TAB") 'neotree-enter)
   (evil-define-key 'normal neotree-mode-map (kbd "SPC") 'neotree-quick-look)
@@ -125,6 +137,7 @@ There are two things you can do about this warning:
 ;; syntax
 (use-package flycheck
   :ensure t
+  :init (global-flycheck-mode t)
   :config (global-flycheck-mode))
 
 ;; snippets
@@ -144,6 +157,9 @@ There are two things you can do about this warning:
     (eval-after-load 'flycheck
       '(add-hook 'flycheck-mode-hook 'flycheck-yamllint-setup))))
 
+;; markdown
+(use-package markdown-mode :ensure t)
+
 ;; language server
 (use-package lsp-mode
   :ensure t
@@ -152,12 +168,15 @@ There are two things you can do about this warning:
   (go-mode . lsp)
   (js-mode . lsp)
   (elixir-mode . lsp)
+  (clojure-mode . lsp)
+  (clojurescript-mode . lsp)
   :config
-  (defvar lsp-language-id-configuration
-     '(
-      (python-mode . "python")
-      (javascript-mode . "javascript")
-      (js-mode . "javascript"))))
+  (setq lsp-prefer-flymake nil)
+  (add-to-list 'lsp-language-id-configuration '(clojure-mode . "clojure"))
+  (add-to-list 'lsp-language-id-configuration '(python-mode . "python"))
+  (add-to-list 'lsp-language-id-configuration '(javascript-mode . "javascript"))
+  (add-to-list 'lsp-language-id-configuration '(clojurescript-mode . "clojurescript"))
+  (add-to-list 'lsp-language-id-configuration '(js-mode . "javascript")))
 
 ;; optional - provides fancier overlays
 (use-package lsp-ui
@@ -179,7 +198,10 @@ There are two things you can do about this warning:
   :config
   (setq gofmt-command "goimports")
   (add-hook 'before-save-hook 'gofmt-before-save)
-  (evil-define-key 'normal go-mode-map "gd" (lambda () (interactive) (evil--jumps-push) (godef-jump))))
+  (evil-define-key 'normal go-mode-map "gd" 'godef-jump))
+
+(use-package go-rename :ensure t)
+(use-package go-guru :ensure t)
 
 (use-package flycheck-golangci-lint
   :ensure t
@@ -210,20 +232,55 @@ There are two things you can do about this warning:
 
 (use-package applescript-mode :ensure t)
 
+;; org mode
+(use-package org :ensure t)
+(use-package org-jira :ensure t
+  :config
+  (setq jiralib-url "https://mercari.atlassian.net"))
+
+;; clojure
+(use-package cider :ensure t)
+(use-package clojure-mode
+  :ensure t
+  :config
+  (add-hook 'cider-mode-hook (lambda ()
+				(define-key evil-normal-state-map ",=" 'cider-format-buffer)
+				(define-key evil-normal-state-map " =" 'cider-format-buffer))))
+
+
+
 ;; Elixir
-(use-package elixir-mode :ensure t)
-(use-package alchemist :ensure t :hook (elixir-mode . alchemist-mode))
-(use-package flycheck-mix :ensure t)
+(use-package elixir-mode :ensure t
+  :hook ((elixir-mode . (lambda ()
+			  )))
+  :config
+  (add-hook 'elixir-mode-hook (lambda ()
+				(define-key evil-normal-state-map ",=" 'lsp-format-buffer)
+				(define-key evil-normal-state-map " =" 'lsp-format-buffer))))
+
+(use-package alchemist :ensure t
+  :hook ((elixir-mode . (lambda ()
+			  (alchemist-mode)
+			  (define-key evil-normal-state-map ",t" 'alchemist-mix-test-this-buffer)
+			  (define-key evil-normal-state-map ",T" 'alchemist-mix-test)
+			  (define-key evil-normal-state-map "gd" 'alchemist-goto)))))
+
+(use-package flycheck-mix :ensure t :config)
 
 ;; Lisps
 (use-package lispy :ensure t
   :config
+  (setq lispy-key-theme '(lispy c-digits))
+  (lispy-set-key-theme '(lispy c-digits))
+  (add-hook 'clojure-mode-hook (lambda () (lispy-mode 1)))
+  (add-hook 'clojurescript-mode-hook (lambda () (lispy-mode 1)))
   (add-hook 'emacs-lisp-mode-hook (lambda () (lispy-mode 1))))
 
 (use-package lispyville :ensure t
   :config
+  (setq lispyville-motions-put-into-special 1)
   (add-hook 'lispy-mode-hook #'lispyville-mode)
-  (setq lispyville-key-theme '(operators c-w slurp/barf-cp prettify additional additional-insert))
+  (setq lispyville-key-theme '(operators c-w slurp/barf-cp prettify additional additional-insert additional-movement escape))
   (lispyville-set-key-theme))
 
 (use-package highlight-parentheses :ensure t :config (global-highlight-parentheses-mode))
@@ -311,6 +368,9 @@ There are two things you can do about this warning:
 (setq scroll-step            1
       scroll-conservatively  10000)
 
+;; (setq-default mode-line-format
+;;                '(:eval (when (featurep 'lispyville)
+;;                          (lispyville-mode-line-string))))
 ;;---------
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
@@ -318,11 +378,12 @@ There are two things you can do about this warning:
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(evil-collection-company-use-tng nil)
+ '(lispy-key-theme (quote (lispy c-digits)))
  '(lispyville-motions-put-into-special t)
  '(lsp-ui-sideline-enable nil)
  '(package-selected-packages
    (quote
-    (flycheck-yamllint yaml-mode kubernetes magit evil-collection flycheck-golangci-lint lispy lispyville highlight-parentheses evil-cleverparens dap-mode lsp-treemacs smartparens flycheck-mix nlinum-relative yasnippet-snippets use-package-chords smart-mode-line seoul256-theme neotree lsp-ui flycheck-gometalinter exec-path-from-shell evil-surround counsel-projectile company-lsp company-go))))
+    (cider org-jira evil-magit github-clone github-browse-file git-link gist magit-gh-pulls flycheck-yamllint yaml-mode kubernetes magit evil-collection flycheck-golangci-lint lispy lispyville highlight-parentheses evil-cleverparens dap-mode lsp-treemacs smartparens flycheck-mix nlinum-relative yasnippet-snippets use-package-chords smart-mode-line seoul256-theme neotree lsp-ui flycheck-gometalinter exec-path-from-shell evil-surround counsel-projectile company-lsp company-go))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

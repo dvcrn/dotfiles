@@ -16,6 +16,9 @@ let g:go_highlight_string_spellcheck = 0
 let g:go_fmt_command = "goimports"
 let g:go_fmt_experimental = 1
 
+let g:go_def_mode='gopls'
+let g:go_info_mode='gopls'
+
 let g:neomake_go_goinstall_maker = {
       \ 'exe': 'go',
       \ 'args': ['install', '-i'],

@@ -15,7 +15,7 @@ let g:LanguageClient_hoverPreview = "Never"
 let g:LanguageClient_serverCommands = {
     \ 'javascript': ['javascript-typescript-stdio'],
     \ 'javascript.jsx': ['javascript-typescript-stdio'],
-    \ 'go': ['bingo', '--format-style', 'goimports'],
+    \ 'go': ['gopls'],
     \ 'elixir': ['eli-ls']
     \ }
 

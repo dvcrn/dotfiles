@@ -1,0 +1,60 @@
+{
+	"bootstrapped": true,
+	"in_process_packages":
+	[
+	],
+	"install_prereleases":
+	[
+		"NeoVintageous"
+	],
+	"installed_packages":
+	[
+		"AdvancedNewFile",
+		"ayu",
+		"BetterSnippetManager",
+		"BracketHighlighter",
+		"ChannelRepositoryTools",
+		"Elixir",
+		"Emmet",
+		"fish",
+		"Fix Mac Path",
+		"Gofmt",
+		"Golang Build",
+		"GoRename",
+		"GoTags",
+		"HTML-CSS-JS Prettify",
+		"HTML5",
+		"InactivePanes",
+		"LSP",
+		"MarkdownEditing",
+		"MarkdownLivePreview",
+		"MarkdownTOC",
+		"NeoVintageous",
+		"Nodejs",
+		"Origami",
+		"Package Control",
+		"PackageResourceViewer",
+		"Protobuf Syntax Hightlighting",
+		"Sass",
+		"ScopeAlways",
+		"SideBarEnhancements",
+		"SnippetMaker",
+		"Solarized Color Scheme",
+		"Soulburn Color Scheme",
+		"sublime-github",
+		"SublimeLinter",
+		"SublimeLinter-golint",
+		"SublimeLinter-gotype",
+		"SublimeLinter-govet",
+		"SublimeLinter-tslint",
+		"TabsShortcuts",
+		"Theme - El Capitan",
+		"Theme - Soda SolarizedDark",
+		"TypeScript",
+		"zenburn"
+	],
+	"repositories":
+	[
+		"https://raw.githubusercontent.com/dvcrn/sublime-repo/master/repository.json"
+	]
+}

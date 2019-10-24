@@ -1,0 +1,10 @@
+<snippet>
+    <content><![CDATA[
+if $1 {
+    $2
+}
+]]></content>
+    <tabTrigger>if</tabTrigger>
+    <scope>source.go, meta.function.go, meta.block.go, meta.block.go, meta.block.go, keyword.control.go</scope>
+    <description>if condition</description>
+</snippet>

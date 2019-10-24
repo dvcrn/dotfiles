@@ -1,0 +1,11 @@
+<snippet>
+    <content><![CDATA[
+// $1 ${4:...}
+func $1($2) $3 {
+    $5
+}
+]]></content>
+    <tabTrigger>func</tabTrigger>
+    <scope>source.go, source.go, comment.line.double-slash.go, punctuation.definition.comment.go</scope>
+    <description>create a new function</description>
+</snippet>

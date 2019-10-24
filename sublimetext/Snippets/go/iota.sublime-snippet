@@ -1,0 +1,10 @@
+<snippet>
+    <content><![CDATA[
+const (
+    $1 ${2:T}           = iota
+    $3
+)]]></content>
+    <tabTrigger>iota</tabTrigger>
+    <scope>source.go</scope>
+    <description>iota</description>
+</snippet>

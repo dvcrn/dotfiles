@@ -1,0 +1,8 @@
+<snippet>
+    <content><![CDATA[
+fmt.Printf("${1:%v}\n", $2)
+]]></content>
+    <tabTrigger>pr</tabTrigger>
+    <scope>source.go, meta.function.go, meta.block.go</scope>
+    <description>fmt.Printf()</description>
+</snippet>

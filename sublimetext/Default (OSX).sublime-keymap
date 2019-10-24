@@ -1,0 +1,72 @@
+[
+    // Exit insertmode with f and d
+    { "keys": ["f", "d"], "command": "_enter_normal_mode", "args": {"mode": "mode_insert"}, "context": [{"key": "vi_insert_mode_aware"}] },
+
+    // Pane navigation with ctrl + direction
+    { "keys": ["ctrl+w", "h"], "command": "travel_to_pane", "args": {"direction": "left"} },
+    { "keys": ["ctrl+w", "l"], "command": "travel_to_pane", "args": {"direction": "right"} },
+    { "keys": ["ctrl+w", "q"], "command": "destroy_pane", "args": {"direction": "self"} },
+    { "keys": ["ctrl+w"], "command": "delete_word", "context": [{"key": "overlay_visible"}], "args": {"forward": false, "sub_words": true} },
+
+    // Quick open file / buffer
+    { "keys": ["ctrl+p"], "command": "show_overlay", "args": {"overlay": "goto", "show_files": true}, "context": [{"key": "overlay_visible", "operand": false}, {"key": "auto_complete_visible", "operand": false}], },
+    { "keys": ["ctrl+b"], "command": "extended_switcher", "args": {"list_mode": "window"}, "context": [{"key": "vi_command_mode_aware"}], },
+
+    {"keys": ["super+e"], "command": "show_overlay", "args": {"overlay": "goto", "text": "#"}},
+    {"keys": ["super+j"], "command": "show_overlay", "args": {"overlay": "goto", "text": "#"}},
+
+    // Quick other stuff
+    { "keys": [",", "r"], "command": "lsp_symbol_rename", "context": [{"key": "vi_command_mode_aware"}], },
+
+    // General
+    { "keys": [" ", "tab"], "command": "next_view_in_stack", "args": {"overlay": "goto", "show_files": true}, "context": [{"key": "vi_command_mode_aware"}], },
+
+    // Window
+    { "keys": [" ", "w", "l"], "command": "create_pane", "context": [{"key": "vi_command_mode_aware"}], "args": {"direction": "right", "give_focus": true} },
+    { "keys": [" ", "w", "h"], "command": "create_pane", "context": [{"key": "vi_command_mode_aware"}], "args": {"direction": "down", "give_focus": true} },
+    { "keys": [" ", "w", "v"], "command": "create_pane", "context": [{"key": "vi_command_mode_aware"}], "args": {"direction": "right", "give_focus": true} },
+    { "keys": [" ", "w", "q"], "command": "close_window", "context": [{"key": "vi_command_mode_aware"}] },
+    { "keys": [" ", "w", "c"], "command": "close_window", "context": [{"key": "vi_command_mode_aware"}] },
+
+    // Buffer
+    { "keys": [" ", "b", "b"], "command": "extended_switcher", "args": {"list_mode": "window"}, "context": [{"key": "vi_command_mode_aware"}], },
+    // close other buffers
+    { "keys": [" ", "b", "C"], "command": "close_others", "args": {}, "context": [{"key": "vi_command_mode_aware"}], },
+
+    // Project
+    { "keys": [" ", "p", "t"], "command": "toggle_side_bar", "context": [{"key": "vi_command_mode_aware"}], },
+    { "keys": [" ", "p", "F"], "command": "reveal_in_side_bar", "context": [{"key": "vi_command_mode_aware"}], },
+    { "keys": [" ", "p", "c"], "command": "advanced_new_file_new", "context": [{"key": "vi_command_mode_aware"}], },
+    { "keys": [" ", "p", "f"], "command": "show_overlay", "args": {"overlay": "goto", "show_files": true}, "context": [{"key": "vi_command_mode_aware"}], },
+    { "keys": [" ", "p", "/"], "command": "show_panel", "args": {"panel": "find_in_files"}, "context": [{"key": "vi_command_mode_aware"}], },
+    { "keys": [" ", "p", "p"], "command": "prompt_select_workspace", "args": {}, "context": [{"key": "vi_command_mode_aware"}], },
+    { "keys": [" ", "p", "r"], "command": "multicommand", "args": {
+        "commands": [
+            {"command": "slurp_find_string"},
+            {"command": "slurp_replace_string"},
+            {"command": "show_panel", "args": {"panel": "find_in_files"}},
+        ]
+    }, "context": [{"key": "vi_command_mode_aware"}], },
+
+    // Selection
+    { "keys": [" ", "s", "e"], "command": "find_all_under", "context": [{"key": "vi_command_mode_aware"}], },
+    { "keys": [" ", "s", "l"], "command": "split_selection_into_lines", "context": [{"key": "vi_command_mode_aware"}], },
+
+    // Errors / linters
+    { "keys": ["]", "q"], "command": "sublime_linter_goto_error", "args": { "direction": "next" }, "context": [{"key": "vi_command_mode_aware"}]},
+    { "keys": ["[", "q"], "command": "sublime_linter_goto_error", "args": { "direction": "previous" }, "context": [{"key": "vi_command_mode_aware"}]},
+
+    // goto
+    { "keys": [" ", "g", "r"], "command": "goto_reference", "context": [{"key": "vi_command_mode_aware"}], },
+
+    // Golang specific stuff
+    { "keys": ["g", "d"], "command": "lsp_symbol_definition", "context": [{"key": "vi_command_mode_aware"}], "operand": "source.go", },
+    // { "keys": ["g", "d"], "command": "gs9o_open", "context": [{"key": "vi_command_mode_aware"}], "args": {"run": ["goto.definition"], "focus_view": false, "show_view": false}, "operand": "source.go", },
+
+    // Other stuff
+    { "keys": [" ", "_", "t"], "command": "toggle_tabs", "context": [{"key": "vi_command_mode_aware"}], },
+    { "keys": [" ", "_", "s"], "command": "toggle_status_bar", "context": [{"key": "vi_command_mode_aware"}], },
+    // { "keys": ["("], "command": "insert_snippet", "args": {"contents": "(${0:$SELECTION})"}},
+    // { "keys": ["["], "command": "insert_snippet", "args": {"contents": "[${0:$SELECTION}]"}},
+    // { "keys": ["{"], "command": "insert_snippet", "args": {"contents": "{${0:$SELECTION}}"}},
+]

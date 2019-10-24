@@ -1,0 +1,19 @@
+<snippet>
+<content><![CDATA[
+
+// TODO: for debug. remove me.
+func(v interface{}) {
+    j, err := json.MarshalIndent(v, "", "  ")
+    if err != nil {
+        fmt.Printf("%v\n", err)
+        return
+    }
+    buf := bytes.NewBuffer(j)
+    fmt.Printf("%v\n", buf.String())
+}(${0})
+
+]]></content>
+<tabTrigger>jpri</tabTrigger>
+<description>json print</description>
+<scope>source.go, meta.function.go, meta.block.go</scope>
+</snippet>

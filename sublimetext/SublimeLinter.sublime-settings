@@ -1,0 +1,13 @@
+// SublimeLinter Settings - User
+{
+    "debug": false,
+    "kill_old_processes": true,
+    "linters": {
+        "json": {
+            "strict": true
+        }
+    },
+    // "highlights.time_to_idle": 3600,
+    // "lint_mode": "load_save",
+    "delay": 2,
+}

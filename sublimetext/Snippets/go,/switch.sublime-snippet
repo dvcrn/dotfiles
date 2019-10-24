@@ -1,0 +1,9 @@
+<snippet>
+    <content><![CDATA[
+switch ${1:expression} {
+case $2:
+}]]></content>
+    <tabTrigger>switch</tabTrigger>
+    <scope>source.go, comment.line.double-slash.go</scope>
+    <description>Switch statement</description>
+</snippet>

@@ -1,0 +1,10 @@
+<snippet>
+<content><![CDATA[
+if err != nil {
+    $0
+}
+]]></content>
+<tabTrigger>err</tabTrigger>
+<description>err handling</description>
+<scope>source.go, meta.function.go, meta.block.go, meta.function-call.method.go, meta.group.go, meta.function.go, meta.block.go</scope>
+</snippet>

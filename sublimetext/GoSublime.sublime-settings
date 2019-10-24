@@ -1,0 +1,6 @@
+{
+
+	"fmt_cmd": ["goimports", "-srcdir", "$_dir"],
+    "autoinst": true,
+	"fmt_enabled": true,
+}

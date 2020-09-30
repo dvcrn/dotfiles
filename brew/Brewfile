@@ -63,9 +63,11 @@ cask "gitup"
 cask "little-snitch"
 cask "kitty"
 cask "sublime-text"
+cask "sublime-merge"
 cask "vimr"
 cask "dash"
 mas "Xcode", id: 497799835
+cask "hazel"
 
 # Automation // Productivity
 cask "keyboard-maestro"
@@ -83,10 +85,9 @@ cask "dropbox"
 cask "bartender"
 cask "beamer"
 cask "airserver"
-mas "Agenda", id: "1287445660"
 
-mas "The Unarchiver", id: "425424353"
-mas "Pixelmator Pro", id: "1289583905"
+mas "The Unarchiver", id: 425424353
+mas "Pixelmator Pro", id: 1289583905
 mas "Day One", id: 1055511498
 mas "KakaoTalk", id: 869223134
 mas "LINE", id: 539883307

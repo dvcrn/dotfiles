@@ -12,9 +12,8 @@ packages = [
     'eslint-config-airbnb',
 
     # typescript
-    'typescript'
-    'gts', # typescript code formatter
-    'tslint',
+    'typescript',
+    'gts',
 
     # etc
     'prettier',
@@ -25,4 +24,4 @@ packages = [
 ]
 
 os.system('npm install -g yarn')
-os.system('yarn global add %s' % ' '.join(packages))
+os.system('npm install -g %s' % ' '.join(packages))

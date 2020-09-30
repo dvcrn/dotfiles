@@ -117,9 +117,9 @@ ln -s ~/.dotfiles/proton/.proton ~/.proton
 echo "---> proton done"
 
 echo ""
-echo "---> sublimious"
-ln -s ~/.dotfiles/sublimious/.sublimious ~/.sublimious
-echo "---> sublimious done"
+echo "---> sublime text"
+ln -s ~/.dotfiles/sublimetext/ /Users/d/Library/Application\ Support/Sublime\ Text\ 3/Packages/User
+echo "---> sublime text done"
 
 echo ""
 echo "---> term"

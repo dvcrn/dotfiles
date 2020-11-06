@@ -22,7 +22,7 @@
 	"caret_extra_width": 1,
 	"caret_style": "phase",
 	"close_windows_when_empty": true,
-	"color_scheme": "Packages/zenburn/zenburn.tmTheme",
+	"color_scheme": "Packages/Color Scheme - Default/Monokai.tmTheme",
 	"draw_white_space": "selection",
 	"enable_language_service_for_javascript": false,
 	"enable_typescript_language_service": false,
@@ -39,7 +39,7 @@
 	"font_options":
 	[
 	],
-	"font_size": 20,
+	"font_size": 17,
 	"gpu_window_buffer": true,
 	"highlight_line": true,
 	"highlight_modified_tabs": true,
@@ -47,8 +47,10 @@
 	"highlightedyank_style": "outline",
 	"ignored_packages":
 	[
+		"Emmet2",
 		"Gofmt",
 		"InactivePanes",
+		"Jedi - Python autocompletion",
 		"Markdown",
 		"Rust",
 		"Six",
@@ -56,7 +58,7 @@
 		"SublimeLinter-gotype",
 		"TypeScript",
 		"Vintage",
-		"Vintageous"
+		"Vintageous",
 	],
 	"inactive_panes_dim_strength": 0.1,
 	"neovintageous_build_version": 11100,
@@ -64,7 +66,7 @@
 	"show_encoding": true,
 	"show_full_path": true,
 	"show_line_endings": true,
-	"theme": "Default.sublime-theme",
+	"theme": "ayu-mirage.sublime-theme",
 	"translate_tabs_to_spaces": true,
 	"trim_trailing_white_space_on_save": true,
 	"typescript_auto_format": true,
@@ -72,5 +74,5 @@
 	"vintageous_use_ctrl_keys": true,
 	"vintageous_use_super_keys": null,
 	"vintageous_use_sys_clipboard": true,
-	"word_wrap": true
+	"word_wrap": true,
 }

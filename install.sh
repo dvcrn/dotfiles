@@ -13,21 +13,19 @@ echo "---> ssh"
 ln -s ~/.dotfiles/ssh/config ~/.ssh/config
 echo "---> ssh done"
 
-if [ ! -e ~/.jg ]; then
-  # jg bins. Since my bashrc is inspired by his, I am using his binaries as
-  # well
-  git clone https://github.com/junegunn/dotfiles.git ~/.jg
-fi
-
+echo "---> bash"
 ln -svf ~/.dotfiles/bash/bashrc ~/.bashrc
 ln -svf ~/.dotfiles/bash/bash_profile ~/.bash_profile
 ln -svf ~/.dotfiles/bash/git.bash ~/.git.bash
 
-# scripts
-mkdir -p ~/bin
-for bin in ~/.jg/bin/*; do
-  ln -svf $bin ~/bin
-done
+if ! grep -q /usr/local/bin/bash "/etc/shells"
+then
+  sudo sh -c "echo '/usr/local/bin/bash' >> /etc/shells"
+fi
+
+if [ ! -e ~/.git-prompt.sh ]; then
+  curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh -o ~/.git-prompt.sh
+fi
 echo "---> bash done"
 
 # Brew
@@ -59,16 +57,15 @@ bash ~/.dotfiles/go/install.sh
 echo "---> Go done"
 
 echo ""
-echo "---> bash"
-if [ ! -e ~/.git-prompt.sh ]; then
-  curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh -o ~/.git-prompt.sh
-fi
+echo "---> fish"
+ln -s ~/.dotfiles/fish ~/.config/fish
+echo "---> fish done"
 
-if ! grep -q /usr/local/bin/bash "/etc/shells"
+if ! grep -q /usr/local/bin/fish "/etc/shells"
 then
-  sudo sh -c "echo '/usr/local/bin/bash' >> /etc/shells"
+  sudo sh -c "echo '/usr/local/bin/fish' >> /etc/shells"
 fi
-chsh -s /usr/local/bin/bash
+chsh -s /usr/local/bin/fish
 
 echo ""
 echo "---> NPM"
@@ -118,7 +115,7 @@ echo "---> proton done"
 
 echo ""
 echo "---> sublime text"
-ln -s ~/.dotfiles/sublimetext/ /Users/d/Library/Application\ Support/Sublime\ Text\ 3/Packages/User
+ln -s ~/.dotfiles/sublimetext/ /Users/d/Library/Application\ Support/Sublime\ Text/Packages/User
 echo "---> sublime text done"
 
 echo ""

@@ -2,11 +2,10 @@ import os
 
 packages = [
     # javascript
-    'gulp',
     'tern',
     'n',
+
     # linting
-    'jslint',
     'eslint',
     'eslint-plugin-react',
     'eslint-config-airbnb',
@@ -24,4 +23,4 @@ packages = [
 ]
 
 os.system('npm install -g yarn')
-os.system('npm install -g %s' % ' '.join(packages))
+os.system('yarn add global %s' % ' '.join(packages))

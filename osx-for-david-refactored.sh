@@ -19,18 +19,13 @@ sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.serve
 # Show the full URL in the address bar (note: this still hides the scheme)
 defaults write com.apple.Safari ShowFullURLInSmartSearchField -bool true
 
-# Set Safari’s home page to `about:blank` for faster loading
-defaults write com.apple.Safari HomePage -string "about:blank"
-
 # Prevent Safari from opening ‘safe’ files automatically after downloading
 defaults write com.apple.Safari AutoOpenSafeDownloads -bool false
 
-# Show icons in tabs
-defaults write com.apple.Safari ShowIconsInTabs -int 1
-
 # Save screenshots into ~/Screenshots/ instead of desktop
 mkdir -p ~/Screenshots/
-sudo defaults write com.apple.screencapture location ~/Screenshots/
+sudo defaults write com.apple.screencapture location /Users/d/Screenshots/
+defaults write com.apple.screencapture location /Users/d/Screenshots/
 
 # Disable press-and-hold for keys in favor of key repeat
 defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false

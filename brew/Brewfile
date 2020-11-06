@@ -1,22 +1,22 @@
-tap "mas-cli/tap", pin: true
+tap "mas-cli/tap"
 brew "mas"
 
 # Dev tools
-tap "heroku/brew"
-brew "heroku"
+# tap "heroku/brew"
+# brew "heroku"
 cask "google-cloud-sdk"
 cask "docker"
 
 # Languages
-cask "adoptopenjdk"
-brew "python"
-brew "python3"
+# cask "adoptopenjdk"
+# brew "python"
+# brew "python3"
 brew "go"
-brew "clojure"
-brew "leiningen"
+# brew "clojure"
+# brew "leiningen"
 brew "node"
 brew "elixir"
-brew "clojure-lsp"
+# brew "clojure-lsp"
 
 # Dev tools
 brew "openssl"
@@ -36,8 +36,11 @@ brew "ack"
 brew "fzf"
 brew "gnu-sed"
 brew "git"
-brew "hub"
 brew "direnv"
+brew "gh"
+
+brew "fish"
+brew "starship"
 
 # Quicklook plugins
 # https://github.com/sindresorhus/quick-look-plugins
@@ -52,22 +55,22 @@ cask "quicklookase"
 cask "qlvideo"
 
 # Misc tools
-cask "osxfuse"
-brew "ntfs-3g"
-brew "hardlink-osx"
-brew "youtube-dl"
-brew "tag"
+#cask "osxfuse"
+#brew "ntfs-3g"
+#brew "hardlink-osx"
+#brew "youtube-dl"
+#brew "tag"
 
 # Dev Apps
 cask "gitup"
-cask "little-snitch"
+#cask "little-snitch"
 cask "kitty"
 cask "sublime-text"
 cask "sublime-merge"
 cask "vimr"
 cask "dash"
-mas "Xcode", id: 497799835
-cask "hazel"
+#mas "Xcode", id: 497799835
+#cask "hazel"
 
 # Automation // Productivity
 cask "keyboard-maestro"
@@ -78,11 +81,11 @@ mas "Magnet", id: 441258766
 # General Apps
 cask "slack"
 cask "transmission"
+cask "microsoft-edge"
 cask "anki"
 cask "google-japanese-ime"
 cask "1password"
-cask "dropbox"
-cask "bartender"
+#cask "bartender"
 cask "beamer"
 cask "airserver"
 
@@ -93,6 +96,8 @@ mas "KakaoTalk", id: 869223134
 mas "LINE", id: 539883307
 mas "Reeder", id: 880001334
 mas "Unsplash Wallpapers", id: 1284863847
+mas "Things 3", id: 904280696
+mas "Fantastical - Calendar & Tasks", id: 975937182
 
 mas "Wipr", id: 1320666476
 mas "StopTheMadness", id: 1376402589

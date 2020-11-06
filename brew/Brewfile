@@ -54,38 +54,33 @@ cask "suspicious-package"
 cask "quicklookase"
 cask "qlvideo"
 
-# Misc tools
-#cask "osxfuse"
-#brew "ntfs-3g"
-#brew "hardlink-osx"
-#brew "youtube-dl"
-#brew "tag"
-
 # Dev Apps
 cask "gitup"
-#cask "little-snitch"
+cask "little-snitch"
 cask "kitty"
 cask "sublime-text"
 cask "sublime-merge"
 cask "vimr"
 cask "dash"
-#mas "Xcode", id: 497799835
-#cask "hazel"
+mas "Xcode", id: 497799835
+cask "hazel"
 
 # Automation // Productivity
 cask "keyboard-maestro"
 cask "alfred"
 cask "hyperswitch"
-mas "Magnet", id: 441258766
+cask "rectangle"
 
 # General Apps
-cask "slack"
+mas "Slack", id: 803453959
+cask "discord"
 cask "transmission"
 cask "microsoft-edge"
+cask "firefox"
 cask "anki"
 cask "google-japanese-ime"
 cask "1password"
-#cask "bartender"
+cask "bartender"
 cask "beamer"
 cask "airserver"
 
@@ -94,16 +89,27 @@ mas "Pixelmator Pro", id: 1289583905
 mas "Day One", id: 1055511498
 mas "KakaoTalk", id: 869223134
 mas "LINE", id: 539883307
-mas "Reeder", id: 880001334
+mas "Reeder", id: 1529448980
 mas "Unsplash Wallpapers", id: 1284863847
 mas "Things 3", id: 904280696
-mas "Fantastical - Calendar & Tasks", id: 975937182
+mas "Fantastical", id: 975937182
+mas "DaisyDisk", id: 411643860
+mas "Deliveries", id: 290986013
+mas "iMazing HEIC Converter", id: 1292198261
 
 mas "Wipr", id: 1320666476
 mas "StopTheMadness", id: 1376402589
+mas "Open In Webmail", id: 1451552749
+mas "Dark Mode for Safari", id: 1397180934
 
 mas "Numbers", id: 409203825
 mas "Keynote", id: 409183694
 mas "Pages", id: 409201541
+mas "Drafts", id: 1435957248
+mas "iA Writer", id: 775737590
+
+
+mas "Notability", id: 736189492
+mas "GoodNotes", id: 1444383602
 
 cask "rocket"

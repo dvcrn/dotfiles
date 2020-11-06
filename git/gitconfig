@@ -39,7 +39,7 @@
 	smudge = git lfs smudge %f
 	required = true
 [credential]
-	helper = osxkeychain
+	helper = store
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path =

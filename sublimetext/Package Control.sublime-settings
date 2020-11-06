@@ -1,8 +1,5 @@
 {
 	"bootstrapped": true,
-	"in_process_packages":
-	[
-	],
 	"install_prereleases":
 	[
 		"NeoVintageous"
@@ -15,8 +12,9 @@
 		"BetterSnippetManager",
 		"BracketHighlighter",
 		"ChannelRepositoryTools",
+		"DoxyDoxygen",
 		"Elixir",
-		"Emmet2",
+		"Emmet",
 		"fish",
 		"Fix Mac Path",
 		"Gofmt",
@@ -28,11 +26,9 @@
 		"HTML5",
 		"InactivePanes",
 		"Jedi - Python autocompletion",
-		"JSCustom",
 		"JsPrettier",
 		"Kirikae",
 		"LLVM",
-		"LSP",
 		"LSP-typescript",
 		"MarkdownEditing",
 		"MarkdownLivePreview",
@@ -42,7 +38,6 @@
 		"Origami",
 		"Package Control",
 		"PackageResourceViewer",
-		"Pretty Ruby",
 		"ProjectManager",
 		"Protobuf Syntax Hightlighting",
 		"Rust Enhanced",
@@ -55,30 +50,24 @@
 		"Soulburn Color Scheme",
 		"sublime-github",
 		"SublimeLinter",
+		"SublimeLinter-eslint",
 		"SublimeLinter-golint",
 		"SublimeLinter-gotype",
 		"SublimeLinter-govet",
-		"SublimeLinter-tslint",
 		"TabsShortcuts",
 		"Terraform",
 		"Theme - El Capitan",
 		"Theme - Soda SolarizedDark",
 		"TypeScript",
-		"TypeScript Syntax",
 		"x86 and x86_64 Assembly",
-		"zenburn"
+		"zenburn",
 	],
-	"query_string_params":
-	{
-		"api.github.com":
-		{
-			"client_id": "Iv1.ef6ca48dd2263834",
-			"client_secret": "f151f4d560870241428754b7d7296b8537a84a0b"
-		}
-	},
 	"repositories":
 	[
 		"https://raw.githubusercontent.com/dvcrn/sublime-repo/master/repository.json",
 		"https://github.com/emmetio/sublime-text-plugin/releases/latest/download/registry.json"
-	]
+	],
+	"in_process_packages":
+	[
+	],
 }

@@ -1,3 +1,4 @@
 " Type :help nv for help.
 
-:ignorecase
+set ignorecase
+let mapleader=<space>

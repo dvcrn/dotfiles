@@ -4,7 +4,7 @@
 	{
 		"gopls":
 		{
-			"enabled": true
+			"enabled": true,
 		},
 		"gopls-david":
 		{
@@ -25,18 +25,14 @@
 				"gopls":
 				{
 					"deepCompletion": false,
-					"fuzzyMatching": false
-				}
+					"fuzzyMatching": false,
+				},
 			},
 			"syntaxes":
 			[
 				"Packages/Go/Go.sublime-syntax",
 				"Packages/GoSublime/syntax/GoSublime-Go-Recommended.sublime-syntax"
-			]
-		},
-		"lsp-typescript":
-		{
-			"enabled": false
+			],
 		},
 		"pyls": {
 		  "enabled": true,
@@ -47,7 +43,7 @@
 		    "Packages/Python/Python.sublime-syntax",
 		    "Packages/MagicPython/grammars/MagicPython.tmLanguage",
 		    "Packages/Djaneiro/Syntaxes/Python Django.tmLanguage",
-		  ],
+			],
 		  "settings": {
 		    "pyls": {
 		      "env":
@@ -61,12 +57,12 @@
 		      "configurationSources": [
 		        "pycodestyle",  // discovered in ~/.config/pycodestyle, setup.cfg, tox.ini and pycodestyle.cfg
 		        "flake8",  // discovered in ~/.config/flake8, setup.cfg, tox.ini and flake8.cfg
-		      ],
+					],
 		      "plugins": {
 		        "jedi": {
 		          "extra_paths": [
 		            // The directory where the pip installation package is located
-		          ],
+							],
 		        },
 		        "jedi_completion": {
 		          "fuzzy": true,  // Enable fuzzy when requesting autocomplete
@@ -74,44 +70,45 @@
 		        "pycodestyle": {
 		          "enabled": true,
 		          "exclude": [  // Exclude files or directories which match these patterns
-		          ],
+							],
 		          "ignore": [  // Ignore errors and warnings
 		            // "E501",  // Line too long (82 &gt; 79 characters)
-		          ],
+							],
 		          // "maxLineLength": 80,  // Set maximum allowed line length
 		        },
-		        "pydocstyle": {"enabled": false},
-		        "pyflakes": {"enabled": true},
-		        "pylint": {"enabled": false},
-		        "yapf": {"enabled": true},
+		        "pydocstyle": {"enabled": false,},
+		        "pyflakes": {"enabled": true,},
+		        "pylint": {"enabled": false,},
+		        "yapf": {"enabled": true,},
 		        // pyls' 3rd Party Plugins, Mypy type checking for Python 3, Must be installed via pip before enabling
 		        "pyls_mypy": {  // Install with: pip install pyls-mypy
 		          "enabled": false,
 		          "live_mode": true,
 		        },
-		      }
-		    }
-		  }
+		      },
+		    },
+		  },
 		},
 		"ruby":
 		{
-			"enabled": true
+			"enabled": true,
 		},
 		"sorbet":
 		{
+			"enabled": false,
+		},
+		"LSP-typescript":
+		{
 			"enabled": false
 		},
-		"typescript-language-server":
-		{
-			"enabled": true
-		}
 	},
 	"log_debug": true,
 	"log_payloads": true,
 	"log_server": true,
 	"log_stderr": true,
-	"show_diagnostics_count_in_view_status": false,
-	"show_diagnostics_in_view_status": false,
-	"show_diagnostics_phantoms": false,
-	"show_diagnostics_severity_level": 0
+	// "show_diagnostics_count_in_view_status": false,
+	// "show_diagnostics_in_view_status": false,
+	// "show_diagnostics_phantoms": false,
+	// "show_diagnostics_severity_level": 0,
+  "show_references_in_quick_panel": true,
 }

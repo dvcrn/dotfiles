@@ -20,6 +20,7 @@ packages = [
     # lsp
     'typescript-language-server',
     'bash-language-server',
+    'dockerfile-language-server-nodejs',
 ]
 
 os.system('npm install -g yarn')

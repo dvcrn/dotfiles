@@ -99,7 +99,7 @@
 		},
 		"LSP-typescript":
 		{
-			"enabled": false
+			"enabled": false,
 		},
 	},
 	"log_debug": true,

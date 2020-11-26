@@ -8,6 +8,8 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 echo "Installing all your stuff!"
 echo ""
 
+mkdir -p ~/.config/
+
 echo ""
 echo "---> ssh"
 ln -s ~/.dotfiles/ssh/config ~/.ssh/config
@@ -27,6 +29,12 @@ if [ ! -e ~/.git-prompt.sh ]; then
   curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh -o ~/.git-prompt.sh
 fi
 echo "---> bash done"
+
+# Starship
+echo ""
+echo "---> Starship"
+ln -s ~/.dotfiles/starship/starship.toml ~/.config/starship.toml
+
 
 # Brew
 echo ""

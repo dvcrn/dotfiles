@@ -26,6 +26,7 @@ set -g fish_color_valid_path --underline
 
 set -gx GOPATH ~/go
 set -gx PATH ~/go/bin $PATH
+set -gx GO111MODULE auto
 
 # Install Starship
 starship init fish | source
@@ -33,3 +34,10 @@ starship init fish | source
 # direnv
 eval (direnv hook fish)
 set -g fish_user_paths "/usr/local/opt/terraform@0.12/bin" $fish_user_paths
+
+# gcloud
+set -g -x "CLOUDSDK_PYTHON" "/usr/local/opt/python@3.8/libexec/bin/python"
+set -g fish_user_paths "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.fish.inc" $fish_user_paths
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.fish.inc' ]; . '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.fish.inc'; end

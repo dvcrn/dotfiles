@@ -35,7 +35,7 @@
 		"CVS",
 		".svn"
 	],
-	"font_face": "OperatorMono Nerd Font",
+	"font_face": "Operator Mono",
 	"font_options":
 	[
 	],
@@ -74,4 +74,5 @@
 	"vintageous_use_super_keys": null,
 	"vintageous_use_sys_clipboard": true,
 	"word_wrap": true,
+	"relative_line_numbers": true,
 }

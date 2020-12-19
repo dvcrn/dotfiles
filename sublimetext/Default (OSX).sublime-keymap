@@ -1,6 +1,6 @@
 [
     // Exit insertmode with f and d
-    { "keys": ["f", "d"], "command": "_enter_normal_mode", "args": {"mode": "mode_insert"}, "context": [{"key": "vi_insert_mode_aware"}] },
+    { "keys": ["f", "d"], "command": "nv_enter_normal_mode", "args": {"mode": "mode_insert"}, "context": [{"key": "vi_insert_mode_aware"}] },
 
     // Pane navigation with ctrl + direction
     { "keys": ["ctrl+w", "h"], "command": "travel_to_pane", "args": {"direction": "left"} },

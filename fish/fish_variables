@@ -133,6 +133,7 @@ SETUVAR _fish_abbr_gwd:git\x20diff\x20\x2d\x2dno\x2dext\x2ddiff
 SETUVAR _fish_abbr_gwr:git\x20reset\x20\x2d\x2dsoft
 SETUVAR _fish_abbr_gws:git\x20status\x20\x2d\x2dignore\x2dsubmodules\x3dall\x20\x2d\x2dshort
 SETUVAR _fish_abbr_gwx:git\x20rm\x20\x2dr
+SETUVAR _fish_abbr_k:kubectl
 SETUVAR _fish_abbr_vim:nvim
 SETUVAR fish_color_autosuggestion:555\x1ebrblack
 SETUVAR fish_color_cancel:\x2dr

@@ -6,6 +6,8 @@ abbr vim nvim
 # Git
 abbr g git
 
+abbr k kubectl
+
 # Branch (b)
 abbr gb "git branch"
 abbr gbc "git checkout -b"
@@ -105,12 +107,12 @@ abbr gpa "git push --all"
 abbr gpA "git push --all; and git push --tags"
 abbr gpt "git push --tags"
 
-function gpc 
+function gpc
   set branch (git rev-parse --abbrev-ref HEAD)
   git push -u origin $branch
 end
 
-function gpp 
+function gpp
   set branch (git rev-parse --abbrev-ref HEAD)
   git pull origin $branch; git push origin $branch
 end

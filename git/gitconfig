@@ -5,7 +5,7 @@
 [core]
   editor = nvim
   whitespace = fix,-indent-with-non-tab,trailing-space,cr-at-eol
-	excludesfile = /Users/d/.gitignore_global
+	excludesfile = ~/.gitignore_global
 	commentChar = %
 [web]
   browser = google-chrome
@@ -50,3 +50,5 @@
 	gpgsign = true
 [url "ssh://git@github.com/"]
 	insteadOf = https://github.com/
+[gpg]
+	program = /usr/local/bin/gpg

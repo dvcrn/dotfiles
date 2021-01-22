@@ -33,16 +33,16 @@ echo "---> bash done"
 # Starship
 echo ""
 echo "---> Starship"
-ln -s ~/.dotfiles/starship/starship.toml ~/.config/starship.toml
+ln -svf ~/.dotfiles/starship/starship.toml ~/.config/starship.toml
 
 
 # Brew
-echo ""
-echo "---> Brew"
-brew tap Homebrew/bundle
-cd ~/.dotfiles/brew/ && brew bundle
-cd ~/.dotfiles/
-echo "---> Brew done"
+# echo ""
+# echo "---> Brew"
+# brew tap Homebrew/bundle
+# cd ~/.dotfiles/brew/ && brew bundle
+# cd ~/.dotfiles/
+# echo "---> Brew done"
 
 echo "---> Post brew"
 $(brew --prefix)/opt/fzf/install
@@ -50,8 +50,8 @@ echo "---> Post brew done"
 
 echo ""
 echo "---> Git"
-ln -s ~/.dotfiles/git/gitconfig ~/.gitconfig
-ln -s ~/.dotfiles/git/gitignore_global ~/.gitignore_global
+ln -svf ~/.dotfiles/git/gitconfig ~/.gitconfig
+ln -svf ~/.dotfiles/git/gitignore_global ~/.gitignore_global
 echo "---> Git done"
 
 echo ""
@@ -66,14 +66,15 @@ echo "---> Go done"
 
 echo ""
 echo "---> fish"
-ln -s ~/.dotfiles/fish ~/.config/fish
-echo "---> fish done"
+ln -svf ~/.dotfiles/fish ~/.config/fish
 
-if ! grep -q /usr/local/bin/fish "/etc/shells"
+echo "---> adding fish as default shell"
+if ! grep -q "$(which fish)" "/etc/shells"
 then
-  sudo sh -c "echo '/usr/local/bin/fish' >> /etc/shells"
+  sudo sh -c "echo '$(which fish)' >> /etc/shells"
 fi
-chsh -s /usr/local/bin/fish
+chsh -s "$(which fish)"
+echo "---> fish done"
 
 echo ""
 echo "---> NPM"
@@ -82,26 +83,26 @@ echo "---> NPM done"
 
 echo ""
 echo "---> tmux"
-ln -s ~/.dotfiles/tmux/.tmux.conf ~/.tmux.conf
+ln -svf ~/.dotfiles/tmux/.tmux.conf ~/.tmux.conf
 tic -x ~/.dotfiles/tmux/tmux.terminfo
 echo "---> tmux done"
 
 echo ""
 echo "---> Kitty"
 mkdir -p ~/.config/kitty/
-ln -s ~/.dotfiles/kitty/kitty.conf ~/.config/kitty/kitty.conf
+ln -svf ~/.dotfiles/kitty/kitty.conf ~/.config/kitty/kitty.conf
 echo "---> Kitty done"
 
 echo ""
 echo "---> vim"
 mkdir -p ~/.config/nvim/
-ln -s ~/.dotfiles/vim/init.vim ~/.config/nvim/init.vim
-ln -s ~/.dotfiles/vim/ginit.vim ~/.config/nvim/ginit.vim
-ln -s ~/.dotfiles/vim/UltiSnips ~/.config/nvim/UltiSnips
-ln -s ~/.dotfiles/vim/init.vim ~/.vimrc
-ln -s ~/.dotfiles/vim/init.vim ~/.gvimrc
-ln -s ~/.dotfiles/vim/ideavimrc.vim ~/.ideavimrc
-ln -s ~/.dotfiles/vim/xvimrc.vim ~/.xvimrc
+ln -svf ~/.dotfiles/vim/init.vim ~/.config/nvim/init.vim
+ln -svf ~/.dotfiles/vim/ginit.vim ~/.config/nvim/ginit.vim
+ln -svf ~/.dotfiles/vim/UltiSnips ~/.config/nvim/UltiSnips
+ln -svf ~/.dotfiles/vim/init.vim ~/.vimrc
+ln -svf ~/.dotfiles/vim/init.vim ~/.gvimrc
+ln -svf ~/.dotfiles/vim/ideavimrc.vim ~/.ideavimrc
+ln -svf ~/.dotfiles/vim/xvimrc.vim ~/.xvimrc
 echo "---> vim plug"
 curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
@@ -109,21 +110,21 @@ echo "---> vim done"
 
 echo ""
 echo "---> emacs"
-ln -s ~/.dotfiles/emacs ~/.emacs.d
+ln -svf ~/.dotfiles/emacs ~/.emacs.d
 
 echo ""
 echo "---> spacemacs"
-ln -s ~/.dotfiles/spacemacs/.spacemacs ~/.spacemacs
+ln -svfh ~/.dotfiles/spacemacs/.spacemacs ~/.spacemacs
 echo "---> spacemacs done"
 
 echo ""
-echo "---> proton"
-ln -s ~/.dotfiles/proton/.proton ~/.proton
-echo "---> proton done"
+echo "---> sublime text"
+ln -svfh ~/.dotfiles/sublimetext/ ~/Library/Application\ Support/Sublime\ Text/Packages/User
+echo "---> sublime text done"
 
 echo ""
-echo "---> sublime text"
-ln -s ~/.dotfiles/sublimetext/ /Users/d/Library/Application\ Support/Sublime\ Text/Packages/User
+echo "---> sublime merge"
+ln -svfh ~/.dotfiles/sublimemerge/ ~/Library/Application\ Support/Sublime\ Merge/Packages/User
 echo "---> sublime text done"
 
 echo ""
@@ -131,3 +132,8 @@ echo "---> term"
 tic -x ~/.dotfiles/term/xterm-256color-italic.terminfo
 echo "---> term done"
 
+echo ""
+echo "---> mackup"
+ln -svf ~/.dotfiles/mackup/.mackup.cfg ~/.mackup.cfg
+ln -svfh ~/.dotfiles/mackup/.mackup ~/.mackup
+echo "---> mackup done"

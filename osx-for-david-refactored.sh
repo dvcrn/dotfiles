@@ -24,8 +24,8 @@ defaults write com.apple.Safari AutoOpenSafeDownloads -bool false
 
 # Save screenshots into ~/Screenshots/ instead of desktop
 mkdir -p ~/Screenshots/
-sudo defaults write com.apple.screencapture location /Users/d/Screenshots/
-defaults write com.apple.screencapture location /Users/d/Screenshots/
+sudo defaults write com.apple.screencapture location ~/Screenshots/
+defaults write com.apple.screencapture location ~/Screenshots/
 
 # Disable press-and-hold for keys in favor of key repeat
 defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
@@ -70,3 +70,6 @@ defaults write NSGlobalDomain com.apple.springing.delay -float 0
 # Avoid creating .DS_Store files on network or USB volumes
 defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
 defaults write com.apple.desktopservices DSDontWriteUSBStores -bool true
+
+# autohide speed
+defaults write com.apple.dock autohide-time-modifier -int 0;killall Dock

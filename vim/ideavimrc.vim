@@ -9,10 +9,15 @@ set smartcase
 " Default to global substitutions on lines
 set gdefault
 
-set vim-surround
+set surround
+set highlightedyank
+set textobj-entire
 
 " Use the system pasteboard
 set clipboard
+
+" relative line numbers
+set relativenumber
 
 " Make c-j to act the same as c-n
 inoremap <C-j> <C-n>
@@ -34,6 +39,13 @@ nnoremap <silent> <leader>/ :nohlsearch<CR>
 
 " project based keybindings
 nnoremap <space>pf :action GotoFile<CR>
+nnoremap <space>pF :action SelectInProjectView<CR>
+nnoremap <space>bb :action RecentFiles<CR>
+nnoremap <C-b> :action RecentFiles<CR>
+nnoremap <space>pt :action ActivateProjectToolWindow<CR>
+
+nnoremap ,r :action RenameElement<CR>
+nnoremap ,R :action RefactoringMenu<CR>
 
 " window
 nnoremap <space>wv :vsplit<CR>

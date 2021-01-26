@@ -28,6 +28,12 @@
     { "keys": [" ", "w", "q"], "command": "close_window", "context": [{"key": "vi_command_mode_aware"}] },
     { "keys": [" ", "w", "c"], "command": "close_window", "context": [{"key": "vi_command_mode_aware"}] },
 
+    // Git
+    { "keys": [" ", "g", "s"], "command": "sublime_merge_open_repo", "context": [{"key": "vi_command_mode_aware"}] },
+    { "keys": [" ", "g", "h"], "command": "sublime_merge_file_history", "context": [{"key": "vi_command_mode_aware"}] },
+    { "keys": [" ", "g", "b"], "command": "sublime_merge_blame_file", "context": [{"key": "vi_command_mode_aware"}] },
+
+
     // Buffer
     { "keys": [" ", "b", "b"], "command": "extended_switcher", "args": {"list_mode": "window"}, "context": [{"key": "vi_command_mode_aware"}], },
     // close other buffers

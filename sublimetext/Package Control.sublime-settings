@@ -1,22 +1,21 @@
 {
 	"bootstrapped": true,
-	"install_prereleases":
-	[
-		"NeoVintageous"
-	],
-	"installed_packages":
-	[
-		"10% Too Dull for My Tastes Color Scheme",
+	"install_prereleases": ["NeoVintageous"],
+	"installed_packages": [
 		"AdvancedNewFile",
 		"ayu",
 		"BetterSnippetManager",
 		"BracketHighlighter",
 		"ChannelRepositoryTools",
+		"Default",
 		"Dockerfile Syntax Highlighting",
-		"DoxyDoxygen",
 		"DoxyDoxygen (evolution)",
+		"dvcrn - AppleScript Extensions",
+		"dvcrn - SublimeLinter-json",
 		"Elixir",
 		"Emmet",
+		"FileIcons",
+		"FileIcons Mono",
 		"fish",
 		"Fix Mac Path",
 		"FontCycler",
@@ -33,13 +32,16 @@
 		"JsPrettier",
 		"Kirikae",
 		"LLVM",
+		"LSP",
 		"LSP-dockerfile",
 		"LSP-typescript",
 		"MarkdownEditing",
 		"MarkdownLivePreview",
 		"MarkdownTOC",
+		"Multicommand",
 		"NeoVintageous",
 		"Nodejs",
+		"Notedown",
 		"Origami",
 		"Package Control",
 		"PackageResourceViewer",
@@ -56,13 +58,13 @@
 		"SnippetMaker",
 		"Solarized Color Scheme",
 		"Soulburn Color Scheme",
-		"sublack",
 		"sublime-github",
 		"SublimeLinter",
 		"SublimeLinter-eslint",
 		"SublimeLinter-golint",
 		"SublimeLinter-gotype",
 		"SublimeLinter-govet",
+		"SyncedSideBar",
 		"TabsShortcuts",
 		"Terraform",
 		"Theme - El Capitan",
@@ -71,12 +73,13 @@
 		"x86 and x86_64 Assembly",
 		"zenburn",
 	],
-	"repositories":
-	[
-		"https://raw.githubusercontent.com/dvcrn/sublime-repo/master/repository.json",
-		"https://github.com/emmetio/sublime-text-plugin/releases/latest/download/registry.json"
+	"repositories": [
+		"https://github.com/dvcrn/sublime-repo/raw/master/repository.json",
+		"https://github.com/deathaxe/sublime-commands"
 	],
-	"in_process_packages":
-	[
+	"in_process_packages": [
 	],
+	"package_name_map": {
+		"sublime-commands": "Default",
+	},
 }

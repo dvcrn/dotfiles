@@ -7,6 +7,7 @@ abbr vim nvim
 abbr g git
 
 abbr k kubectl
+abbr kctx kubectl config use-context
 
 # Branch (b)
 abbr gb "git branch"

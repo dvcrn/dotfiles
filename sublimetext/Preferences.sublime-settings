@@ -22,7 +22,7 @@
 	"caret_extra_width": 1,
 	"caret_style": "phase",
 	"close_windows_when_empty": true,
-	"color_scheme": "Packages/Color Scheme - Default/Monokai.tmTheme",
+	"color_scheme": "Packages/Color Scheme - Default/Mariana.sublime-color-scheme",
 	"draw_white_space": "selection",
 	"enable_language_service_for_javascript": false,
 	"enable_typescript_language_service": false,
@@ -39,7 +39,7 @@
 	"font_options":
 	[
 	],
-	"font_size": 18,
+	"font_size": 21,
 	"gpu_window_buffer": true,
 	"highlight_line": true,
 	"highlight_modified_tabs": true,
@@ -48,11 +48,13 @@
 	"ignored_packages":
 	[
 		"Emmet2",
+		"FileIcons",
 		"Gofmt",
 		"InactivePanes",
 		"Jedi - Python autocompletion",
 		"Markdown",
 		"Rust",
+		"SFTP",
 		"Six",
 		"SnippetMaker",
 		"SublimeLinter-gotype",
@@ -65,7 +67,7 @@
 	"show_encoding": true,
 	"show_full_path": true,
 	"show_line_endings": true,
-	"theme": "ayu-mirage.sublime-theme",
+	"theme": "Default Dark.sublime-theme",
 	"translate_tabs_to_spaces": true,
 	"trim_trailing_white_space_on_save": true,
 	"typescript_auto_format": true,

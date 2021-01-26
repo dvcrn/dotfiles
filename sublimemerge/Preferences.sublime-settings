@@ -1,7 +1,7 @@
 {
 	"theme": "Merge Dark.sublime-theme",
 	"side_bar_layout": "commit_graph_as_column",
-	"font_face": "Operator Mono",
+	"font_face": "Operator Mono Ssm Lig",
 	"time_format": "24h",
 	"trim_trailing_white_space_on_save": true,
 }

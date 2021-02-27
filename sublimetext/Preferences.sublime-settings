@@ -39,7 +39,7 @@
 	"font_options":
 	[
 	],
-	"font_size": 21,
+	"font_size": 19,
 	"gpu_window_buffer": true,
 	"highlight_line": true,
 	"highlight_modified_tabs": true,
@@ -47,21 +47,11 @@
 	"highlightedyank_style": "outline",
 	"ignored_packages":
 	[
-		"Emmet2",
-		"FileIcons",
-		"Gofmt",
-		"InactivePanes",
-		"Jedi - Python autocompletion",
-		"Markdown",
-		"Rust",
-		"SFTP",
 		"Six",
-		"SnippetMaker",
-		"SublimeLinter-gotype",
+		"SublimeLinter-eslint",
 		"Vintage",
 		"Vintageous",
 	],
-	"inactive_panes_dim_strength": 0.1,
 	"neovintageous_build_version": 11100,
 	"scroll_past_end": true,
 	"show_encoding": true,

@@ -64,7 +64,7 @@ func Margo(m mg.Args) {
 		&golang.GoCmd{},
 
 		// add the day and time to the status bar
-		&DayTimeStatus{},
+		// &DayTimeStatus{},
 
 		// both GoFmt and GoImports will automatically disable the GoSublime version
 		// you will need to install the `goimports` tool manually
@@ -111,12 +111,12 @@ func Margo(m mg.Args) {
 
 		// show func arguments/calltips in the status bar
 		// gs: this replaces the `calltips` setting
-		&golang.GocodeCalltips{},
+		// &golang.GocodeCalltips{},
 
 		// use guru for goto-definition
 		// new commands `goto.definition` and `guru.definition` are defined
 		// gs: by default `goto.definition` is bound to ctrl+.,ctrl+g or cmd+.,cmd+g
-		&golang.Guru{},
+		// &golang.Guru{},
 
 		// add some default context aware-ish snippets
 		// gs: this replaces the `autocomplete_snippets` and `default_snippets` settings
@@ -130,7 +130,7 @@ func Margo(m mg.Args) {
 		// gs: this and other linters e.g. below,
 		//     replaces the settings `gslint_enabled`, `lint_filter`, `comp_lint_enabled`,
 		//     `comp_lint_commands`, `gslint_timeout`, `lint_enabled`, `linters`
-		&golang.SyntaxCheck{},
+		// &golang.SyntaxCheck{},
 
 		// Add user commands for running tests and benchmarks
 		// gs: this adds support for the tests command palette `ctrl+.`,`ctrl+t` or `cmd+.`,`cmd+t`

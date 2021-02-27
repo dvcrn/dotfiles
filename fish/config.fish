@@ -28,6 +28,7 @@ set -gx GOPATH ~/go
 set -gx PATH ~/go/bin $PATH
 set -gx GO111MODULE auto
 
+set -gx PATH $PATH (yarn global bin)
 # Install Starship
 starship init fish | source
 

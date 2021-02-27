@@ -77,9 +77,11 @@ chsh -s "$(which fish)"
 echo "---> fish done"
 
 echo ""
-echo "---> NPM"
-python ~/.dotfiles/npm/install.py
-echo "---> NPM done"
+echo "---> Yarn"
+npm i -g yarn
+ln -svf ~/.dotfiles/yarn/.yarnrc ~/.yarnrc
+python ~/.dotfiles/yarn/install.py
+echo "---> Yarn done"
 
 echo ""
 echo "---> tmux"

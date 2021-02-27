@@ -24,21 +24,37 @@ set -g fish_color_selection 'white'  '--bold'  '--background=brblack'
 set -g fish_color_user brgreen
 set -g fish_color_valid_path --underline
 
+set -gx fish_user_paths /opt/homebrew/bin $fish_user_paths
+
 set -gx GOPATH ~/go
 set -gx PATH ~/go/bin $PATH
 set -gx GO111MODULE auto
 
+set -gx PATH $PATH /opt/homebrew/bin
+set -gx PATH $PATH ~/.cargo/bin
 set -gx PATH $PATH (yarn global bin)
+
+
+
 # Install Starship
 starship init fish | source
 
 # direnv
 eval (direnv hook fish)
-set -g fish_user_paths "/usr/local/opt/terraform@0.12/bin" $fish_user_paths
+# set -g fish_user_paths "/usr/local/opt/terraform@0.12/bin" $fish_user_paths
+
+# pyenv
+pyenv init - | source
 
 # gcloud
-set -g -x "CLOUDSDK_PYTHON" "/usr/local/opt/python@3.8/libexec/bin/python"
-set -g fish_user_paths "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.fish.inc" $fish_user_paths
+# set -g -x "CLOUDSDK_PYTHON" "/usr/local/opt/python@3.8/libexec/bin/python"
+# set -g fish_user_paths "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.fish.inc" $fish_user_paths
+
+
 
 # The next line updates PATH for the Google Cloud SDK.
-if [ -f '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.fish.inc' ]; . '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.fish.inc'; end
+# if [ -f '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.fish.inc' ]; . '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.fish.inc'; end
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/david/google-cloud-sdk/path.fish.inc' ]; . '/Users/david/google-cloud-sdk/path.fish.inc'; end
+

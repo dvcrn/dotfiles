@@ -1,7 +1,5 @@
 call plug#begin('~/.vim/plugged')
 
-Plug 'neovim/node-host', { 'do': 'npm install' }
-
 Plug 'junegunn/vim-pseudocl'
 Plug 'junegunn/vim-fnr'
 Plug 'junegunn/vim-peekaboo'

@@ -2,9 +2,9 @@
 # VERSION: 3.0
 SETUVAR ZO_CMD:zo
 SETUVAR Z_CMD:z
-SETUVAR Z_DATA:/Users/d/\x2elocal/share/z/data
-SETUVAR Z_DATA_DIR:/Users/d/\x2elocal/share/z
-SETUVAR Z_EXCLUDE:\x5e/Users/d\x24
+SETUVAR Z_DATA:/Users/david/\x2elocal/share/z/data
+SETUVAR Z_DATA_DIR:/Users/david/\x2elocal/share/z
+SETUVAR Z_EXCLUDE:\x5e/Users/david\x24
 SETUVAR __fish_initialized:3100
 SETUVAR _fish_abbr_bd:beatport\x20download
 SETUVAR _fish_abbr_ff:git\x20pull\x20\x2d\x2dff\x2donly
@@ -134,7 +134,12 @@ SETUVAR _fish_abbr_gwr:git\x20reset\x20\x2d\x2dsoft
 SETUVAR _fish_abbr_gws:git\x20status\x20\x2d\x2dignore\x2dsubmodules\x3dall\x20\x2d\x2dshort
 SETUVAR _fish_abbr_gwx:git\x20rm\x20\x2dr
 SETUVAR _fish_abbr_k:kubectl
+SETUVAR _fish_abbr_kctx:kubectl\x20config\x20use\x2dcontext
 SETUVAR _fish_abbr_vim:nvim
+SETUVAR _fisher_edc_2F_bass_files:/Users/david/\x2econfig/fish/functions/__bass\x2epy\x1e/Users/david/\x2econfig/fish/functions/bass\x2efish
+SETUVAR _fisher_jethrokuan_2F_z_files:/Users/david/\x2econfig/fish/functions/__z\x2efish\x1e/Users/david/\x2econfig/fish/functions/__z_add\x2efish\x1e/Users/david/\x2econfig/fish/functions/__z_clean\x2efish\x1e/Users/david/\x2econfig/fish/functions/__z_complete\x2efish\x1e/Users/david/\x2econfig/fish/conf\x2ed/z\x2efish
+SETUVAR _fisher_jorgebucaran_2F_fisher_files:/Users/david/\x2econfig/fish/functions/fisher\x2efish\x1e/Users/david/\x2econfig/fish/completions/fisher\x2efish
+SETUVAR _fisher_plugins:edc/bass\x1ejorgebucaran/fisher\x1ejethrokuan/z
 SETUVAR fish_color_autosuggestion:555\x1ebrblack
 SETUVAR fish_color_cancel:\x2dr
 SETUVAR fish_color_command:005fd7
@@ -164,4 +169,3 @@ SETUVAR fish_pager_color_completion:\x1d
 SETUVAR fish_pager_color_description:B3A06D\x1eyellow
 SETUVAR fish_pager_color_prefix:white\x1e\x2d\x2dbold\x1e\x2d\x2dunderline
 SETUVAR fish_pager_color_progress:brwhite\x1e\x2d\x2dbackground\x3dcyan
-SETUVAR fish_user_paths:/usr/local/opt/fzf/bin\x1e/Users/d/\x2efzf/bin

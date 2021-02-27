@@ -73,6 +73,7 @@
     { "keys": [" ", "_", "t"], "command": "toggle_tabs", "context": [{"key": "vi_command_mode_aware"}], },
     { "keys": [" ", "_", "s"], "command": "toggle_status_bar", "context": [{"key": "vi_command_mode_aware"}], },
     { "keys": [",", "="], "command": "js_prettier", "context": [{"key": "vi_command_mode_aware"}], },
+    { "keys": ["alt+`"], "command": "toggle_terminus_panel" },
     // { "keys": ["("], "command": "insert_snippet", "args": {"contents": "(${0:$SELECTION})"}},
     // { "keys": ["["], "command": "insert_snippet", "args": {"contents": "[${0:$SELECTION}]"}},
     // { "keys": ["{"], "command": "insert_snippet", "args": {"contents": "{${0:$SELECTION}}"}},

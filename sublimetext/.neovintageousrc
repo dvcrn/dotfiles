@@ -2,3 +2,49 @@
 
 set ignorecase
 let mapleader=<space>
+
+nnoremap <space><tab> :NextViewInStack<CR>
+
+nnoremap ,r :LspSymbolRename<CR>
+nnoremap ,= :JSPrettier<CR>
+
+nnoremap <space>_r :Neovintageous action=reload_rc_file<CR>
+nnoremap <space>_t :ToggleTabs<CR>
+nnoremap <space>_s :ToggleStatusBar<CR>
+
+" Window
+nnoremap <space>wl :CreatePane direction=right give_focus=true<CR>
+nnoremap <space>wh :CreatePane direction=down give_focus=true<CR>
+nnoremap <space>wv :CreatePane direction=right give_focus=true<CR>
+nnoremap <space>wq :DestroyPane direction=self<CR>
+nnoremap <space>wc :DestroyPane direction=self<CR>
+
+" Git
+nnoremap <space>gs :SublimeMergeOpenRepo<CR>
+nnoremap <space>gh :SublimeMergeFileHistory<CR>
+nnoremap <space>gb :SublimeMergeBlameFile<CR>
+
+" Buffer
+nnoremap <space>bb :ExtendedSwitcher list_mode=window<CR>
+nnoremap <space>br :AdvancedNewFileMove<CR>
+nnoremap <space>b= :JsPrettier<CR>
+
+" Project
+nnoremap <space>pt :ToggleSideBar<CR>
+nnoremap <space>pF :RevealInSidebar<CR>
+nnoremap <space>pc :AdvancedNewFileNew<CR>
+nnoremap <space>pf :ShowOverlay overlay=goto show_files=true<CR>
+nnoremap <space>pp :PromptSelectWorkspace<CR>
+nnoremap <space>p/ :ShowPanel panel=find_in_files<CR>
+" nnoremap <space>pr :Multicommand commands=[{"command": "slurp_find_string"}]<CR>
+
+" Selection
+nnoremap <space>se :FindAllUnder<CR>
+nnoremap <space>sl :SplitSelectionIntoLines<CR>
+
+" Linters, Errors
+nnoremap ]q :SublimeLinterGotoError direction=next<CR>
+nnoremap [q :SublimeLinterGotoError direction=previous<CR>
+
+" Goto
+nnoremap <space>gr :GotoReference<CR>

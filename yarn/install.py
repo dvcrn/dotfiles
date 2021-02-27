@@ -3,7 +3,6 @@ import os
 packages = [
     # javascript
     'tern',
-    'n',
 
     # linting
     'eslint',
@@ -16,6 +15,8 @@ packages = [
 
     # etc
     'prettier',
+    'prettier-eslint-cli',
+    'prettier-plugin-solidity',
 
     # lsp
     'typescript-language-server',
@@ -23,4 +24,4 @@ packages = [
     'dockerfile-language-server-nodejs',
 ]
 
-os.system('npm i -g %s' % ' '.join(packages))
+os.system('yarn global add %s' % ' '.join(packages))

@@ -47,6 +47,7 @@ export PATH_EXPANDED=1
 export PATH=~/bin:~/ruby:/opt/bin:/usr/local/bin:/usr/local/share/python:$GOPATH/bin:/usr/local/opt/go/libexec/bin:$PATH
 export PATH=$GOPATH/bin:$PATH
 export PATH_EXPANDED=1
+export PATH="$PATH:$(yarn global bin)"
 
 ## Fix GPG
 export GPG_TTY=$(tty)

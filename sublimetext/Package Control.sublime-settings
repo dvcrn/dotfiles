@@ -3,6 +3,7 @@
 	"install_prereleases": ["NeoVintageous"],
 	"installed_packages": [
 		"AdvancedNewFile",
+		"ApplySyntax",
 		"BetterSnippetManager",
 		"BracketHighlighter",
 		"Default",
@@ -31,7 +32,9 @@
 		"ProjectManager",
 		"Protobuf Syntax Hightlighting",
 		"RemoteSubl",
+		"SaneSnippets",
 		"Sass",
+		"ScopeAlways",
 		"sublime-github",
 		"SublimeLinter",
 		"SublimeLinter-eslint",

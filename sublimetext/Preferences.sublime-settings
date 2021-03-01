@@ -48,7 +48,7 @@
 	"ignored_packages":
 	[
 		"Six",
-		"SublimeLinter-eslint",
+		"Tailwind Reorder",
 		"Vintage",
 		"Vintageous",
 	],

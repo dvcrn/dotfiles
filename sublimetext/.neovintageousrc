@@ -34,8 +34,12 @@ nnoremap <space>pt :ToggleSideBar<CR>
 nnoremap <space>pF :RevealInSidebar<CR>
 nnoremap <space>pc :AdvancedNewFileNew<CR>
 nnoremap <space>pf :ShowOverlay overlay=goto show_files=true<CR>
-nnoremap <space>pp :PromptSelectWorkspace<CR>
+nnoremap <space>pp :ProjectManager action=switch<CR>
+nnoremap <space>pP :ProjectManager action=new<CR>
 nnoremap <space>p/ :ShowPanel panel=find_in_files<CR>
+nnoremap <space>pr :AdvancedNewFileMove<CR>
+" nnoremap <space>pR :RenamePath paths="$file"<CR>
+nnoremap <space>pq :CloseWorkspace<CR>
 " nnoremap <space>pr :Multicommand commands=[{"command": "slurp_find_string"}]<CR>
 
 " Selection

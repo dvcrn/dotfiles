@@ -39,7 +39,7 @@
 	"font_options":
 	[
 	],
-	"font_size": 19,
+	"font_size": 20,
 	"gpu_window_buffer": true,
 	"highlight_line": true,
 	"highlight_modified_tabs": true,
@@ -47,6 +47,7 @@
 	"highlightedyank_style": "outline",
 	"ignored_packages":
 	[
+		"Markdown",
 		"Six",
 		"Tailwind Reorder",
 		"Vintage",

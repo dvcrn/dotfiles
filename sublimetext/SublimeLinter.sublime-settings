@@ -5,6 +5,12 @@
     "linters": {
         "json": {
             "strict": true
+        },
+        "eslint": {
+            "selector": "source.ts, source.js, source.jsx, source.tsx"
+        },
+        "solhint": {
+            "selector": "source.sol"
         }
     },
     // "highlights.time_to_idle": 3600,

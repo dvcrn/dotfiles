@@ -1,3 +1,7 @@
 {
 
+    "show_files": true,
+    "rename_default": "<filepath>",
+    "cursor_before_extension": true,
+    "default_initial": "./",
 }

@@ -1,10 +1,11 @@
 {
-    "prettier_options": {
-    },
-    "auto_format_on_save": true,
-    "custom_file_extensions": ["sol"],
-    "additional_cli_args": {
-        // "--config": "${project_path}/.prettierrc",
+  "debug": false,
+  "prettier_options": {},
+  "auto_format_on_save": true,
+  // "auto_format_on_save_excludes": ["*.ts", "*.tsx"],
+  "custom_file_extensions": ["sol"],
 
-    }
+  "additional_cli_args": {
+    "--config": ""
+  }
 }

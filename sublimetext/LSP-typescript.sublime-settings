@@ -1,0 +1,37 @@
+{
+  "languages": [
+    {
+      "languageId": "javascriptreact",
+      "scopes": ["source.jsx", "source.js.react"],
+      "syntaxes": [
+        "Packages/User/JS Custom/Syntaxes/React.sublime-syntax",
+      ],
+      "code_actions_on_save": [] // repeating the same information here
+    },
+    {
+      "languageId": "javascript",
+      "scopes": ["source.js"],
+      "syntaxes": [
+        "Packages/JavaScript/JavaScript.sublime-syntax",
+        "Packages/Babel/JavaScript (Babel).sublime-syntax",
+      ],
+      "code_actions_on_save": [] // repeating the same information here
+    },
+    {
+      "languageId": "typescriptreact",
+      "scopes": ["source.tsx"],
+      "syntaxes": [
+        "Packages/TypeScript Syntax/TypeScriptReact.tmLanguage",
+      ],
+      "code_actions_on_save": [] // repeating the same information here
+    },
+    {
+      "languageId": "typescript",
+      "scopes": ["source.ts"],
+      "syntaxes": [
+        "Packages/TypeScript Syntax/TypeScript.tmLanguage",
+      ],
+      "code_actions_on_save": [] // repeating the same information here
+    },
+  ],
+}

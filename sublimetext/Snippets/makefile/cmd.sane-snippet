@@ -1,0 +1,8 @@
+---
+tabTrigger: cmd
+scope: source.makefile
+description:
+---
+.PHONY: $1
+$1:
+	$2

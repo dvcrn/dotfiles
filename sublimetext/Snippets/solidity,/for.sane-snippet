@@ -1,0 +1,8 @@
+---
+tabTrigger: for
+scope: source.solidity, keyword.control
+description: for loop
+---
+for (uint256 i = 0; i < $1.length; i++) {
+	$1[i];
+}

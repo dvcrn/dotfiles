@@ -1,0 +1,11 @@
+<snippet>
+	<content><![CDATA[
+"syntax_override": {
+	"\\.html$": ["Handlebars", "grammars", "Handlebars"],
+	"\\.js$": ["JavaScript", "JSX"]
+}
+]]></content>
+	<description>project specific syntax_override</description>
+	<scope>source.json, meta.mapping.value.json, meta.sequence.json, meta.mapping.json</scope>
+	<tabTrigger>syntax_override</tabTrigger>
+</snippet>

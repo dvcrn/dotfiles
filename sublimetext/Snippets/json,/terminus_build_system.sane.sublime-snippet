@@ -1,0 +1,16 @@
+<snippet>
+	<content><![CDATA[
+"build_systems": [
+	{
+		"name": "Run Format",
+		"target": "terminus_exec",
+		"cancel": "terminus_cancel_build",
+		"cmd": ["yarn", "run", "format"],
+		"working_dir": "\$folder"
+	}
+]
+]]></content>
+	<description>build system for terminus</description>
+	<scope>source.json, meta.mapping.value.json, meta.sequence.json, meta.mapping.json</scope>
+	<tabTrigger>terminus_build_system</tabTrigger>
+</snippet>

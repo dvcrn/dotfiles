@@ -26,6 +26,7 @@ set -g fish_color_valid_path --underline
 
 set -gx fish_user_paths /opt/homebrew/bin $fish_user_paths
 
+set -gx HOMEBREW_NO_AUTO_UPDATE 1
 set -gx GOPATH ~/go
 set -gx PATH ~/go/bin $PATH
 set -gx GO111MODULE auto

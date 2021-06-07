@@ -1,0 +1,10 @@
+<snippet>
+	<content><![CDATA[
+for (uint256 i = 0; i < $1.length; i++) {
+	$1[i];
+}
+]]></content>
+	<description>for loop</description>
+	<scope>source.solidity, keyword.control</scope>
+	<tabTrigger>for</tabTrigger>
+</snippet>

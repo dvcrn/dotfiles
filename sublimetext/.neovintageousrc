@@ -7,6 +7,8 @@ nnoremap <space><tab> :NextViewInStack<CR>
 
 nnoremap ,r :LspSymbolRename<CR>
 nnoremap ,= :JSPrettier<CR>
+nnoremap ,i :ListImports<CR>
+nnoremap ,t :EmmetGoToTagPair<CR>
 
 nnoremap <space>_r :Neovintageous action=reload_rc_file<CR>
 nnoremap <space>_t :ToggleTabs<CR>

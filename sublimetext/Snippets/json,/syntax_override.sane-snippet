@@ -1,0 +1,10 @@
+---
+tabTrigger: syntax_override
+scope: source.json, meta.mapping.value.json, meta.sequence.json, meta.mapping.json
+description: project specific syntax_override
+---
+"syntax_override": {
+	"\\.html$": ["Handlebars", "grammars", "Handlebars"],
+	"\\.js$": ["JavaScript", "JSX"]
+}
+

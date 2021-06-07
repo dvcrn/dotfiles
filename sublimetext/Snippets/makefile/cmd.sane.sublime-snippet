@@ -1,0 +1,10 @@
+<snippet>
+	<content><![CDATA[
+.PHONY: $1
+$1:
+	$2
+]]></content>
+	<description></description>
+	<scope>source.makefile</scope>
+	<tabTrigger>cmd</tabTrigger>
+</snippet>

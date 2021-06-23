@@ -73,3 +73,7 @@ defaults write com.apple.desktopservices DSDontWriteUSBStores -bool true
 
 # autohide speed
 defaults write com.apple.dock autohide-time-modifier -int 0;killall Dock
+
+# never re-open apps
+sudo chown root ~/Library/Preferences/ByHost/com.apple.loginwindow*
+sudo chmod 000 ~/Library/Preferences/ByHost/com.apple.loginwindow*

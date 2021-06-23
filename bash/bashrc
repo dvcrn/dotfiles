@@ -44,7 +44,7 @@ export GOPATH=~/go
 mkdir -p $GOPATH
 
 export PATH_EXPANDED=1
-export PATH=~/bin:~/ruby:/opt/bin:/usr/local/bin:/usr/local/share/python:$GOPATH/bin:/usr/local/opt/go/libexec/bin:$PATH
+export PATH=~/bin:~/ruby:/opt/bin:/opt/homebrew/bin:/opt/homebrew/share/python:$GOPATH/bin:/opt/homebrew/opt/go/libexec/bin:$PATH
 export PATH=$GOPATH/bin:$PATH
 export PATH_EXPANDED=1
 export PATH="$PATH:$(yarn global bin)"
@@ -60,7 +60,7 @@ export EDITOR=nvim
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 [ "$PLATFORM" = 'Darwin' ] ||
-export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:.:/usr/local/lib
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:.:/opt/homebrew/lib
 
 ### VIM stuff
 if [ -n "${NVIM_LISTEN_ADDRESS+x}" ]; then

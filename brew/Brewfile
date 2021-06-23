@@ -55,12 +55,10 @@ cask "quicklookase"
 cask "qlvideo"
 
 # Dev Apps
-cask "gitup"
 cask "little-snitch"
-cask "kitty"
-cask "sublime-text"
-cask "sublime-merge"
-cask "vimr"
+cask "alacritty"
+cask "sublime-text-dev"
+cask "sublime-merge-dev"
 cask "dash"
 mas "Xcode", id: 497799835
 cask "hazel"
@@ -68,21 +66,21 @@ cask "hazel"
 # Automation // Productivity
 cask "keyboard-maestro"
 cask "alfred"
-cask "hyperswitch"
+cask "alt-tab"
 cask "rectangle"
 
 # General Apps
 mas "Slack", id: 803453959
 cask "discord"
 cask "transmission"
-cask "microsoft-edge"
-cask "firefox"
+cask "microsoft-edge-dev"
+cask "firefox-developer-edition"
+cask "brave-browser-dev"
+cask "safari-technology-preview"
 cask "anki"
-cask "google-japanese-ime"
 cask "1password"
 cask "bartender"
 cask "beamer"
-cask "airserver"
 
 mas "The Unarchiver", id: 425424353
 mas "Pixelmator Pro", id: 1289583905

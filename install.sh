@@ -38,11 +38,11 @@ ln -svf ~/.dotfiles/starship/starship.toml ~/.config/starship.toml
 
 # Brew
 # echo ""
-# echo "---> Brew"
-# brew tap Homebrew/bundle
-# cd ~/.dotfiles/brew/ && brew bundle
-# cd ~/.dotfiles/
-# echo "---> Brew done"
+echo "---> Brew"
+brew tap Homebrew/bundle
+cd ~/.dotfiles/brew/ && brew bundle
+cd ~/.dotfiles/
+echo "---> Brew done"
 
 echo "---> Post brew"
 $(brew --prefix)/opt/fzf/install
@@ -90,10 +90,10 @@ tic -x ~/.dotfiles/tmux/tmux.terminfo
 echo "---> tmux done"
 
 echo ""
-echo "---> Kitty"
-mkdir -p ~/.config/kitty/
-ln -svf ~/.dotfiles/kitty/kitty.conf ~/.config/kitty/kitty.conf
-echo "---> Kitty done"
+echo "---> Alacritty"
+mkdir -p ~/.config/alacritty/
+ln -svf ~/.dotfiles/alacritty/alacritty.yml ~/.config/alacritty/alacritty.yml
+echo "---> Alacritty done"
 
 echo ""
 echo "---> vim"

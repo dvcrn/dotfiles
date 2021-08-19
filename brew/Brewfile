@@ -1,4 +1,5 @@
 tap "mas-cli/tap"
+tap "homebrew/cask-versions"
 brew "mas"
 
 # Dev tools
@@ -53,6 +54,8 @@ cask "webpquicklook"
 cask "suspicious-package"
 cask "quicklookase"
 cask "qlvideo"
+
+brew "mailtrackerblocker"
 
 # Dev Apps
 cask "little-snitch"

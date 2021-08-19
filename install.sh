@@ -121,11 +121,13 @@ echo "---> spacemacs done"
 
 echo ""
 echo "---> sublime text"
+mkdir -p ~/Library/Application\ Support/Sublime\ Text/Packages/
 ln -svfh ~/.dotfiles/sublimetext/ ~/Library/Application\ Support/Sublime\ Text/Packages/User
 echo "---> sublime text done"
 
 echo ""
 echo "---> sublime merge"
+mkdir -p /Users/david/Library/Application\ Support/Sublime\ Merge/Packages/
 ln -svfh ~/.dotfiles/sublimemerge/ ~/Library/Application\ Support/Sublime\ Merge/Packages/User
 echo "---> sublime text done"
 

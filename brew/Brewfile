@@ -40,6 +40,7 @@ brew "git"
 brew "direnv"
 brew "gh"
 
+brew "mackup"
 brew "fish"
 brew "starship"
 

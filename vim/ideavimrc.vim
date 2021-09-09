@@ -13,8 +13,12 @@ set surround
 set highlightedyank
 set textobj-entire
 
+set ideajoin
+set ideamarks
+
 " Use the system pasteboard
-set clipboard
+set ideaput
+set clipboard+=unnamed
 
 " relative line numbers
 set relativenumber
@@ -43,6 +47,7 @@ nnoremap <space>pF :action SelectInProjectView<CR>
 nnoremap <space>bb :action RecentFiles<CR>
 nnoremap <C-b> :action RecentFiles<CR>
 nnoremap <space>pt :action ActivateProjectToolWindow<CR>
+nnoremap <space>pc :action NewFile<CR>
 
 nnoremap ,r :action RenameElement<CR>
 nnoremap ,R :action RefactoringMenu<CR>

@@ -1,3 +1,4 @@
+" to find actions in intellij, use :actionlist [pattern]"
 set incsearch
 
 " Case-insensitive searching.
@@ -20,8 +21,12 @@ set ideamarks
 set ideaput
 set clipboard+=unnamed
 
+" Make it so mode stays the same when refactoring or using templates
+set idearefactormode=keep
+
 " relative line numbers
 set relativenumber
+set number
 
 " Make c-j to act the same as c-n
 inoremap <C-j> <C-n>
@@ -34,6 +39,9 @@ vnoremap <C-j> <C-n>
 vnoremap <C-k> <C-p>
 
 nnoremap Q <nop>
+
+" unsplit with C-w
+nnoremap <C-w>q :action Unsplit<CR>
 
 " better esc
 imap fd <esc>
@@ -54,4 +62,9 @@ nnoremap ,R :action RefactoringMenu<CR>
 
 " window
 nnoremap <space>wv :vsplit<CR>
+nnoremap <space>wl :vsplit<CR>
 nnoremap <space>wh :split<CR>
+nnoremap <space>wj :split<CR>
+
+" meta
+nnoremap <space>_r :source ~/.ideavimrc<CR>

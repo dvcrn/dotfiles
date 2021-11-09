@@ -44,17 +44,17 @@ brew "mackup"
 brew "fish"
 brew "starship"
 
-# Quicklook plugins
-# https://github.com/sindresorhus/quick-look-plugins
-cask "qlcolorcode"
-cask "qlstephen"
-cask "qlmarkdown"
-cask "quicklook-json"
-cask "qlimagesize"
-cask "webpquicklook"
-cask "suspicious-package"
-cask "quicklookase"
-cask "qlvideo"
+# # Quicklook plugins
+# # https://github.com/sindresorhus/quick-look-plugins
+# cask "qlcolorcode"
+# cask "qlstephen"
+# cask "qlmarkdown"
+# cask "quicklook-json"
+# cask "qlimagesize"
+# cask "webpquicklook"
+# cask "suspicious-package"
+# cask "quicklookase"
+# cask "qlvideo"
 
 brew "mailtrackerblocker"
 

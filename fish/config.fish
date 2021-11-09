@@ -26,15 +26,19 @@ set -g fish_color_valid_path --underline
 
 set -gx fish_user_paths /opt/homebrew/bin $fish_user_paths
 
+set -gx CARGO_NET_GIT_FETCH_WITH_CLI true
 set -gx HOMEBREW_NO_AUTO_UPDATE 1
 set -gx GOPATH ~/go
 set -gx PATH ~/go/bin $PATH
 set -gx GO111MODULE auto
+set -gx GOPROXY direct
 
 set -gx PATH $PATH /opt/homebrew/bin
 set -gx PATH $PATH ~/.cargo/bin
 set -gx PATH $PATH (yarn global bin)
+set -gx PATH $PATH ~/src/solana/bin
 
+alias ibrew "arch -x86_64 /usr/local/bin/brew"
 
 
 # Install Starship

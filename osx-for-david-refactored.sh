@@ -27,6 +27,9 @@ mkdir -p ~/Screenshots/
 sudo defaults write com.apple.screencapture location ~/Screenshots/
 defaults write com.apple.screencapture location ~/Screenshots/
 
+# Disable the “Are you sure you want to open this application?” dialog
+defaults write com.apple.LaunchServices LSQuarantine -bool false
+
 # Disable press-and-hold for keys in favor of key repeat
 defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
 
@@ -65,7 +68,7 @@ defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
 defaults write NSGlobalDomain com.apple.springing.enabled -bool true
 
 # Remove the spring loading delay for directories
-defaults write NSGlobalDomain com.apple.springing.delay -float 0
+defaults write NSGlobalDomain com.apple.springing.delay -float 0.2
 
 # Avoid creating .DS_Store files on network or USB volumes
 defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
@@ -77,3 +80,9 @@ defaults write com.apple.dock autohide-time-modifier -int 0;killall Dock
 # never re-open apps
 sudo chown root ~/Library/Preferences/ByHost/com.apple.loginwindow*
 sudo chmod 000 ~/Library/Preferences/ByHost/com.apple.loginwindow*
+
+# enable TouchID for sudo
+if ! sudo grep -q "pam_tid.so" /etc/pam.d/sudo; then
+    sudo cp /etc/pam.d/sudo /etc/pam.d/sudo.bak
+    echo -e "auth optional /opt/homebrew/lib/pam/pam_reattach.so\nauth sufficient pam_tid.so\n$(sudo cat /etc/pam.d/sudo)" | sudo tee /etc/pam.d/sudo
+fi

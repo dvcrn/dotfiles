@@ -45,17 +45,18 @@ alias ibrew "arch -x86_64 /usr/local/bin/brew"
 starship init fish | source
 
 # direnv
-eval (direnv hook fish)
-# set -g fish_user_paths "/usr/local/opt/terraform@0.12/bin" $fish_user_paths
+if type -q direnv
+    eval (direnv hook fish)
+end
 
 # pyenv
-pyenv init - | source
+if type -q pyenv
+    pyenv init - | source
+end
 
 # gcloud
 # set -g -x "CLOUDSDK_PYTHON" "/usr/local/opt/python@3.8/libexec/bin/python"
 # set -g fish_user_paths "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.fish.inc" $fish_user_paths
-
-
 
 # The next line updates PATH for the Google Cloud SDK.
 # if [ -f '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.fish.inc' ]; . '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.fish.inc'; end

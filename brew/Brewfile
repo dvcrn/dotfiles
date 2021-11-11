@@ -1,23 +1,24 @@
 tap "mas-cli/tap"
 tap "homebrew/cask-versions"
+tap "fabianishere/personal"
+tap "rajiv/fastmate"
+
 brew "mas"
 
 # Dev tools
-# tap "heroku/brew"
-# brew "heroku"
 cask "google-cloud-sdk"
 cask "docker"
 
 # Languages
-# cask "adoptopenjdk"
-# brew "python"
-# brew "python3"
+brew "python"
+brew "python3"
 brew "go"
+brew "rustup-init"
+brew "node"
+# brew "elixir"
+# brew "clojure-lsp"
 # brew "clojure"
 # brew "leiningen"
-brew "node"
-brew "elixir"
-# brew "clojure-lsp"
 
 # Dev tools
 brew "openssl"
@@ -28,7 +29,6 @@ brew "tmux"
 brew "bash"
 brew "neovim"
 brew "wget"
-brew "reattach-to-user-namespace"
 brew "watch"
 brew "readline"
 brew "z"
@@ -39,24 +39,13 @@ brew "gnu-sed"
 brew "git"
 brew "direnv"
 brew "gh"
+cask "jetbrains-toolbox"
+brew "reattach-to-user-namespace"
+brew "pam_reattach"
 
 brew "mackup"
 brew "fish"
 brew "starship"
-
-# # Quicklook plugins
-# # https://github.com/sindresorhus/quick-look-plugins
-# cask "qlcolorcode"
-# cask "qlstephen"
-# cask "qlmarkdown"
-# cask "quicklook-json"
-# cask "qlimagesize"
-# cask "webpquicklook"
-# cask "suspicious-package"
-# cask "quicklookase"
-# cask "qlvideo"
-
-brew "mailtrackerblocker"
 
 # Dev Apps
 cask "little-snitch"
@@ -64,7 +53,6 @@ cask "alacritty"
 cask "sublime-text-dev"
 cask "sublime-merge-dev"
 cask "dash"
-mas "Xcode", id: 497799835
 cask "hazel"
 
 # Automation // Productivity
@@ -75,34 +63,27 @@ cask "rectangle"
 
 # General Apps
 mas "Slack", id: 803453959
-cask "discord"
 cask "transmission"
-cask "microsoft-edge-dev"
 cask "firefox-developer-edition"
 cask "brave-browser-dev"
 cask "safari-technology-preview"
-cask "anki"
 cask "1password"
 cask "bartender"
 cask "beamer"
+brew "fastmate"
 
 mas "The Unarchiver", id: 425424353
 mas "Pixelmator Pro", id: 1289583905
 mas "Day One", id: 1055511498
-mas "KakaoTalk", id: 869223134
 mas "LINE", id: 539883307
 mas "Reeder", id: 1529448980
 mas "Unsplash Wallpapers", id: 1284863847
 mas "Things 3", id: 904280696
 mas "Fantastical", id: 975937182
 mas "DaisyDisk", id: 411643860
-mas "Deliveries", id: 290986013
 mas "iMazing HEIC Converter", id: 1292198261
 
-mas "Wipr", id: 1320666476
 mas "StopTheMadness", id: 1376402589
-mas "Open In Webmail", id: 1451552749
-mas "Dark Mode for Safari", id: 1397180934
 
 mas "Numbers", id: 409203825
 mas "Keynote", id: 409183694
@@ -110,8 +91,7 @@ mas "Pages", id: 409201541
 mas "Drafts", id: 1435957248
 mas "iA Writer", id: 775737590
 
-
 mas "Notability", id: 736189492
 mas "GoodNotes", id: 1444383602
 
-cask "rocket"
+# cask "rocket"

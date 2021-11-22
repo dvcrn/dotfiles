@@ -2,6 +2,7 @@
 # Aliases
 #
 abbr vim nvim
+abbr vi nvim
 
 # Git
 abbr g git

@@ -1,0 +1,6 @@
+{
+  "target": "terminus_exec",
+  "cancel": "terminus_cancel_build",
+  "cmd": ["yarn", "test"],
+  "working_dir": "$folder"
+}

@@ -11,24 +11,18 @@ echo ""
 mkdir -p ~/.config/
 
 echo ""
+echo "---> Git"
+ln -svf ~/.dotfiles/git/gitconfig ~/.gitconfig
+ln -svf ~/.dotfiles/git/gitignore_global ~/.gitignore_global
+echo "---> Git done"
+
+echo ""
 echo "---> ssh"
+if test -f "~/.dotfiles/ssh/config"; then
+	mv ~/.dotfiles/ssh/config ~/.dotfiles/ssh/config.bak
+fi
 ln -s ~/.dotfiles/ssh/config ~/.ssh/config
 echo "---> ssh done"
-
-echo "---> bash"
-ln -svf ~/.dotfiles/bash/bashrc ~/.bashrc
-ln -svf ~/.dotfiles/bash/bash_profile ~/.bash_profile
-ln -svf ~/.dotfiles/bash/git.bash ~/.git.bash
-
-if ! grep -q /usr/local/bin/bash "/etc/shells"
-then
-  sudo sh -c "echo '/usr/local/bin/bash' >> /etc/shells"
-fi
-
-if [ ! -e ~/.git-prompt.sh ]; then
-  curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh -o ~/.git-prompt.sh
-fi
-echo "---> bash done"
 
 # Starship
 echo ""
@@ -47,12 +41,6 @@ echo "---> Brew done"
 echo "---> Post brew"
 $(brew --prefix)/opt/fzf/install
 echo "---> Post brew done"
-
-echo ""
-echo "---> Git"
-ln -svf ~/.dotfiles/git/gitconfig ~/.gitconfig
-ln -svf ~/.dotfiles/git/gitignore_global ~/.gitignore_global
-echo "---> Git done"
 
 echo ""
 echo "---> Python / pip"

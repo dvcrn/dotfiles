@@ -71,6 +71,7 @@ cask "1password"
 cask "bartender"
 cask "beamer"
 brew "fastmate"
+cask "sensei"
 
 mas "The Unarchiver", id: 425424353
 mas "Pixelmator Pro", id: 1289583905

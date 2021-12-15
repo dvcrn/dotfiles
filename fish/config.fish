@@ -32,7 +32,7 @@ set -gx GOPATH ~/go
 set -gx PATH ~/go/bin $PATH
 set -gx GO111MODULE auto
 set -gx GOPROXY direct
-set -gx GOPRIVATE github.com/*
+set -gx GOPRIVATE github.com
 
 set -gx PATH $PATH /opt/homebrew/bin
 set -gx PATH $PATH ~/.cargo/bin
@@ -53,6 +53,10 @@ end
 # pyenv
 if type -q pyenv
     pyenv init - | source
+end
+
+if type -q fnm
+   fnm env | source
 end
 
 # gcloud

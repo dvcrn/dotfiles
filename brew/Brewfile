@@ -11,7 +11,6 @@ cask "docker"
 
 # Languages
 brew "python"
-brew "python3"
 brew "go"
 brew "rustup-init"
 brew "node"
@@ -44,22 +43,26 @@ brew "reattach-to-user-namespace"
 brew "pam_reattach"
 
 brew "mackup"
-brew "fish"
+brew "fish", args: ['head']
 brew "starship"
 
 # Dev Apps
 cask "little-snitch"
 cask "alacritty"
+cask "kitty"
 cask "sublime-text-dev"
 cask "sublime-merge-dev"
 cask "dash"
 cask "hazel"
+cask "visual-studio-code-insiders"
 
 # Automation // Productivity
 cask "keyboard-maestro"
 cask "alfred"
 cask "alt-tab"
 cask "rectangle"
+cask "raycast"
+
 
 # General Apps
 mas "Slack", id: 803453959
@@ -70,8 +73,12 @@ cask "safari-technology-preview"
 cask "1password"
 cask "bartender"
 cask "beamer"
-brew "fastmate"
+cask "fastmate"
 cask "sensei"
+cask "obsidian"
+cask "pastebot"
+cask "soundsource"
+cask "syncthing"
 
 mas "The Unarchiver", id: 425424353
 mas "Pixelmator Pro", id: 1289583905

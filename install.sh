@@ -84,6 +84,12 @@ ln -svf ~/.dotfiles/alacritty/alacritty.yml ~/.config/alacritty/alacritty.yml
 echo "---> Alacritty done"
 
 echo ""
+echo "---> Kitty"
+mkdir -p ~/.config/kitty/
+ln -svf ~/.dotfiles/kitty/kitty.conf ~/.config/kitty/kitty.conf
+echo "---> Kitty done"
+
+echo ""
 echo "---> vim"
 mkdir -p ~/.config/nvim/
 ln -svf ~/.dotfiles/vim/init.vim ~/.config/nvim/init.vim

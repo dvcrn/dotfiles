@@ -33,6 +33,7 @@ set -gx PATH ~/go/bin $PATH
 set -gx GO111MODULE auto
 set -gx GOPROXY direct
 set -gx GOPRIVATE github.com
+set -gx EDITOR (which nvim)
 
 set -gx PATH $PATH /opt/homebrew/bin
 set -gx PATH $PATH ~/.cargo/bin

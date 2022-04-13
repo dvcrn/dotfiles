@@ -33,4 +33,44 @@
 
     // Other stuff
     { "keys": ["alt+`"], "command": "toggle_terminus_panel" },
+    {
+        "keys": ["f1"],
+        "command": "show_overlay",
+        "args": {
+            "overlay": "command_palette",
+            "text": "LSP: ",
+        }
+    },
+    {
+        "command": "lsp_code_actions",
+        "args": {
+            "only_kinds": [
+                "source"
+            ]
+        },
+        "keys": [
+            "f2"
+        ],
+        "context": [
+            {
+                "key": "lsp.session_with_capability",
+                "operator": "equal",
+                "operand": "codeActionProvider.codeActionKinds"
+            }
+        ]
+    },
+    {
+        "command": "lsp_code_actions",
+        "keys": [
+            "super+."
+        ],
+        "context": [
+            {
+                "key": "lsp.session_with_capability",
+                "operator": "equal",
+                "operand": "codeActionProvider"
+            }
+        ]
+    },
+
 ]

@@ -1,4 +1,4 @@
 {
         "autocomplete_auto_import": true,
-
+        "autocomplete_export_names": false,
 }

@@ -18,9 +18,11 @@ sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.serve
 ###############################################################################
 # Show the full URL in the address bar (note: this still hides the scheme)
 defaults write com.apple.Safari ShowFullURLInSmartSearchField -bool true
+defaults write com.apple.SafariTechnologyPreview ShowFullURLInSmartSearchField -bool true
 
 # Prevent Safari from opening ‘safe’ files automatically after downloading
 defaults write com.apple.Safari AutoOpenSafeDownloads -bool false
+defaults write com.apple.SafariTechnologyPreview AutoOpenSafeDownloads -bool false
 
 # Save screenshots into ~/Screenshots/ instead of desktop
 mkdir -p ~/Screenshots/
@@ -84,5 +86,5 @@ sudo chmod 000 ~/Library/Preferences/ByHost/com.apple.loginwindow*
 # enable TouchID for sudo
 if ! sudo grep -q "pam_tid.so" /etc/pam.d/sudo; then
     sudo cp /etc/pam.d/sudo /etc/pam.d/sudo.bak
-    echo -e "auth optional /opt/homebrew/lib/pam/pam_reattach.so\nauth sufficient pam_tid.so\n$(sudo cat /etc/pam.d/sudo)" | sudo tee /etc/pam.d/sudo
+    echo "auth optional /opt/homebrew/lib/pam/pam_reattach.so\nauth sufficient pam_tid.so\n$(sudo cat /etc/pam.d/sudo)" | sudo tee /etc/pam.d/sudo
 fi

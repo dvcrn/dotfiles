@@ -1,6 +1,6 @@
 [user]
   name = David Mohl
-  email = git@davemail.io
+  email = git@d.sh
 	signingkey = E75DA8BA
 [core]
   editor = nvim

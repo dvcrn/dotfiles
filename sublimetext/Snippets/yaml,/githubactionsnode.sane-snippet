@@ -1,0 +1,19 @@
+---
+tabTrigger: githubactionsnode
+scope: source.yaml, meta.mapping.key.yaml, meta.string.yaml, string.unquoted.plain.out.yaml
+description: Template for GitHub actions for node
+---
+name: CI
+on: [push]
+jobs:
+	CI:
+		runs-on: ubuntu-latest
+		steps:
+			- name: Check out repository code
+				uses: actions/checkout@v3
+			- uses: actions/setup-node@v3
+			  with:
+			  	node-version: '17'
+			- run: yarn install
+			- run: yarn test
+

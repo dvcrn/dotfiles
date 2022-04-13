@@ -1,0 +1,11 @@
+---
+tabTrigger: useHook
+scope: source.ts, keyword.declaration.js, source.tsx
+description: New default hook
+---
+const $1 = () => {
+	$2
+};
+
+export default $1;
+

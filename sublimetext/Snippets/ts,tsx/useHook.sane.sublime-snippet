@@ -1,0 +1,12 @@
+<snippet>
+	<content><![CDATA[
+const $1 = () => {
+	$2
+};
+
+export default $1;
+]]></content>
+	<description>New default hook</description>
+	<scope>source.ts, keyword.declaration.js, source.tsx</scope>
+	<tabTrigger>useHook</tabTrigger>
+</snippet>

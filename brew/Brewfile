@@ -79,6 +79,7 @@ cask "obsidian"
 cask "pastebot"
 cask "soundsource"
 cask "syncthing"
+cask "launchcontrol"
 
 mas "The Unarchiver", id: 425424353
 mas "Pixelmator Pro", id: 1289583905

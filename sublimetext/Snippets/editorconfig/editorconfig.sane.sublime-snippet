@@ -1,0 +1,20 @@
+<snippet>
+	<content><![CDATA[
+root = true
+
+[*]
+indent_style = tab
+indent_size = 2
+end_of_line = lf
+charset = utf-8
+trim_trailing_whitespace = true
+insert_final_newline = true
+
+[*.yml]
+indent_style = space
+indent_size = 2
+]]></content>
+	<description>editorconfig</description>
+	<scope>source.ini.editorconfig,text.plain</scope>
+	<tabTrigger>editorconfig</tabTrigger>
+</snippet>

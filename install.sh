@@ -29,9 +29,8 @@ echo ""
 echo "---> Starship"
 ln -svf ~/.dotfiles/starship/starship.toml ~/.config/starship.toml
 
-
 # Brew
-# echo ""
+echo ""
 echo "---> Brew"
 brew tap Homebrew/bundle
 cd ~/.dotfiles/brew/ && brew bundle
@@ -106,7 +105,7 @@ echo "---> vim done"
 
 echo ""
 echo "---> emacs"
-ln -svf ~/.dotfiles/emacs ~/.emacs.d
+ln -svfh ~/.dotfiles/emacs ~/.emacs.d
 
 echo ""
 echo "---> spacemacs"
@@ -129,9 +128,3 @@ echo ""
 echo "---> term"
 tic -x ~/.dotfiles/term/xterm-256color-italic.terminfo
 echo "---> term done"
-
-echo ""
-echo "---> mackup"
-ln -svf ~/.dotfiles/mackup/.mackup.cfg ~/.mackup.cfg
-ln -svfh ~/.dotfiles/mackup/.mackup ~/.mackup
-echo "---> mackup done"

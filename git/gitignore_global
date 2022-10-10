@@ -19,3 +19,5 @@ flycheck_*.el
 # projectiles files
 .projectile
 .envrc
+.stversions
+*.sync-conflict*

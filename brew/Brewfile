@@ -42,9 +42,12 @@ cask "jetbrains-toolbox"
 brew "reattach-to-user-namespace"
 brew "pam_reattach"
 
+brew "unison"
 brew "mackup"
 brew "fish", args: ['head']
 brew "starship"
+brew "autozimu/homebrew-formulas/unison-fsmonitor"
+
 
 # Dev Apps
 cask "little-snitch"

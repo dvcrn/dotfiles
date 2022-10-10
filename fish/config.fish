@@ -34,11 +34,15 @@ set -gx GO111MODULE auto
 set -gx GOPROXY direct
 set -gx GOPRIVATE github.com
 set -gx EDITOR (which nvim)
+set -gx NODE_OPTIONS --max-old-space-size=8192
 
 set -gx PATH $PATH /opt/homebrew/bin
 set -gx PATH $PATH ~/.cargo/bin
 set -gx PATH $PATH (yarn global bin)
 set -gx PATH $PATH ~/src/solana/bin
+
+export CGO_LDFLAGS="-L/opt/homebrew/opt/openssl/lib"
+export CGO_CPPFLAGS="-I/opt/homebrew/opt/openssl/include"
 
 alias ibrew "arch -x86_64 /usr/local/bin/brew"
 

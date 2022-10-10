@@ -1,3 +1,4 @@
-# if type -q fnm
-#     fnm env | source
-# end
+if type -q fnm
+    fnm completions --shell fish | source
+    fnm env --use-on-cd | source
+end

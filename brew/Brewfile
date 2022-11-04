@@ -38,12 +38,12 @@ brew "gnu-sed"
 brew "git"
 brew "direnv"
 brew "gh"
-cask "jetbrains-toolbox"
 brew "reattach-to-user-namespace"
 brew "pam_reattach"
+brew "rclone"
 
 brew "unison"
-brew "mackup"
+# brew "mackup"
 brew "fish", args: ['head']
 brew "starship"
 brew "autozimu/homebrew-formulas/unison-fsmonitor"
@@ -53,57 +53,65 @@ brew "autozimu/homebrew-formulas/unison-fsmonitor"
 cask "little-snitch"
 cask "alacritty"
 cask "kitty"
-cask "sublime-text-dev"
-cask "sublime-merge-dev"
+cask "sublime-text"
+cask "sublime-merge"
 cask "dash"
 cask "hazel"
-cask "visual-studio-code-insiders"
+cask "visual-studio-code"
+cask "jetbrains-toolbox"
 
 # Automation // Productivity
 cask "keyboard-maestro"
 cask "alfred"
-cask "alt-tab"
-cask "rectangle"
+# cask "alt-tab"
+# cask "rectangle"
 cask "raycast"
-
+cask "macupdater"
 
 # General Apps
 mas "Slack", id: 803453959
+cask "discord"
 cask "transmission"
 cask "firefox-developer-edition"
-cask "brave-browser-dev"
-cask "safari-technology-preview"
+cask "brave-browser"
+cask "choosy"
 cask "1password"
 cask "bartender"
-cask "beamer"
+# cask "beamer"
 cask "fastmate"
 cask "sensei"
 cask "obsidian"
 cask "pastebot"
 cask "soundsource"
+mas "Tailscale", id: 1475387142
 cask "syncthing"
 cask "launchcontrol"
+cask "typora"
+cask "arq"
+# cask "rocket"
 
 mas "The Unarchiver", id: 425424353
 mas "Pixelmator Pro", id: 1289583905
 mas "Day One", id: 1055511498
 mas "LINE", id: 539883307
 mas "Reeder", id: 1529448980
-mas "Unsplash Wallpapers", id: 1284863847
 mas "Things 3", id: 904280696
 mas "Fantastical", id: 975937182
 mas "DaisyDisk", id: 411643860
 mas "iMazing HEIC Converter", id: 1292198261
+mas "NotePlan 3", id: 1505432629
+mas "Anybox", id: 1593408455
+cask "imazing"
 
 mas "StopTheMadness", id: 1376402589
+mas "1Blocker", id: 1365531024
 
 mas "Numbers", id: 409203825
 mas "Keynote", id: 409183694
 mas "Pages", id: 409201541
 mas "Drafts", id: 1435957248
 mas "iA Writer", id: 775737590
+cask "airbuddy"
 
 mas "Notability", id: 736189492
 mas "GoodNotes", id: 1444383602
-
-# cask "rocket"

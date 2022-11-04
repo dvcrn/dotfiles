@@ -33,7 +33,7 @@ nnoremap <space>b= :JsPrettier<CR>
 
 " Project
 nnoremap <space>pt :ToggleSideBar<CR>
-nnoremap <space>pF :RevealInSideBar<CR>
+nnoremap <space>pF :RevealInSidebar<CR>
 nnoremap <space>pc :AdvancedNewFileNew<CR>
 nnoremap <space>pf :ShowOverlay overlay=goto show_files=true<CR>
 nnoremap <space>pp :ProjectManager action=switch<CR>
@@ -49,10 +49,8 @@ nnoremap <space>se :FindAllUnder<CR>
 nnoremap <space>sl :SplitSelectionIntoLines<CR>
 
 " Linters, Errors
-" nnoremap ]q :SublimeLinterGotoError direction=next<CR>
-" nnoremap [q :SublimeLinterGotoError direction=previous<CR>
-nnoremap ]q :NextResult direction=next<CR>
-nnoremap [q :PrevResult direction=previous<CR>
+nnoremap ]q :SublimeLinterGotoError direction=next<CR>
+nnoremap [q :SublimeLinterGotoError direction=previous<CR>
 
 " Goto
 nnoremap <space>gr :GotoReference<CR>

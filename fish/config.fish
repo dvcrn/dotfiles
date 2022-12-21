@@ -24,45 +24,18 @@ set -g fish_color_selection 'white'  '--bold'  '--background=brblack'
 set -g fish_color_user brgreen
 set -g fish_color_valid_path --underline
 
-set -gx fish_user_paths /opt/homebrew/bin $fish_user_paths
-
 set -gx CARGO_NET_GIT_FETCH_WITH_CLI true
 set -gx HOMEBREW_NO_AUTO_UPDATE 1
-set -gx GOPATH ~/go
-set -gx PATH ~/go/bin $PATH
 set -gx GO111MODULE auto
 set -gx GOPROXY direct
 set -gx GOPRIVATE github.com
 set -gx EDITOR (which nvim)
 set -gx NODE_OPTIONS --max-old-space-size=8192
 
-set -gx PATH $PATH /opt/homebrew/bin
-set -gx PATH $PATH ~/.cargo/bin
-set -gx PATH $PATH (yarn global bin)
-set -gx PATH $PATH ~/src/solana/bin
-
 export CGO_LDFLAGS="-L/opt/homebrew/opt/openssl/lib"
 export CGO_CPPFLAGS="-I/opt/homebrew/opt/openssl/include"
 
 alias ibrew "arch -x86_64 /usr/local/bin/brew"
-
-
-# Install Starship
-starship init fish | source
-
-# direnv
-if type -q direnv
-    eval (direnv hook fish)
-end
-
-# pyenv
-if type -q pyenv
-    pyenv init - | source
-end
-
-if type -q fnm
-   fnm env | source
-end
 
 # gcloud
 # set -g -x "CLOUDSDK_PYTHON" "/usr/local/opt/python@3.8/libexec/bin/python"
@@ -72,5 +45,5 @@ end
 # if [ -f '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.fish.inc' ]; . '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.fish.inc'; end
 
 # The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/david/google-cloud-sdk/path.fish.inc' ]; . '/Users/david/google-cloud-sdk/path.fish.inc'; end
+# if [ -f '/Users/david/google-cloud-sdk/path.fish.inc' ]; . '/Users/david/google-cloud-sdk/path.fish.inc'; end
 

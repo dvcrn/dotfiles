@@ -28,7 +28,7 @@
 
 
     // Golang specific stuff
-    { "keys": ["g", "d"], "command": "lsp_symbol_definition", "context": [{"key": "vi_command_mode_aware"}], "operand": "source.go", },
+    { "keys": ["g", "d"], "command": "lsp_symbol_definition", "context": [{"key": "vi_command_mode_aware"}, { "key": "selector", "operator": "equal", "operand": "source.go" }] },
     // { "keys": ["g", "d"], "command": "gs9o_open", "context": [{"key": "vi_command_mode_aware"}], "args": {"run": ["goto.definition"], "focus_view": false, "show_view": false}, "operand": "source.go", },
 
     // Other stuff
@@ -72,5 +72,11 @@
             }
         ]
     },
+    { "keys": ["super+shift+a"], "command": "expand_selection", "args": {"to": "tag"}, "context":
+        [
+            { "key": "selector", "operator": "equal", "operand": "(source.tsx, source.ts)", "match_all": true }
+        ]
+    },
+
 
 ]

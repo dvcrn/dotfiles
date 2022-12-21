@@ -1,3 +1,6 @@
+set -U Z_DATA ~/.local/share/z/data
+set -U Z_DATA_DIR ~/.local/share/z/
+
 if test -z "$Z_DATA"
   if test -z "$XDG_DATA_HOME"
     set -U Z_DATA_DIR "$HOME/.local/share/z"

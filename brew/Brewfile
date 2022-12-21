@@ -67,6 +67,7 @@ cask "alfred"
 # cask "rectangle"
 cask "raycast"
 cask "macupdater"
+cask "textsniper"
 
 # General Apps
 mas "Slack", id: 803453959
@@ -74,10 +75,12 @@ cask "discord"
 cask "transmission"
 cask "firefox-developer-edition"
 cask "brave-browser"
+cask "vivaldi"
 cask "choosy"
 cask "1password"
 cask "bartender"
 # cask "beamer"
+cask "iina"
 cask "fastmate"
 cask "sensei"
 cask "obsidian"
@@ -88,6 +91,7 @@ cask "syncthing"
 cask "launchcontrol"
 cask "typora"
 cask "arq"
+cask "downie"
 # cask "rocket"
 
 mas "The Unarchiver", id: 425424353

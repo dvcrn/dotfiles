@@ -204,3 +204,4 @@ abbr ff "git pull --ff-only"
 #   git commit -am "wip $(date)"
 # }
 
+alias tailscale /Applications/Tailscale.app/Contents/MacOS/Tailscale

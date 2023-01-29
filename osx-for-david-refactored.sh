@@ -7,10 +7,10 @@ sudo spctl --master-disable
 ###############################################################################
 # General UI/UX                                                               #
 ###############################################################################
-sudo scutil --set ComputerName Davebook
-sudo scutil --set HostName Davebook
-sudo scutil --set LocalHostName Davebook
-sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string Davebook
+# sudo scutil --set ComputerName Davebook
+# sudo scutil --set HostName Davebook
+# sudo scutil --set LocalHostName Davebook
+# sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string Davebook
 
 
 ###############################################################################
@@ -18,7 +18,6 @@ sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.serve
 ###############################################################################
 # Show the full URL in the address bar (note: this still hides the scheme)
 defaults write com.apple.Safari ShowFullURLInSmartSearchField -bool true
-defaults write com.apple.SafariTechnologyPreview ShowFullURLInSmartSearchField -bool true
 
 # Prevent Safari from opening ‘safe’ files automatically after downloading
 defaults write com.apple.Safari AutoOpenSafeDownloads -bool false
@@ -41,6 +40,9 @@ defaults write NSGlobalDomain InitialKeyRepeat -int 20
 
 # Set the timezone; see `sudo systemsetup -listtimezones` for other values
 sudo systemsetup -settimezone "Asia/Tokyo" > /dev/null
+# set first day of the week to 'Monday', like normal people
+defaults write -globalDomain AppleLocale -string "en_JP@calendar=iso8601";
+
 
 # Finder: show hidden files by default
 defaults write com.apple.finder AppleShowAllFiles -bool true
@@ -82,9 +84,5 @@ defaults write com.apple.dock autohide-time-modifier -int 0;killall Dock
 # never re-open apps
 sudo chown root ~/Library/Preferences/ByHost/com.apple.loginwindow*
 sudo chmod 000 ~/Library/Preferences/ByHost/com.apple.loginwindow*
+defaults write com.apple.loginwindow TALLogoutSavesState -bool false
 
-# enable TouchID for sudo
-if ! sudo grep -q "pam_tid.so" /etc/pam.d/sudo; then
-    sudo cp /etc/pam.d/sudo /etc/pam.d/sudo.bak
-    echo "auth optional /opt/homebrew/lib/pam/pam_reattach.so\nauth sufficient pam_tid.so\n$(sudo cat /etc/pam.d/sudo)" | sudo tee /etc/pam.d/sudo
-fi

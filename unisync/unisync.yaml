@@ -1,0 +1,15 @@
+targetPath: ~/.config/appconfigsync
+apps:
+  - dash
+  - raycast
+  - devonthink
+  - choosy
+  - spotify
+  - jetbrains-toolbox
+  - intellijidea
+  - pastebot
+  - xcode
+  - bartender
+  - cyberduck
+  - fantastical
+  - spotify

@@ -1,0 +1,83 @@
+[
+  {
+    "Constant" : [
+
+    ],
+    "submodules" : [
+
+    ],
+    "Function" : [
+
+    ],
+    "Variable" : [
+
+    ],
+    "stripped_doc" : [
+
+    ],
+    "desc" : "UNKNOWN DESC",
+    "type" : "Module",
+    "Deprecated" : [
+
+    ],
+    "Constructor" : [
+
+    ],
+    "doc" : "",
+    "Method" : [
+      {
+        "doc" : "Start ReloadConfiguration\n\nParameters:\n * None\n\nReturns:\n * A string",
+        "def" : "RandomUsername:generateUsername()",
+        "stripped_doc" : [
+          "Start ReloadConfiguration",
+          ""
+        ],
+        "parameters" : [
+          " * None",
+          ""
+        ],
+        "notes" : [
+
+        ],
+        "signature" : "RandomUsername:generateUsername()",
+        "type" : "Method",
+        "returns" : [
+          " * A string"
+        ],
+        "name" : "generateUsername",
+        "desc" : "Start ReloadConfiguration"
+      }
+    ],
+    "Command" : [
+
+    ],
+    "Field" : [
+
+    ],
+    "items" : [
+      {
+        "doc" : "Start ReloadConfiguration\n\nParameters:\n * None\n\nReturns:\n * A string",
+        "def" : "RandomUsername:generateUsername()",
+        "stripped_doc" : [
+          "Start ReloadConfiguration",
+          ""
+        ],
+        "parameters" : [
+          " * None",
+          ""
+        ],
+        "notes" : [
+
+        ],
+        "signature" : "RandomUsername:generateUsername()",
+        "type" : "Method",
+        "returns" : [
+          " * A string"
+        ],
+        "name" : "generateUsername",
+        "desc" : "Start ReloadConfiguration"
+      }
+    ],
+    "name" : "RandomUsername"
+  }
+]

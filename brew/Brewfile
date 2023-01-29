@@ -5,21 +5,19 @@ tap "rajiv/fastmate"
 
 brew "mas"
 
-# Dev tools
-cask "google-cloud-sdk"
-cask "docker"
-
 # Languages
 brew "python"
 brew "go"
 brew "rustup-init"
 brew "node"
-# brew "elixir"
+brew "elixir"
+# not currently doing clojure so those are paused
 # brew "clojure-lsp"
 # brew "clojure"
 # brew "leiningen"
 
-# Dev tools
+# Dev tools, stuff I definitely want installed
+#cask "google-cloud-sdk"
 brew "openssl"
 brew "ffmpeg"
 cask "gpg-suite"
@@ -32,90 +30,150 @@ brew "watch"
 brew "readline"
 brew "z"
 brew "ag"
-brew "ack"
 brew "fzf"
 brew "gnu-sed"
 brew "git"
 brew "direnv"
 brew "gh"
+brew "jq"
 brew "reattach-to-user-namespace"
 brew "pam_reattach"
 brew "rclone"
-
 brew "unison"
+brew "autozimu/homebrew-formulas/unison-fsmonitor"
 # brew "mackup"
 brew "fish", args: ['head']
 brew "starship"
-brew "autozimu/homebrew-formulas/unison-fsmonitor"
-
+brew "hugo"
+brew "fnm"
+brew "kubernetes-cli"
+brew "kustomize"
 
 # Dev Apps
-cask "little-snitch"
-cask "alacritty"
-cask "kitty"
+# evaluating warp
+# cask "alacritty"
+# cask "kitty"
+cask "warp"
 cask "sublime-text"
 cask "sublime-merge"
 cask "dash"
-cask "hazel"
 cask "visual-studio-code"
 cask "jetbrains-toolbox"
+cask "docker"
+cask "script-debugger"
+cask "proxyman"
+cask "wireshark"
 
-# Automation // Productivity
-cask "keyboard-maestro"
-cask "alfred"
-# cask "alt-tab"
-# cask "rectangle"
-cask "raycast"
-cask "macupdater"
-cask "textsniper"
+# CLIs from services
+# brew "doctl"
+# brew "flyctl"
+# cask "google-cloud-sdk"
 
-# General Apps
-mas "Slack", id: 803453959
-cask "discord"
-cask "transmission"
+# Browsers
 cask "firefox-developer-edition"
 cask "brave-browser"
-cask "vivaldi"
-cask "choosy"
-cask "1password"
-cask "bartender"
-# cask "beamer"
-cask "iina"
-cask "fastmate"
-cask "sensei"
-cask "obsidian"
-cask "pastebot"
-cask "soundsource"
-mas "Tailscale", id: 1475387142
-cask "syncthing"
-cask "launchcontrol"
-cask "typora"
-cask "arq"
-cask "downie"
-# cask "rocket"
+cask "arc"
+cask "orion"
 
-mas "The Unarchiver", id: 425424353
+# General important apps I often use
+cask "devonthink"
+mas "Apple Configurator", id: 1037126344
+mas "TestFlight", id: 899247664
 mas "Pixelmator Pro", id: 1289583905
 mas "Day One", id: 1055511498
-mas "LINE", id: 539883307
 mas "Reeder", id: 1529448980
-mas "Things 3", id: 904280696
-mas "Fantastical", id: 975937182
+cask "iina"
+mas "Slack", id: 803453959
+cask "discord"
+
+# Maintenance?
 mas "DaisyDisk", id: 411643860
-mas "iMazing HEIC Converter", id: 1292198261
-mas "NotePlan 3", id: 1505432629
-mas "Anybox", id: 1593408455
-cask "imazing"
+cask "launchcontrol"
+cask "sensei"
+cask "macupdater"
 
-mas "StopTheMadness", id: 1376402589
-mas "1Blocker", id: 1365531024
-
+# Just apps I want installed and sometimes use
 mas "Numbers", id: 409203825
 mas "Keynote", id: 409183694
 mas "Pages", id: 409201541
 mas "Drafts", id: 1435957248
 mas "iA Writer", id: 775737590
-cask "airbuddy"
-
-mas "Notability", id: 736189492
 mas "GoodNotes", id: 1444383602
+cask "typora"
+mas "Amazing AI", id: 1660147028
+cask "downie"
+cask "transmission"
+cask "imazing"
+mas "ColorSlurp", id: 1287239339
+cask "ledger-live"
+brew "exiftool"
+cask "zoom"
+mas "Flighty", id: 1358823008
+
+mas "Telegram", id: 747648890
+mas "Twitter", id: 1482454543
+mas "LINE", id: 539883307
+
+# Productivity & Work. I NEED these for working
+cask "1password"
+mas "Dato", id: 1470584107
+mas "Anybox", id: 1593408455
+mas "NotePlan 3", id: 1505432629
+mas "Things", id: 904280696
+cask "keyboard-maestro"
+# cask "alfred" # evaluating raycast
+cask "raycast"
+cask "obsidian"
+cask "fastmate"
+
+# Convenience apps, converters, etc.
+mas "Jiffy", id: 1502527999
+mas "iMazing Converter", id: 1292198261
+mas "HEIC Converter", id: 1294126402
+mas "Gifski", id: 1351639930
+cask "textsniper"
+mas "The Unarchiver", id: 425424353
+
+# Background utilities
+cask "hammerspoon"
+cask "little-snitch"
+mas "Tailscale", id: 1475387142
+mas "Pure Paste", id: 1611378436
+mas "Pandan", id: 1569600264
+mas "Lungo", id: 1263070803
+# cask "choosy" # evaluating velja
+mas "Velja", id: 1607635845
+mas "Hyperduck", id: 6444667067
+cask "airbuddy"
+cask "bartender"
+cask "hazel"
+cask "arq"
+mas "Battery Indicator", id: 1206020918
+cask "syncthing"
+mas "NextDNS", id: 1464122853
+mas "NordVPN", id: 905953485
+cask "vivid"
+cask "black-light-pro"
+
+# Extensions
+mas "StopTheMadness", id: 1376402589
+mas "Shareful", id: 1522267256
+mas "SimplyJSON", id: 1495193038
+mas "Refined GitHub", id: 1519867270
+mas "AdGuard for Safari", id: 1440147259
+mas "1Password for Safari", id: 1569813296
+mas "Actions", id: 1586435171
+cask "suspicious-package"
+mas "Mapper", id: 1589391989
+
+
+# Undecided whether still needed
+# cask "beamer" # nowadays not using
+# cask "pastebot" # raycast can do this
+# cask "soundsource" # do I really use this
+# cask "rocket" # fun but not necessary
+# cask "alt-tab" # currently not using
+# cask "rectangle" # raycast can do this
+# brew "ack" # always use ag and never ack
+# mas "Fantastical", id: 975937182 # trying to use manual calendar + dato
+# mas "1Blocker", id: 1365531024 # adguard for safari

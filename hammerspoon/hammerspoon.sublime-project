@@ -1,0 +1,18 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"LSP": {
+			"LSP-lua": {
+				"settings": {
+					"Lua.workspace.library": [
+						"~/.hammerspoon/Spoons/EmmyLua.spoon/annotations"
+					]
+				},
+			}
+		},
+	}
+}

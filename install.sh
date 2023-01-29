@@ -35,10 +35,22 @@ echo "---> Brew"
 brew tap Homebrew/bundle
 cd ~/.dotfiles/brew/ && brew bundle
 cd ~/.dotfiles/
+echo "---> Setting autoupdate"
+brew autoupdate start --upgrade
 echo "---> Brew done"
+
+# enable TouchID for sudo
+echo "---> enabling TouchID for sudo"
+if ! sudo grep -q "pam_tid.so" /etc/pam.d/sudo; then
+    sudo cp /etc/pam.d/sudo /etc/pam.d/sudo.bak
+    printf "auth optional /opt/homebrew/lib/pam/pam_reattach.so\nauth sufficient pam_tid.so\n$(sudo cat /etc/pam.d/sudo)" | sudo tee /etc/pam.d/sudo
+fi
+echo "---> touchid for sudo done"
 
 echo "---> Post brew"
 $(brew --prefix)/opt/fzf/install
+# install rust + cargo
+rustup-init -y
 echo "---> Post brew done"
 
 echo ""
@@ -89,6 +101,11 @@ ln -svf ~/.dotfiles/kitty/kitty.conf ~/.config/kitty/kitty.conf
 echo "---> Kitty done"
 
 echo ""
+echo "---> Hammerspoon"
+ln -svf ~/.dotfiles/hammerspoon ~/.hammerspoon
+echo "---> hammerspoon done"
+
+echo ""
 echo "---> vim"
 mkdir -p ~/.config/nvim/
 ln -svf ~/.dotfiles/vim/init.vim ~/.config/nvim/init.vim
@@ -103,14 +120,20 @@ curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 echo "---> vim done"
 
-echo ""
-echo "---> emacs"
-ln -svfh ~/.dotfiles/emacs ~/.emacs.d
+# echo ""
+# echo "---> emacs"
+# ln -svfh ~/.dotfiles/emacs ~/.emacs.d
+
+# echo ""
+# echo "---> spacemacs"
+# ln -svfh ~/.dotfiles/spacemacs/.spacemacs ~/.spacemacs
+# echo "---> spacemacs done"
 
 echo ""
-echo "---> spacemacs"
-ln -svfh ~/.dotfiles/spacemacs/.spacemacs ~/.spacemacs
-echo "---> spacemacs done"
+echo "---> unisync"
+mkdir -p ~/.config/unisync
+~/.dotfiles/unisync/unisync.yaml ~/.config/unisync/unisync.yaml
+echo "---> unisync done"
 
 echo ""
 echo "---> sublime text"

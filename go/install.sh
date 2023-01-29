@@ -1,3 +1,4 @@
+GO111MODULE=on go install github.com/dvcrn/unisync@latest
 GO111MODULE=on go install github.com/klauspost/asmfmt/cmd/asmfmt@master
 GO111MODULE=on go install github.com/go-delve/delve/cmd/dlv@master
 GO111MODULE=on go install github.com/kisielk/errcheck@master

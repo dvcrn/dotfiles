@@ -36,6 +36,7 @@ export CGO_LDFLAGS="-L/opt/homebrew/opt/openssl/lib"
 export CGO_CPPFLAGS="-I/opt/homebrew/opt/openssl/include"
 
 alias ibrew "arch -x86_64 /usr/local/bin/brew"
+alias neovide "neovide --multigrid"
 
 # gcloud
 # set -g -x "CLOUDSDK_PYTHON" "/usr/local/opt/python@3.8/libexec/bin/python"

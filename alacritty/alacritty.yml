@@ -10,25 +10,25 @@ draw_bold_text_with_bright_colors: true
 font:
   # The normal (roman) font face to use.
   normal:
-    family: Operator Mono SSm Lig
+    family: OperatorMonoSSmLig Nerd Font
     # Style can be specified to pick a specific face.
     style: Medium
 
   # The bold font face
   bold:
-    family: Operator Mono SSm Lig
+    family: OperatorMonoSSmLig Nerd Font
     # Style can be specified to pick a specific face.
     style: Medium
 
   # The italic font face
   italic:
-    family: Operator Mono SSm Lig
+    family: OperatorMonoSSmLig Nerd Font
     # Style can be specified to pick a specific face.
     style: Italic
 
   # Bold italic font face
   bold_italic:
-    family: Operator Mono SSm Lig
+    family: OperatorMonoSSmLig Nerd Font
     # Style can be specified to pick a specific face.
     style: Medium Italic
 

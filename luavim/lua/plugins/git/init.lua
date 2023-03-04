@@ -4,7 +4,7 @@ local mod = {
 		'lewis6991/gitsigns.nvim',
 	}
 }
-function mod.Setup(container)
+mod.setup = { {}, function(container)
 	local gitsigns = require("gitsigns")
 	gitsigns.setup({
 		current_line_blame = true,
@@ -51,5 +51,6 @@ function mod.Setup(container)
 
 	return gitsigns
 end
+}
 
 return mod

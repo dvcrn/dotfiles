@@ -44,72 +44,66 @@ local mod = {
 		"lukas-reineke/lsp-format.nvim",
 		"jose-elias-alvarez/null-ls.nvim"
 	},
-	deps = {
-		"capabilities"
-	}
-}
+	setup = { { "capabilities" }, function(capabilities)
+		require("mason").setup()
 
-function mod.Setup(container)
-	capabilities = container.capabilities or {}
+		local null_ls = require("null-ls")
+		null_ls.setup({
+			on_attach = on_attach,
+			sources = {
+				null_ls.builtins.code_actions.gitsigns,
+			}
+		})
 
-	require("mason").setup()
-
-	local null_ls = require("null-ls")
-	null_ls.setup({
-		on_attach = on_attach,
-		sources = {
-			null_ls.builtins.code_actions.gitsigns,
-		}
-	})
-
-	require("mason-lspconfig").setup({
-		ensure_installed = { "bashls", "docker_compose_language_service", "elixirls", "gopls", "lua_ls", "vimls" },
-	})
+		require("mason-lspconfig").setup({
+			ensure_installed = { "bashls", "docker_compose_language_service", "elixirls", "gopls", "lua_ls", "vimls" },
+		})
 
 
-	require("mason-lspconfig").setup_handlers({
-		["bashls"] = function()
-			require 'lspconfig'.bashls.setup({
-				capabilities = capabilities,
-				on_attach = on_attach,
-			})
-		end,
-		["gopls"] = function()
-			require 'lspconfig'.gopls.setup({
-				capabilities = capabilities,
-				on_attach = on_attach,
-			})
-		end,
-		["lua_ls"] = function()
-			require 'lspconfig'.lua_ls.setup({
-				on_attach = on_attach,
-				capabilities = capabilities,
-				settings = {
-					Lua = {
-						runtime = {
-							version = 'LuaJIT',
-						},
-						diagnostics = {
-							globals = { 'vim' },
-						},
-						workspace = {
-							library = vim.api.nvim_get_runtime_file("", true),
-						},
-						telemetry = {
-							enable = false,
+		require("mason-lspconfig").setup_handlers({
+			["bashls"] = function()
+				require 'lspconfig'.bashls.setup({
+					capabilities = capabilities,
+					on_attach = on_attach,
+				})
+			end,
+			["gopls"] = function()
+				require 'lspconfig'.gopls.setup({
+					capabilities = capabilities,
+					on_attach = on_attach,
+				})
+			end,
+			["lua_ls"] = function()
+				require 'lspconfig'.lua_ls.setup({
+					on_attach = on_attach,
+					capabilities = capabilities,
+					settings = {
+						Lua = {
+							runtime = {
+								version = 'LuaJIT',
+							},
+							diagnostics = {
+								globals = { 'vim' },
+							},
+							workspace = {
+								library = vim.api.nvim_get_runtime_file("", true),
+							},
+							telemetry = {
+								enable = false,
+							},
 						},
 					},
-				},
-			})
-		end,
-		["elixirls"] = function()
-			require 'lspconfig'.elixirls.setup({
-				capabilities = capabilities,
-				on_attach = on_attach,
-				cmd = { vim.fn.expand("$HOME/src/elixir-ls-1.12-22.3/language_server.sh") },
-			})
-		end
-	})
-end
+				})
+			end,
+			["elixirls"] = function()
+				require 'lspconfig'.elixirls.setup({
+					capabilities = capabilities,
+					on_attach = on_attach,
+					cmd = { vim.fn.expand("$HOME/src/elixir-ls-1.12-22.3/language_server.sh") },
+				})
+			end
+		})
+	end }
+}
 
 return mod;

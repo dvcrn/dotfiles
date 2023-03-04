@@ -12,7 +12,7 @@ local mod = {
 	}
 }
 
-function mod.Setup(container)
+mod.setup = { {}, function()
 	require 'nvim-web-devicons'.setup {
 		-- your personnal icons can go here (to override)
 		-- you can specify color or cterm_color instead of specifying both of them
@@ -59,5 +59,7 @@ function mod.Setup(container)
 	vim.keymap.set('n', '<leader>pF', ":Neotree filesystem reveal left<CR>")
 	vim.keymap.set('n', '<leader>pt', ":Neotree toggle=true<CR>")
 end
+}
+
 
 return mod

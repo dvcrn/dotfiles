@@ -80,7 +80,7 @@ local mod = {
 	}
 }
 
-function mod.Setup(container)
+mod.setup = { {}, function()
 	local capabilities = require("cmp_nvim_lsp").default_capabilities()
 	local cmp = require 'cmp'
 
@@ -219,5 +219,6 @@ function mod.Setup(container)
 
 	return { cmp = cmp, capabilities = capabilities }
 end
+}
 
 return mod

@@ -4,7 +4,7 @@ local mod = {
 	}
 }
 
-function mod.Setup(container)
+mod.setup = { {}, function(container)
 	require("bufferline").setup {
 		options = {
 
@@ -24,6 +24,6 @@ function mod.Setup(container)
 			}
 		}
 	}
-end
+end }
 
 return mod

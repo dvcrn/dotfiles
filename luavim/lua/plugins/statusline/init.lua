@@ -6,7 +6,7 @@ local mod = {
 		}
 	}
 }
-function mod.Setup(container)
+mod.setup = { {}, function()
 	local lualine = require('lualine')
 
 	-- Color table for highlights
@@ -228,5 +228,6 @@ function mod.Setup(container)
 
 	return lualine
 end
+}
 
 return mod

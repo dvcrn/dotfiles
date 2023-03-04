@@ -1,16 +1,18 @@
-local mod = {}
-
-function mod.Register(use)
-	use {
-		"nvim-neo-tree/neo-tree.nvim",
-		branch = "v2.x",
-		requires = {
-			"nvim-lua/plenary.nvim",
-			"nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
-			"MunifTanjim/nui.nvim",
+local mod = {
+	plugins = {
+		{
+			"nvim-neo-tree/neo-tree.nvim",
+			branch = "v2.x",
+			requires = {
+				"nvim-lua/plenary.nvim",
+				"nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
+				"MunifTanjim/nui.nvim",
+			}
 		}
 	}
+}
 
+function mod.Setup(container)
 	require 'nvim-web-devicons'.setup {
 		-- your personnal icons can go here (to override)
 		-- you can specify color or cterm_color instead of specifying both of them

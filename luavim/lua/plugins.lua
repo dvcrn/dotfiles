@@ -6,11 +6,7 @@ local container = {}
 function load_package(use, package_name)
 	local status, lib = pcall(require, package_name)
 	if (status) then
-		-- get package dependencies
-		local has_deps, deps = pcall(lib.Deps)
-		if not has_deps then
-			deps = {}
-		end
+		deps = lib.deps or {}
 
 		for _, v in pairs(deps) do
 			if not container[v] then
@@ -18,9 +14,14 @@ function load_package(use, package_name)
 			end
 		end
 
+		-- call all plugins with use
+		for _, v in pairs(lib.plugins or {}) do
+			use(v)
+		end
+
 		-- call 'Register' method, pass 'use' and all package exports so far
 		-- all my packages have a Register method as starting point
-		local register_status, registered_package = pcall(lib.Register, use, container)
+		local register_status, registered_package = pcall(lib.Setup, container)
 		if (register_status) then
 			-- take whatever those packages export and add it to the packages table
 			-- so that other plugins can access those things as depdendencies
@@ -31,13 +32,14 @@ function load_package(use, package_name)
 				end
 			end
 
-			return true
+			return
 		end
+
+		return
 	end
 
 	--Library failed to load, so perhaps return `nil` or something?
-	print("failed to load: ", package_name)
-	return false
+	print("failed to load: ", package_name, " --- ", lib)
 end
 
 return require('packer').startup(function(use)

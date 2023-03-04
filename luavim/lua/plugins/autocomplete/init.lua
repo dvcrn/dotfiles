@@ -67,18 +67,20 @@ local hl = {
 	CmpItemKindTypeParameter = { fg = "#D8EEEB", bg = "#58B5A8" },
 }
 
-local mod = {}
+local mod = {
+	plugins = {
+		'hrsh7th/cmp-nvim-lsp', -- LSP source for nvim-cmp
+		'hrsh7th/cmp-buffer',
+		'hrsh7th/cmp-path',
+		'hrsh7th/cmp-cmdline',
+		'saadparwaiz1/cmp_luasnip', -- Snippets source for nvim-cmp
+		'hrsh7th/nvim-cmp', -- Autocompletion plugin
+		'onsails/lspkind.nvim', -- fancy icons
+		'L3MON4D3/LuaSnip' -- Snippets plugin
+	}
+}
 
-function mod.Register(use)
-	use 'hrsh7th/cmp-nvim-lsp' -- LSP source for nvim-cmp
-	use 'hrsh7th/cmp-buffer'
-	use 'hrsh7th/cmp-path'
-	use 'hrsh7th/cmp-cmdline'
-	use 'saadparwaiz1/cmp_luasnip' -- Snippets source for nvim-cmp
-	use 'hrsh7th/nvim-cmp' -- Autocompletion plugin
-	use 'onsails/lspkind.nvim' -- fancy icons
-	use 'L3MON4D3/LuaSnip' -- Snippets plugin
-
+function mod.Setup(container)
 	local capabilities = require("cmp_nvim_lsp").default_capabilities()
 	local cmp = require 'cmp'
 

@@ -1,18 +1,18 @@
-local mod = {}
-
-function mod.Register(use)
-	use {
-		'nvim-telescope/telescope.nvim', tag = '0.1.1',
-		requires = { { 'nvim-lua/plenary.nvim' } }
+local mod = {
+	plugins = {
+		{
+			'nvim-telescope/telescope.nvim', tag = '0.1.1',
+			requires = { { 'nvim-lua/plenary.nvim' } }
+		},
+		{
+			"nvim-telescope/telescope-file-browser.nvim",
+			requires = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" }
+		},
+		{ 'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
 	}
+}
 
-	use {
-		"nvim-telescope/telescope-file-browser.nvim",
-		requires = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" }
-	}
-
-	use { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
-
+function mod.Setup(container)
 	local telescope = require("telescope")
 	local actions = require('telescope.actions')
 	local fb_actions = telescope.extensions.file_browser.actions

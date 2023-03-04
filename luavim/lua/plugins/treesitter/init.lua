@@ -1,20 +1,22 @@
-local mod = {}
-function mod.Register(use)
-	use {
-		'nvim-treesitter/nvim-treesitter',
-		run = function()
-			local ts_update = require('nvim-treesitter.install').update({ with_sync = true })
-			ts_update()
-		end,
+local mod = {
+	plugins = {
+		{
+			'nvim-treesitter/nvim-treesitter',
+			run = function()
+				local ts_update = require('nvim-treesitter.install').update({ with_sync = true })
+				ts_update()
+			end,
+		},
+		{
+			"nvim-treesitter/nvim-treesitter-textobjects",
+			after = "nvim-treesitter",
+			requires = "nvim-treesitter/nvim-treesitter",
+		},
+		"RRethy/nvim-treesitter-endwise"
 	}
+}
 
-	use({
-		"nvim-treesitter/nvim-treesitter-textobjects",
-		after = "nvim-treesitter",
-		requires = "nvim-treesitter/nvim-treesitter",
-	})
-	use { "RRethy/nvim-treesitter-endwise" }
-
+function mod.Setup(container)
 	-- vim.opt.foldmethod     = 'expr'
 	-- vim.opt.foldexpr       = 'nvim_treesitter#foldexpr()'
 	---WORKAROUND

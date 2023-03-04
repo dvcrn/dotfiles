@@ -34,21 +34,23 @@ local on_attach = function(client, bufnr)
 end
 
 
-local mod = {}
-function mod.Deps()
-	return { "capabilities" }
-end
-
-function mod.Register(use, plugins)
-	capabilities = plugin.capabilities or {}
-
-	use {
-		"williamboman/mason.nvim",
-		"williamboman/mason-lspconfig.nvim",
-		"neovim/nvim-lspconfig",
+local mod = {
+	plugins = {
+		{
+			"williamboman/mason.nvim",
+			"williamboman/mason-lspconfig.nvim",
+			"neovim/nvim-lspconfig",
+		},
+		"lukas-reineke/lsp-format.nvim",
+		"jose-elias-alvarez/null-ls.nvim"
+	},
+	deps = {
+		"capabilities"
 	}
-	use "lukas-reineke/lsp-format.nvim"
-	use "jose-elias-alvarez/null-ls.nvim"
+}
+
+function mod.Setup(container)
+	capabilities = container.capabilities or {}
 
 	require("mason").setup()
 

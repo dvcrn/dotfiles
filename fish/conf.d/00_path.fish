@@ -10,3 +10,7 @@ set -gx PATH ~/go/bin $PATH
 set -gx PATH $PATH ~/.cargo/bin
 set -gx PATH $PATH (yarn global bin)
 set -gx PATH $PATH ~/src/solana/bin
+
+set -gx PATH /opt/homebrew/opt/libpq/bin $PATH
+
+if [ -f '/opt/homebrew/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.fish.inc' ]; . '/opt/homebrew/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.fish.inc'; end

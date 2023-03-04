@@ -1,5 +1,4 @@
 source ~/.config/fish/alias.fish
-source ~/.config/fish/functions.fish
 
 # Fish syntax highlighting
 set -g fish_color_autosuggestion '555'  'brblack'
@@ -43,7 +42,9 @@ alias neovide "neovide --multigrid"
 # set -g fish_user_paths "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.fish.inc" $fish_user_paths
 
 # The next line updates PATH for the Google Cloud SDK.
-# if [ -f '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.fish.inc' ]; . '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.fish.inc'; end
+export USE_GKE_GCLOUD_AUTH_PLUGIN=True
+# export KERL_BUILD_DOCS=yes
+set -xg KERL_BUILD_DOCS yes
 
 # The next line updates PATH for the Google Cloud SDK.
 # if [ -f '/Users/david/google-cloud-sdk/path.fish.inc' ]; . '/Users/david/google-cloud-sdk/path.fish.inc'; end

@@ -12,7 +12,7 @@ local mod = {
 	}
 }
 
-function mod.Setup(container)
+mod.setup = { {}, function()
 	local telescope = require("telescope")
 	local actions = require('telescope.actions')
 	local fb_actions = telescope.extensions.file_browser.actions
@@ -113,9 +113,8 @@ function mod.Setup(container)
 	vim.keymap.set('n', '<c-b>', builtin.buffers, {})
 	vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
 
-	mod.hogehoge = "abc"
-
-	return telescope
+	return { telescope = telescope }
 end
+}
 
 return mod

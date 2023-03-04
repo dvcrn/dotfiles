@@ -1,3 +1,5 @@
+table.unpack = table.unpack or unpack -- 5.1 compatibility
+
 local container = {}
 
 -- wrapper around "require" to continue when an error happened
@@ -6,22 +8,26 @@ local container = {}
 function load_package(use, package_name)
 	local status, lib = pcall(require, package_name)
 	if (status) then
-		deps = lib.deps or {}
+		deps, setup = table.unpack(lib.setup)
 
+		local resolved_deps = {}
 		for _, v in pairs(deps) do
 			if not container[v] then
 				print("WARNING!! package '", package_name, "' has dep, but not provided: ", v)
+				table.insert(resolved_deps, nil)
+			else
+				table.insert(resolved_deps, container[v])
 			end
 		end
 
-		-- call all plugins with use
+		-- call all depdendency plugins with 'use', so packer registers them
 		for _, v in pairs(lib.plugins or {}) do
 			use(v)
 		end
 
 		-- call 'Register' method, pass 'use' and all package exports so far
 		-- all my packages have a Register method as starting point
-		local register_status, registered_package = pcall(lib.Setup, container)
+		local register_status, registered_package = pcall(setup, table.unpack(resolved_deps))
 		if (register_status) then
 			-- take whatever those packages export and add it to the packages table
 			-- so that other plugins can access those things as depdendencies

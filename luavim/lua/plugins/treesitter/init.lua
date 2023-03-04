@@ -16,7 +16,7 @@ local mod = {
 	}
 }
 
-function mod.Setup(container)
+mod.setup = { {}, function()
 	-- vim.opt.foldmethod     = 'expr'
 	-- vim.opt.foldexpr       = 'nvim_treesitter#foldexpr()'
 	---WORKAROUND
@@ -93,5 +93,6 @@ function mod.Setup(container)
 		},
 	}
 end
+}
 
 return mod

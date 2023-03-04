@@ -97,10 +97,18 @@ function mod.Register(use)
 	end
 
 	vim.keymap.set('n', '<c-p>', git_or_find_files, {})
+	vim.keymap.set('n', '<D-p>', git_or_find_files) -- file searching with cmd-p
 	vim.keymap.set('n', '<leader>pf', git_or_find_files, {})
+	vim.keymap.set('n', '<leader>ps', builtin.treesitter, {})
+	vim.keymap.set('n', '<leader>pr', builtin.lsp_document_symbols, {})
+	vim.keymap.set('n', '<leader>pR', builtin.lsp_workspace_symbols, {})
+	vim.keymap.set('n', '<D-r>', builtin.lsp_document_symbols) -- sublime style symbols search
+	vim.keymap.set('n', '<D-R>', builtin.lsp_workspace_symbols) -- sublime style symbols search
+
 	vim.keymap.set('n', '<leader>pc', advanced_new_file, {})
 	vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
 	vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
+	vim.keymap.set('n', '<leader>p/', builtin.live_grep, {})
 	vim.keymap.set('n', '<leader>bb', builtin.buffers, {})
 	vim.keymap.set('n', '<c-b>', builtin.buffers, {})
 	vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})

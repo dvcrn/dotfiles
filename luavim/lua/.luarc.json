@@ -1,0 +1,14 @@
+{
+    "workspace.library": [
+        "/Users/david.mohl/.config/nvim",
+        "/Users/david.mohl/.local/share/nvim/site",
+        "/Users/david.mohl/.local/share/nvim/site/pack/packer/start/mason-lspconfig.nvim",
+        "/Users/david.mohl/.local/share/nvim/site/pack/packer/start/mason.nvim",
+        "/Users/david.mohl/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
+        "/Users/david.mohl/.local/share/nvim/site/pack/packer/start/packer.nvim",
+        "/opt/homebrew/Cellar/neovim/0.8.3/share/nvim/runtime",
+        "/opt/homebrew/Cellar/neovim/0.8.3/lib/nvim",
+        "${3rd}/luassert/library",
+        "${3rd}/luv/library"
+    ]
+}

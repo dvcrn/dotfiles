@@ -1,9 +1,10 @@
-local mod = {}
-function mod.Register(use)
-	use {
+local mod = {
+	plugins = {
+
 		'lewis6991/gitsigns.nvim',
 	}
-
+}
+function mod.Setup(container)
 	local gitsigns = require("gitsigns")
 	gitsigns.setup({
 		current_line_blame = true,

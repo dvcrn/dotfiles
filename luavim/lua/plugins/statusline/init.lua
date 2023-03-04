@@ -1,9 +1,12 @@
-local mod = {}
-function mod.Register(use)
-	use {
-		'nvim-lualine/lualine.nvim',
-		requires = { 'kyazdani42/nvim-web-devicons', opt = true }
+local mod = {
+	plugins = {
+		{
+			'nvim-lualine/lualine.nvim',
+			requires = { 'kyazdani42/nvim-web-devicons', opt = true }
+		}
 	}
+}
+function mod.Setup(container)
 	local lualine = require('lualine')
 
 	-- Color table for highlights

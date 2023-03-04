@@ -1,8 +1,10 @@
-local mod = {}
+local mod = {
+	plugins = {
+		{ 'akinsho/bufferline.nvim', tag = "v3.*", requires = 'nvim-tree/nvim-web-devicons' }
+	}
+}
 
-function mod.Register(use)
-	use { 'akinsho/bufferline.nvim', tag = "v3.*", requires = 'nvim-tree/nvim-web-devicons' }
-
+function mod.Setup(container)
 	require("bufferline").setup {
 		options = {
 

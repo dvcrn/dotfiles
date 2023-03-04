@@ -215,7 +215,7 @@ function mod.Register(use)
 		return {}
 	end
 
-	return cmp, capabilities
+	return { cmp = cmp, capabilities = capabilities }
 end
 
 return mod

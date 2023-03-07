@@ -10,7 +10,7 @@ vim.keymap.set("n", "<Tab>", ":e#<CR>")
 vim.keymap.set("n", "<leader>_r", ":luafile %<CR>")
 vim.keymap.set("i", "fd", "<esc>")
 vim.keymap.set("t", "<esc>", "<C-\\><C-n>")
-vim.keymap.set("n", "<leader>gs", ":!smerge %<CR>")
+vim.keymap.set("n", "<leader>gs", ":silent !smerge %<CR>")
 
 -- beginning of line / end of line with C-e, C-a
 vim.keymap.set("n", "<C-e>", "$")
@@ -56,9 +56,9 @@ if vim.g.neovide then
 	vim.api.nvim_set_keymap('v', '<D-v>', '<C-R>+', { noremap = true, silent = true })
 
 	vim.keymap.set('n', '<D-s>', ':w<CR>') -- Save
-	vim.keymap.set('v', '<D-c>', '"+y') -- Copy
-	vim.keymap.set('n', '<D-v>', '"+P') -- Paste normal mode
-	vim.keymap.set('v', '<D-v>', '"+P') -- Paste visual mode
+	vim.keymap.set('v', '<D-c>', '"+y')  -- Copy
+	vim.keymap.set('n', '<D-v>', '"+P')  -- Paste normal mode
+	vim.keymap.set('v', '<D-v>', '"+P')  -- Paste visual mode
 	vim.keymap.set('c', '<D-v>', '<C-R>+') -- Paste command mode
 	vim.keymap.set('i', '<D-v>', '<ESC>l"+Pli') -- Paste insert mode
 

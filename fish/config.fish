@@ -31,11 +31,17 @@ set -gx GOPRIVATE github.com
 set -gx EDITOR (which nvim)
 set -gx NODE_OPTIONS --max-old-space-size=8192
 
-export CGO_LDFLAGS="-L/opt/homebrew/opt/openssl/lib"
-export CGO_CPPFLAGS="-I/opt/homebrew/opt/openssl/include"
+
+export CGO_CPPFLAGS="-I/opt/homebrew/opt/openssl/include -I/opt/homebrew/include/"
+export CGO_LDFLAGS="-L/opt/homebrew/opt/openssl/lib -L/opt/homebrew/lib/"
+
+
+# export CGO_LDFLAGS="-L/opt/homebrew/opt/openssl/lib"
+# export CGO_CPPFLAGS="-I/opt/homebrew/opt/openssl/include"
+# export CGO_CFLAGS="-I/opt/homebrew/include/"
+# export CGO_LDFLAGS="-L/opt/homebrew/lib/ -lolm"
 
 alias ibrew "arch -x86_64 /usr/local/bin/brew"
-alias neovide "neovide --multigrid"
 
 # gcloud
 # set -g -x "CLOUDSDK_PYTHON" "/usr/local/opt/python@3.8/libexec/bin/python"
@@ -48,4 +54,5 @@ set -xg KERL_BUILD_DOCS yes
 
 # The next line updates PATH for the Google Cloud SDK.
 # if [ -f '/Users/david/google-cloud-sdk/path.fish.inc' ]; . '/Users/david/google-cloud-sdk/path.fish.inc'; end
+
 

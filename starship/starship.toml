@@ -1,4 +1,6 @@
 [gcloud]
 disabled = true
 
-
+# elixir is too slow with asdf, so disabling it
+[elixir]
+disabled = true

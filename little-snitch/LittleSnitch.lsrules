@@ -72,6 +72,11 @@
     },
     {
       "action" : "allow",
+      "process" : "identifier.G7HH3F8CAK\/com.getdropbox.dropbox",
+      "remote-domains" : "dropbox.com"
+    },
+    {
+      "action" : "allow",
       "process" : "identifier.SY64MV22J9\/com.raycast.macos",
       "remote-domains" : "raycast.com"
     }

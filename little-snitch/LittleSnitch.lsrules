@@ -36,6 +36,17 @@
     },
     {
       "action" : "allow",
+      "direction" : "incoming",
+      "process" : "identifier.W5364U7YZB\/io.tailscale.ipn.macsys.network-extension",
+      "remote" : "any"
+    },
+    {
+      "action" : "allow",
+      "process" : "identifier.W5364U7YZB\/io.tailscale.ipn.macsys.network-extension",
+      "remote" : "any"
+    },
+    {
+      "action" : "allow",
       "process" : "identifier.APPLE\/com.apple.Safari",
       "remote" : "any"
     },

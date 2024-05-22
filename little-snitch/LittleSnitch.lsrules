@@ -22,6 +22,22 @@
       "action" : "allow",
       "process" : "identifier.KEYe838df72a52dbf6e6cbee716ec597e8df77c405ce6a100127b2b769f80f4032a\/io.tailscale.ipn.macos",
       "remote-domains" : "githubusercontent.com"
+    },
+    {
+      "action" : "allow",
+      "direction" : "incoming",
+      "process" : "identifier.W5364U7YZB\/io.tailscale.ipn.macsys.network-extension",
+      "remote" : "any"
+    },
+    {
+      "action" : "allow",
+      "process" : "identifier.W5364U7YZB\/io.tailscale.ipn.macsys.network-extension",
+      "remote" : "any"
+    },
+    {
+      "action" : "allow",
+      "process" : "identifier.APPLE\/com.apple.Safari",
+      "remote" : "any"
     }
   ]
 }

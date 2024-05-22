@@ -1,0 +1,27 @@
+{
+  "description" : "",
+  "name" : "David's Little Snitch Rules",
+  "rules" : [
+    {
+      "action" : "allow",
+      "direction" : "both",
+      "remote-addresses" : "100.64.0.0-100.127.255.255"
+    },
+    {
+      "action" : "allow",
+      "direction" : "incoming",
+      "process" : "identifier.KEYe838df72a52dbf6e6cbee716ec597e8df77c405ce6a100127b2b769f80f4032a\/io.tailscale.ipn.macos.network-extension",
+      "remote" : "any"
+    },
+    {
+      "action" : "allow",
+      "process" : "identifier.W5364U7YZB\/io.tailscale.ipn.macos.network-extension",
+      "remote" : "any"
+    },
+    {
+      "action" : "allow",
+      "process" : "identifier.KEYe838df72a52dbf6e6cbee716ec597e8df77c405ce6a100127b2b769f80f4032a\/io.tailscale.ipn.macos",
+      "remote-domains" : "githubusercontent.com"
+    }
+  ]
+}

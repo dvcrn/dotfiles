@@ -38,6 +38,32 @@
       "action" : "allow",
       "process" : "identifier.APPLE\/com.apple.Safari",
       "remote" : "any"
+    },
+    {
+      "action" : "allow",
+      "process" : "identifier.2BUA8C4S2C\/com.1password.1password",
+      "remote-domains" : "1password.com"
+    },
+    {
+      "action" : "allow",
+      "process" : "identifier.9BNSXJN65R\/com.docker.docker",
+      "remote-domains" : "docker.com"
+    },
+    {
+      "action" : "allow",
+      "process" : "identifier.G7HH3F8CAK\/com.getdropbox.dropbox.fileprovider",
+      "remote-domains" : "dropbox.com"
+    },
+    {
+      "action" : "allow",
+      "process" : "identifier.G7HH3F8CAK\/com.getdropbox.dropbox.fileprovider",
+      "remote-domains" : "dropboxapi.com"
+    },
+    {
+      "action" : "allow",
+      "process" : "identifier.SY64MV22J9\/com.raycast.macos",
+      "remote-domains" : "raycast.com"
     }
+
   ]
 }

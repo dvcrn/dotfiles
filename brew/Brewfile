@@ -7,6 +7,7 @@ brew "mas"
 
 # Languages
 brew "python"
+brew "pipx"
 brew "go"
 brew "rustup-init"
 brew "node"
@@ -17,10 +18,11 @@ brew "elixir"
 # brew "leiningen"
 
 # Dev tools, stuff I definitely want installed
-#cask "google-cloud-sdk"
+# cask "google-cloud-sdk"
 brew "openssl"
 brew "ffmpeg"
-cask "gpg-suite"
+cask "gpg-suite-no-mail"
+cask "free-gpgmail"
 brew "coreutils"
 brew "tmux"
 brew "bash"
@@ -50,12 +52,13 @@ brew "hugo"
 brew "fnm"
 brew "kubernetes-cli"
 brew "kustomize"
+brew "atuin"
 
 # Dev Apps
 # evaluating warp
 # cask "alacritty"
-# cask "kitty"
-cask "warp"
+cask "kitty"
+# cask "warp"
 cask "sublime-text"
 cask "sublime-merge"
 cask "dash"
@@ -65,6 +68,8 @@ cask "docker"
 cask "script-debugger"
 cask "proxyman"
 cask "wireshark"
+cask "angry-ip-scanner"
+mas "LanScan", id: 472226235
 
 # CLIs from services
 # brew "doctl"
@@ -73,7 +78,7 @@ cask "wireshark"
 
 # Browsers
 cask "firefox-developer-edition"
-cask "brave-browser"
+# cask "brave-browser"
 cask "arc"
 cask "orion"
 
@@ -168,6 +173,9 @@ mas "Actions", id: 1586435171
 cask "suspicious-package"
 mas "Mapper", id: 1589391989
 
+tap "macos-fuse-t/homebrew-cask"
+brew "fuse-t"
+brew "fuse-t-sshfs"
 
 # Undecided whether still needed
 # cask "beamer" # nowadays not using

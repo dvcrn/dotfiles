@@ -22,6 +22,10 @@ packages = [
     'typescript-language-server',
     'bash-language-server',
     'dockerfile-language-server-nodejs',
+
+    # CLI tools
+    'spoof',
+    'npm-check-updates',
 ]
 
 os.system('yarn global add %s' % ' '.join(packages))

@@ -42,7 +42,8 @@ local mod = {
 			"neovim/nvim-lspconfig",
 		},
 		"lukas-reineke/lsp-format.nvim",
-		"jose-elias-alvarez/null-ls.nvim"
+		"jose-elias-alvarez/null-ls.nvim",
+		"folke/trouble.nvim",
 	},
 	setup = { { "capabilities" }, function(capabilities)
 		require("mason").setup()
@@ -52,14 +53,21 @@ local mod = {
 			on_attach = on_attach,
 			sources = {
 				null_ls.builtins.code_actions.gitsigns,
+				-- null_ls.builtins.diagnostics.credo -- elixir
 			}
 		})
 
+		require("trouble").setup({
+		})
+
 		require("mason-lspconfig").setup({
-			ensure_installed = { "bashls", "docker_compose_language_service", "elixirls", "gopls", "lua_ls", "vimls" },
+			ensure_installed = { "bashls", "docker_compose_language_service", "elixirls", "gopls", "lua_ls",
+				"vimls" },
 		})
 
 
+		-- https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md for a list with all servers
+		-- or :help lspconfig-all
 		require("mason-lspconfig").setup_handlers({
 			["bashls"] = function()
 				require 'lspconfig'.bashls.setup({
@@ -99,7 +107,13 @@ local mod = {
 				require 'lspconfig'.elixirls.setup({
 					capabilities = capabilities,
 					on_attach = on_attach,
-					cmd = { vim.fn.expand("$HOME/src/elixir-ls-1.12-22.3/language_server.sh") },
+					cmd = { vim.fn.expand("$HOME/syncsrc/elixir-ls/language_server.sh") },
+				})
+			end,
+			["tsserver"] = function()
+				require 'lspconfig'.tsserver.setup({
+					capabilities = capabilities,
+					on_attach = on_attach
 				})
 			end
 		})

@@ -21,3 +21,5 @@ flycheck_*.el
 .envrc
 .stversions
 *.sync-conflict*
+
+.elixir_ls

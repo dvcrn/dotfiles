@@ -19,3 +19,4 @@ GO111MODULE=on go install github.com/josharian/impl@master
 GO111MODULE=on go install honnef.co/go/tools/cmd/keyify@master
 GO111MODULE=on go install github.com/fatih/motion@master
 GO111MODULE=on go install github.com/koron/iferr@master
+GO111MODULE=on go install mvdan.cc/gofumpt@latest

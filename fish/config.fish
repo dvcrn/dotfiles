@@ -55,4 +55,5 @@ set -xg KERL_BUILD_DOCS yes
 # The next line updates PATH for the Google Cloud SDK.
 # if [ -f '/Users/david/google-cloud-sdk/path.fish.inc' ]; . '/Users/david/google-cloud-sdk/path.fish.inc'; end
 
-
+# Created by `pipx` on 2024-05-10 04:59:27
+set PATH $PATH /Users/david/.local/bin

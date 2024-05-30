@@ -2,12 +2,6 @@ python-language-server[all]
 flake8
 pep8
 autoflake
-
-ipython
-
-json-rpc
-
 virtualenv
-yapf
-
 neovim
+argcomplete

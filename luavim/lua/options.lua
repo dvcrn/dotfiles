@@ -34,7 +34,7 @@ augroup END
 ]]
 
 if vim.g.neovide then
-	vim.o.guifont = "OperatorMonoSSmLig Nerd Font:h18"
+	vim.o.guifont = "OperatorMonoSSmLig Nerd Font:h20"
 	vim.g.neovide_refresh_rate = 60
 	vim.g.neovide_input_use_logo = 1
 end

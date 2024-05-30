@@ -52,5 +52,6 @@ nnoremap <space>sl :SplitSelectionIntoLines<CR>
 nnoremap ]q :SublimeLinterGotoError direction=next<CR>
 nnoremap [q :SublimeLinterGotoError direction=previous<CR>
 
-" Goto
-nnoremap <space>gr :GotoReference<CR>
+" Goto (does not need space)
+nnoremap gr :GotoReference<CR>
+nnoremap gd :LspSymbolDefinition<CR>

@@ -86,5 +86,18 @@ return require('packer').startup(function(use)
 		end
 	}
 
+	use({
+		'mikesmithgh/kitty-scrollback.nvim',
+		disable = false,
+		opt = true,
+		cmd = { 'KittyScrollbackGenerateKittens', 'KittyScrollbackCheckHealth' },
+		event = { 'User KittyScrollbackLaunch' },
+		-- tag = '*', -- latest stable version, may have breaking changes if major version changed
+		-- tag = 'v4.0.0', -- pin specific tag
+		config = function()
+			require('kitty-scrollback').setup()
+		end,
+	})
+
 	vim.cmd("colorscheme onedark")
 end)

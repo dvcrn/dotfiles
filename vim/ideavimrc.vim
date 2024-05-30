@@ -47,6 +47,10 @@ nnoremap <C-w>q :action Unsplit<CR>
 imap fd <esc>
 vno v <esc>
 
+" jump to next error
+nnoremap ]q :action GotoNextError<CR>
+nnoremap [q :action GotoPreviousError<CR>
+
 nnoremap <silent> <leader>/ :nohlsearch<CR>
 
 " project based keybindings

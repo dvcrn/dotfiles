@@ -36,7 +36,7 @@ brew tap Homebrew/bundle
 cd ~/.dotfiles/brew/ && brew bundle
 cd ~/.dotfiles/
 echo "---> Setting autoupdate"
-brew autoupdate start --upgrade
+brew autoupdate start
 echo "---> Brew done"
 
 # enable TouchID for sudo

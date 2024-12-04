@@ -3,6 +3,7 @@
 #
 abbr vim nvim
 abbr vi nvim
+abbr kssh kitten ssh
 
 # Git
 abbr g git
@@ -176,6 +177,36 @@ abbr gwx "git rm -r"
 abbr gwX "git rm -rf"
 
 abbr ff "git pull --ff-only"
+
+# network stuff
+abbr wifi sudo networksetup -setairportpower "Wi-Fi"
+abbr wifion sudo networksetup -setairportpower "Wi-Fi" on
+abbr wifioff sudo networksetup -setairportpower "Wi-Fi" off
+abbr renewlease sudo ipconfig set en0 DHCP
+abbr useip sudo networksetup -setmanualwithdhcprouter Wi-Fi
+abbr usedhcp sudo networksetup -setdhcp Wi-Fi
+abbr ifaddr ipconfig getifaddr en0
+abbr wifiinfo networksetup -getinfo Wi-Fi
+
+function tryspoof
+    if test (count $argv) -lt 2
+        echo "Usage: tryspoof <MAC_ADDRESS> <IP_ADDRESS>"
+        return 1
+    end
+
+    set m $argv[1]
+    set ip $argv[2]
+    echo "spoofing mac to $m, ip = $ip"
+
+    sudo networksetup -setairportpower "Wi-Fi" off; or echo "Failed to turn off Wi-Fi, but continuing..."
+
+    sudo /usr/local/bin/spoof set "$m" "en0"; or echo "Failed to spoof MAC address, but continuing..."
+
+    echo "setting IP to $ip"
+    sudo networksetup -setmanualwithdhcprouter "Wi-Fi" "$ip"; or echo "Failed to set IP address, but continuing..."
+
+    sudo networksetup -setairportpower "Wi-Fi" on; or echo "Failed to turn on Wi-Fi, but continuing..."
+end
 
 # # Function shortcuts
 # gcac() {

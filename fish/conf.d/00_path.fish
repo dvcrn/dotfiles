@@ -16,3 +16,4 @@ set -gx PATH /opt/homebrew/opt/libpq/bin $PATH
 if [ -f '/opt/homebrew/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.fish.inc' ]; . '/opt/homebrew/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.fish.inc'; end
 
 set -gx PATH /usr/local/bin/jetbrains $PATH
+fish_add_path /opt/homebrew/opt/ruby/bin

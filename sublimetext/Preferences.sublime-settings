@@ -1,6 +1,5 @@
 {
-	"binary_file_patterns":
-	[
+	"binary_file_patterns": [
 		"*.dds",
 		"*.eot",
 		"*.gif",
@@ -26,45 +25,46 @@
 	"draw_white_space": "selection",
 	"enable_language_service_for_javascript": false,
 	"enable_typescript_language_service": false,
-	"ensure_newline_at_eof_on_save": true,
-	"folder_exclude_patterns":
-	[
+	"ensure_newline_at_eof_on_save": false,
+	"folder_exclude_patterns": [
 		".golangci*",
 		".git",
 		".hg",
 		"CVS",
-		".svn"
+		".svn",
+		"deps",
+		"_build",
+		".elixir_ls",
+		".next",
+		".fleet"
 	],
 	"font_face": "Operator Mono SSm Lig",
-	"font_options":
-	[
-	],
+	"font_options": [],
 	"font_size": 20,
 	"gpu_window_buffer": true,
 	"highlight_line": true,
 	"highlight_modified_tabs": true,
 	"highlightedyank_duration": 200,
 	"highlightedyank_style": "outline",
-	"ignored_packages":
-	[
-		"Markdown",
-		"Six",
+	"ignored_packages": [
+		"Elixir",
+		"LSP-copilot",
+		"LSP-typescript",
 		"Tailwind Reorder",
 		"Vintage",
-		"Vintageous",
 	],
-	"neovintageous_build_version": 11100,
+	"neovintageous_build_version": 13200,
 	"scroll_past_end": true,
 	"show_encoding": true,
 	"show_full_path": true,
 	"show_line_endings": true,
 	"theme": "Default Dark.sublime-theme",
 	"translate_tabs_to_spaces": true,
-	"trim_trailing_white_space_on_save": true,
+	"trim_trailing_white_space_on_save": "all",
 	"typescript_auto_format": true,
 	"vintageous_reset_mode_when_switching_tabs": false,
 	"vintageous_use_ctrl_keys": true,
-	"vintageous_use_super_keys": null,
+	"vintageous_use_super_keys": false,
 	"vintageous_use_sys_clipboard": true,
 	"word_wrap": true,
 	"relative_line_numbers": true,

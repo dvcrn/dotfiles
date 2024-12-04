@@ -1,103 +1,14 @@
 {
-	"clients": {
-		"gopls": {
-			"enabled": true
-		},
-		"gopls-david": {
-			"command": ["gopls"],
-			"enabled": false,
-			"languageId": "go",
-			"scopes": ["source.go"],
-			"settings": {
-				"deepCompletion": false,
-				"fuzzyMatching": false,
-				"gopls": {
-					"deepCompletion": false,
-					"fuzzyMatching": false
-				}
-			},
-			"syntaxes": [
-				"Packages/Go/Go.sublime-syntax",
-				"Packages/GoSublime/syntax/GoSublime-Go-Recommended.sublime-syntax"
-			]
-		},
-		"pyls": {
-			"enabled": true,
-			"command": ["pyls"],
-			"languageId": "python",
-			"scopes": ["source.python"],
-			"syntaxes": [
-				"Packages/Python/Python.sublime-syntax",
-				"Packages/MagicPython/grammars/MagicPython.tmLanguage",
-				"Packages/Djaneiro/Syntaxes/Python Django.tmLanguage"
-			],
-			"settings": {
-				"pyls": {
-					"env": {
-						// Making Sublime's own libs available to the linters.
-						"PYTHONPATH": "/Users/d/Library/Python/3.7/lib/python/site-packages"
-					},
-					// Configuration is computed first from user configuration (in home directory),
-					// overridden by configuration passed in by the language client,
-					// and then overridden by configuration discovered in the workspace.
-					"configurationSources": [
-						"pycodestyle", // discovered in ~/.config/pycodestyle, setup.cfg, tox.ini and pycodestyle.cfg
-						"flake8" // discovered in ~/.config/flake8, setup.cfg, tox.ini and flake8.cfg
-					],
-					"plugins": {
-						"jedi": {
-							"extra_paths": [
-								// The directory where the pip installation package is located
-							]
-						},
-						"jedi_completion": {
-							"fuzzy": true // Enable fuzzy when requesting autocomplete
-						},
-						"pycodestyle": {
-							"enabled": true,
-							"exclude": [
-								// Exclude files or directories which match these patterns
-							],
-							"ignore": [
-								// Ignore errors and warnings
-								// "E501",  // Line too long (82 &gt; 79 characters)
-							]
-							// "maxLineLength": 80,  // Set maximum allowed line length
-						},
-						"pydocstyle": { "enabled": false },
-						"pyflakes": { "enabled": true },
-						"pylint": { "enabled": false },
-						"yapf": { "enabled": true },
-						// pyls' 3rd Party Plugins, Mypy type checking for Python 3, Must be installed via pip before enabling
-						"pyls_mypy": {
-							// Install with: pip install pyls-mypy
-							"enabled": false,
-							"live_mode": true
-						}
-					}
-				}
-			}
-		},
-		"ruby": {
-			"enabled": true
-		},
-		"sorbet": {
-			"enabled": false
-		},
-		"LSP-typescript": {
-			"enabled": true
-		}
-	},
-	"log_debug": false,
-	"log_payloads": false,
-	"log_server": false,
-	"log_stderr": false,
-	"auto_show_diagnostics_panel": false,
+	"clients": {},
+	"log_debug": true,
+	"show_diagnostics_panel_on_save": 0,
 	"lsp_format_on_save": true,
 	"lsp_code_actions_on_save": {
-		// "source.fixAll": true,
-		// "source.organizeImports": true,
+		"source.fixAll.go": true,
+		"source.organizeImports.go": true,
+		"source.organizeImports": true,
 		"source.fixAll.eslint": true,
+		// "source.organizeImports.ts": true,
 	},
 	// "show_diagnostics_count_in_view_status": false,
 	// "show_diagnostics_in_view_status": false,

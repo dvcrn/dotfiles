@@ -39,28 +39,28 @@ echo "---> Setting autoupdate"
 brew autoupdate start
 echo "---> Brew done"
 
-# enable TouchID for sudo
-echo "---> enabling TouchID for sudo"
-if ! sudo grep -q "pam_tid.so" /etc/pam.d/sudo; then
-    sudo cp /etc/pam.d/sudo /etc/pam.d/sudo.bak
-    printf "auth optional /opt/homebrew/lib/pam/pam_reattach.so\nauth sufficient pam_tid.so\n$(sudo cat /etc/pam.d/sudo)" | sudo tee /etc/pam.d/sudo
-fi
-echo "---> touchid for sudo done"
+## enable TouchID for sudo
+#echo "---> enabling TouchID for sudo"
+#if ! sudo grep -q "pam_tid.so" /etc/pam.d/sudo; then
+#    sudo cp /etc/pam.d/sudo /etc/pam.d/sudo.bak
+#    printf "auth optional /opt/homebrew/lib/pam/pam_reattach.so\nauth sufficient pam_tid.so\n$(sudo cat /etc/pam.d/sudo)" | sudo tee /etc/pam.d/sudo
+#fi
+#echo "---> touchid for sudo done"
 
 echo "---> Post brew"
-$(brew --prefix)/opt/fzf/install
+$(brew --prefix)/opt/fzf/install --all
 # install rust + cargo
 rustup-init -y
 echo "---> Post brew done"
 
 echo ""
 echo "---> Python / pip"
-pip3 install -r ~/.dotfiles/pip/packages.txt
+pipx install -r ~/.dotfiles/pip/packages.txt
 echo "---> Python / pip done"
 
 echo ""
 echo "---> Go "
-bash ~/.dotfiles/go/install.sh
+bash ~/.dotfiles/go/intall.sh
 echo "---> Go done"
 
 echo ""
@@ -86,6 +86,7 @@ echo ""
 echo "---> tmux"
 ln -svf ~/.dotfiles/tmux/.tmux.conf ~/.tmux.conf
 tic -x ~/.dotfiles/tmux/tmux.terminfo
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 echo "---> tmux done"
 
 echo ""
@@ -108,16 +109,22 @@ echo "---> hammerspoon done"
 echo ""
 echo "---> vim"
 mkdir -p ~/.config/nvim/
-ln -svf ~/.dotfiles/vim/init.vim ~/.config/nvim/init.vim
-ln -svf ~/.dotfiles/vim/ginit.vim ~/.config/nvim/ginit.vim
-ln -svf ~/.dotfiles/vim/UltiSnips ~/.config/nvim/UltiSnips
-ln -svf ~/.dotfiles/vim/init.vim ~/.vimrc
-ln -svf ~/.dotfiles/vim/init.vim ~/.gvimrc
+# ln -svf ~/.dotfiles/vim/init.vim ~/.config/nvim/init.vim
+# ln -svf ~/.dotfiles/vim/ginit.vim ~/.config/nvim/ginit.vim
+# ln -svf ~/.dotfiles/vim/UltiSnips ~/.config/nvim/UltiSnips
+# ln -svf ~/.dotfiles/vim/init.vim ~/.vimrc
+# ln -svf ~/.dotfiles/vim/init.vim ~/.gvimrc
 ln -svf ~/.dotfiles/vim/ideavimrc.vim ~/.ideavimrc
-ln -svf ~/.dotfiles/vim/xvimrc.vim ~/.xvimrc
+# ln -svf ~/.dotfiles/vim/xvimrc.vim ~/.xvimrc
 echo "---> vim plug"
 curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+
+# lua vim
+ln -svf ~/.dotfiles/luavim/init.lua ~/.config/nvim/init.lua
+ln -svf ~/.dotfiles/luavim/lua ~/.config/nvim/lua
+git clone --depth 1 https://github.com/wbthomason/packer.nvim\
+ ~/.local/share/nvim/site/pack/packer/start/packer.nvim
 echo "---> vim done"
 
 # echo ""
@@ -132,7 +139,7 @@ echo "---> vim done"
 echo ""
 echo "---> unisync"
 mkdir -p ~/.config/unisync
-~/.dotfiles/unisync/unisync.yaml ~/.config/unisync/unisync.yaml
+ln -svfh ~/.dotfiles/unisync/unisync.yaml ~/.config/unisync/unisync.yaml
 echo "---> unisync done"
 
 echo ""

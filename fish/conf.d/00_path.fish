@@ -8,9 +8,13 @@ set -gx PATH ~/go/bin $PATH
 
 # etc
 set -gx PATH $PATH ~/.cargo/bin
-set -gx PATH $PATH (yarn global bin)
+if type -q yarn
+    set -gx PATH $PATH (yarn global bin)
+end
+
 set -gx PATH $PATH ~/src/solana/bin
 
+set -gx PATH "/Users/david/Library/Application Support/JetBrains/Toolbox/scripts" $PATH
 set -gx PATH /opt/homebrew/opt/libpq/bin $PATH
 
 if [ -f '/opt/homebrew/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.fish.inc' ]; . '/opt/homebrew/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.fish.inc'; end

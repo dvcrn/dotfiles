@@ -12,6 +12,11 @@ sudo spctl --master-disable
 # sudo scutil --set LocalHostName Davebook
 # sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string Davebook
 
+# Menubar spacing
+# defaults -currentHost delete -globalDomain NSStatusItemSpacing
+defaults -currentHost write -globalDomain NSStatusItemSpacing -int 10
+defaults -currentHost write -globalDomain NSStatusItemSelectionPadding -int 8
+killall SystemUIServer
 
 ###############################################################################
 # Safari & WebKit                                                             #

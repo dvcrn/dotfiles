@@ -1,0 +1,63 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run `zed: open default settings` from the
+// command palette (cmd-shift-p / ctrl-shift-p)
+{
+  "assistant": {
+    "default_model": {
+      "provider": "copilot_chat",
+      "model": "claude-3-5-sonnet"
+    },
+    "version": "2"
+  },
+  "base_keymap": "SublimeText",
+  "relative_line_numbers": true,
+  "vim_mode": true,
+  "ui_font_size": 16,
+  "buffer_font_size": 16,
+  "buffer_font_family": "Operator Mono SSm Lig",
+  "buffer_font_weight": 400,
+  "theme": {
+    "mode": "dark",
+    "light": "One Light",
+    "dark": "One Dark Pro"
+  },
+  "telemetry": {
+    "diagnostics": false,
+    "metrics": false
+  },
+  "vim": {
+    "toggle_relative_line_numbers": true,
+    "use_system_clipboard": "always",
+    "use_multiline_find": true,
+    "use_smartcase_find": true,
+    "highlight_on_yank_duration": 200,
+    "custom_digraphs": {}
+  },
+  "chat_panel": {
+    // Whether to show the chat panel button in the status bar.
+    "button": "never",
+    // Where to the chat panel. Can be 'left' or 'right'.
+    "dock": "right",
+    // Default width of the chat panel.
+    "default_width": 240
+  },
+  "auto_install_extensions": {
+    "html": true,
+    "dockerfile": true,
+    "docker-compose": true,
+    "one-dark-pro": true,
+    "swift": true,
+    "toml": true,
+    "make": true
+  },
+  "languages": {
+    "Markdown": {
+      "format_on_save": "on"
+    }
+  }
+}

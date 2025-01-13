@@ -1,7 +1,0 @@
-python-language-server[all]
-flake8
-pep8
-autoflake
-virtualenv
-neovim
-argcomplete

@@ -18,10 +18,10 @@ echo "---> Git done"
 
 echo ""
 echo "---> ssh"
-if test -f "~/.dotfiles/ssh/config"; then
-	mv ~/.dotfiles/ssh/config ~/.dotfiles/ssh/config.bak
+if test -f "~/.ssh/config"; then
+	mv ~/.ssh/config ~/.ssh/config.bak
 fi
-ln -s ~/.dotfiles/ssh/config ~/.ssh/config
+ln -svf ~/.dotfiles/ssh/config ~/.ssh/config
 echo "---> ssh done"
 
 # Starship
@@ -39,29 +39,21 @@ echo "---> Setting autoupdate"
 brew autoupdate start
 echo "---> Brew done"
 
-## enable TouchID for sudo
-#echo "---> enabling TouchID for sudo"
-#if ! sudo grep -q "pam_tid.so" /etc/pam.d/sudo; then
-#    sudo cp /etc/pam.d/sudo /etc/pam.d/sudo.bak
-#    printf "auth optional /opt/homebrew/lib/pam/pam_reattach.so\nauth sufficient pam_tid.so\n$(sudo cat /etc/pam.d/sudo)" | sudo tee /etc/pam.d/sudo
-#fi
-#echo "---> touchid for sudo done"
-
-echo "---> Post brew"
-$(brew --prefix)/opt/fzf/install --all
-# install rust + cargo
-rustup-init -y
-echo "---> Post brew done"
+# echo "---> Post brew"
+# $(brew --prefix)/opt/fzf/install --all
+# # install rust + cargo
+# rustup-init -y
+# echo "---> Post brew done"
 
 echo ""
 echo "---> Python / pip"
-pipx install -r ~/.dotfiles/pip/packages.txt
+python3 ~/.dotfiles/python/install.py
 echo "---> Python / pip done"
 
 echo ""
-echo "---> Go "
-bash ~/.dotfiles/go/intall.sh
-echo "---> Go done"
+echo "---> Golang "
+python3 ~/.dotfiles/go/install.py
+echo "---> Golang done"
 
 echo ""
 echo "---> fish"
@@ -76,10 +68,9 @@ chsh -s "$(which fish)"
 echo "---> fish done"
 
 echo ""
-echo "---> Yarn"
-npm i -g yarn
-ln -svf ~/.dotfiles/yarn/.yarnrc ~/.yarnrc
-python ~/.dotfiles/yarn/install.py
+echo "---> Node + NPM"
+fnm install --latest
+python3 ~/.dotfiles/node/install.py
 echo "---> Yarn done"
 
 echo ""
@@ -90,57 +81,32 @@ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 echo "---> tmux done"
 
 echo ""
-echo "---> Alacritty"
-mkdir -p ~/.config/alacritty/
-ln -svf ~/.dotfiles/alacritty/alacritty.yml ~/.config/alacritty/alacritty.yml
-echo "---> Alacritty done"
-
-echo ""
-echo "---> Kitty"
-mkdir -p ~/.config/kitty/
-ln -svf ~/.dotfiles/kitty/kitty.conf ~/.config/kitty/kitty.conf
-echo "---> Kitty done"
-
-echo ""
-echo "---> Hammerspoon"
-ln -svf ~/.dotfiles/hammerspoon ~/.hammerspoon
-echo "---> hammerspoon done"
+echo "---> Ghostty"
+mkdir -p ~/.config/ghostty/
+ln -svf ~/.dotfiles/ghostty/config ~/.config/ghostty/config
+echo "---> Ghostty done"
 
 echo ""
 echo "---> vim"
 mkdir -p ~/.config/nvim/
-# ln -svf ~/.dotfiles/vim/init.vim ~/.config/nvim/init.vim
-# ln -svf ~/.dotfiles/vim/ginit.vim ~/.config/nvim/ginit.vim
-# ln -svf ~/.dotfiles/vim/UltiSnips ~/.config/nvim/UltiSnips
-# ln -svf ~/.dotfiles/vim/init.vim ~/.vimrc
-# ln -svf ~/.dotfiles/vim/init.vim ~/.gvimrc
 ln -svf ~/.dotfiles/vim/ideavimrc.vim ~/.ideavimrc
-# ln -svf ~/.dotfiles/vim/xvimrc.vim ~/.xvimrc
-echo "---> vim plug"
-curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
-    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
 # lua vim
 ln -svf ~/.dotfiles/luavim/init.lua ~/.config/nvim/init.lua
 ln -svf ~/.dotfiles/luavim/lua ~/.config/nvim/lua
-git clone --depth 1 https://github.com/wbthomason/packer.nvim\
- ~/.local/share/nvim/site/pack/packer/start/packer.nvim
+# mkdir -p ~/.local/share/nvim/site/pack/packer/start/
+# git clone --depth 1 git@github.com:wbthomason/packer.nvim.git ~/.local/share/nvim/site/pack/packer/start/packer.nvim
 echo "---> vim done"
 
-# echo ""
-# echo "---> emacs"
-# ln -svfh ~/.dotfiles/emacs ~/.emacs.d
-
-# echo ""
-# echo "---> spacemacs"
-# ln -svfh ~/.dotfiles/spacemacs/.spacemacs ~/.spacemacs
-# echo "---> spacemacs done"
+echo ""
+echo "---> zed"
+ln -svf ~/.dotfiles/zed ~/.config/zed
+echo "---> zed done"
 
 echo ""
-echo "---> unisync"
-mkdir -p ~/.config/unisync
-ln -svfh ~/.dotfiles/unisync/unisync.yaml ~/.config/unisync/unisync.yaml
-echo "---> unisync done"
+echo "---> helix"
+ln -svf ~/.dotfiles/helix ~/.config/helix
+echo "---> helix done"
 
 echo ""
 echo "---> sublime text"

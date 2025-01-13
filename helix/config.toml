@@ -1,0 +1,7 @@
+theme = "adawaita-dark"
+
+[editor]
+bufferline = "always"
+color-modes = true
+cursorline = true
+line-number = "relative"

@@ -1,256 +1,104 @@
+# my own stuff
+tap "dvcrn/formulas"
+brew "dvcrn/formulas/wework"
+brew "mas"
+
 tap "autozimu/formulas"
-tap "cirruslabs/cli"
 tap "fabianishere/personal"
-tap "homebrew/autoupdate"
 tap "homebrew/bundle"
 tap "homebrew/cask-versions"
 tap "homebrew/services"
-tap "hudochenkov/sshpass"
-tap "macos-fuse-t/cask"
-tap "majd/repo"
 tap "mas-cli/tap"
-tap "playcover/playcover"
-tap "rajiv/fastmate"
-tap "stripe/stripe-cli"
-brew "readline"
-# brew "python@3.12"
-brew "python"
-brew "aircrack-ng"
-brew "ansible"
-brew "aria2"
-brew "coreutils"
+
+# dev tools
 brew "asdf"
-brew "atuin"
-brew "bash"
-brew "cdrtools"
-brew "ruby", link: true
-brew "cocoapods"
-brew "direnv"
-brew "envchain"
-brew "elixir"
-# brew "exiftool"
-# brew "fastlane"
-# brew "fd"
-brew "ffmpeg"
-brew "fish"
-brew "flyctl"
-brew "fnm"
-brew "fzf"
 brew "gh"
+brew "fnm"
 brew "git"
-# brew "git-lfs"
 brew "gnu-sed"
 brew "gnupg"
 brew "go"
-# brew "go@1.18"
-# brew "go@1.19"
-# brew "pkg-config"
-# brew "gpgme"
+brew "python3"
 brew "grep"
-# brew "handbrake", link: false
-brew "helm"
-# brew "hugo"
-brew "imagemagick"
-brew "ios-deploy"
-brew "ipfs", link: false
-brew "jq"
-# brew "jython"
 brew "kubernetes-cli"
-brew "lego"
-brew "libolm"
-brew "libpq"
-brew "lua"
-brew "luarocks"
-brew "mas"
-# brew "mosquitto"
-brew "neovim", args: ["HEAD"]
-brew "neovide", args: ["HEAD"], link: false
-brew "nmap"
-brew "node"
-cask "ollama"
-brew "ollama"
 brew "pipx"
-brew "poppler"
-brew "protobuf"
-brew "protoc-gen-go"
-brew "protoc-gen-go-grpc"
-# brew "python@3.11"
-# brew "qemu"
-brew "rclone"
-brew "reattach-to-user-namespace"
-# brew "ripgrep"
-brew "rsync"
-brew "rustup"
-# brew "samba"
-# brew "socat"
-# brew "sqlcipher"
-brew "starship"
-brew "swiftformat"
-# brew "swtpm"
 brew "the_silver_searcher"
-brew "tmux"
-brew "unison"
-# brew "usbutils"
-# brew "virt-manager"
-brew "watch"
-brew "wget"
-brew "wireguard-tools"
-brew "yt-dlp"
+brew "jq"
+brew "coreutils"
+brew "rclone"
+brew "rsync"
+# brew "ffmpeg"
+ 
+## terminal 
+brew "readline"
+brew "fish"
+brew "starship"
 brew "zoxide"
-# brew "zsync"
-brew "autozimu/formulas/unison-fsmonitor"
-brew "cirruslabs/cli/tart"
-brew "fabianishere/personal/pam_reattach"
-# brew "hudochenkov/sshpass/sshpass"
-# brew "stripe/stripe-cli/stripe"
+brew "direnv"
+brew "atuin"
+brew "tmux"
+brew "aria2"
+brew "neovim"
+brew "helix"
+
+# misc utils
+brew "reattach-to-user-namespace"
 cask "1password-cli"
-# cask "adguard"
-cask "airbuddy"
-cask "android-platform-tools"
-cask "android-studio"
-cask "angry-ip-scanner"
-cask "appcleaner"
-cask "arc"
-cask "arq"
-cask "asset-catalog-tinkerer"
-cask "bartender"
-# cask "beamer"
-# cask "black-light-pro"
-# cask "brave-browser"
-# cask "burp-suite"
-cask "burp-suite-professional"
-# cask "copilot-for-xcode"
-cask "cryptomator"
-# cask "cyberduck"
-cask "dash"
-cask "discord"
-cask "docker"
-cask "downie"
-cask "dropbox@beta"
-cask "element"
-cask "element@nightly"
-# cask "enpass"
-cask "fastmate"
-cask "firefox@developer-edition"
-cask "free-gpgmail"
-cask "fuse-t"
-cask "fuse-t-sshfs"
-cask "ghidra"
-cask "google-chrome"
-cask "google-cloud-sdk"
-cask "gpg-suite-no-mail"
-cask "grammarly-desktop"
-cask "hammerspoon"
-# cask "handbrake"
-cask "hazel"
-cask "iina"
-cask "imazing"
-cask "ipatool"
-cask "ipfs"
-cask "jetbrains-toolbox"
-# cask "keybase"
-cask "keyboard-maestro"
-cask "kitty"
-cask "launchcontrol"
-cask "ledger-live"
-cask "little-snitch"
-cask "macupdater"
-cask "microsoft-edge"
-# cask "mountain-duck"
-cask "neovide"
-cask "notion-calendar"
-# cask "nova"
-cask "obsidian"
-# cask "ollamac"
-cask "openvpn-connect"
-# cask "paragon-extfs"
-cask "parsec"
-cask "playcover-community"
-cask "postico"
-cask "postman"
-cask "proxyman"
+brew "fabianishere/personal/pam_reattach"
+
+# dev applications
+mas "Xcode", id: 497799835
+cask "intellij-idea"
 cask "raycast"
-cask "rekordbox"
-cask "remarkable"
-cask "script-debugger"
+cask "little-snitch"
 cask "sublime-merge"
 cask "sublime-text"
-cask "suspicious-package"
-cask "swiftformat-for-xcode"
-cask "temurin"
-cask "textsniper"
-cask "transmission"
-# cask "transmit"
-cask "typora"
 cask "visual-studio-code"
-cask "visual-studio-code@insiders"
+cask "ghostty"
+cask "zed"
+
+# desktop stuff
+cask "aldente"
+cask "docker"
+cask "dropbox"
+cask "arq"
+cask "firefox"
+cask "free-gpgmail"
+cask "gpg-suite-no-mail"
+cask "appcleaner"
+cask "launchcontrol"
+cask "obsidian"
+cask "macupdater"
+cask "proxyman"
+cask "transmission"
 cask "vivid"
-cask "vmware-fusion"
-cask "warp"
-cask "wireshark"
-cask "wkhtmltopdf"
-cask "zoom"
-mas "1Keyboard", id: 766939888
-mas "1Password for Safari", id: 1569813296
-mas "Actions", id: 1586435171
-mas "Affinity Designer 2", id: 1616831348
-mas "Affinity Photo 2", id: 1616822987
-# mas "Amazing AI", id: 1660147028
-# mas "Amphetamine", id: 937984704
+
+cask "claude"
+cask "chatgpt"
+mas "Perplexity", id: 6714467650
+
+cask "textsniper"
 mas "Anybox", id: 1593408455
 mas "Apple Configurator", id: 1037126344
-mas "Coin Stats", id: 1247849330
+mas "TestFlight", id: 899247664
 mas "ColorSlurp", id: 1287239339
-mas "com.kagimacOS.Kagi-Search", id: 1622835804
-# mas "Command X", id: 6448461551
-mas "Consent-O-Matic", id: 1606897889
-mas "Cookie-Editor", id: 6446215341
-mas "DaisyDisk", id: 411643860
-mas "Darkroom", id: 953286746
-# mas "Dato", id: 1470584107
-mas "Day One", id: 1055511498
-# mas "Deliveries", id: 290986013
 mas "Discovery", id: 1381004916
 mas "Drafts", id: 1435957248
-mas "Fantastical", id: 975937182
-mas "Flighty", id: 1358823008
 mas "Gifski", id: 1351639930
-mas "Goodnotes", id: 1444383602
-mas "HEIC Converter", id: 1294126402
-# mas "Hush", id: 1544743900
-mas "iA Writer", id: 775737590
-mas "Jiffy", id: 1502527999
-# mas "Jira", id: 1475897096
-mas "Keynote", id: 409183694
-mas "Ledger Extension", id: 1627727841
-mas "LINE", id: 539883307
-# mas "Mapper", id: 1589391989
-mas "MusicBox", id: 1614730313
-# mas "NextDNS", id: 1464122853
-mas "NordVPN", id: 905953485
-mas "Numbers", id: 409203825
-mas "Okta Verify", id: 490179405
-mas "Pages", id: 409201541
-mas "Parcel", id: 639968404
-mas "Photomator", id: 1444636541
-# mas "PiPifier", id: 1160374471
-mas "Pixelmator Pro", id: 1289583905
-mas "Playlisty for Apple Music", id: 1459275972
-mas "Pure Paste", id: 1611378436
-mas "Reeder", id: 1529448980
-mas "Refined GitHub", id: 1519867270
-mas "reMarkable", id: 1276493162
+mas "Gifox", id: 1461845568
+mas "The Unarchiver", id: 425424353
+mas "WireGuard", id: 1451685025
+
+## small apps to make my life easier
 mas "Shareful", id: 1522267256
 mas "Shortery", id: 1594183810
-mas "SimplyJSON", id: 1495193038
-mas "Slack", id: 803453959
-mas "StopTheMadness Pro", id: 6471380298
-mas "Telegram", id: 747648890
-mas "TestFlight", id: 899247664
-mas "The Unarchiver", id: 425424353
-mas "Things", id: 904280696
-mas "TripIt", id: 1475712010
+mas "Actions", id: 1586435171
+mas "Online Check", id: 6504709660
+
+# browser
+mas "1Password for Safari", id: 1569813296
 mas "Velja", id: 1607635845
-mas "Wipr", id: 1320666476
-mas "WireGuard", id: 1451685025
-mas "Xcode", id: 497799835
+mas "StopTheMadness Pro", id: 6471380298
+mas "Wipr 2", id: 1662217862
+mas "com.kagimacOS.Kagi-Search", id: 1622835804
+

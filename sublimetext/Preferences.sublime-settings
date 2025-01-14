@@ -48,7 +48,6 @@
 	"highlightedyank_style": "outline",
 	"ignored_packages": [
 		"Elixir",
-		"LSP-copilot",
 		"LSP-typescript",
 		"Tailwind Reorder",
 		"Vintage",
@@ -68,4 +67,5 @@
 	"vintageous_use_sys_clipboard": true,
 	"word_wrap": true,
 	"relative_line_numbers": true,
+	"index_files": true,
 }

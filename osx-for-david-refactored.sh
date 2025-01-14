@@ -43,11 +43,14 @@ defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
 defaults write NSGlobalDomain KeyRepeat -int 1
 defaults write NSGlobalDomain InitialKeyRepeat -int 20
 
+# disable spell check
+defaults write -g NSAllowContinuousSpellChecking -bool false
+defaults write -g WebAutomaticSpellingCorrectionEnabled -bool false
+ 
 # Set the timezone; see `sudo systemsetup -listtimezones` for other values
 sudo systemsetup -settimezone "Asia/Tokyo" > /dev/null
 # set first day of the week to 'Monday', like normal people
 defaults write -globalDomain AppleLocale -string "en_JP@calendar=iso8601";
-
 
 # Finder: show hidden files by default
 defaults write com.apple.finder AppleShowAllFiles -bool true

@@ -1,7 +1,12 @@
-theme = "adawaita-dark"
+theme = "catppuccin_mocha"
 
 [editor]
 bufferline = "always"
 color-modes = true
 cursorline = true
 line-number = "relative"
+soft-wrap.enable = true
+smart-tab.enable = true
+mouse = true
+
+

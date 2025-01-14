@@ -8,6 +8,7 @@ go_packages = [
     "mvdan.cc/gofumpt@latest",  # Stricter gofmt
     "github.com/golangci/golangci-lint/cmd/golangci-lint@latest",  # Meta linter
     "github.com/nametake/golangci-lint-langserver@latest",
+    "golang.org/x/tools/cmd/goimports@latest",
     # Optional tools
     "github.com/fatih/gomodifytags@latest",
     "github.com/josharian/impl@latest",

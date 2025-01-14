@@ -7,6 +7,7 @@ go_packages = [
     "github.com/go-delve/delve/cmd/dlv@latest",  # Debugger
     "mvdan.cc/gofumpt@latest",  # Stricter gofmt
     "github.com/golangci/golangci-lint/cmd/golangci-lint@latest",  # Meta linter
+    "github.com/nametake/golangci-lint-langserver@latest",
     # Optional tools
     "github.com/fatih/gomodifytags@latest",
     "github.com/josharian/impl@latest",

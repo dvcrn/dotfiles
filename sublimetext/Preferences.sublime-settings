@@ -68,4 +68,5 @@
 	"word_wrap": true,
 	"relative_line_numbers": true,
 	"index_files": true,
+	"goto_anything_file_preview": true,
 }

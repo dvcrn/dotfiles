@@ -1,0 +1,35 @@
+[[language]]
+name = "go"
+scope = "source.go"
+injection-regex = "go"
+file-types = ["go"]
+roots = ["go.work", "go.mod"]
+auto-format = true
+comment-token = "//"
+block-comment-tokens = { start = "/*", end = "*/" }
+language-servers = [ "gopls", "golangci-lint-lsp" ]
+# TODO: gopls needs utf-8 offsets?
+indent = { tab-width = 4, unit = "\t" }
+formatter = { command = "goimports" }
+
+
+[language-server.gopls]
+command = "gopls"
+
+[language-server.gopls.config]
+"formatting.gofumpt" = true
+
+[language-server.gopls.settings]
+# Automatically organize imports on save
+"gopls.formatting.goimports" = true
+
+
+#[[language]]
+#name = "go"
+#auto-format = true
+#language-servers = ["gopls", "golangci-lint-langserver"]
+
+#[language-server.gopls]
+#command = "gopls"
+##config = { "gofumpt" = true, "local" = "goimports", "semanticTokens" = true, "staticcheck" = true, "verboseOutput" = true, usePlaceholders = true, completeUnimported = true, hints = { "assignVariableType" = true, "compositeLiteralFields" = true, "compositeLiteralTypes" = true, "constantValues" = true, "functionTypeParameters" = true, "parameterNames" = true, "rangeVariableTypes" = true } }
+

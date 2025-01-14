@@ -34,10 +34,6 @@
 	required = true
 	clean = git media clean %f
 	smudge = git media smudge %f
-[filter "lfs"]
-	clean = git lfs clean %f
-	smudge = git lfs smudge %f
-	required = true
 [credential]
 	helper = store
 [difftool "sourcetree"]
@@ -48,8 +44,8 @@
 	trustExitCode = true
 [commit]
 	gpgsign = true
-[url "ssh://git@github.com/"]
-	insteadOf = https://github.com/
+#[url "ssh://git@github.com/"]
+	#insteadOf = https://github.com/
 [gpg]
 	program = /usr/local/bin/gpg
 [init]

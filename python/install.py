@@ -7,7 +7,6 @@ packages = [
     "black",
     "ruff",
     "virtualenv",
-    "git+https://github.com/dvcrn/chainenv.git",
     "git+https://github.com/dvcrn/anthropic-cli",
 ]
 

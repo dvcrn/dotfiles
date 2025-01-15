@@ -1,6 +1,7 @@
 # my own stuff
 tap "dvcrn/formulas"
 brew "dvcrn/formulas/wework"
+brew "dvcrn/formulas/chainenv"
 brew "mas"
 
 tap "autozimu/formulas"
@@ -28,8 +29,8 @@ brew "coreutils"
 brew "rclone"
 brew "rsync"
 # brew "ffmpeg"
- 
-## terminal 
+
+## terminal
 brew "readline"
 brew "fish"
 brew "starship"
@@ -101,4 +102,3 @@ mas "Velja", id: 1607635845
 mas "StopTheMadness Pro", id: 6471380298
 mas "Wipr 2", id: 1662217862
 mas "com.kagimacOS.Kagi-Search", id: 1622835804
-

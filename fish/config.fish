@@ -57,3 +57,9 @@ set -xg KERL_BUILD_DOCS yes
 
 # Created by `pipx` on 2024-05-10 04:59:27
 set PATH $PATH /Users/david/.local/bin
+
+# Added by LM Studio CLI (lms)
+set -gx PATH $PATH /Users/david/.lmstudio/bin
+
+# Added by Windsurf
+fish_add_path /Users/david/.codeium/windsurf/bin

@@ -1,3 +1,3 @@
 if type -q chainenv
-    chainenv get-env WEWORK_PASSWORD,WEWORK_USERNAME --fish | source
+    chainenv get-env WEWORK_PASSWORD,WEWORK_USERNAME,OPENROUTER_API_KEY,OPENAI_API_KEY,PERPLEXITY_API_KEY,ANTHROPIC_API_KEY --fish | source
 end

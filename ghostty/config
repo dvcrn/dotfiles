@@ -4,3 +4,4 @@ font-family-bold = Operator Mono SSm Lig Bold
 font-family-italic = Operator Mono SSm Lig Medium Italic
 font-family-bold-italic = Operator Mono SSm Lig Bold Italic
 font-size = 18
+scrollback-limit = 100000000

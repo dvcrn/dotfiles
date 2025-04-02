@@ -34,7 +34,7 @@ abbr gcP "git cherry-pick --no-commit"
 abbr gcr "git revert"
 abbr gcR "git reset 'HEAD^'"
 abbr gcs "git show"
-abbr gcl "git-commit-lost"
+abbr gcl git-commit-lost
 abbr gsv "git show HEAD --pretty=fuller --show-signature"
 
 abbr gcf "git commit --amend --reuse-message HEAD"
@@ -111,13 +111,14 @@ abbr gpA "git push --all; and git push --tags"
 abbr gpt "git push --tags"
 
 function gpc
-  set branch (git rev-parse --abbrev-ref HEAD)
-  git push -u origin $branch
+    set branch (git rev-parse --abbrev-ref HEAD)
+    git push -u origin $branch
 end
 
 function gpp
-  set branch (git rev-parse --abbrev-ref HEAD)
-  git pull origin $branch; git push origin $branch
+    set branch (git rev-parse --abbrev-ref HEAD)
+    git pull origin $branch
+    git push origin $branch
 end
 
 # Rebase (r)
@@ -136,18 +137,18 @@ abbr gRm "git remote rename"
 abbr gRu "git remote update"
 abbr gRp "git remote prune"
 abbr gRs "git remote show"
-abbr gRb "git-hub-browse"
+abbr gRb git-hub-browse
 
 # Stash (s)
 abbr gs "git stash"
 abbr gsa "git stash apply"
 abbr gsx "git stash drop"
-abbr gsX "git-stash-clear-interactive"
+abbr gsX git-stash-clear-interactive
 abbr gsl "git stash list"
-abbr gsL "git-stash-dropped"
+abbr gsL git-stash-dropped
 abbr gsd "git stash show --patch --stat"
 abbr gsp "git stash pop"
-abbr gsr "git-stash-recover"
+abbr gsr git-stash-recover
 abbr gss "git stash save --include-untracked"
 abbr gsS "git stash save --patch --no-keep-index"
 abbr gsw "git stash save --include-untracked --keep-index"
@@ -159,10 +160,10 @@ abbr gSf "git submodule foreach"
 abbr gSi "git submodule init"
 abbr gSI "git submodule update --init --recursive"
 abbr gSl "git submodule status"
-abbr gSm "git-submodule-move"
+abbr gSm git-submodule-move
 abbr gSs "git submodule sync"
 abbr gSu "git submodule foreach git pull origin master"
-abbr gSx "git-submodule-remove"
+abbr gSx git-submodule-remove
 
 # Working Copy (w)
 abbr gws "git status --ignore-submodules=all --short"
@@ -179,9 +180,9 @@ abbr gwX "git rm -rf"
 abbr ff "git pull --ff-only"
 
 # network stuff
-abbr wifi sudo networksetup -setairportpower "Wi-Fi"
-abbr wifion sudo networksetup -setairportpower "Wi-Fi" on
-abbr wifioff sudo networksetup -setairportpower "Wi-Fi" off
+abbr wifi sudo networksetup -setairportpower Wi-Fi
+abbr wifion sudo networksetup -setairportpower Wi-Fi on
+abbr wifioff sudo networksetup -setairportpower Wi-Fi off
 abbr renewlease sudo ipconfig set en0 DHCP
 abbr useip sudo networksetup -setmanualwithdhcprouter Wi-Fi
 abbr usedhcp sudo networksetup -setdhcp Wi-Fi
@@ -198,14 +199,14 @@ function tryspoof
     set ip $argv[2]
     echo "spoofing mac to $m, ip = $ip"
 
-    sudo networksetup -setairportpower "Wi-Fi" off; or echo "Failed to turn off Wi-Fi, but continuing..."
+    sudo networksetup -setairportpower Wi-Fi off; or echo "Failed to turn off Wi-Fi, but continuing..."
 
-    sudo /usr/local/bin/spoof set "$m" "en0"; or echo "Failed to spoof MAC address, but continuing..."
+    sudo /usr/local/bin/spoof set "$m" en0; or echo "Failed to spoof MAC address, but continuing..."
 
     echo "setting IP to $ip"
-    sudo networksetup -setmanualwithdhcprouter "Wi-Fi" "$ip"; or echo "Failed to set IP address, but continuing..."
+    sudo networksetup -setmanualwithdhcprouter Wi-Fi "$ip"; or echo "Failed to set IP address, but continuing..."
 
-    sudo networksetup -setairportpower "Wi-Fi" on; or echo "Failed to turn on Wi-Fi, but continuing..."
+    sudo networksetup -setairportpower Wi-Fi on; or echo "Failed to turn on Wi-Fi, but continuing..."
 end
 
 # # Function shortcuts

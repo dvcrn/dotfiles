@@ -47,7 +47,7 @@
   weak_model_name: github_copilot/gpt-4.1-mini
   use_repo_map: true
   use_temperature: false
-  editor_model_name: gpt-4.5
+  editor_model_name: gpt-4.5-preview
   editor_edit_format: editor-diff
   system_prompt_prefix: "Formatting re-enabled. "
   extra_params:

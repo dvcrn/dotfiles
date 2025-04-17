@@ -14,3 +14,7 @@ npm-debug.log
 emacs/projectile-bookmarks.eld
 node_modules
 .aider*
+zed/conversations
+zed/embeddings
+zed/development_credentials
+zed/settings_backup.json

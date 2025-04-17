@@ -75,10 +75,26 @@ openai-api-base: https://gateway.ai.cloudflare.com/v1/02c07a2514d9a25f58c78a180b
 ## Add a model alias (can be used multiple times)
 #alias: xxx
 ## Specify multiple values like this:
-#alias:
-#  - xxx
-#  - yyy
-#  - zzz
+alias:
+  - gpt-3.5-turbo:github_copilot/gpt-3.5-turbo
+  - gpt-4:github_copilot/gpt-4
+  - gpt-4.1:github_copilot/gpt-4.1
+  - gpt-4.5-preview:github_copilot/gpt-4.5-preview
+  - gpt-4.5:github_copilot/gpt-4.5-preview
+  - gpt-4o:github_copilot/gpt-4o
+  - gpt-4o-mini:github_copilot/gpt-4o-mini
+  - o1:github_copilot/o1
+  - o4-mini:github_copilot/o4-mini
+  - o3-mini:github_copilot/o3-mini
+  - o3:github_copilot/o3
+  - claude-3.5-sonnet:github_copilot/claude-3.5-sonnet
+  - claude-3.7-sonnet:github_copilot/claude-3.7-sonnet
+  - claude-3.7-sonnet-thought:github_copilot/claude-3.7-sonnet-thought
+  # Alias without -thought suffix, points to the non-thought version for simplicity
+  - claude-3.7-thought:github_copilot/claude-3.7-sonnet
+  - gemini-2.0-flash-001:github_copilot/gemini-2.0-flash-001
+  - gemini-2.0-flash:github_copilot/gemini-2.0-flash-001
+  - gemini-2.5-pro:github_copilot/gemini-2.5-pro
 
 ## Set the reasoning_effort API parameter (default: not set)
 #reasoning-effort: xxx

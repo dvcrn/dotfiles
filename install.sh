@@ -70,6 +70,9 @@ echo "---> fish done"
 echo ""
 echo "---> Node + NPM"
 fnm install --latest
+sudo ln -sfv ~/.local/share/fnm/aliases/default/bin/npm /usr/local/bin/npm
+sudo ln -sfv ~/.local/share/fnm/aliases/default/bin/node /usr/local/bin/node
+sudo ln -sfv ~/.local/share/fnm/aliases/default/bin/npx /usr/local/bin/npx
 python3 ~/.dotfiles/node/install.py
 echo "---> Yarn done"
 

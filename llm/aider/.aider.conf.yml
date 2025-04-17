@@ -121,7 +121,7 @@ alias:
 #weak-model: xxx
 
 ## Specify the model to use for editor tasks (default depends on --model)
-editor-model: github_copilot/claude-3.5-sonnet
+editor-model: github_copilot/gemini-2.5-pro
 
 ## Specify the edit format for the editor model (default: depends on editor model)
 #editor-edit-format: xxx

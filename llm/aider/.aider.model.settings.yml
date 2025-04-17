@@ -42,7 +42,7 @@
       editor-version: Neovim/0.9.0
       Copilot-Integration-Id: vscode-chat
 
-- name: github_copilot/gpt-4.5
+- name: github_copilot/gpt-4.5-preview
   edit_format: diff
   weak_model_name: github_copilot/gpt-4.1-mini
   use_repo_map: true

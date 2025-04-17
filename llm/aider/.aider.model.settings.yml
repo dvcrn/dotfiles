@@ -44,8 +44,7 @@
 
 - name: github_copilot/gpt-4.5
   edit_format: diff
-  # Using gpt-4o-mini as the weak model, as gpt-4.1-mini doesn't appear in the provided list
-  weak_model_name: github_copilot/gpt-4o-mini
+  weak_model_name: github_copilot/gpt-4.1-mini
   use_repo_map: true
   use_temperature: false
   editor_model_name: gpt-4.5

@@ -18,7 +18,7 @@
 # Main model:
 
 ## Specify the model to use for the main chat
-model: github_copilot/claude-3.7-sonnet
+model: github_copilot/gemini-2.5-pro
 
 ########################
 # API Keys and settings:

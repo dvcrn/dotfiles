@@ -19,6 +19,7 @@ brew "git"
 brew "gnu-sed"
 brew "gnupg"
 brew "go"
+brew "rustup"
 brew "python3"
 brew "grep"
 brew "kubernetes-cli"
@@ -49,6 +50,8 @@ brew "fabianishere/personal/pam_reattach"
 
 # dev applications
 mas "Xcode", id: 497799835
+cask "swiftformat-for-xcode"
+brew "swiftformat"
 cask "intellij-idea"
 cask "raycast"
 cask "little-snitch"

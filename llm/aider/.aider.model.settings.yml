@@ -32,16 +32,20 @@
   editor_edit_format: editor-diff
   system_prompt_prefix: "Formatting re-enabled. "
   extra_params:
-    max_tokens: 32768
-    max_input_tokens: 128000
-    max_output_tokens: 32768
+    # max_tokens usually refers to max_output_tokens for aider
+    max_tokens: 16384
+    # Based on JSON: "max_prompt_tokens": 64000
+    max_input_tokens: 64000
+    # Based on JSON: "max_output_tokens": 16384
+    max_output_tokens: 16384
     extra_headers:
       editor-version: Neovim/0.9.0
       Copilot-Integration-Id: vscode-chat
 
 - name: github_copilot/gpt-4.5
   edit_format: diff
-  weak_model_name: github_copilot/gpt-4.1-mini
+  # Using gpt-4o-mini as the weak model, as gpt-4.1-mini doesn't appear in the provided list
+  weak_model_name: github_copilot/gpt-4o-mini
   use_repo_map: true
   use_temperature: false
   editor_model_name: gpt-4.5

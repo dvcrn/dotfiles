@@ -86,7 +86,8 @@
       editor-version: Neovim/0.9.0
       Copilot-Integration-Id: vscode-chat
 
-- name: github_copilot/o1-ga
+# Changed name from o1-ga to o1 based on JSON ID
+- name: github_copilot/o1
   edit_format: diff
   weak_model_name: github_copilot/gpt-4o-mini
   use_repo_map: true
@@ -199,7 +200,8 @@
       editor-version: Neovim/0.9.0
       Copilot-Integration-Id: vscode-chat
 
-- name: github_copilot/gemini-2.0-flash
+# Added -001 suffix based on JSON ID
+- name: github_copilot/gemini-2.0-flash-001
   edit_format: diff
   use_repo_map: true
   extra_params:

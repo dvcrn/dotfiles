@@ -1,0 +1,10 @@
+{
+  "JSON Dump object": {
+    "prefix": "jpri",
+    "body": [
+      "b, _ := json.MarshalIndent($0, \"\", \"  \")",
+      "fmt.Println(string(b))"
+    ],
+    "description": "Print formatted JSON of data"
+  }
+}

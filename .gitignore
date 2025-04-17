@@ -13,3 +13,4 @@ npm-debug.log
 *~
 emacs/projectile-bookmarks.eld
 node_modules
+.aider*

@@ -124,6 +124,12 @@ ln -svfh ~/.dotfiles/sublimemerge/ ~/Library/Application\ Support/Sublime\ Merge
 echo "---> sublime text done"
 
 echo ""
+echo "---> aider (llm config)"
+ln -svf ~/.dotfiles/llm/aider/.aider.conf.yml ~/.aider.conf.yml
+ln -svf ~/.dotfiles/llm/aider/.aider.model.settings.yml ~/.aider.model.settings.yml
+echo "---> aider (llm config) done"
+
+echo ""
 echo "---> term"
 tic -x ~/.dotfiles/term/xterm-256color-italic.terminfo
 echo "---> term done"

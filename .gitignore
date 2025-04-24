@@ -19,3 +19,4 @@ zed/embeddings
 zed/development_credentials
 zed/settings_backup.json
 llm/roo/tasks
+llm/roo/cache

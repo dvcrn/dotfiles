@@ -12,6 +12,7 @@ tap "homebrew/services"
 tap "mas-cli/tap"
 
 # dev tools
+brew "just"
 brew "asdf"
 brew "gh"
 brew "fnm"

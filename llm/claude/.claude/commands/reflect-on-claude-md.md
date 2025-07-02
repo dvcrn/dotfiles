@@ -1,0 +1,1 @@
+Reflect on our @CLAUDE.md rules, was there anything in this conversation that I told you that we should add as a memo? If I have not given any feedback or corrected anything you do, it's fine to skip this unless you determine there has been a significant new insight.

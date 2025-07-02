@@ -20,3 +20,10 @@ zed/development_credentials
 zed/settings_backup.json
 llm/roo/tasks
 llm/roo/cache
+
+# claude
+.claude.backup*
+llm/claude/.claude/projects/
+llm/claude/.claude/todos/
+llm/claude/.claude/statsig
+llm/backup

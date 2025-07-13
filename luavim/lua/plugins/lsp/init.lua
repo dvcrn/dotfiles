@@ -1,16 +1,6 @@
 local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
 
 local on_attach = function(client, bufnr)
-	if client.supports_method("textDocument/formatting") then
-		vim.api.nvim_clear_autocmds({ group = augroup, buffer = bufnr })
-		vim.api.nvim_create_autocmd("BufWritePre", {
-			group = augroup,
-			buffer = bufnr,
-			callback = function()
-				vim.lsp.buf.format({ bufnr = bufnr })
-			end,
-		})
-	end
 	-- Mappings.
 	-- See `:help vim.lsp.*` for documentation on any of the below functions
 	local bufopts = { noremap = true, silent = true, buffer = bufnr }
@@ -21,9 +11,6 @@ local on_attach = function(client, bufnr)
 	vim.keymap.set('n', '<C-k>', vim.lsp.buf.signature_help, bufopts)
 	vim.keymap.set('n', '<space>wa', vim.lsp.buf.add_workspace_folder, bufopts)
 	vim.keymap.set('n', '<space>wr', vim.lsp.buf.remove_workspace_folder, bufopts)
-	-- vim.keymap.set('n', '<space>wl', function()
-	-- 	print(vim.inspect(vim.lsp.buf.list_workspace_folders()))
-	-- end, bufopts)
 	vim.keymap.set('n', '<space>D', vim.lsp.buf.type_definition, bufopts)
 	vim.keymap.set('n', '<space>rn', vim.lsp.buf.rename, bufopts)
 	vim.keymap.set('n', '<space>ca', vim.lsp.buf.code_action, bufopts)
@@ -33,91 +20,223 @@ local on_attach = function(client, bufnr)
 	vim.keymap.set('n', ',e', vim.lsp.buf.code_action, bufopts)
 end
 
-
-local mod = {
-	plugins = {
-		{
-			"williamboman/mason.nvim",
-			"williamboman/mason-lspconfig.nvim",
-			"neovim/nvim-lspconfig",
-		},
-		"lukas-reineke/lsp-format.nvim",
-		"jose-elias-alvarez/null-ls.nvim",
-		"folke/trouble.nvim",
+return {
+	-- Mason
+	{
+		"williamboman/mason.nvim",
+		build = ":MasonUpdate",
+		config = function()
+			require("mason").setup()
+		end,
 	},
-	setup = { { "capabilities" }, function(capabilities)
-		require("mason").setup()
 
-		local null_ls = require("null-ls")
-		null_ls.setup({
-			on_attach = on_attach,
-			sources = {
-				null_ls.builtins.code_actions.gitsigns,
-				-- null_ls.builtins.diagnostics.credo -- elixir
+	-- Mason LSP config
+	{
+		"williamboman/mason-lspconfig.nvim",
+		dependencies = { 
+			"williamboman/mason.nvim",
+			"neovim/nvim-lspconfig",
+			"hrsh7th/cmp-nvim-lsp",
+		},
+		config = function()
+			-- Setup capabilities for nvim-cmp
+			local capabilities = require('cmp_nvim_lsp').default_capabilities()
+			local lspconfig = require('lspconfig')
+
+			require("mason-lspconfig").setup({
+				-- Auto-install LSPs when opening files
+				automatic_installation = true,
+				
+				-- Optional: ensure these specific servers are always installed
+				ensure_installed = {
+					"lua_ls",
+					"bashls", 
+					"gopls",
+					"tsserver",
+				},
+			})
+			
+			-- Auto-configure all Mason-installed servers
+			vim.api.nvim_create_autocmd("User", {
+				pattern = "MasonLspInstall",
+				callback = function(event)
+					local server_name = event.data.name
+					-- Default setup for all servers
+					lspconfig[server_name].setup({
+						capabilities = capabilities,
+						on_attach = on_attach,
+					})
+				end,
+			})
+			
+			-- Setup servers that are already installed
+			local mason_lspconfig = require("mason-lspconfig")
+			mason_lspconfig.get_installed_servers(function(servers)
+				for _, server_name in ipairs(servers) do
+					if server_name == "lua_ls" then
+						lspconfig.lua_ls.setup({
+							capabilities = capabilities,
+							on_attach = on_attach,
+							settings = {
+								Lua = {
+									runtime = {
+										version = 'LuaJIT',
+									},
+									diagnostics = {
+										globals = { 'vim' },
+									},
+									workspace = {
+										library = vim.api.nvim_get_runtime_file("", true),
+										checkThirdParty = false,
+									},
+									telemetry = {
+										enable = false,
+									},
+								},
+							},
+						})
+					elseif server_name == "elixirls" then
+						lspconfig.elixirls.setup({
+							capabilities = capabilities,
+							on_attach = on_attach,
+							cmd = { vim.fn.expand("$HOME/syncsrc/elixir-ls/language_server.sh") },
+						})
+					else
+						lspconfig[server_name].setup({
+							capabilities = capabilities,
+							on_attach = on_attach,
+						})
+					end
+				end
+			end)
+		end,
+	},
+
+	-- Mason Tool Installer for comprehensive tool management
+	{
+		"WhoIsSethDaniel/mason-tool-installer.nvim",
+		dependencies = { "williamboman/mason.nvim" },
+		config = function()
+			require("mason-tool-installer").setup({
+				ensure_installed = {
+					-- LSPs
+					"lua-language-server",
+					"bash-language-server",
+					"gopls",
+					"typescript-language-server",
+					"pyright",
+					"rust-analyzer",
+					"elixir-ls",
+					"dockerfile-language-server",
+					"yaml-language-server",
+					"json-lsp",
+					
+					-- Formatters  
+					"stylua",
+					"prettier",
+					"gofmt",
+					"goimports",
+					"black",
+					"isort",
+					"shfmt",
+					
+					-- Linters
+					"eslint_d",
+					"shellcheck",
+					"golangci-lint",
+					"ruff",
+					"yamllint",
+				},
+				
+				-- Auto-update tools
+				auto_update = false,
+				
+				-- Run installer on startup
+				run_on_start = true,
+				
+				-- Debounce installation/update events
+				start_delay = 3000, -- milliseconds
+			})
+		end,
+	},
+
+	-- Formatting
+	{
+		"stevearc/conform.nvim",
+		event = { "BufReadPre", "BufNewFile" },
+		config = function()
+			local conform = require("conform")
+
+			conform.setup({
+				formatters_by_ft = {
+					lua = { "stylua" },
+					python = { "isort", "black" },
+					javascript = { "prettier" },
+					typescript = { "prettier" },
+					javascriptreact = { "prettier" },
+					typescriptreact = { "prettier" },
+					json = { "prettier" },
+					yaml = { "prettier" },
+					markdown = { "prettier" },
+					html = { "prettier" },
+					css = { "prettier" },
+					go = { "gofmt", "goimports" },
+					sh = { "shfmt" },
+					bash = { "shfmt" },
+					-- Use LSP formatting for other filetypes
+					["_"] = { "trim_whitespace" },
+				},
+				format_on_save = {
+					lsp_fallback = true,
+					async = false,
+					timeout_ms = 500,
+				},
+			})
+
+			vim.keymap.set({ "n", "v" }, "<leader>f", function()
+				conform.format({
+					lsp_fallback = true,
+					async = false,
+					timeout_ms = 500,
+				})
+			end, { desc = "Format file or range (in visual mode)" })
+		end,
+	},
+
+	-- Linting
+	{
+		"mfussenegger/nvim-lint",
+		event = { "BufReadPre", "BufNewFile" },
+		config = function()
+			local lint = require("lint")
+
+			lint.linters_by_ft = {
+				javascript = { "eslint_d" },
+				typescript = { "eslint_d" },
+				javascriptreact = { "eslint_d" },
+				typescriptreact = { "eslint_d" },
+				python = { "ruff" },
+				go = { "golangcilint" },
+				sh = { "shellcheck" },
+				bash = { "shellcheck" },
+				yaml = { "yamllint" },
 			}
-		})
 
-		require("trouble").setup({
-		})
+			local lint_augroup = vim.api.nvim_create_augroup("lint", { clear = true })
 
-		require("mason-lspconfig").setup({
-			ensure_installed = { "bashls", "docker_compose_language_service", "elixirls", "gopls", "lua_ls",
-				"vimls" },
-		})
+			vim.api.nvim_create_autocmd({ "BufEnter", "BufWritePost", "InsertLeave" }, {
+				group = lint_augroup,
+				callback = function()
+					lint.try_lint()
+				end,
+			})
+		end,
+	},
 
-
-		-- https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md for a list with all servers
-		-- or :help lspconfig-all
-		require("mason-lspconfig").setup_handlers({
-			["bashls"] = function()
-				require 'lspconfig'.bashls.setup({
-					capabilities = capabilities,
-					on_attach = on_attach,
-				})
-			end,
-			["gopls"] = function()
-				require 'lspconfig'.gopls.setup({
-					capabilities = capabilities,
-					on_attach = on_attach,
-				})
-			end,
-			["lua_ls"] = function()
-				require 'lspconfig'.lua_ls.setup({
-					on_attach = on_attach,
-					capabilities = capabilities,
-					settings = {
-						Lua = {
-							runtime = {
-								version = 'LuaJIT',
-							},
-							diagnostics = {
-								globals = { 'vim' },
-							},
-							workspace = {
-								library = vim.api.nvim_get_runtime_file("", true),
-							},
-							telemetry = {
-								enable = false,
-							},
-						},
-					},
-				})
-			end,
-			["elixirls"] = function()
-				require 'lspconfig'.elixirls.setup({
-					capabilities = capabilities,
-					on_attach = on_attach,
-					cmd = { vim.fn.expand("$HOME/syncsrc/elixir-ls/language_server.sh") },
-				})
-			end,
-			["tsserver"] = function()
-				require 'lspconfig'.tsserver.setup({
-					capabilities = capabilities,
-					on_attach = on_attach
-				})
-			end
-		})
-	end }
+	-- Trouble
+	{
+		"folke/trouble.nvim",
+		dependencies = { "nvim-tree/nvim-web-devicons" },
+		opts = {},
+	},
 }
-
-return mod;

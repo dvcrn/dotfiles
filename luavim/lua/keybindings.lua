@@ -67,6 +67,14 @@ vim.keymap.set("n", "<leader>bx", ":bd<CR>")
 vim.keymap.set("n", "<leader>bn", ":bnext<CR>")
 vim.keymap.set("n", "<leader>bp", ":bprevious<CR>")
 
+-- Lazy.nvim plugin management
+vim.keymap.set("n", "<leader>_s", ":Lazy sync<CR>", { desc = "Sync plugins" })
+vim.keymap.set("n", "<leader>_u", ":Lazy update<CR>", { desc = "Update plugins" })
+vim.keymap.set("n", "<leader>_i", ":Lazy install<CR>", { desc = "Install plugins" })
+vim.keymap.set("n", "<leader>_l", ":Lazy<CR>", { desc = "Open Lazy UI" })
+vim.keymap.set("n", "<leader>_c", ":Lazy clean<CR>", { desc = "Clean unused plugins" })
+vim.keymap.set("n", "<leader>_p", ":Lazy profile<CR>", { desc = "Profile plugin load times" })
+
 if vim.g.neovide then
 	vim.g.neovide_input_use_logo = 1
 

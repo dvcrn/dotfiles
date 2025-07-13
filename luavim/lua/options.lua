@@ -1,5 +1,8 @@
 vim.g.mapleader = " "
 
+-- Temporarily suppress deprecation warnings until plugins update
+vim.deprecate = function() return function() end end
+
 local set = vim.opt
 
 set.showcmd = true -- show current cmd

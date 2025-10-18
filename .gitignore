@@ -14,6 +14,8 @@ npm-debug.log
 emacs/projectile-bookmarks.eld
 node_modules
 .aider*
+.crush/
+.claude/settings.local.json
 zed/conversations
 zed/embeddings
 zed/development_credentials

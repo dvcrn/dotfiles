@@ -55,6 +55,7 @@ require("lazy").setup({
 	{ import = "plugins.git" },
 	{ import = "plugins.statusline" },
 	{ import = "plugins.bufferline" },
+	{ import = "plugins.ai" },
 }, {
 	-- Lazy.nvim options
 	ui = {

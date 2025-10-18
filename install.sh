@@ -39,21 +39,15 @@ echo "---> Setting autoupdate"
 brew autoupdate start
 echo "---> Brew done"
 
-# echo "---> Post brew"
-# $(brew --prefix)/opt/fzf/install --all
-# # install rust + cargo
-# rustup-init -y
-# echo "---> Post brew done"
+echo "---> mise (languages)"
+mise i node elixir go erlang rust python
+mise use -g node elixir go erlang rust python
+eval "$(mise activate zsh)"
 
-echo ""
-echo "---> Python / pip"
-python3 ~/.dotfiles/python/install.py
-echo "---> Python / pip done"
+echo "----> Install bun"
+mise use -g bun@latest
+mise use -g uv
 
-echo ""
-echo "---> Golang "
-python3 ~/.dotfiles/go/install.py
-echo "---> Golang done"
 
 echo ""
 echo "---> fish"
@@ -68,15 +62,6 @@ chsh -s "$(which fish)"
 echo "---> fish done"
 
 echo ""
-echo "---> Node + NPM"
-fnm install --latest
-sudo ln -sfv ~/.local/share/fnm/aliases/default/bin/npm /usr/local/bin/npm
-sudo ln -sfv ~/.local/share/fnm/aliases/default/bin/node /usr/local/bin/node
-sudo ln -sfv ~/.local/share/fnm/aliases/default/bin/npx /usr/local/bin/npx
-python3 ~/.dotfiles/node/install.py
-echo "---> Yarn done"
-
-echo ""
 echo "---> tmux"
 ln -svf ~/.dotfiles/tmux/.tmux.conf ~/.tmux.conf
 tic -x ~/.dotfiles/tmux/tmux.terminfo
@@ -88,11 +73,6 @@ echo "---> Ghostty"
 mkdir -p ~/.config/ghostty/
 ln -svf ~/.dotfiles/ghostty/config ~/.config/ghostty/config
 echo "---> Ghostty done"
-
-echo ""
-echo "---> vim"
-mkdir -p ~/.config/nvim/
-ln -svf ~/.dotfiles/vim/ideavimrc.vim ~/.ideavimrc
 
 # lua vim
 ln -svf ~/.dotfiles/luavim/init.lua ~/.config/nvim/init.lua
@@ -124,10 +104,44 @@ ln -svfh ~/.dotfiles/sublimemerge/ ~/Library/Application\ Support/Sublime\ Merge
 echo "---> sublime text done"
 
 echo ""
-echo "---> aider (llm config)"
-ln -svf ~/.dotfiles/llm/aider/.aider.conf.yml ~/.aider.conf.yml
-ln -svf ~/.dotfiles/llm/aider/.aider.model.settings.yml ~/.aider.model.settings.yml
-echo "---> aider (llm config) done"
+echo "---> Claude CLI"
+ln -svf ~/.dotfiles/llm/claude/.claude ~/.claude
+echo "---> Claude CLI done"
+
+# echo ""
+# echo "---> LLM configs (VSCode integrations)"
+
+# CLINE_SETTINGS_SRC="$HOME/.dotfiles/llm/cline"
+# ROO_SETTINGS_SRC="$HOME/.dotfiles/llm/roo"
+
+# # --- Standard VS Code ---
+# VSCODE_STD_BASE="$HOME/Library/Application Support/Code/User/globalStorage"
+# CLAUDE_STD_TARGET="$VSCODE_STD_BASE/saoudrizwan.claude-dev/settings"
+# ROO_STD_TARGET="$VSCODE_STD_BASE/rooveterinaryinc.roo-cline/settings"
+
+# if [ -d "$HOME/Library/Application Support/Code" ]; then
+#   echo "Processing Standard VS Code settings..."
+#   mkdir -p "$(dirname "$CLAUDE_STD_TARGET")"
+#   mkdir -p "$(dirname "$ROO_STD_TARGET")"
+
+#   if [ -e "$CLAUDE_STD_TARGET" ] || [ -L "$CLAUDE_STD_TARGET" ]; then
+#     echo "Backing up existing standard Claude settings..."
+#     rm -rf "$CLAUDE_STD_TARGET.bak"
+#     mv "$CLAUDE_STD_TARGET" "$CLAUDE_STD_TARGET.bak"
+#   fi
+#   ln -svf "$CLINE_SETTINGS_SRC" "$CLAUDE_STD_TARGET"
+
+#   if [ -e "$ROO_STD_TARGET" ] || [ -L "$ROO_STD_TARGET" ]; then
+#     echo "Backing up existing standard Roo settings..."
+#     rm -rf "$ROO_STD_TARGET.bak"
+#     mv "$ROO_STD_TARGET" "$ROO_STD_TARGET.bak"
+#   fi
+#   ln -svf "$ROO_SETTINGS_SRC" "$ROO_STD_TARGET"
+# else
+#   echo "Standard VS Code directory not found, skipping."
+# fi
+
+echo "---> LLM configs done"
 
 echo ""
 echo "---> term"

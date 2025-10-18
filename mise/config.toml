@@ -1,0 +1,19 @@
+[tools]
+bun = "latest"
+elixir = "latest"
+erlang = "latest"
+go = "latest"
+node = "24"
+"npm:@anthropic-ai/claude-code" = "latest"
+"npm:@charmland/crush" = "latest"
+"npm:@google/gemini-cli" = "latest"
+"npm:@openai/codex" = "latest"
+"npm:opencode-ai" = "latest"
+python = "latest"
+rust = "latest"
+uv = "latest"
+
+[settings]
+
+[settings.npm]
+bun = true

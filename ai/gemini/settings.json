@@ -1,0 +1,64 @@
+{
+  "general": {
+    "checkpointing": {
+      "enabled": true
+    }
+  },
+  "context": {
+    "fileName": "GEMINI.md"
+  },
+  "security": {
+    "folderTrust": {
+      "featureEnabled": true
+    },
+    "auth": {
+      "selectedType": "oauth-personal"
+    }
+  },
+  "ide": {
+    "hasSeenNudge": true,
+    "enabled": true
+  },
+  "ui": {
+    "showLineNumbers": true,
+    "theme": "Default"
+  },
+  "mcpServers": {
+    "git": {
+      "command": "uvx",
+      "args": [
+        "mcp-server-git"
+      ]
+    },
+    "microfn": {
+      "command": "npx",
+      "args": [
+        "mcp-remote",
+        "https://mcp.microfn.dev/mcp"
+      ],
+      "type": "stdio",
+      "env": {}
+    },
+    "mcpnest": {
+      "command": "npx",
+      "args": [
+        "mcp-remote",
+        "https://mcp.mcpnest.dev/mcp"
+      ],
+      "type": "stdio",
+      "env": {}
+    }
+  },
+  "telemetry": {
+    "enabled": false,
+    "target": "local",
+    "otlpEndpoint": "http://localhost:16686",
+    "logPrompts": false
+  },
+  "privacy": {
+    "usageStatisticsEnabled": false
+  },
+  "importProcessor": {
+    "enabled": false
+  }
+}

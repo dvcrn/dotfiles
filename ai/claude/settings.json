@@ -1,0 +1,63 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-settings.json",
+  "env": {
+    "CLAUDE_CODE_ENABLE_TELEMETRY": "0"
+  },
+  "includeCoAuthoredBy": false,
+  "permissions": {
+    "allow": [
+      "Bash(npm run lint)",
+      "Bash(npm run test:*)",
+      "Bash(npm install:*)",
+      "Bash(npm test:*)",
+      "Bash(bun test:*)",
+      "Bash(bun run test:*)",
+      "Bash(find:*)",
+      "Bash(grep:*)",
+      "Bash(ls:*)",
+      "Bash(npm run build:*)",
+      "Bash(npm run format:*)",
+      "Bash(mkdir:*)",
+      "Bash(rg:*)",
+      "Bash(chainenv set:*)",
+      "Bash(chainenv get:*)",
+      "Bash(chainenv copy:*)",
+      "Bash(gh issue view:*)",
+      "Bash(gh pr create:*)",
+      "Bash(just test:*)",
+      "Bash(go doc:*)",
+      "Bash(go get:*)",
+      "Bash(go build:*)",
+      "mcp__subagent__check_subagent_status",
+      "mcp__perplexity-ask__perplexity_ask",
+      "Bash(base64:*)",
+      "Bash(echo:*)"
+    ],
+    "deny": [
+      "Bash(git add .)",
+      "Bash(git add -A)",
+      "Bash(git add -p)"
+    ]
+  },
+  "hooks": {
+    "UserPromptSubmit": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "~/.dotfiles/llm/claude/hooks/you_are_not_right.sh"
+          }
+        ]
+      }
+    ]
+  },
+  "statusLine": {
+    "type": "command",
+    "command": "input=$(cat); current_dir=$(echo \"$input\" | jq -r '.workspace.current_dir'); model=$(echo \"$input\" | jq -r '.model.display_name'); git_branch=$(cd \"$current_dir\" && git branch --show-current 2>/dev/null || echo ''); if [ -n \"$git_branch\" ]; then printf \"%s on %s [%s]\" \"$(basename \"$current_dir\")\" \"$git_branch\" \"$model\"; else printf \"%s [%s]\" \"$(basename \"$current_dir\")\" \"$model\"; fi"
+  },
+  "alwaysThinkingEnabled": true,
+  "feedbackSurveyState": {
+    "lastShownTime": 1754070472312
+  }
+}

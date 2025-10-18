@@ -10,7 +10,13 @@
 - Never make assumptions of some env var or config existing. ALWAYS do a web search, first with your built in tools, then with perplexity
 
 ### Build Systems
-- Use `just` instead of `make` or other runners. Create a `justfile` if it doesn't exist yet
+- Use `mise` instead of `make` or other runners. Create a `mise.toml` if it doesn't exist yet
+- Example mise tasks in `mise.toml`:
+  ```toml
+  [tasks.build]
+  run = "go build -o ./bin/copilot-proxy ./cmd/copilot-api-proxy"
+  description = "Build the application binary"
+  ```
 
 ### Search Tools
 - Use `rg` (ripgrep) instead of `grep`
@@ -24,6 +30,12 @@
 - NEVER use `git add .` or `git add -A`. ALWAYS use `git status` and commit what needs to be committed.
 - Whenever we're done with a task (multi-step, etc), ask me whether we should do a git commit
 - **Always prefer MCP git tools** when available (e.g., `git_commit`, `git_status`, `git_diff`, `git_add`) instead of command-line `git` commands for better integration
+- **Fallback**: Use command-line `git` commands via the `terminal` tool when MCP tools are not available
+
+Always prefer creating git commits with `git_commit` (not `git status`)
+Always prefer the status with `git_status` (not `git status`)
+Always prefer the diff with `git_diff` (not `git diff`)
+Always prefer to add files with `git_add` (not `git add`)
 
 ### Commit Message Format
 
@@ -82,38 +94,70 @@ WIP
 ### Working with Node/JavaScript
 
 #### Package Management
-- ALWAYS use `na` instead of `npm`, `bun` or `pnpm`. It's a wrapper that will automatically pick the right package manager.
-  - Install: `ni webpack` or `na install webpack`
-  - Install with -D: `ni @types/node -D` or `na install @types/node -D`
-  - Run something: `nr` == `npm/pnpm/bun run` == `na run`
-  - Uninstall: `nun webpack` or `na uninstall webpack`
-- Do not put `na` `ni` or similar into any config files, those tools are only for us on this machine. The config and script files should reflect the actual package manager of the project.
+- ALWAYS use `bun` unless the repository has a specific package manager configured (check for `package-lock.json`, `pnpm-lock.yaml`, or `yarn.lock`)
+  - Install: `bun add webpack`
+  - Install with -D: `bun add -D @types/node`
+  - Run something: `bun run <script>`
+  - Uninstall: `bun remove webpack`
+- If the repo has existing lock files for other package managers, respect that choice and use the appropriate manager (`npm`, `pnpm`, or `yarn`)
 - Never edit `package.json` on your own, always use the package manager to add or remove dependencies. By default, try the latest version
 - Never automatically downgrade dependencies. Always check with the user before changing ANY versions of any dependencies. Assume the version is there for a reason.
+- When working in a project, automatically document the package manager being used in CLAUDE.md if it's not already documented there
+
+#### Version management
+
+We use `mise` to manage versions of installed languages (preferred over tools like `asdf`)
+
+Example `mise.toml` configuration:
+```toml
+[tools]
+go = "1.25.1"
+```
 
 #### Runtime Limitations
 - You are unable to run `wrangler dev` as it's an interactive command. Don't attempt this, unless you chain it into a command to auto-kill it, or to run in the background
+- When using `fly logs`, always use `--no-tail`
 </nodejs>
 </programming-language-specific-rules>
 
 <secret-management>
 ## Secret Management
 
-- Always use `chainenv` for secrets management and put them into .envrc
-- **IMPORTANT**: Always prefix chainenv keys with the project name (eg `HOMESERVER_`) since the keychain is global
-  - Store in chainenv: `chainenv update HOMESERVER_CLOUDFLARE_API_TOKEN 'value'`
-  - Export in .envrc: `export CLOUDFLARE_API_TOKEN=$(chainenv get HOMESERVER_CLOUDFLARE_API_TOKEN)`
-  - This prevents conflicts with other projects using the same chainenv keychain
-- Example .envrc patterns:
+- Use `mise` + chainenv plugin to manage secrets via `mise.toml` (not justfile or .envrc by default).
+- Prefix chainenv keys with the project name (e.g., `CLOUDMCP_`) to avoid global key conflicts.
+- Install the plugin and tool:
   ```bash
-  export CLOUDFLARE_EMAIL=$(chainenv get HOMESERVER_CLOUDFLARE_EMAIL)
-  export CLOUDFLARE_API_TOKEN=$(chainenv get HOMESERVER_CLOUDFLARE_API_TOKEN)
-  export FILEHAMSTER_PASSWORD=$(chainenv get HOMESERVER_FILEHAMSTER_PASSWORD)
-  export RCLONE_CONFIG_GDRIVE_TOKEN=$(chainenv get HOMESERVER_RCLONE_CONFIG_GDRIVE_TOKEN)
+  mise plugin install chainenv https://github.com/dvcrn/mise-chainenv --force
+  mise install chainenv
   ```
-- Update secrets with: `chainenv update HOMESERVER_SECRET_NAME 'value'` (not set/del)
-- Read current value first to maintain format: `chainenv get HOMESERVER_SECRET_NAME`
-- After a task is done, suggest copying the `chainenv` tokens over to 1Password for long-term persistency (not just local keychain). You can do that with `chainenv copy` (chainenv copy --from keychain --to 1password key1,key2,key3 --overwrite). However, as this is a GLOBAL storage across different services, make sure to prefix tokens correctly. 1Password is much slower for reading than keychain, so 1Password should act as the source of truth, but keychain should be used for actual reading.
+- Add chainenv to `[tools]` and declare secrets under `[env]`:
+  ```toml
+  [tools]
+  elixir = "1.18.4-otp-27"
+  erlang = "27.2"
+  chainenv = "latest"
+
+  [env]
+  # Resolution rule: Any key starting with CHAINENV_ is fetched as `chainenv get <suffix>`
+  # Example: CHAINENV_BAR -> `chainenv get BAR` (prefix is stripped)
+  CHAINENV_CLOUDMCP_SUPABASE_ANON_KEY = { value = "", tools = true, chainenv_backend = "keychain" }
+  CHAINENV_CLOUDMCP_SUPABASE_JWT_SECRET = { value = "", tools = true, chainenv_backend = "keychain" }
+
+  # Export app-facing variables by referencing the resolved CHAINENV_* values
+  SUPABASE_ANON_KEY  = { value = "{{env.CHAINENV_CLOUDMCP_SUPABASE_ANON_KEY}}", tools = true, chainenv_backend = "keychain" }
+  SUPABASE_JWT_SECRET = { value = "{{env.CHAINENV_CLOUDMCP_SUPABASE_JWT_SECRET}}", tools = true, chainenv_backend = "keychain" }
+  ```
+- Resolution rules:
+  - Any `[env]` key named `CHAINENV_<NAME>` triggers the plugin to run `chainenv get <NAME>`.
+  - Do not include the `CHAINENV_` prefix in the stored secret name. For example, to read secret `BAR`, define `CHAINENV_BAR` in `mise.toml`.
+  - `tools = true` makes variables available to tasks and tools run by mise.
+  - `chainenv_backend = "keychain"` selects the Keychain backend for reads.
+- Managing values:
+  - Update secrets: `chainenv update CLOUDMCP_SUPABASE_ANON_KEY 'value'`
+  - Read current value: `chainenv get CLOUDMCP_SUPABASE_ANON_KEY`
+  - After tasks, consider copying secrets to 1Password for long-term storage: `chainenv copy --from keychain --to 1password key1,key2 --overwrite`
+- If a project still uses a `justfile`, export variables with chainenv directly when needed, for example:
+  `export RCLONE_CONFIG_GDRIVE_TOKEN=$(chainenv get HOMESERVER_RCLONE_CONFIG_GDRIVE_TOKEN)`
 </secret-management>
 
 <documentation>
@@ -139,76 +183,19 @@ WIP
 #### Proactive Issue Management
 _When?_ When a GitHub issue is specified.
 
-When working on a GitHub issue, proactively use available tools (such as `gh issue comment` or `gh issue edit`) to provide additional context and learnings when you learn something new about the issue. This is a worklog to store information and additional context.
+When working on a GitHub issue, proactively use available tools to provide additional context and learnings when you learn something new about the issue. This is a worklog to store information and additional context.
 
-When no Github issue is present, suggest to the user to create one. If accepted, use `gh issue create` to create a new issue.
+When no Github issue is present, suggest to the user to create one. If accepted, create a new issue using available tools.
 
 When finishing a task, always provide a summary in the GitHub issue.
 
-#### Available Commands
-
-**List Issues**
-```shell
-gh issue list
-gh issue list --state all
-gh issue list --assignee @me
-```
-
-**View Issues**
-```shell
-gh issue view <issue-number>
-gh issue view <issue-number> --comments
-```
-
-**Close Issues**
-```shell
-gh issue close <issue-number>
-```
-
-**Comment on Issues**
-```shell
-gh issue comment <issue-number> --body "Your comment here"
-```
-
-**Edit Issues**
-```shell
-$ gh issue edit 23 --title "I found a bug" --body "Nothing works"
-$ gh issue edit 23 --add-label "bug,help wanted" --remove-label "core"
-$ gh issue edit 23 --add-assignee "@me" --remove-assignee monalisa,hubot
-$ gh issue edit 23 --add-project "Roadmap" --remove-project v1,v2
-$ gh issue edit 23 --milestone "Version 1"
-$ gh issue edit 23 --remove-milestone
-$ gh issue edit 23 --body-file body.txt
-$ gh issue edit 23 34 --add-label "help wanted"
-```
-
-**Help**
-```shell
-gh issue --help
-gh issue <subcommand> --help
-```
+#### Tool Preference
+- **Primary**: Use GitHub API tools when available (`search_issues`, `get_issue`, `create_issue`, `list_issues`, `get_issue_comments`, `add_issue_comment`, `update_issue`)
+- **Fallback**: Use `gh` CLI commands when API tools are not available (`gh issue view`, `gh issue view --comments`, `gh issue edit`, `gh issue --help`)
 </github-issues>
 
-<subagents>
-### Subagents
 
-You have the capability to spawn subagent using the `run_subagent_claude`. This creates another independent claude instance in the specific directory and instructs it with the given prompt.
 
-Give the sub-agent a clear objective and a ask of what the final state should be.
-
-Communication with the subagent happens through `check_subagent_status`. Sub-agents can ask questions for clarification, which need to be answered with the `reply_subagent`. Poll for status updates on the subagent every 30 - 60 seconds, depending on the size of the subtask.
-
-Use subagents sparingly as they create completely autonomous instances. They are especially useful when work needs to be completed in a different project.
-
-_Never_ use `get_subagent_logs` unless explicitely instructed, as the log output is enormous and will overload your context window.
-
-To work on something in parallel, use `quicktree` to create a git worktree of the current repository. Always by default assume that we want a new worktree when using `subagent`.
-
-Example, wanting to do an investigation:
-```
-quicktree some-investigation
-```
-</subagents>
 
 <internet-search>
 ### Internet Search

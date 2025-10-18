@@ -1,0 +1,26 @@
+model = "gpt-5"
+model_reasoning_effort = "high"
+#approval_policy = "on-failure"
+#sandbox_mode = "danger-full-access"
+
+# [mcp_servers.microfn]
+# command = "npx"
+# args = ["-y", "mpc-remote", "https://mcp.microfn.dev/sse"]
+# env = { "API_KEY" = "value" }
+
+[mcp_servers.mcpnest]
+command = "npx"
+args = ["-y", "mcp-remote", "https://mcp.mcpnest.dev/mcp/c6da7aac-0ca0-4d4b-b548-901eb160e428"]
+
+[mcp_servers.git]
+command = "uvx"
+args = ["mcp-server-git"]
+
+[sandbox_workspace_write]
+network_access = true
+
+[tui]
+notifications = true
+
+[tools]
+#web_search = true

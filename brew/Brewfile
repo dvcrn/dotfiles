@@ -17,11 +17,13 @@ brew "gnu-sed"
 brew "gnupg"
 brew "grep"
 brew "kubernetes-cli"
-brew "the_silver_searcher"
+brew "krew" # k8s plugin manager
+brew "kubectx"
 brew "jq"
 brew "coreutils"
 brew "rclone"
 brew "rsync"
+brew "MisterTea/et/et"
 # brew "ffmpeg"
 
 ## terminal

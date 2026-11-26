@@ -1,12 +1,28 @@
+# Added by OrbStack: 'orb' SSH host for Linux machines
+# This only works if it's at the top of ssh_config (before any Host blocks).
+# This won't be added again if you remove it.
+Include ~/.orbstack/ssh/config
+Include ~/.ssh/1Password/config
+
+Host 10.128.0.2 orbit.d.sh 5.223.76.5
+  IdentitiesOnly yes
+  PasswordAuthentication no
+  PubkeyAuthentication yes
+  IdentityFile ~/.ssh/hetzner
+  ForwardAgent no
+
+Host 10.128.0.1 m2.d.sh 
+  IdentitiesOnly yes
+  PasswordAuthentication no
+  PubkeyAuthentication yes
+  IdentityFile ~/.ssh/m2
+  ForwardAgent no
+
 Host *
   AddKeysToAgent yes
   UseKeychain yes
   ForwardAgent yes
-  HostKeyAlgorithms +ssh-rsa,ssh-dss
   ControlMaster auto
-  #ControlPath ~/.ssh/control/%C.sock
-  ControlPersist 300s
-
-
-Host *
+  ControlPersist 10m
+  ControlPath ~/.ssh/master-%r@%h:%p
   IdentityAgent "~/Library/Group Containers/2BUA8C4S2C.com.1password/t/agent.sock"

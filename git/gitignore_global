@@ -23,3 +23,13 @@ flycheck_*.el
 *.sync-conflict*
 
 .elixir_ls
+.expert
+.claude/settings.local.json
+.tmp
+
+**/.claude/settings.local.json
+
+# local overrides and secret caches
+*.local.toml
+*.local.yaml
+*.local.json

@@ -1,12 +1,13 @@
 [user]
-  name = David Mohl
-  email = git@d.sh
-	signingkey = E75DA8BA
+	name = David
+	email = 688326+dvcrn@users.noreply.github.com
+	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIFGo1ldv8kxSAsn5uV379lmKsgUv7R1DahkFQGCvY2rJ
 [core]
-  editor = nvim
+	editor = hx
   whitespace = fix,-indent-with-non-tab,trailing-space,cr-at-eol
 	excludesfile = ~/.gitignore_global
 	commentChar = %
+	pager = cat
 [web]
   browser = google-chrome
 [rerere]
@@ -48,5 +49,19 @@
 	#insteadOf = https://github.com/
 [gpg]
 	program = /usr/local/bin/gpg
+	format = ssh
 [init]
 	defaultBranch = main
+[credential "https://github.com"]
+	helper = 
+	helper = !/opt/homebrew/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+	helper = 
+	helper = !/opt/homebrew/bin/gh auth git-credential
+[filter "lfs"]
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+[gpg "ssh"]
+	program = /Applications/1Password.app/Contents/MacOS/op-ssh-sign

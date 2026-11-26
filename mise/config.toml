@@ -1,19 +1,28 @@
 [tools]
 bun = "latest"
+cloudflared = "latest"
 elixir = "latest"
 erlang = "latest"
-go = "latest"
+flyctl = "latest"
+fnox = "latest"
+"github:dvcrn/chainenv" = "latest"
+"github:patriceckhart/zot" = "latest"
+go = "1.26.3"
+hcloud = "latest"
 node = "24"
-"npm:@anthropic-ai/claude-code" = "latest"
 "npm:@charmland/crush" = "latest"
-"npm:@google/gemini-cli" = "latest"
-"npm:@openai/codex" = "latest"
-"npm:opencode-ai" = "latest"
+"npm:@playwright/cli" = "latest"
+"pypi:google-colab-cli" = "latest"
+"pypi:notebooklm-mcp-cli" = "latest"
 python = "latest"
 rust = "latest"
+stripe = "latest"
+terraform = "latest"
 uv = "latest"
+wrangler = "latest"
 
 [settings]
+experimental = true
 
 [settings.npm]
 bun = true

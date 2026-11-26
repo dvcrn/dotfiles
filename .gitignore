@@ -41,3 +41,17 @@ ai/gemini/*
 !ai/opencode/
 ai/opencode/*
 !ai/opencode/AGENTS.md
+
+# machine-local state and generated files
+.claude/settings.local.json
+fish/fish_variables
+fish/conf.d/fish_frozen_*.fish
+fish/completions/*
+*.bak
+*.bak.*
+zed/prompts/
+zed/.wrangler/
+zed/tasks.json
+sublimetext/Terminus/
+sublimetext/Emmet.sublime-settings
+sublimetext/Package Control.user-ca-bundle

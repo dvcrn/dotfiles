@@ -1,23 +1,27 @@
 # Homebrew
 set -gx fish_user_paths /opt/homebrew/bin $fish_user_paths
-set -gx PATH $PATH /opt/homebrew/bin
+fish_add_path /opt/homebrew/bin
+fish_add_path ~/.local/bin
 
 # Golang
 set -gx GOPATH ~/go
-set -gx PATH ~/go/bin $PATH
+fish_add_path ~/go/bin
 
 # etc
-set -gx PATH $PATH ~/.cargo/bin
+fish_add_path ~/.cargo/bin
 if type -q yarn
-    set -gx PATH $PATH (yarn global bin)
+    fish_add_path (yarn global bin)
 end
 
-set -gx PATH $PATH ~/src/solana/bin
+fish_add_path "/Users/david/Library/Application Support/JetBrains/Toolbox/scripts"
+fish_add_path /opt/homebrew/opt/libpq/bin
 
-set -gx PATH "/Users/david/Library/Application Support/JetBrains/Toolbox/scripts" $PATH
-set -gx PATH /opt/homebrew/opt/libpq/bin $PATH
+if [ -f '/opt/homebrew/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.fish.inc' ]
+    . '/opt/homebrew/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.fish.inc'
+end
 
-if [ -f '/opt/homebrew/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.fish.inc' ]; . '/opt/homebrew/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.fish.inc'; end
-
-set -gx PATH /usr/local/bin/jetbrains $PATH
+fish_add_path /usr/local/bin/jetbrains
 fish_add_path /opt/homebrew/opt/ruby/bin
+
+# Keep Bun's local binaries ahead of other Bun installations.
+fish_add_path --move "/Users/david/.bun/bin"

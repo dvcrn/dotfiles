@@ -13,6 +13,13 @@
     }
   },
   {
+    "context": "AcpThread > Editor",
+    "bindings": {
+      "ctrl-t": "agent::CycleThinkingEffort",
+      "ctrl-x v": "agent::ToggleThinkingEffortMenu"
+    }
+  },
+  {
     "context": "vim_mode == normal",
     "bindings": {
       // project
@@ -20,16 +27,17 @@
       "space p t": "workspace::ToggleLeftDock",
       "space p F": "pane::RevealInProjectPanel",
       "space p c": ["workspace::SendKeystrokes", "escape"],
-
       // window
       "space w l": "pane::SplitRight",
       "space w h": "pane::SplitLeft",
       "space w j": "pane::SplitDown",
       "space w k": "pane::SplitUp",
-
+      // "space g s": "command",
       // buffer
       "space b b": "tab_switcher::Toggle",
-      "ctrl-b": "tab_switcher::Toggle"
+      "ctrl-b": "tab_switcher::Toggle",
+      // special
+      ", r": "editor::Rename"
     }
   },
   {

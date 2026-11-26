@@ -20,7 +20,6 @@ command = "gopls"
 "formatting.gofumpt" = true
 
 [language-server.gopls.settings]
-# Automatically organize imports on save
 "gopls.formatting.goimports" = true
 
 

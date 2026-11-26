@@ -1,50 +1,360 @@
-// Zed settings
-//
-// For information on how to configure Zed, see the Zed
-// documentation: https://zed.dev/docs/configuring-zed
-//
-// To see all of Zed's default settings without changing your
-// custom settings, run `zed: open default settings` from the
-// command palette (cmd-shift-p / ctrl-shift-p)
 {
-  "assistant": {
-    "default_model": {
-      "provider": "copilot_chat",
-      "model": "claude-3-5-sonnet"
+  "context_server_timeout": 120,
+  "diff_view_style": "unified",
+  "tab_bar": {
+    "show_pinned_tabs_in_separate_row": true,
+  },
+  "title_bar": {
+    "show_branch_status_icon": true,
+  },
+  "status_bar": {
+    "show_active_file": true,
+  },
+  "proxy": "",
+  "cli_default_open_behavior": "existing_window",
+  "project_panel": {
+    "dock": "right",
+  },
+  "git_panel": {
+    "dock": "right",
+  },
+  "ui_font_weight": 450.0,
+  "ssh_connections": [
+    {
+      "host": "m2.d.sh",
+      "username": "root",
+      "args": [],
+      "projects": [
+        {
+          "paths": ["/mnt"],
+        },
+      ],
     },
-    "version": "2"
+    {
+      "host": "ssh.comet.d.sh",
+      "username": "ubuntu",
+      "args": [],
+      "projects": [],
+    },
+    {
+      "host": "comet.d.sh",
+      "username": "ubuntu",
+      "args": [],
+      "projects": [],
+    },
+  ],
+  "icon_theme": "Catppuccin Frappé",
+  "edit_predictions": {
+    "provider": "zed",
+    "allow_data_collection": "no",
+    "disabled_globs": [],
+    "mode": "subtle",
+    "codestral": {
+      "model": "codestral-latest",
+      "max_tokens": 500,
+    },
+  },
+  "show_edit_predictions": true,
+  "tabs": {
+    "git_status": true,
+    "file_icons": true,
+    "show_diagnostics": "errors",
+  },
+  "diagnostics": {
+    "inline": {
+      "enabled": true,
+    },
+  },
+  "preview_tabs": {
+    "enable_preview_from_file_finder": false,
+    "enable_keep_preview_on_code_navigation": true,
+  },
+  "auto_signature_help": true,
+  "show_signature_help_after_edits": true,
+  "cursor_shape": "bar",
+  "outline_panel": {
+    "dock": "right",
+  },
+  "inlay_hints": {
+    "enabled": false,
+  },
+  "agent": {
+    "sandbox_permissions": {
+      "allow_fs_write_all": true,
+      "allow_unsandboxed": true,
+      "allow_all_hosts": true,
+      "network_hosts": [
+        "artist-lineup-cdn.tomorrowland.com",
+        "amicorum.app",
+        "dev.amicorum.app",
+        "developers.cloudflare.com",
+        "raw.githubusercontent.com",
+        "api.github.com",
+        "www.rfc-editor.org",
+        "developer.apple.com",
+        "github.com",
+        "pkg.go.dev",
+        "go.dev",
+        "developer.android.com",
+        "dl.google.com"
+      ]
+    },
+    "thinking_display": "always_collapsed",
+    "show_turn_stats": true,
+    "enable_feedback": false,
+    "tool_permissions": {
+      "tools": {
+        "terminal": {
+          "always_allow": [
+            {
+              "pattern": "agy .*"
+            },
+            {
+              "pattern": "codex .*"
+            }
+          ],
+          "always_confirm": [],
+          "always_deny": [
+            {
+              "pattern": "git stash .*"
+            },
+            {
+              "pattern": "git checkout .*"
+            },
+            {
+              "pattern": "git restore .*"
+            },
+            {
+              "pattern": "rm -rf .*"
+            }
+          ],
+        },
+      },
+      "default": "allow",
+    },
+    "dock": "left",
+    "favorite_models": [
+      {
+        "provider": "anthropic",
+        "model": "claude-sonnet-4-6-thinking-latest",
+        "enable_thinking": false
+      },
+      {
+        "provider": "anthropic",
+        "model": "claude-opus-4-6-latest",
+        "enable_thinking": true,
+        "effort": "high"
+      },
+      {
+        "provider": "anthropic",
+        "model": "claude-haiku-4-5-latest",
+        "enable_thinking": true
+      },
+      {
+        "provider": "x_ai",
+        "model": "grok-build-0.1",
+        "enable_thinking": false
+      },
+      {
+        "provider": "x_ai",
+        "model": "grok-composer-2.5-fast",
+        "enable_thinking": false
+      },
+      {
+        "provider": "google",
+        "model": "gemini-pro-agent",
+        "enable_thinking": false
+      },
+      {
+        "provider": "openai-subscribed",
+        "model": "gpt-5.6-sol",
+        "enable_thinking": true,
+        "effort": "medium",
+        "speed": "standard"
+      },
+      {
+        "provider": "x_ai",
+        "model": "grok-4.6",
+        "enable_thinking": true,
+        "effort": "medium"
+      },
+      {
+        "provider": "openai-subscribed",
+        "model": "gpt-6-astra",
+        "enable_thinking": true,
+        "effort": "low",
+        "speed": "standard"
+      },
+      {
+        "provider": "anthropic",
+        "model": "claude-sonnet-5-5",
+        "enable_thinking": true,
+        "effort": "medium"
+      },
+      {
+        "provider": "anthropic",
+        "model": "claude-opus-5-5",
+        "enable_thinking": true,
+        "effort": "medium",
+        "speed": "standard"
+      },
+      {
+        "provider": "google",
+        "model": "gemini-3.5-flash-lite",
+        "enable_thinking": true,
+        "effort": "minimal"
+      },
+      {
+        "provider": "Claude Code",
+        "model": "claude-opus-5-5",
+        "enable_thinking": true,
+        "effort": "high"
+      },
+      {
+        "provider": "Claude Code",
+        "model": "claude-sonnet-5-5",
+        "enable_thinking": true,
+        "effort": "high"
+      },
+      {
+        "provider": "google",
+        "model": "gemini-4-carbon",
+        "enable_thinking": true,
+        "effort": "medium"
+      },
+      {
+        "provider": "google",
+        "model": "gemini-4-argon",
+        "enable_thinking": true,
+        "effort": "medium"
+      },
+      {
+        "provider": "google",
+        "model": "gemini-4-hydrogen",
+        "enable_thinking": true,
+        "effort": "medium"
+      },
+      {
+        "provider": "google",
+        "model": "gemini-pro-orchestrator",
+        "enable_thinking": false
+      }
+    ],
+    "commit_message_instructions": "<commit-format><subject>Start with present-tense verb (Add, Fix, Update, Refactor, Remove). Capitalize first letter. No trailing period. Under 50 chars. NO conventional commit prefixes (feat:, fix:, chore:, docs:, etc).</subject><body>Concise high-information summary, skip if change is simple. Explain why not how. Terse. Blank line after subject. Wrap at 72 chars. Skip if simple and Title is sufficient.</body><footer>Reference GitHub/Linear issues after body. Use Fixes #N to resolve, Refs #N to relate.</footer><examples><good>Add user authentication endpoint\\n\\nImplement /login route with email and password validation.\\nIntroduces bcrypt package for secure password hashing.\\n\\nFixes #123</good><bad>feat: add new login feature</bad><bad>fixed a bug</bad><bad>WIP</bad></examples></commit-format>",
+    "commit_message_model": {
+      "provider": "google",
+      "model": "gemini-3.8-flash-low",
+      "enable_thinking": false,
+      "effort": "none"
+    },
+    "profiles": {
+      "write": {
+        "name": "Write",
+        "tools": {
+          "copy_path": true,
+          "create_directory": true,
+          "create_thread": true,
+          "delete_path": true,
+          "diagnostics": true,
+          "apply_code_action": true,
+          "ask_user": true,
+          "edit_file": true,
+          "write_file": true,
+          "fetch": true,
+          "find_path": true,
+          "find_references": true,
+          "get_code_actions": true,
+          "go_to_definition": true,
+          "list_agents_and_models": true,
+          "list_directory": true,
+          "move_path": true,
+          "rename_symbol": true,
+          "read_file": true,
+          "grep": true,
+          "skill": true,
+          "spawn_agent": true,
+          "terminal": true,
+          "search_web": true
+        },
+        "enable_all_context_servers": true,
+        "context_servers": {}
+      },
+      "ask": {
+        "name": "Ask",
+        "tools": {
+          "ask_user": true,
+          "create_thread": true,
+          "diagnostics": true,
+          "fetch": true,
+          "list_agents_and_models": true,
+          "list_directory": true,
+          "find_path": true,
+          "find_references": true,
+          "get_code_actions": true,
+          "go_to_definition": true,
+          "read_file": true,
+          "grep": true,
+          "skill": true,
+          "spawn_agent": true,
+          "search_web": true,
+        },
+        "enable_all_context_servers": false,
+        "context_servers": {},
+      },
+    },
+    "default_profile": "write",
+    "default_model": {
+      "effort": "medium",
+      "speed": "standard",
+      "enable_thinking": true,
+      "provider": "google",
+      "model": "gemini-4-hydrogen",
+    },
+    // "subagent_model": {
+    //   "provider": "google",
+    //   "model": "gemini-3.8-flash-medium",
+    //   "enable_thinking": true,
+    //   "effort": "medium",
+    // },
+    "model_parameters": [],
+    "compaction_model": {
+      "provider": "google",
+      "model": "gemini-3.8-flash-low",
+      "enable_thinking": false,
+      "effort": "none"
+    },
+    "thread_summary_model": {
+      "provider": "google",
+      "model": "gemini-3.5-flash-lite",
+      "enable_thinking": true,
+      "effort": "minimal",
+      "speed": "standard"
+    },
   },
   "base_keymap": "SublimeText",
-  "relative_line_numbers": true,
-  "vim_mode": true,
-  "ui_font_size": 16,
+  "relative_line_numbers": "enabled",
+  "vim_mode": false,
+  "helix_mode": true,
+  "ui_font_size": 16.0,
   "buffer_font_size": 16,
-  "buffer_font_family": "Operator Mono SSm Lig",
+  "buffer_font_family": "OperatorMonoSSmLig Nerd Font",
   "buffer_font_weight": 400,
   "theme": {
     "mode": "dark",
     "light": "One Light",
-    "dark": "One Dark Pro"
+    "dark": "One Dark - Darkened",
   },
   "telemetry": {
     "diagnostics": false,
-    "metrics": false
+    "metrics": false,
   },
+  "use_smartcase_search": true,
   "vim": {
     "toggle_relative_line_numbers": true,
     "use_system_clipboard": "always",
-    "use_multiline_find": true,
     "use_smartcase_find": true,
     "highlight_on_yank_duration": 200,
-    "custom_digraphs": {}
-  },
-  "chat_panel": {
-    // Whether to show the chat panel button in the status bar.
-    "button": "never",
-    // Where to the chat panel. Can be 'left' or 'right'.
-    "dock": "right",
-    // Default width of the chat panel.
-    "default_width": 240
+    "custom_digraphs": {},
   },
   "auto_install_extensions": {
     "html": true,
@@ -53,11 +363,398 @@
     "one-dark-pro": true,
     "swift": true,
     "toml": true,
-    "make": true
+    "make": true,
+    "fish": true,
+    "elixir": true,
+    "prisma": true,
+    "ini": true,
+    "solidity": true,
+    "snippets": true,
+    "env": true,
   },
   "languages": {
+    "Python": {
+      "code_actions_on_format": {
+        "source.fixAll.ruff": true,
+      },
+      "language_servers": ["pyright", "ruff"],
+      "format_on_save": "on",
+    },
     "Markdown": {
-      "format_on_save": "on"
+      "show_edit_predictions": false,
+      "format_on_save": "on",
+    },
+    "Elixir": {
+      "language_servers": [
+        "expert",
+        "!elixir-ls",
+        "!dexter",
+        "!next-ls",
+        "!lexical",
+      ],
+    },
+    "EEx": {
+      "language_servers": [
+        "expert",
+        "!elixir-ls",
+        "!dexter",
+        "!next-ls",
+        "!lexical",
+      ],
+    },
+    "HEEx": {
+      "language_servers": [
+        "expert",
+        "!elixir-ls",
+        "!dexter",
+        "!next-ls",
+        "!lexical",
+      ],
+    },
+    "Swift": {
+      "enable_language_server": true,
+      "language_servers": ["sourcekit-lsp"],
+      "formatter": "language_server",
+      "format_on_save": "on",
+    },
+  },
+  "context_servers": {
+    "classpass": {
+      "args": [
+        "exec",
+        "--",
+        "go",
+        "run",
+        "."
+      ],
+      "command": "fnox",
+      "enabled": false,
+      "remote": false
+    },
+    "search": {
+      "enabled": true,
+      "url": "https://search.mcp.d.pn/mcp?codemode=search_and_execute"
+    },
+    "Grafana": {
+      "enabled": false,
+      "url": "https://mcp.grafana.com/mcp"
+    },
+    "dpn": {
+      "enabled": true,
+      "url": "https://mcp.d.pn/mcp?codemode=search_and_execute"
     }
-  }
+  },
+  "collaboration_panel": {
+    "dock": "right",
+    "button": false,
+  },
+  "language_models": {
+    "google_compatible": {
+      "Antigravity": {
+        "api_url": "https://antigravity.d.pn",
+        "available_models": [
+          {
+            "name": "gemini-4-argon",
+            "display_name": "Gemini 4 Argon",
+            "max_tokens": 1000000,
+            "max_output_tokens": 65536,
+            "mode": {
+              "type": "adaptive"
+            },
+            "capabilities": {
+              "tools": true,
+              "images": true
+            }
+          }
+        ]
+      }
+    },
+    "anthropic_compatible": {
+      "Claude Code": {
+        "api_url": "https://claude.d.pn",
+        "available_models": [
+          {
+            "name": "claude-mythos-5-2",
+            "display_name": "Claude Mythos 5.2",
+            "max_tokens": 1000000,
+            "max_output_tokens": 128000,
+            "mode": {
+              "type": "adaptive"
+            },
+            "capabilities": {
+              "tools": true,
+              "images": true,
+              "prompt_caching": true
+            }
+          },
+          {
+            "name": "claude-fable-5-2",
+            "display_name": "Claude Fable 5.2",
+            "max_tokens": 1000000,
+            "max_output_tokens": 128000,
+            "mode": {
+              "type": "adaptive"
+            },
+            "capabilities": {
+              "tools": true,
+              "images": true,
+              "prompt_caching": true
+            }
+          },
+          {
+            "name": "claude-haiku-5-5",
+            "display_name": "Claude Haiku 5.5",
+            "max_tokens": 1000000,
+            "max_output_tokens": 128000,
+            "mode": {
+              "type": "adaptive"
+            },
+            "capabilities": {
+              "tools": true,
+              "images": true,
+              "prompt_caching": true
+            }
+          },
+          {
+            "name": "claude-sonnet-5-5",
+            "display_name": "Claude Sonnet 5.5",
+            "max_tokens": 1000000,
+            "max_output_tokens": 128000,
+            "mode": {
+              "type": "adaptive"
+            },
+            "capabilities": {
+              "tools": true,
+              "images": true,
+              "prompt_caching": true
+            }
+          },
+          {
+            "name": "claude-opus-5-5",
+            "display_name": "Claude Opus 5.5",
+            "max_tokens": 1000000,
+            "max_output_tokens": 128000,
+            "mode": {
+              "type": "adaptive"
+            },
+            "capabilities": {
+              "tools": true,
+              "images": true,
+              "prompt_caching": true
+            }
+          }
+        ]
+      }
+    },
+    "opencode": {
+      "show_zen_models": true
+    },
+    // "anthropic": {
+    //   "api_url": "https://claude.d.pn",
+    // },
+    // "x_ai": {
+    //   "api_url": "https://grok.d.pn",
+    //   "available_models": [
+    //     {
+    //       "name": "grok-composer-2.5-fast",
+    //       "display_name": "Grok Composer 2.5 Fast",
+    //       "max_tokens": 200000,
+    //       "max_output_tokens": 32768,
+    //       "max_completion_tokens": 32768,
+    //       "parallel_tool_calls": true,
+    //       "supports_images": false,
+    //       "supports_tools": true,
+    //     },
+    //   ],
+    // },
+    "google": {
+      "api_url": "https://antigravity.d.pn",
+      "available_models": [
+        {
+          "name": "gemini-pro-orchestrator",
+          "display_name": "Gemini Pro Orchestrator (Carbon)",
+          "max_tokens": 1000000,
+        },
+        {
+          "name": "gemini-pro-orchestrator-argon",
+          "display_name": "Gemini Pro Orchestrator (Argon)",
+          "max_tokens": 1000000,
+        },
+      ],
+      // "available_models": [
+      //   {
+      //     "name": "gemini-3.8-flash",
+      //     "display_name": "Gemini 3.8 Flash (Antigravity)",
+      //     "max_tokens": 1000000,
+      //   },
+      //   {
+      //     "name": "gemini-4-argon",
+      //     "display_name": "Gemini 4 Argon (Antigravity)",
+      //     "max_tokens": 1000000,
+      //   },
+      //   {
+      //     "name": "gemini-4-carbon",
+      //     "display_name": "Gemini 4 Carbon (Antigravity)",
+      //     "max_tokens": 1000000,
+      //   },
+      //   {
+      //     "name": "gemini-4-hydrogen",
+      //     "display_name": "Gemini 4 Hydrogen (Antigravity)",
+      //     "max_tokens": 1000000,
+      //   },
+      //   {
+      //     "name": "gemini-3.8-flash-high",
+      //     "display_name": "Gemini 3.8 Flash (High) (Antigravity)",
+      //     "max_tokens": 1000000,
+      //   },
+      //   {
+      //     "name": "gemini-3.8-flash-low",
+      //     "display_name": "Gemini 3.8 Flash (Low) (Antigravity)",
+      //     "max_tokens": 1000000,
+      //   },
+      //   {
+      //     "name": "gemini-3.8-flash-medium",
+      //     "display_name": "Gemini 3.8 Flash (Medium) (Antigravity)",
+      //     "max_tokens": 1000000,
+      //   },
+      //   {
+      //     "name": "gemini-3.8-flash-tiered",
+      //     "display_name": "Gemini 3.8 Flash (Tiered) (Antigravity)",
+      //     "max_tokens": 1000000,
+      //   },
+      //   {
+      //     "name": "gemini-4-argon-high",
+      //     "display_name": "Gemini 4 Argon (High) (Antigravity)",
+      //     "max_tokens": 1000000,
+      //   },
+      //   {
+      //     "name": "gemini-4-argon-medium",
+      //     "display_name": "Gemini 4 Argon (Medium) (Antigravity)",
+      //     "max_tokens": 1000000,
+      //   },
+      //   {
+      //     "name": "gemini-4-argon-low",
+      //     "display_name": "Gemini 4 Argon (Low) (Antigravity)",
+      //     "max_tokens": 1000000,
+      //   },
+      //   {
+      //     "name": "gemini-4-carbon-high",
+      //     "display_name": "Gemini 4 Carbon (High) (Antigravity)",
+      //     "max_tokens": 1000000,
+      //   },
+      //   {
+      //     "name": "gemini-4-carbon-medium",
+      //     "display_name": "Gemini 4 Carbon (Medium) (Antigravity)",
+      //     "max_tokens": 1000000,
+      //   },
+      //   {
+      //     "name": "gemini-4-carbon-low",
+      //     "display_name": "Gemini 4 Carbon (Low) (Antigravity)",
+      //     "max_tokens": 1000000,
+      //   },
+      //   {
+      //     "name": "gemini-4-hydrogen-xhigh",
+      //     "display_name": "Gemini 4 Hydrogen (xHigh) (Antigravity)",
+      //     "max_tokens": 1000000,
+      //   },
+      //   {
+      //     "name": "gemini-4-hydrogen-high",
+      //     "display_name": "Gemini 4 Hydrogen (High) (Antigravity)",
+      //     "max_tokens": 1000000,
+      //   },
+      //   {
+      //     "name": "gemini-4-hydrogen-medium",
+      //     "display_name": "Gemini 4 Hydrogen (Medium) (Antigravity)",
+      //     "max_tokens": 1000000,
+      //   },
+      //   {
+      //     "name": "gemini-4-hydrogen-low",
+      //     "display_name": "Gemini 4 Hydrogen (Low) (Antigravity)",
+      //     "max_tokens": 1000000,
+      //   },
+      //   {
+      //     "name": "gemini-flash-worker-agy",
+      //     "display_name": "Gemini Flash Worker (Agy) (Antigravity)",
+      //     "max_tokens": 1000000,
+      //   },
+      //   {
+      //     "name": "gemini-pro-orchestrator",
+      //     "display_name": "Gemini Pro Orchestrator (Carbon) (Antigravity)",
+      //     "max_tokens": 1000000,
+      //   },
+      //   {
+      //     "name": "gemini-pro-orchestrator-argon",
+      //     "display_name": "Gemini Pro Orchestrator (Argon) (Antigravity)",
+      //     "max_tokens": 1000000,
+      //   },
+      //   {
+      //     "name": "gemini-3.1-flash-lite",
+      //     "display_name": "Gemini 3.1 Flash Lite (Antigravity)",
+      //     "max_tokens": 1000000,
+      //   },
+      //   {
+      //     "name": "gemini-3.1-flash-image",
+      //     "display_name": "Gemini 3.1 Flash Image (Antigravity)",
+      //     "max_tokens": 1000000,
+      //   },
+      //   {
+      //     "name": "gemini-3.5-flash-lite",
+      //     "display_name": "Gemini 3.5 Flash Lite (Antigravity)",
+      //     "max_tokens": 1000000,
+      //   },
+      // ],
+    },
+
+    "mistral": {
+    },
+  },
+  "command_aliases": {
+    "w": "workspace::Save",
+  },
+  "terminal": {
+    "shell": {
+      "program": "zsh",
+    },
+    "show_count_badge": true,
+    "env": {
+      "FIG_NEW_SESSION": "0",
+      "Q_NEW_SESSION": "0",
+      "PAGER": "cat",
+      "NO_COLOR": "1",
+      "GIT_PAGER": "cat",
+      "MANPAGER": "cat",
+      "LESS": "-R",
+      "BAT_PAGER": "cat",
+    },
+  },
+  "prettier": {
+  },
+  "agent_servers": {
+    "antigravity-acp": {
+      "default_config_options": {
+        "thinking_level": "medium",
+        "mode": "yolo",
+        "model": "gemini-4-argon"
+      },
+      "type": "registry"
+    },
+    "grok-build": {
+      "type": "registry",
+    },
+    "codex-acp": {
+      "type": "registry",
+    },
+    "claude-acp": {
+      "default_config_options": {
+        "mode": "bypassPermissions"
+      },
+      "type": "registry",
+    },
+    "opencode": {
+      "type": "registry",
+    },
+    "github-copilot": {
+      "type": "registry",
+    },
+  },
 }

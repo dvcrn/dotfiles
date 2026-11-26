@@ -2,8 +2,16 @@
   "JSON Dump object": {
     "prefix": "jpri",
     "body": [
-      "b, _ := json.MarshalIndent($0, \"\", \"  \")",
-      "fmt.Println(string(b))"
+      "func(v interface{}) {",
+      "\tj, err := json.MarshalIndent(v, \"\", \"  \")",
+      "\tif err != nil {",
+      "\t\tfmt.Printf(\"%v\\n\", err)",
+      "\t\treturn",
+      "\t}",
+      "\tbuf := bytes.NewBuffer(j)",
+      "\tfmt.Printf(\"%v\\n\", buf.String())",
+      "}($0)",
+      ""
     ],
     "description": "Print formatted JSON of data"
   }

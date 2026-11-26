@@ -47,9 +47,6 @@
 	"highlightedyank_duration": 200,
 	"highlightedyank_style": "outline",
 	"ignored_packages": [
-		"Elixir",
-		"LSP-typescript",
-		"Tailwind Reorder",
 		"Vintage",
 	],
 	"neovintageous_build_version": 13200,

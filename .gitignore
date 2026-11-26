@@ -29,4 +29,15 @@ llm/claude/.claude/projects/
 llm/claude/.claude/todos/
 llm/claude/.claude/statsig
 llm/backup
-ai/claude/plugins
+# ai: only shared agent instructions are tracked
+ai/*
+!ai/AGENTS.md
+!ai/claude/
+ai/claude/*
+!ai/claude/CLAUDE.md
+!ai/gemini/
+ai/gemini/*
+!ai/gemini/GEMINI.md
+!ai/opencode/
+ai/opencode/*
+!ai/opencode/AGENTS.md

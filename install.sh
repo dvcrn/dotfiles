@@ -48,6 +48,21 @@ echo "----> Install bun"
 mise use -g bun@latest
 mise use -g uv
 
+echo ""
+echo "---> zsh"
+if test -f ~/.zshrc; then
+	mv ~/.zshrc ~/.zshrc.bak
+fi
+ln -svf ~/.dotfiles/zsh/.zshrc ~/.zshrc
+echo "---> zsh done"
+
+echo ""
+echo "---> bash"
+if test -f ~/.bashrc; then
+	mv ~/.bashrc ~/.bashrc.bak
+fi
+ln -svf ~/.dotfiles/bash/.bashrc ~/.bashrc
+echo "---> bash done"
 
 echo ""
 echo "---> fish"
